@@ -1,25 +1,26 @@
-// import logo from './logo.svg';
-import './people.css';
+// import React from 'react';
+import './PersonalStory.css';
 
-function getImgUrl() {
-  return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
-}
+// function getImgUrl() {
+//   return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
+// }
 
-function HainesDauner() {
-// const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
+function PersonalStory(props) {
+  console.log(props);
+  const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
 
   return (
     <div>
       <header className="basic-page">
-        <h1>Bob Haines &amp; Gene Dauner, Photographers</h1>
-        <h4>Kingston, NY</h4>
+        <h1>{props.title}</h1>
+        <h4>{props.city}</h4>
       </header>
 
       <section className="basic-grid">
 
         <div className="image-full">
           <img 
-            src= {getImgUrl()}
+            src= {imgUrl}
             alt='meaningful alt text'/>
         </div>
 
@@ -70,4 +71,4 @@ function HainesDauner() {
   );
 }
 
-export default HainesDauner;
+export default PersonalStory;
