@@ -1,22 +1,20 @@
-// import logo from './logo.svg';
-// import './App.css';
-import PersonalStory from './PersonalStory';
+import { Outlet, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div >
-      <header >
-        <p>
-          Main nav for wireframe
-        </p>
-      </header>
-      <PersonalStory 
-        title="Bob Haines &amp; Gene Dauner, Photographers"
-        city="Kingston, NY"
-        mainImage="haines-mcmillan-bldg"
-       />
+      <nav>
+        Picturing Urban Renewal - {" "}
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/people/haines-dauner">Haines-Dauner</Link> |{" "}
+        <Link to="/places/newburgh">Newburgh</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
 
 export default App;
+
+
+ 
