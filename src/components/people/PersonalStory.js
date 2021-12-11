@@ -1,5 +1,6 @@
 import React from 'react';
 import './PersonalStory.css';
+// import SlideShow from './SlideShow';
 
 // function getImgUrl() {
 //   return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
@@ -7,13 +8,24 @@ import './PersonalStory.css';
 
 // function PersonalStory(props) {
 class PersonalStory extends React.Component {
-  // console.log(props);
+  state = {lat: null, errorMessage: ''};
+
+  componentDidMount() {
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log('lat: ' + position.coords.latitude);
+        this.setState({ lat: position.coords.latitude });
+      },
+      (err) => this.setState({ errorMessage: err.message })
+    );
+  }
 
   render() {
     const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
 
     return (
       <div>
+
         <header className="basic-page">
           <h1>Title</h1>
           <h4>City</h4>
@@ -41,6 +53,7 @@ class PersonalStory extends React.Component {
             <p>Soon, Bob and Gene began taking photos together, Bob in black and white, Gene in color. Downtown Kingston&rsquo;s rich architectural details drew them to the soon-to-be demolished area.</p>
 
             <p>On one trip, Bob brought an 8-millimeter movie camera. He filmed wrecking crews tearing down buildings in 1967. As his film documents, crews used two methods to demolish buildings. For those that were easy to raze, like frame buildings, a bulldozer simply undermined the first floor and gravity did the rest. For more substantial brick buildings, wrecking crews used two bulldozers and a cable. The cable extended through the length of a building, say the front and rear doors, and each end connected to each bulldozer. As the bulldozers pulled away from the building, the cable tightened and sliced through the load bearing wall.</p>
+
           </article>
 
           <div className="first-col">
@@ -69,6 +82,8 @@ class PersonalStory extends React.Component {
           </div>
 
         </section>
+
+
 
       </div>
     );
