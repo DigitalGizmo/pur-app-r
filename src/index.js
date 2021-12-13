@@ -2,7 +2,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './main.css';
+import './index.css';
 import App from './App';
 import PersonalStory from './components/people/PersonalStory';
 import Newburgh from './components/places/Newburgh';
