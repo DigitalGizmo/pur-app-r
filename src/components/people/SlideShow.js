@@ -8,12 +8,13 @@ const slides = [
   {imgName: 'haines-old-city-hall-pigeons', caption: 'haines-old-city-hall-pigeons'},
 ];
 
-const { imgName, caption } = slides[0];
 
 let currSlide = 0;
-function nextSlide() {
-  this.currSlide = 1;
-}
+const { imgName, caption } = slides[currSlide];
+
+// function nextSlide() {
+//   this.currSlide = 1;
+// }
 
 // class SlideShow extends React.Component {
 const SlideShow = props => {
@@ -21,7 +22,7 @@ const SlideShow = props => {
 
     return (
       <div className="lightbox">
-        <div id="slimpop-wrapper" className="entry-pop">
+        <div className="slimpop-wrapper slide-show">
           <h2>Slide Show: {props.title}</h2>
           <p>lat: {props.lat > 41 ? 'Northern' : 'Southern'} </p>
           <img 
@@ -33,5 +34,9 @@ const SlideShow = props => {
     );
   // } // end render
 } // end class
+
+SlideShow.defaultProps = {
+  title: 'Title sent from PersonalStory'
+};
 
 export default SlideShow;

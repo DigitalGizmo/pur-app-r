@@ -533,8 +533,9 @@ header.story-title nav#dropdown-parent {
   z-index: 99;
 }
 
-/* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
-#slimpop-wrapper {
+/* shared styles for all slimpops, specific styles in 
+SlideShow.css etc. */
+.slimpop-wrapper {
   background-color: beige;  
   border: 1px solid gray;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);

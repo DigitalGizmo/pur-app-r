@@ -1,5 +1,7 @@
 /* These styles are straight from Treat Map */
-.entry-pop {
+.slide-show {
+  /*See also generic slimpop-wrapper in index.css*/ 
+  /*From 'pop-entry' in Vue, Treat*/
   margin: 5% auto;
   height: 80%;
   width: 60%;

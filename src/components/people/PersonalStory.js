@@ -8,13 +8,14 @@ import SlideShow from './SlideShow';
 
 // function PersonalStory(props) {
 class PersonalStory extends React.Component {
-  state = {lat: null, errorMessage: ''};
+  state = {lat: null, errorMessage: '', isShowing: false};
 
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
         console.log('lat: ' + position.coords.latitude);
         this.setState({ lat: position.coords.latitude });
+        this.setState({ isShowing: true });
       },
       (err) => this.setState({ errorMessage: err.message })
     );
@@ -23,7 +24,6 @@ class PersonalStory extends React.Component {
   render() {
     // const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
     const imgName = 'haines-mcmillan-bldg';
-    const fullImage = 'image-full';
 
     return (
       <div>
@@ -33,7 +33,7 @@ class PersonalStory extends React.Component {
         </header>
 
         <section className="basic-grid">
-          <div className={fullImage}>
+          <div className="image-full">
             {/*the following mini-template from Grider "showing Icons"*/}
             <img 
               src= {`http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/${imgName}.jpg`}
@@ -84,14 +84,12 @@ class PersonalStory extends React.Component {
 
         </section>
 
-        <SlideShow 
+        {this.state.isShowing && <SlideShow 
           lat={this.state.lat}
-          title= 'Haines - Dauner'
-        />
+        />};
 
-
-
-
+{/*          title= 'Haines - Dauner'
+*/}
       </div>
     );
   } // end render
