@@ -10,21 +10,33 @@ const slides = [
 
 
 let currSlide = 0;
+// const { imgName, caption } = slides[currSlide];
 const { imgName, caption } = slides[currSlide];
 
 // function nextSlide() {
 //   this.currSlide = 1;
 // }
 
-// class SlideShow extends React.Component {
-const SlideShow = props => {
-  // render() {
+class SlideShow extends React.Component {
+// const SlideShow = props => {
+  // state = { currSlide: 0 };
+  onSlimClose = event => {
+    event.preventDefault();
+    console.log('close')
+    this.props.closeSlim();
+  }
+
+  render() {
 
     return (
-      <div className="lightbox">
+      <div className="lightbox"> {/*onClick={this.onSlimClose}*/}
         <div className="slimpop-wrapper slide-show">
-          <h2>Slide Show: {props.title}</h2>
-          <p>lat: {props.lat > 41 ? 'Northern' : 'Southern'} </p>
+          <p className="close">
+            {/*<a href="/" onClick="prevEntry">Prev</a> |
+            <a href="/" onClick="nextEntry">Next</a> | */}
+            <a href="/" onClick={this.onSlimClose}>Close</a>
+          </p>
+          <h2>Slide Show: {this.props.title}</h2> {/*props.title*/}
           <img 
             src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${imgName}.jpg`}
             alt='meaningful alt text'/>
@@ -32,7 +44,7 @@ const SlideShow = props => {
         </div>
       </div>
     );
-  // } // end render
+  } // end render
 } // end class
 
 SlideShow.defaultProps = {

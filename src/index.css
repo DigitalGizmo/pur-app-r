@@ -529,7 +529,7 @@ header.story-title nav#dropdown-parent {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background: url(assets/overlay.png) repeat;*/
+  background: url(./assets/overlay.png) repeat;
   z-index: 99;
 }
 

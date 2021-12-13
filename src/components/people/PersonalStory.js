@@ -10,12 +10,22 @@ import SlideShow from './SlideShow';
 class PersonalStory extends React.Component {
   state = {lat: null, errorMessage: '', isShowing: false};
 
+  onSlideLinkClick = event => {
+    event.preventDefault();
+    this.setState({ isShowing: true });
+    console.log('slideshow clicked');
+  }
+
+  onSlideClose = () => {
+    console.log('ins story close ');
+    this.setState({ isShowing: false });
+  }
+
   componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log('lat: ' + position.coords.latitude);
+        // console.log('lat: ' + position.coords.latitude);
         this.setState({ lat: position.coords.latitude });
-        this.setState({ isShowing: true });
       },
       (err) => this.setState({ errorMessage: err.message })
     );
@@ -71,7 +81,7 @@ class PersonalStory extends React.Component {
               alt='meaningful alt text'
             />
             <p className="caption">McMillan Building before demolition. Photo courtesy of Gene Dauner.<br/>
-            <strong><a href="/">View a slideshow of photos by Dauner and Haines</a></strong></p>
+            <strong><a href="/" onClick={this.onSlideLinkClick}>View a slideshow of photos by Dauner and Haines</a></strong></p>
           </div>
 
           <div className="second-col">
@@ -79,13 +89,20 @@ class PersonalStory extends React.Component {
               <source src="http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-demo-footage.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
             </video>      
-            <p className="caption">Bob Haines filmed the tragic demolition of these stately brick buildings along Water street with his 8mm movie camera. Courtesy of Bob Haines</p>
+            <p className="caption">
+                Bob Haines filmed the tragic demolition of these stately brick buildings along Water street with his 8mm movie camera. Courtesy of Bob Haines
+            </p>
+            <button onClick={this.onSlideLinkClick}>Slides</button>
+            <button onClick={e => this.setState({ isShowing: false})}>Slides</button>
           </div>
 
         </section>
 
-        {this.state.isShowing && <SlideShow 
+        {this.state.isShowing && 
+          <SlideShow 
           lat={this.state.lat}
+          title="Haines-Dauner"
+          closeSlim = {this.onSlideClose}
         />};
 
 {/*          title= 'Haines - Dauner'

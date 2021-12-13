@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import PersonalStory from './components/people/PersonalStory';
 import Newburgh from './components/places/Newburgh';
 import Home from './components/Home';
