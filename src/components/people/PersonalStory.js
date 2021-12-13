@@ -1,6 +1,6 @@
 import React from 'react';
 import './PersonalStory.css';
-// import SlideShow from './SlideShow';
+import SlideShow from './SlideShow';
 
 // function getImgUrl() {
 //   return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
@@ -21,21 +21,22 @@ class PersonalStory extends React.Component {
   }
 
   render() {
-    const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
+    // const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
+    const imgName = 'haines-mcmillan-bldg';
+    const fullImage = 'image-full';
 
     return (
       <div>
-
         <header className="basic-page">
           <h1>Title</h1>
           <h4>City</h4>
         </header>
 
         <section className="basic-grid">
-
-          <div className="image-full">
+          <div className={fullImage}>
+            {/*the following mini-template from Grider "showing Icons"*/}
             <img 
-              src= {imgUrl}
+              src= {`http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/${imgName}.jpg`}
               alt='meaningful alt text'/>
           </div>
 
@@ -82,6 +83,12 @@ class PersonalStory extends React.Component {
           </div>
 
         </section>
+
+        <SlideShow 
+          lat={this.state.lat}
+          title= 'Haines - Dauner'
+        />
+
 
 
 
