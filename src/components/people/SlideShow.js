@@ -56,7 +56,7 @@ class SlideShow extends React.Component {
           <img 
             src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[this.state.currSlide].imgName}.jpg`}
             alt='meaningful alt text'/>
-          <p>caption: </p>
+          <p>caption: {slides[this.state.currSlide].caption}</p>
         </div>
       </div>
     );

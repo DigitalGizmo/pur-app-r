@@ -38,8 +38,8 @@ class PersonalStory extends React.Component {
     return (
       <div>
         <header className="basic-page">
-          <h1>Title</h1>
-          <h4>City</h4>
+          <h1>Bob Haines &amp; Gene Dauner, Photographers</h1>
+          <h4>Kingston, NY</h4>
         </header>
 
         <section className="basic-grid">
@@ -92,8 +92,6 @@ class PersonalStory extends React.Component {
             <p className="caption">
                 Bob Haines filmed the tragic demolition of these stately brick buildings along Water street with his 8mm movie camera. Courtesy of Bob Haines
             </p>
-            <button onClick={this.onSlideLinkClick}>Slides</button>
-            <button onClick={e => this.setState({ isShowing: false})}>Slides</button>
           </div>
 
         </section>
