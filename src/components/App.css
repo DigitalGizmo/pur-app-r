@@ -1,0 +1,28 @@
+/*All from Vue App.vue*/
+ul, ol {
+  list-style-type: none;
+  padding:  0;
+}
+
+h1 {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+/* Don's freelancing */
+#main-menu li {
+  display: inline;
+}
+
+.little-title {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
