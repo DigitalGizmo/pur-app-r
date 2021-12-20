@@ -163,6 +163,7 @@ h1 {
 header.basic-page {
   background-color: #686959;
   padding: .5em 3%;
+  max-width: 100%;
   text-align: left;
 }
 

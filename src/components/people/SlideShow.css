@@ -2,9 +2,10 @@
 .slide-show {
   /*See also generic slimpop-wrapper in index.css*/ 
   /*From 'pop-entry' in Vue, Treat*/
-  margin: 5% auto;
   height: 80%;
-  width: 60%;
+  margin: 3% auto;
+  padding-top: 1em;
+  width: 70%;
 }
 
 header {
@@ -12,8 +13,12 @@ header {
 }
 
 header p {
-  font-size: .8em;
+  font-size: .75em;
   margin:  .4em auto;
+}
+
+.slide-show p {
+  font-size: .8em;
 }
 
 p.close {
@@ -24,11 +29,9 @@ p.close {
 }
 
 .close a {
-  color: darkorange;
+  color: #BE6A07;
 }
 
-img.fullpic {
-  float: left;
-  max-height: 60vh;
-  margin-right:  1em;
+.close a:hover {
+  color: #F88906;
 }
