@@ -415,10 +415,10 @@ header.story-title nav#dropdown-parent {
 /* shared styles for all slimpops, specific styles in 
 SlideShow.css etc. */
 .slimpop-wrapper {
-  background-color: beige;  
-  border: 1px solid gray;
+  background-color: #EDEEE4;  
+  border: 1px solid #BDBEA7;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  color: black;
+  color: #353626;
   overflow:  auto;
   padding: 2em;
   position: relative;
