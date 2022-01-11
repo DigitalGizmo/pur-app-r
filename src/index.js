@@ -6,6 +6,7 @@ import './index.css';
 import App from './components/App';
 import PersonalStory from './components/people/PersonalStory';
 import Newburgh from './components/places/Newburgh';
+import Visuals from './components/archive/Visuals';
 import Home from './components/Home';
 // import reportWebVitals from './reportWebVitals';
 
@@ -18,6 +19,7 @@ render(
         <Route index element={<Home />} />
         <Route path="/people/haines-dauner" element={<PersonalStory />} />
         <Route path="/places/newburgh" element={<Newburgh />} />
+        <Route path="/archive/visuals" element={<Visuals />} />
       </Route>
     </Routes>
   </BrowserRouter>,

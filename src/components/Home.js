@@ -11,6 +11,7 @@ class Home extends React.Component {
         <ul>
             <li><Link to="/people/haines-dauner">Haines-Dauner</Link></li>
             <li><Link to="/places/newburgh">Newburgh</Link></li>
+            <li><Link to="/archive/visuals">Visuals</Link></li>
           </ul>  
       </div>
     );

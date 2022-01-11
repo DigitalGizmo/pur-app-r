@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div >
-      <nav class="main-menu">
+      <nav className="main-menu">
         <ul>
           <li><a href="http://app.picturingurbanrenewal.org/">Home </a></li>
           <li><a href="http://app.picturingurbanrenewal.org/cities">4 Cities / 4 Stories</a> </li>
