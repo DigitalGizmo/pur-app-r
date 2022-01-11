@@ -10,19 +10,36 @@ import Visuals from './components/archive/Visuals';
 import Home from './components/Home';
 // import reportWebVitals from './reportWebVitals';
 
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+    // useQuery,
+    // gql
+} from "@apollo/client"
+
+const client = new ApolloClient({
+  uri: 'http://admin.picturingurbanrenewal.org/archive/graphql/',
+  cache: new InMemoryCache()
+});
+
+
+
 const rootElement = document.getElementById('root');
 
 render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Home />} />
-        <Route path="/people/haines-dauner" element={<PersonalStory />} />
-        <Route path="/places/newburgh" element={<Newburgh />} />
-        <Route path="/archive/visuals" element={<Visuals />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>,
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="/people/haines-dauner" element={<PersonalStory />} />
+          <Route path="/archive/visuals" element={<Visuals />} />
+          <Route path="/places/newburgh" element={<Newburgh />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </ApolloProvider>,
   rootElement
 );
 // If you want to start measuring performance in your app, pass a function

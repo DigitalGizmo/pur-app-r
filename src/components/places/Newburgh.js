@@ -1,5 +1,5 @@
 import React from 'react';
-import { Waypoint } from 'react-waypoint';
+// import { Waypoint } from 'react-waypoint';
 
 class Newburgh extends React.Component {
 
@@ -17,7 +17,10 @@ class Newburgh extends React.Component {
             <div id="image-sequence1" className="image-panel"> 
                 {/* image-1a */}
                 <div>
-                    <img src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1.jpg"/>
+                    <img 
+                        src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1.jpg"
+                        alt="aerial view of Newburgh"
+                    />
                 </div>
             </div>{/*  /image-panel */}
 

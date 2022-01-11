@@ -13,7 +13,9 @@ function App() {
           <li><a href="http://app.picturingurbanrenewal.org/places">Places</a></li>  
         </ul>
       </nav>
-      <Outlet />
+      <Outlet 
+        message="test message"
+      />
     </div>
   );
 }
