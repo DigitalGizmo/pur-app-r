@@ -7,7 +7,7 @@ import {
     gql
 } from "@apollo/client"
 import './Visuals.css';
-
+import ImageList from './ImageList';
 
 const client = new ApolloClient({
   uri: 'http://admin.picturingurbanrenewal.org/archive/graphql/',
@@ -33,32 +33,14 @@ const Visuals= () => {
   `
   );
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-
-  // return data.all_images.map(({ id, slug, title }) => (
-  const images = data.all_images.map(({ id, slug, title }) => {
-    return (
-      <figure 
-        className="images-menu-item"
-        key={id}
-        >
-          <img className="menu-image" 
-                src={`http://admin.picturingurbanrenewal.org/media/visuals/thumbpics/${slug}-tn.jpg`}
-                alt={title}
-          />
-          <figcaption className="menu-title">
-            -- { title}
-          </figcaption>
-      </figure>
-    )
-  });
-
   return (
     <div>
-      <p>Hello Apollo!</p>
-      <p>Found function based component</p>
-      <div className="images-menu">{images}</div>
+      <p>Hello from Visuals</p>
+      <ImageList 
+        loading = {loading}
+        error = {error}
+        data = {data}
+      />
     </div>
   );
 }
