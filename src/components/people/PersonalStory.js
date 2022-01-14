@@ -51,7 +51,7 @@ class PersonalStory extends React.Component {
           </div>
 
           <div className="image-full-caption">
-            <p className="caption">Kingston&rsquo;s McMillan Buiding during demolition. January, 1966. By Bob Haines, used with permission from Kingson Daily Freeman.</p>
+            <p className="caption">Kingston&rsquo;s McMillan Buiding during demolition. January, 1966. By Bob Haines, used with his permission.</p>
           </div>
 
           <article className="text-side">

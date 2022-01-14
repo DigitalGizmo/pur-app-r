@@ -1,4 +1,5 @@
 import React from 'react';
+import './ImageList.css';
 
 const ImageList = ({loading, error, data}) => {
 
@@ -26,7 +27,6 @@ const ImageList = ({loading, error, data}) => {
 
   return (
     <div>
-      <p>Hello from ImageList</p>
       <div className="images-menu">{images}</div>
     </div>
   );
