@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SlideShow.css';
 
 const slides = [
@@ -18,60 +18,47 @@ const slides = [
   {imgName: 'haines-fischer-street', caption: 'Fischer Building after demolition, with adjacent buildings awaiting their turn. Bob Haines photograph.'},
   {imgName: 'haines-utility-poles', caption: 'Utility workers removing wiring and other equipment from overhead poles in the Broadway East urban renewal area. Bob Haines photograph.'},];
 
-
-
-// let currSlide = 0;
-// // const { imgName, caption } = slides[currSlide];
-// const { imgName, caption } = slides[currSlide];
-
-// function nextSlide() {
-//   this.currSlide = 1;
-// }
-
-class SlideShow extends React.Component {
-  state = { currSlide: 0 };
+const SlideShow = (props) => {
+  const [currSlide, setCurrSlide] = useState(0)
 
   // baseImagePath = 'http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/';
 
-  onSlimClose = event => {
+  const onSlimClose = event => {
     event.preventDefault();
-    console.log('close')
-    this.props.closeSlim();
+    // console.log('close')
+    props.closeSlim();
   }
 
-  onSlideNext = event => {
+  const onSlideNext = event => {
     event.preventDefault();
-    if (this.state.currSlide < (slides.length - 1)) {
-      this.setState({currSlide: this.state.currSlide + 1});
+    if (currSlide < (slides.length - 1)) {
+      setCurrSlide(currSlide + 1);
     }
   }
 
-  onSlidePrev = event => {
+  const onSlidePrev = event => {
     event.preventDefault();
-    if (this.state.currSlide > 0) {
-      this.setState({currSlide: this.state.currSlide - 1});
+    if (currSlide > 0) {
+      setCurrSlide(currSlide -1);
     }
   }
 
-  render() {
-
-    return (
-      <div className="lightbox"> {/*onClick={this.onSlimClose}*/}
-        <div className="slimpop-wrapper slide-show">
-          <p className="close">
-            <a href="/" onClick={this.onSlidePrev}>Prev</a> | 
-            <a href="/" onClick={this.onSlideNext}>Next</a> | 
-            <a href="/" onClick={this.onSlimClose}>Close</a>
-          </p>
-          <h2>Slide Show: {this.props.title}</h2> {/*props.title*/}
-          <p>{slides[this.state.currSlide].caption}</p>
-          <img 
-            src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[this.state.currSlide].imgName}.jpg`}
-            alt='meaningful alt text'/>
-        </div>
+  return (
+    <div className="lightbox"> {/*onClick={this.onSlimClose}*/}
+      <div className="slimpop-wrapper slide-show">
+        <p className="close">
+          <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
+          <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
+          <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
+        </p>
+        <h2>Slide Show: {props.title}</h2> {/*props.title*/}
+        <p>{slides[currSlide].caption}</p>
+        <img 
+          src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[currSlide].imgName}.jpg`}
+          alt='meaningful alt text'/>
       </div>
-    );
-  } // end render
+    </div>
+  );
 } // end class
 
 SlideShow.defaultProps = {
