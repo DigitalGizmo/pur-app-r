@@ -1,25 +1,23 @@
 import React from 'react'; // , { useState }
 import {
-    ApolloClient,
-    InMemoryCache,
+    // ApolloClient,
+    // InMemoryCache,
     // ApolloProvider,
     useQuery,
     gql
-} from "@apollo/client"
+} from "@apollo/client"; // , makeVar
 import './Visuals.css';
 import ImageList from './ImageList';
 
-const client = new ApolloClient({
-  uri: 'http://admin.picturingurbanrenewal.org/archive/graphql/',
-  cache: new InMemoryCache()
-});
-
 const Visuals= () => {
   // const [cityID, setCityID] = useState(0);
+  // const cityIdVar = makeVar([]);
+  // cityIdVar([2]);
+  // console.log(cityIdVar);
 
   const { loading, error, data } = useQuery(gql`
-    query getImages {
-      all_images {
+    query getImages ($city_id: Int) {
+      all_images(city_id: $city_id) {
         id
         slug
         title
@@ -31,7 +29,7 @@ const Visuals= () => {
         street_address
       }
     }
-  `
+  `, {city_id: 1}
   );
 
   return (
