@@ -29,9 +29,11 @@ const Visuals= () => {
         street_address
       }
     }
-  `, {city_id: 1}
+  `
   );
 
+  // , { variables: { city_id: 1 } }
+  
   return (
     <div>
       <h2>The Visual Record</h2>
