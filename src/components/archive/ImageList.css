@@ -1,32 +1,44 @@
 /* From Vue Visuals.vue */
+/* .images-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1.25em .52em;
+  margin: auto;
+}
+
+.images-menu-item {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu-image {
+  width: 100%;
+  display: block;
+}
+
+.menu-image img {
+  height: 100px;
+}
+
+.menu-title {
+  color: grey;
+  font-size: .75em;
+} */
+/*  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+
 .images-menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 1.25em .52em;
-    margin: auto;
-  }
-  
-  .images-menu-item {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 100%;
-  }
-  
-  .menu-image {
-    width: 100%;
-    display: block;
-  }
-  
-  .menu-image img {
-    height: 100px;
-  }
-  
-  .menu-title {
-    color: grey;
-    font-size: .75em;
-  /*  width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;*/
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-gap: 1.25em .52em; */
+  /* grid-gap: 10px; */
+  /* margin: auto; */
+  grid-auto-rows: 15px;
+}
+
+.images-menu img {
+  width: 250px;
+}

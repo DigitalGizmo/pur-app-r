@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SlideShow.css';
 
 const slides = [
@@ -19,7 +19,12 @@ const slides = [
   {imgName: 'haines-utility-poles', caption: 'Utility workers removing wiring and other equipment from overhead poles in the Broadway East urban renewal area. Bob Haines photograph.'},];
 
 const SlideShow = (props) => {
-  const [currSlide, setCurrSlide] = useState(0)
+  const [currSlide, setCurrSlide] = useState(0);
+  const numSlides = slides.length;
+
+  useEffect(() => {
+    console.log('got to useEffect: ');
+  }, [currSlide]);
 
   // baseImagePath = 'http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/';
 
@@ -47,6 +52,7 @@ const SlideShow = (props) => {
     <div className="lightbox"> {/*onClick={this.onSlimClose}*/}
       <div className="slimpop-wrapper slide-show">
         <p className="close">
+          {currSlide + 1} of {numSlides} |
           <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
           <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
           <a href="/" onClick={ event => onSlimClose(event) }>Close</a>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './ImageList.css';
+import ImageCard from './ImageCard';
 
 const ImageList = ({loading, error, data}) => {
 
@@ -7,22 +8,8 @@ const ImageList = ({loading, error, data}) => {
   if (error) return <p>Error :(</p>;
 
   // return data.all_images.map(({ id, slug, title }) => (
-  const images = data.all_images.map(({ id, slug, title }) => {
-    return (
-      <figure 
-        className="images-menu-item"
-        key={id}
-        >
-          <img 
-            className="menu-image" 
-            src={`http://admin.picturingurbanrenewal.org/media/visuals/thumbpics/${slug}-tn.jpg`}
-            alt={title}
-          />
-          <figcaption className="menu-title">
-            { title}
-          </figcaption>
-      </figure>
-    )
+  const images = data.all_images.map((image) => {
+    return  <ImageCard key={image.id} image={image} />;
   });
 
   return (
