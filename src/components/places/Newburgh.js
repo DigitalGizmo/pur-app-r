@@ -9,11 +9,14 @@ import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , 
 // };
 
 const Newburgh = () => {
-  const [imageName, setImageName] = useState('newburgh-aerial-1')
+  const [imageName, setImageName] = useState('newburgh-aerial-1');
+  // const image2 = 'newburgh-guided-map1-title';
+  // const [firstVisible, setFirstVisible] = useState(true);
 
   const onChangeImage = () => {
     console.log('got to onChangeImage');
     setImageName('newburgh-guided-map1-title');
+    // setFirstVisible(!firstVisible);
   }
 
   return (
@@ -31,15 +34,28 @@ const Newburgh = () => {
       <div id="image-sequence1" className="image-panel"> 
           {/* image-1a */}
           <div>
-            <AnimatePresence>
+            <AnimatePresence initial={false}>
               <motion.img
                 key={imageName}
                 src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
-                alt="aerial view of Newburgh"
-                initial={{ opacity: 1 }}
-                exit={{ opacity: 0}}
-                transition={{ duration: 1 }}
-                // layoutId={`unique`}
+                alt={imageName}
+                initial={{ 
+                  opacity: 0,
+                  position: 'absolute',
+                  // top: 10,
+                  // left: 10,
+                }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 0, duration: 1 },
+                  transitionEnd: { position: 'static'}
+                }}
+                exit={{ 
+                  opacity: 0,
+                  position: 'static',
+                  transition: { delay: 0, duration: 1 }
+                }}
+                
               />
             </AnimatePresence>
           </div>
