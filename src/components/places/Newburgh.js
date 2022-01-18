@@ -1,7 +1,7 @@
-import React, { useState } from 'react'; // , { useEffect }
-// import React from 'react';
+import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
-// import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
+import './Newburgh.css';
 
 // const imageVariants = {
 //     visible: { opacity: 1, transition: { duration: 1 }},
@@ -12,6 +12,15 @@ const Newburgh = () => {
   const [imageName, setImageName] = useState('newburgh-aerial-1');
   // const image2 = 'newburgh-guided-map1-title';
   // const [firstVisible, setFirstVisible] = useState(true);
+  const [ref1, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      // console.log("square coming into view");
+      // call some change to pinned here
+      onChangeImage();
+    }
+  }, [inView]);
 
   const onChangeImage = () => {
     console.log('got to onChangeImage');
@@ -34,6 +43,7 @@ const Newburgh = () => {
       <div id="image-sequence1" className="image-panel"> 
           {/* image-1a */}
           <div>
+          {/* <img src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1-title.jpg"/> */}
             <AnimatePresence initial={false}>
               <motion.img
                 key={imageName}
@@ -70,9 +80,11 @@ const Newburgh = () => {
               <p className="gallery-text">Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city&rsquo;s population, as well as its tax base, was in decline. The planners&rsquo; solution to this cluster of problems was to start over from scratch.</p>
           </motion.div>
 
-          <div>{/*  text-1b */}
+          <motion.div
+            ref={ref1}
+          >{/*  text-1b */}
               <p className="gallery-text">This was the logic of urban renewal: Demolition of existing homes and shops was the first step toward transforming a blighted area. Once cleared, small lots could be repackaged into larger parcels for sale to private developers. Those developers would build modern housing and commercial developments. New people (whiter and wealthier than their predecessors) would move into the new homes. New businesses would rent space in the commercial structures. These new businesses and residents would stabilize municipal finances.</p>
-          </div>
+          </motion.div>
 
           <motion.div 
             animate={{ x: '100px'}}
