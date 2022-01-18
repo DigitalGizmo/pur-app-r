@@ -1,3 +1,8 @@
+/* Don adding this main section */
+.main-section {
+  position: relative;
+}
+
 .image-panel {
   height: 80vh;
   position: relative;

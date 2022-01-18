@@ -3,56 +3,26 @@ import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , 
 import { useInView } from "react-intersection-observer";
 import './Newburgh.css';
 
-// const imageVariants = {
-//     visible: { opacity: 1, transition: { duration: 1 }},
-//     hidden: { opacity: 0.1}
-// };
-
 const Newburgh = () => {
-  // const [imageName, setImageName] = useState('newburgh-aerial-1');
+  const images = [
+    'newburgh-aerial-1', 
+    'newburgh-guided-map1-title',
+  ];
+  const [imageName, setImageName] = useState(images[0]);
   // const image2 = 'newburgh-guided-map1-title';
-  // const [firstVisible, setFirstVisible] = useState(true);
   const [ref1, inView] = useInView();
-
-  function First() {
-    return (
-      <motion.img 
-      style={{ maxWidth: "100%", position: "relative" }}
-        src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1-title.jpg"
-      />
-    );
-  }
-
-  function Second() {
-    return (
-      <motion.img 
-      style={{ maxWidth: "100%", position: "relative" }}
-        src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-guided-map1-title.jpg"
-      />
-    );
-  }
-
-  const sections = {
-    first: "First",
-    second: "Second"
-  };
-  const [activeSection, setActiveSection] = useState(sections.first);
-
 
   useEffect(() => {
     if (inView) {
-      // console.log("square coming into view");
-      // call some change to pinned here
+      // console.log("caption coming into view");
+      // call some change to pinned div here
       onChangeImage();
     }
   }, [inView]);
 
   const onChangeImage = () => {
     // setImageName('newburgh-guided-map1-title');
-    // setFirstVisible(!firstVisible);
-    setActiveSection(sections.second);
-    
-    console.log('onChangeImage, activeSection: ' + activeSection);
+    setImageName(images[1]);
   }
 
   return (
@@ -60,26 +30,20 @@ const Newburgh = () => {
     <header className="basic-page">
         <h1>Title</h1>
         <h4>Newburgh</h4>
-        <button onClick={() => onChangeImage()}>
-          change image
-        </button>
     </header>
 
     {/* <div id="chapter1-title" class="chapter-title">
       <h2>Newburgh from the Planner's Perspective</h2>
     </div> */}
 
-    <section id="chapter1"> 
+    <section id="chapter1" className='main-section'> 
         
       <div id="image-sequence1" className="image-panel"> 
           {/* image-1a */}
           <div>
-          {/* <img src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1-title.jpg"/> */}
             <AnimatePresence initial={false}>
               <motion.div
-                key={activeSection}
-                // src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
-                // alt={imageName}
+                key={imageName}
                 initial={{ 
                   opacity: 0,
                   position: 'absolute',
@@ -97,9 +61,10 @@ const Newburgh = () => {
                   transition: { delay: 0, duration: 1 }
                 }}                
               >
-                {activeSection === sections.first && <First />}
-                {activeSection === sections.second && <Second />}
-
+                <img 
+                  alt={imageName}
+                  src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
+                />
               </motion.div>
             </AnimatePresence>
           </div>
@@ -114,18 +79,14 @@ const Newburgh = () => {
               <p className="gallery-text">Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city&rsquo;s population, as well as its tax base, was in decline. The planners&rsquo; solution to this cluster of problems was to start over from scratch.</p>
           </motion.div>
 
-          <motion.div
-            ref={ref1}
-          >{/*  text-1b */}
+          <motion.div ref={ref1}>{/*  text-1b */}
               <p className="gallery-text">This was the logic of urban renewal: Demolition of existing homes and shops was the first step toward transforming a blighted area. Once cleared, small lots could be repackaged into larger parcels for sale to private developers. Those developers would build modern housing and commercial developments. New people (whiter and wealthier than their predecessors) would move into the new homes. New businesses would rent space in the commercial structures. These new businesses and residents would stabilize municipal finances.</p>
           </motion.div>
 
-          <motion.div 
-            animate={{ x: '100px'}}
-            >{/*  text-2a */}
+          <div>{/*  text-2a */}
               <h4>The Appraiser&rsquo;s Advice - debug: waypoint trigger</h4>
               <p className="gallery-text">In 1964, when Newburgh&rsquo;s city council hired the planning firm of David Rosen Associates, urban renewal was already underway.</p>
-          </motion.div>
+          </div>
 
           <div>{/*  text-2b */}
               <p className="gallery-text">The planning firm&rsquo;s job was to assess the &ldquo;feasibility&rdquo; of expanding the urban renewal area.</p>
