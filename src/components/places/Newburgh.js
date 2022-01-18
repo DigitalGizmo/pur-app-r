@@ -14,16 +14,20 @@ const Newburgh = () => {
 
   useEffect(() => {
     if (inView) {
-      // console.log("caption coming into view");
+      console.log("caption inView: " + inView);
       // call some change to pinned div here
-      onChangeImage();
+      // onChangeImage();
+      setImageName(images[1]);
+    }
+    if(!inView) {
+      console.log("went out of view" + inView);
     }
   }, [inView]);
 
-  const onChangeImage = () => {
-    // setImageName('newburgh-guided-map1-title');
-    setImageName(images[1]);
-  }
+  // const onChangeImage = () => {
+  //   // setImageName('newburgh-guided-map1-title');
+  //   setImageName(images[1]);
+  // }
 
   return (
     <div>
