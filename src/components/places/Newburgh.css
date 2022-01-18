@@ -8,12 +8,33 @@
   position: relative;
 }
 
+/* 
 .image-panel div {
-  /* position: absolute; */
-  position: fixed;
+  position: absolute;
   top: 160;
   left: 0;
+} */
+
+/* .image-panel div {
+  position: fixed;
+  top: 100;
+  left: 10;
+} */
+
+
+.image-panel-outer-div {
+  position: fixed;
+  top: 100;
+  left: 10;
 }
+
+.image-panel div img, div.full-image img {
+  border: thin solid #615c3d;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.6em;
+}
+
 
 .chapter-title {
   background-color: #B25900;
@@ -29,6 +50,8 @@
   height: auto;
   margin-bottom: 1.6em;
 }
+
+
 
 .caption-panel {
   position: relative;

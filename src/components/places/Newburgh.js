@@ -16,44 +16,44 @@ const Newburgh = () => {
     if (inView) {
       console.log("caption inView: " + inView);
       // call some change to pinned div here
-      // onChangeImage();
-      setImageName(images[1]);
+      onChangeImage();
+      // setImageName(images[1]);
     }
     if(!inView) {
       console.log("went out of view" + inView);
     }
   }, [inView]);
 
-  // const onChangeImage = () => {
-  //   // setImageName('newburgh-guided-map1-title');
-  //   setImageName(images[1]);
-  // }
+  const onChangeImage = () => {
+    // setImageName('newburgh-guided-map1-title');
+    setImageName(images[1]);
+  }
 
   return (
     <div>
-{/*    <header className="basic-page">
-        <h1>Title</h1>
-        <h4>Newburgh</h4>
-    </header>*/}
-{/*   main nav(app.js) and chapter title should be pinned; also improve markup to use header element
-*/}
-    { <div id="chapter1-title" class="chapter-title">
+    {/* <header className="basic-page">
+      <h1>Title</h1>
+      <h4>Newburgh</h4>
+    </header> */}
+    {/*   main nav(app.js) and chapter title should be pinned; 
+      also improve markup to use header element
+    */}
+    <div id="chapter1-title" className="chapter-title">
       <h2>Newburgh from the Planner's Perspective</h2>
-    </div> }
+    </div>
 
     <section id="chapter1" className='main-section'> 
         
       <div id="image-sequence1" className="image-panel"> 
-          {/* image-1a */}
-          <div>
+          <div className='image-panel-outer-div'>
             <AnimatePresence initial={false}>
               <motion.div
                 key={imageName}
                 initial={{ 
                   opacity: 0,
                   position: 'absolute',
-                  // top: 10,
-                  // left: 10,
+                  top: 0,
+                  left: 0,
                 }}
                 animate={{
                   opacity: 1,
