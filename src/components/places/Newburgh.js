@@ -31,14 +31,15 @@ const Newburgh = () => {
 
   return (
     <div>
-    <header className="basic-page">
+{/*    <header className="basic-page">
         <h1>Title</h1>
         <h4>Newburgh</h4>
-    </header>
-
-    {/* <div id="chapter1-title" class="chapter-title">
+    </header>*/}
+{/*   main nav(app.js) and chapter title should be pinned; also improve markup to use header element
+*/}
+    { <div id="chapter1-title" class="chapter-title">
       <h2>Newburgh from the Planner's Perspective</h2>
-    </div> */}
+    </div> }
 
     <section id="chapter1" className='main-section'> 
         
