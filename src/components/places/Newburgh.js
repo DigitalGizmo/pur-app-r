@@ -9,10 +9,35 @@ import './Newburgh.css';
 // };
 
 const Newburgh = () => {
-  const [imageName, setImageName] = useState('newburgh-aerial-1');
+  // const [imageName, setImageName] = useState('newburgh-aerial-1');
   // const image2 = 'newburgh-guided-map1-title';
   // const [firstVisible, setFirstVisible] = useState(true);
   const [ref1, inView] = useInView();
+
+  function First() {
+    return (
+      <motion.img 
+      style={{ maxWidth: "100%", position: "relative" }}
+        src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1-title.jpg"
+      />
+    );
+  }
+
+  function Second() {
+    return (
+      <motion.img 
+      style={{ maxWidth: "100%", position: "relative" }}
+        src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-guided-map1-title.jpg"
+      />
+    );
+  }
+
+  const sections = {
+    first: "First",
+    second: "Second"
+  };
+  const [activeSection, setActiveSection] = useState(sections.first);
+
 
   useEffect(() => {
     if (inView) {
@@ -23,9 +48,11 @@ const Newburgh = () => {
   }, [inView]);
 
   const onChangeImage = () => {
-    console.log('got to onChangeImage');
-    setImageName('newburgh-guided-map1-title');
+    // setImageName('newburgh-guided-map1-title');
     // setFirstVisible(!firstVisible);
+    setActiveSection(sections.second);
+    
+    console.log('onChangeImage, activeSection: ' + activeSection);
   }
 
   return (
@@ -38,6 +65,10 @@ const Newburgh = () => {
         </button>
     </header>
 
+    {/* <div id="chapter1-title" class="chapter-title">
+      <h2>Newburgh from the Planner's Perspective</h2>
+    </div> */}
+
     <section id="chapter1"> 
         
       <div id="image-sequence1" className="image-panel"> 
@@ -45,10 +76,10 @@ const Newburgh = () => {
           <div>
           {/* <img src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1-title.jpg"/> */}
             <AnimatePresence initial={false}>
-              <motion.img
-                key={imageName}
-                src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
-                alt={imageName}
+              <motion.div
+                key={activeSection}
+                // src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
+                // alt={imageName}
                 initial={{ 
                   opacity: 0,
                   position: 'absolute',
@@ -64,9 +95,12 @@ const Newburgh = () => {
                   opacity: 0,
                   position: 'static',
                   transition: { delay: 0, duration: 1 }
-                }}
-                
-              />
+                }}                
+              >
+                {activeSection === sections.first && <First />}
+                {activeSection === sections.second && <Second />}
+
+              </motion.div>
             </AnimatePresence>
           </div>
       </div>{/*  /image-panel */}
