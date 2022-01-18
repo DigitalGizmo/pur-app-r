@@ -1,6 +1,6 @@
-import React from 'react'; // , { useEffect }
+import React, { useState } from 'react'; // , { useEffect }
 // import React from 'react';
-import {motion } from 'framer-motion/dist/framer-motion'; // , useAnimation
+import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 // import { useInView } from "react-intersection-observer";
 
 // const imageVariants = {
@@ -9,27 +9,40 @@ import {motion } from 'framer-motion/dist/framer-motion'; // , useAnimation
 // };
 
 const Newburgh = () => {
+  const [imageName, setImageName] = useState('newburgh-aerial-1')
+
+  const onChangeImage = () => {
+    console.log('got to onChangeImage');
+    setImageName('newburgh-guided-map1-title');
+  }
 
   return (
     <div>
     <header className="basic-page">
         <h1>Title</h1>
         <h4>Newburgh</h4>
+        <button onClick={() => onChangeImage()}>
+          change image
+        </button>
     </header>
 
     <section id="chapter1"> 
         
       <div id="image-sequence1" className="image-panel"> 
           {/* image-1a */}
-          <motion.div
-            initial={{ opacity: 0.2 }}
-            animation={{ opacity: 1 }}
-          >
-              <img 
-                  src="http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/newburgh-aerial-1.jpg"
-                  alt="aerial view of Newburgh"
+          <div>
+            <AnimatePresence>
+              <motion.img
+                key={imageName}
+                src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
+                alt="aerial view of Newburgh"
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0}}
+                transition={{ duration: 1 }}
+                // layoutId={`unique`}
               />
-          </motion.div>
+            </AnimatePresence>
+          </div>
       </div>{/*  /image-panel */}
 
       <div id="caption-sequence1" className="caption-panel">
