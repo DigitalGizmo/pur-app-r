@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { useInView } from "react-intersection-observer";
+import MainNav from '../common/MainNav';
 import './Newburgh.css';
 
 const Newburgh = () => {
@@ -38,21 +39,22 @@ const Newburgh = () => {
     {/*   main nav(app.js) and chapter title should be pinned; 
       also improve markup to use header element
     */}
-    <div id="chapter1-title" className="chapter-title">
-      <h2>Newburgh from the Planner's Perspective</h2>
-    </div>
 
     <section id="chapter1" className='main-section'> 
         
       <div id="image-sequence1" className="image-panel"> 
           <div className='image-panel-outer-div'>
+            <MainNav />
+            <div id="chapter1-title" className="chapter-title">
+              <h2>Newburgh from the Planner's Perspective</h2>
+            </div>
             <AnimatePresence initial={false}>
               <motion.div
                 key={imageName}
                 initial={{ 
                   opacity: 0,
                   position: 'absolute',
-                  top: 0,
+                  top: 100,
                   left: 0,
                 }}
                 animate={{

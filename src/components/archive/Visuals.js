@@ -6,6 +6,7 @@ import {
     useQuery,
     gql
 } from "@apollo/client"; // , makeVar
+import MainNav from '../common/MainNav';
 import './Visuals.css';
 import ImageList from './ImageList';
 
@@ -36,6 +37,7 @@ const Visuals= () => {
   
   return (
     <div>
+      <MainNav />
       <h2>The Visual Record</h2>
       <h3># Images | Filter Images </h3>
 
