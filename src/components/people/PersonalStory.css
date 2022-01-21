@@ -1,7 +1,7 @@
 .basic-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-gap: 1.5em;
 }
 
@@ -33,11 +33,15 @@
   grid-column: 2/5;
 }
 
+.second-row {
+  grid-row: 3;
+}
+  
 article.text-side {
   background: rgba(53, 53, 38, 0.8);
   grid-column: 5/7;
   grid-row-start:  1;
-  grid-row-end: last-line;
+  grid-row-end: 4;
   padding: 1em;
 }
 
@@ -50,6 +54,6 @@ p.caption {
   color: #BAB692;
   border: 1px solid #686959;
   font-size: .75em;
-  margin: 0;
-  padding: 1em;
+  margin: 0 0 2em 0;
+  padding: .75em;
 }

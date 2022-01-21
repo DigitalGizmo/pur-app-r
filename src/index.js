@@ -4,7 +4,11 @@ import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './components/App';
+import CitiesMenu from './components/cities/CitiesMenu';
+import PeopleMenu from './components/people/PeopleMenu';
 import PersonalStory from './components/people/PersonalStory';
+import PersonalStoryCW from './components/people/PersonalStoryCW';
+import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
 // import Visuals from './components/archive/Visuals';
 import GqlShell from './components/archive/GqlShell';
@@ -34,8 +38,12 @@ render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="/people/haines-dauner" element={<PersonalStory />} />
+          <Route path="/cities" element={<CitiesMenu />} />
+          <Route path="/people" element={<PeopleMenu />} />
+            <Route path="/people/haines-dauner" element={<PersonalStory />} />
+            <Route path="/people/carrie-wilson" element={<PersonalStoryCW />} />
           <Route path="/archive/visuals" element={<GqlShell />} />
+          <Route path="/places" element={<PlacesMenu />} />
           <Route path="/places/newburgh" element={<Newburgh />} />
         </Route>
       </Routes>
