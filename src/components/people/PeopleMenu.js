@@ -5,7 +5,7 @@ import MainNav from '../common/MainNav';
 const PeopleMenu = () => {
   return (
     <div>
-      <MainNav />
+      <MainNav selected='people'/>
       <h2>Personal Stories</h2>
       <ul>
         <li><Link to="/people/haines-dauner">Bob Haines and Gene Dauner, Photographers</Link></li>

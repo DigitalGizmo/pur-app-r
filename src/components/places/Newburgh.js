@@ -41,7 +41,7 @@ const Newburgh = () => {
           
         <div id="image-sequence1" className="image-panel"> 
             <div className='image-panel-outer-div'>
-              <MainNav />
+            <MainNav selected='places'/>
               <div id="chapter1-title" className="chapter-title">
                 <h2>Newburgh from the Planner's Perspective</h2>
               </div>

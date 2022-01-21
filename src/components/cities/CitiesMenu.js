@@ -5,7 +5,7 @@ import MainNav from '../common/MainNav';
 const CitiesMenu = () => {
   return (
     <div>
-      <MainNav />
+      <MainNav selected='cities'/>
       <h2>4 Cities / 4 Stories</h2>
       <ul>
         <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">Albany: Lost Places/Displaced People - The Reaction to Redevelopment</a></li>

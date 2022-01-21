@@ -44,7 +44,7 @@ class PersonalStory extends React.Component {
 
     return (
       <div>
-        <MainNav />
+        <MainNav selected='people'/>
         <header className="basic-page">
           <h1>Carrie Wilson, Contract Buyer</h1>
           <h4>Newburgh, NY</h4>

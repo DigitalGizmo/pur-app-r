@@ -9,9 +9,10 @@ class Home extends React.Component {
       <div>
       <h2>Home page</h2>
         <ul>
+            <li><Link to="/cities">4 Cities / 4 Stories</Link></li>
             <li><Link to="/people">Personal Stories</Link></li>
+            <li><a href="http://app.picturingurbanrenewal.org/visuals">Visual Record</a> </li>
             <li><Link to="/places">Place-Based Explorations</Link></li>
-            <li><Link to="/archive/visuals">Visuals</Link></li>
           </ul>  
       </div>
     );
