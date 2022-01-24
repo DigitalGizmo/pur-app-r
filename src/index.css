@@ -159,6 +159,14 @@ h1 {
   font-size: 3em;
 }
 
+div.menu-page {
+  padding: .5em 3%;
+}
+
+.menu-page ul {
+  margin-top: 2em;
+}
+
 /* basic-page is for personal stories, essays, etc */
 header.basic-page {
   background-color: #686959;

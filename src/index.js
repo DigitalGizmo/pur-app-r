@@ -8,6 +8,7 @@ import CitiesMenu from './components/cities/CitiesMenu';
 import PeopleMenu from './components/people/PeopleMenu';
 import PersonalStory from './components/people/PersonalStory';
 import PersonalStoryCW from './components/people/PersonalStoryCW';
+import PersonalStoryJR from './components/people/PersonalStoryJR';
 import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
 // import Visuals from './components/archive/Visuals';
@@ -42,6 +43,7 @@ render(
           <Route path="/people" element={<PeopleMenu />} />
             <Route path="/people/haines-dauner" element={<PersonalStory />} />
             <Route path="/people/carrie-wilson" element={<PersonalStoryCW />} />
+            <Route path="/people/joseph-resnick" element={<PersonalStoryJR />} />
           <Route path="/archive/visuals" element={<GqlShell />} />
           <Route path="/places" element={<PlacesMenu />} />
           <Route path="/places/newburgh" element={<Newburgh />} />

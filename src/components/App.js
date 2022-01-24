@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom'; // , Link
-
+import MainNav from './common/MainNav';
 
 function App() {
   return (
     <div >
-      <Outlet 
+     <MainNav/>
+     <Outlet 
         message="test message"
       />
     </div>
