@@ -1,5 +1,4 @@
 import React from 'react';
-import MainNav from '../common/MainNav';
 import SlideShow from './SlideShow';
 import './PersonalStory.css';
 
@@ -45,7 +44,6 @@ class PersonalStory extends React.Component {
 
     return (
       <div>
-        <MainNav selected='people'/>
         <header className="basic-page">
           <h1>Joseph Y. Resnick, US Congressman</h1>
           <h4>Kingston, NY</h4>
@@ -76,7 +74,7 @@ class PersonalStory extends React.Component {
             <p className="caption">Cover of Resnick&rsquo;s 1964 campaign booklet.</p>
 
             <img src="http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/resnick-selma-delegation.jpg" 
-              alt="photo of delegation members"
+              alt="delegation members"
             />
             <p className="caption">Press photo of the Selma Congressional delegation.</p>
           </div>

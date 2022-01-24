@@ -398,6 +398,9 @@ then that file should be sym linked to be
 available for model pages */
 nav.main-menu {
   text-align: center;
+  /* position: fixed;
+  top: 0;
+  left: 0; */
 }
 
 nav.main-menu li {

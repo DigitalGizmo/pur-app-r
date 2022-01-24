@@ -6,7 +6,7 @@ class Home extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="menu-page">
       <h2>Home page</h2>
         <ul>
             <li><Link to="/cities">4 Cities / 4 Stories</Link></li>

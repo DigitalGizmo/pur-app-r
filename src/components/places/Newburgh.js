@@ -1,7 +1,6 @@
 import React, { useState } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import MainNav from '../common/MainNav';
 import { images, captions } from './NewburghContent';
 // import CaptionDissolve from './CaptionDissolve';
 import './Newburgh.css';
@@ -18,19 +17,43 @@ const Newburgh = () => {
     }
   };
 
+  // const captionDissolves = () => {
+  //   let captionSequence = [];
+  //   for(let i = 0; i < captions.length; i++) {
+  //     const presetHTML = <div dangerouslySetInnerHTML={{ __html: captions[i] }}></div>;
+  //     captionSequence.push( 
+  //       <InView 
+  //         as="div" 
+  //         // dangerouslySetInnerHTML={{ __html: captions[i] }}
+  //         onChange={(inView, entry) => { 
+  //           console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + i);
+  //           onChangeImage(inView, i); 
+  //         }
+  //         }>
+  //         {/* dangerouslySetInnerHTML={{ __html: captions[i] }} */}
+  //         {/* { captions[i].text } */}
+  //         { presetHTML}
+  //       </InView>  
+  //       // <div>text: { captions[i].text }</div>
+  //     );
+  //   }
+  //   return captionSequence;
+  // }
+
   const captionDissolves = captions.map((caption, index) => {
-    const presetHTML = `<h4>${caption.title}</h4> ${caption.text}`;
-    return (
-       <InView 
-        as="div" 
-        dangerouslySetInnerHTML={{ __html: presetHTML }}
-        onChange={(inView, entry) => { 
-          console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
-          onChangeImage(inView, index); 
-        }}>
-      </InView>          
-    ) 
-  });
+      const presetHTML = `<h4>${caption.title}</h4> ${caption.text}`;
+      return (
+        <InView 
+          as="div" 
+          dangerouslySetInnerHTML={{ __html: presetHTML }}
+          onChange={(inView, entry) => { 
+            console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
+            onChangeImage(inView, index); 
+          }}>
+        </InView>          
+      ) 
+  })
+  
 
   return (
     <div>
@@ -41,7 +64,6 @@ const Newburgh = () => {
           
         <div id="image-sequence1" className="image-panel"> 
             <div className='image-panel-outer-div'>
-            <MainNav selected='places'/>
               <div id="chapter1-title" className="chapter-title">
                 <h2>Newburgh from the Planner's Perspective</h2>
               </div>
@@ -51,7 +73,8 @@ const Newburgh = () => {
                   initial={{ 
                     opacity: 0,
                     position: 'absolute',
-                    top: 104, // don't know why +4 works
+                    // top: 104, // this works w main nav fixed
+                    top: 72, // works w main nav scrolling away
                     left: 0,
                   }}
                   animate={{
@@ -76,6 +99,7 @@ const Newburgh = () => {
 
         <div id="caption-sequence1" className="caption-panel">
           { captionDissolves }
+          {/* {captionSequence} */}
         </div>{/*  /caption-panel */}
 
       </section> {/*  /chapter1 */}

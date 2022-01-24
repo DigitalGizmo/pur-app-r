@@ -17,9 +17,15 @@ h2 {
 }
 
 /* Don's freelancing */
-#main-menu li {
+/* .main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+} */
+
+/* .main-menu li {
   display: inline;
-}
+} */
 
 .little-title {
   font-size: 1em;
