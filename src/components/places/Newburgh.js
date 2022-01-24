@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import { images, captions } from './NewburghContent';
+import { images, captionSections } from './NewburghContentSections';
 // import CaptionDissolve from './CaptionDissolve';
 import './Newburgh.css';
 
@@ -40,8 +40,9 @@ const Newburgh = () => {
   //   return captionSequence;
   // }
 
-  const captionDissolves = captions.map((caption, index) => {
-      const presetHTML = `<h4>${caption.title}</h4> ${caption.text}`;
+  // const captionDissolves = captions.map((caption, index) => {
+  let captionDissolves = (sectionIndex) => captionSections[sectionIndex].captions.map((caption, index) => {
+      const presetHTML = `${caption.text}`;
       return (
         <InView 
           as="div" 
@@ -98,8 +99,14 @@ const Newburgh = () => {
         </div>{/*  /image-panel */}
 
         <div id="caption-sequence1" className="caption-panel">
-          { captionDissolves }
-          {/* {captionSequence} */}
+          <h2 className='section-title'>{ captionSections[0].title}</h2>
+          { captionDissolves(0) }
+          <h2 className='section-title'>{ captionSections[1].title}</h2>
+          { captionDissolves(1) }
+          <h2 className='section-title'>{ captionSections[2].title}</h2>
+          { captionDissolves(2) }
+          <h2 className='section-title'>{ captionSections[3].title}</h2>
+          { captionDissolves(3) }
         </div>{/*  /caption-panel */}
 
       </section> {/*  /chapter1 */}
