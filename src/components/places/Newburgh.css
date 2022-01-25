@@ -9,9 +9,13 @@
 }
 
 .section-title {
+  color: #d17316;
+  font-size: 2em;
+  font-weight: bold;
+  left: 3%;
   position: fixed;
-  top: 100px;
-  left: 30px;
+  text-shadow: 1px 1px black;
+  top: 120px;
 }
 /* 
 .image-panel div {

@@ -1,10 +1,15 @@
 const images = [
-  'newburgh-aerial-1-title',
-  'newburgh-aerial-2-title',
-  'newburgh-guided-map1-title',
-  'newburgh-guided-map1a-title',
-  'newburgh-guided-map1b-title',
+  'newburgh-aerial-1',
+  'newburgh-aerial-2',
+  'newburgh-aerial-2-map1',
+  'newburgh-aerial-2-map2',
+  'newburgh-aerial-2-map3',
+  'newburgh-aerial-2-map4',
+  'newburgh-post-office',
   'newburgh-front&water',
+  'newburgh-guided-map1',
+  'newburgh-guided-map1a',
+  'newburgh-guided-map1b',
   'Feasability_Survey_Area_Map3-sized',
   'Feasability_Survey_Area_Map3-deterior',
   'newburgh-map3-5a',
@@ -28,59 +33,105 @@ const images = [
 
 const sectionTitles = [
   'The View from Above',
+  'East Newburgh',
   'The Appraiser\'s Advice',
-  'The East Newburgh Urban Renewal Area',
   'Good, Fair, Deteriorating, Deteriorated',
   'Missing from the Planners\' Perspective',
   'The Homeowners\' Perspective',
   'Preservation and Demolition',
   'Repackaging East Newburgh',
-  
+  'A New Map of East Newburgh',
+  'Middle-class Comforts',
+  'Urban Amenities',
+  'Plan vs. Reality',  
 ]
   const captions = [
     {
-      label: 'text-1a - The View from Above',
+      label: 'text-1a image: aerial photo - The View from Above',
       titleIndex: 0,
-      text: '<p>Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city&rsquo;s population, as well as its tax base, was in decline. The planners&rsquo; solution to this cluster of problems was to start over from scratch.</p>',
+      text: '<p>Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city\'s population, as well as its tax base, was in decline. The planners\' solution to this cluster of problems was to start over from scratch.</p>',
     },
     {
-      label: 'text-1b',
+      label: 'text-1b image: zoomed in aerial photo - The View from Above',
       titleIndex: null,
-      text: '<p>This was the logic of urban renewal: Demolition of existing homes and shops was the first step toward transforming a blighted area. Once cleared, small lots could be repackaged into larger parcels for sale to private developers. Those developers would build modern housing and commercial developments. New people (whiter and wealthier than their predecessors) would move into the new homes. New businesses would rent space in the commercial structures. These new businesses and residents would stabilize municipal finances.</p>'
+      text: '<p>This was the logic of urban renewal:</p><p>Demolition of existing homes and shops was the first step toward transforming a blighted area.</p>'
     },
     {
-      label: 'text-2a - The Appraiser&rsquo;s Advice',
+      label: 'text-1c image: - The View from Above',
+      titleIndex: null,
+      text: '<p>Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: 'text-1d image: - The View from Above',
+      titleIndex: null,
+      text: '<p>Those developers would build modern housing and commercial developments.</p>'
+    },
+    {
+      label: 'text-1e image: - The View from Above',
+      titleIndex: null,
+      text: '<p>New people (whiter and wealthier than their predecessors) would move into the new homes. New businesses would rent space in the commercial structures.</p>'
+    },
+    {
+      label: 'text-1f image: - The View from Above',
+      titleIndex: null,
+      text: '<p>These new businesses and residents would stabilize municipal finances.</p>'
+    },
+
+
+    {
+      label: 'text-2a image: newburgh-post-office - East Newburgh',
       titleIndex: 1,
-      text: '<p>In 1964, when Newburgh&rsquo;s city council hired the planning firm of David Rosen Associates, urban renewal was already underway.</p>'
+      text: '<p>The east side of Newburgh is the oldest section of the city. It was once home to Newburgh\'s white elite. That was no longer true by 1960.</p>'
     },
     {
-      label: 'text-2b',
+      label: 'text-2b image: newburgh-front&water - East Newburgh',
       titleIndex: null,
-      text: '<p>The planning firm&rsquo;s job was to assess the &ldquo;feasibility&rdquo; of expanding the urban renewal area.</p>'
+      text: '<p>Between 1950 and 1960, Newburgh\'s Black population more than doubled.</p><p>Many were Southern migrants, part of what is known as the Great Migration. Between World War I and the 1970s, roughly six million African Americans moved from the rural South to the urban North in search of a better life.</p> <p>In Newburgh, these migrants made their homes in the eastern section of the city, along the Hudson River. (White realtors and property owners prevented them from settling anywhere else.)</p> <p>During that same period of time, white city residents moved from east to west or out to the suburbs. Federally-backed mortgages facilitated these moves, described collectively as white flight.</p>'
     },
+
+
     {
-      label: 'text-2c',
-      titleIndex: null,
-      text: '<p>Justifying this expansion was an earlier analysis by real estate appraiser Humes Flynn. In 1961, Mr. Flynn wrote that the earlier Water Street Urban Renewal Project, &ldquo;is only the beginning. The project will be a miserable failure if a future project does not extend from South Street to Water Street on both sides of Smith  and High Streets, and also should include First Street, both sides of Colden Street and South Water Street from Water Street to Washington Street. These areas must in the very near future be demolished, or whatever is built in the present area will be greatly reduced in value and effectiveness by the condition of the properties in the surrounding areas.&rdquo;</p>'
-    },
-    {
-      label: 'text-3 - The East Newburgh Urban Renewal Area',
-      titleIndex: null,
-      text: '<p>The East Newburgh Urban Renewal Area included some of the oldest sections of the city. It was once home to Newburgh&rsquo;s white elite. That was no longer true by 1960.<br>Between 1950 and 1960, the city&rsquo;s Black population more than doubled. Many were Southern migrants, part of what is known as the Great Migration. Between World War I and the 1970s, roughly six million African Americans moved from the rural South to the urban North in search of a better life. In Newburgh, these migrants made their homes in the eastern section of the city. (White property owners prevented them from settling anywhere else.)<br>During the same period of time, white city residents moved from east to west or to the suburbs. Federally-backed mortgages facilitated these moves, described collectively as white flight.</p>'
-    },
-    {
-      label: 'text-4a image: plain map3 - Good, Fair, Deteriorating, Deteriorated',
+      label: 'text-3a image: - The Appraisers Advice',
       titleIndex: 2,
-      text: '<p>The planners started with the assumption that &ldquo;blight and deterioration&rdquo; were rampant in the renewal area.</p>'
+      text: '<p>In 1964, Newburgh\'s city council hired the planning firm of David Rosen Associates. Urban renewal was already underway.</p>'
     },
     {
-      label: 'text-4b image: map 3 with categories highlighted',
+      label: 'text-3b image: - The Appraisers Advice',
       titleIndex: null,
-      text: '<p>Most of the buildings on this map were classified as &ldquo;deteriorating&rdquo; or &ldquo;deteriorated.&rdquo; </p>'
+      text: '<p>The planners\' job was to assess the \"feasibility\" of expanding the urban renewal area to include East Newburgh.</p>'
     },
+    {
+      label: 'text-3c image: - The Appraisers Advice',
+      titleIndex: null,
+      text: '<p>The justification for this expansion was a 1961 report by real estate appraiser Humes Flynn. From the appraiser\'s perspective, the Water Street Urban Renewal Project was \"only the beginning.\" Urban renewal would be a \"miserable failure,\" if more buildings weren\'t demolished. Should the City fail to heed his advice, Mr. Flynn predicted, \"whatever is built in the present area will be greatly reduced in value and effectiveness by the condition of the properties in the surrounding areas.\"</p>'
+    },
+
+
+    {
+      label: 'text-4a image: - Good, Fair, Deteriorating, Deteriorated',
+      titleIndex: 3,
+      text: '<p>The planners started with the assumption that \"blight and deterioration\" were rampant in the renewal area.</p>'
+    },
+    {
+      label: 'text-4b image:  - Good, Fair, Deteriorating, Deteriorated',
+      titleIndex: null,
+      text: '<p>While the planners classified some buildings as being in \"good\" or \"fair\" condition, they regarded most as \"deteriorating\" or \"deteriorated.\"</p>'
+    },
+    {
+      label: 'text-4c image:  - Good, Fair, Deteriorating, Deteriorated',
+      titleIndex: null,
+      text: 'Contemporary photographs show that many East Newburgh buildings were in poor repair. In part this was due to redlining. Redlining was the practice of denying home loans in inner-city neighborhoods or to non-white borrowers.</p>'
+    },
+    {
+      label: 'text-4d image:  - Good, Fair, Deteriorating, Deteriorated',
+      titleIndex: null,
+      text: '<p>But redlining doesn\'t completely explain the planners\' map.</p>'
+    },
+
+
     {
       label: 'text-5a image: map 3 with poor condition photos -Missing from the Planners&rsquo; Perspective',
-      titleIndex: 3,
+      titleIndex: 4,
       text: '<p>Contemporary photographs show that many East Newburgh buildings were in poor condition. In part this was due redlining. Redlining was the practice of restricting bank financing to white borrowers and middle-class neighborhoods. But redlining doesn&rsquo;t completely explain this map.</p>'
     },
     {
