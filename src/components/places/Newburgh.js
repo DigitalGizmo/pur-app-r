@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import { images, captions } from './NewburghContent';
+import { images, captions, sectionTitles } from './NewburghContent';
 // import CaptionDissolve from './CaptionDissolve';
 import './Newburgh.css';
 
@@ -9,24 +9,21 @@ const Newburgh = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [titleIndex, setTitleIndex] = useState(0);
-  // const [sectionTitle, setSectionTitle] = 
-  //   useState(captionSections[0].title);
+  const [sectionTitle, setSectionTitle] = useState(sectionTitles[titleIndex]);
 
-  const onChangeImage = (isInView, imgIndex) => {
-    // console.log('in Newburgh onChangeImage: ' + isInView + ', i: ' + parseInt(imgIndex));
+  const onCaptionChange = (isInView, imgIndex, titleIndex) => {
+    // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));
     if (isInView) {
+      if (titleIndex) { 
+
+        setTitleIndex(titleIndex) 
+        setSectionTitle(sectionTitles[titleIndex]) 
+        // console.log('sectionTitle index: ' + titleIndex);
+      };
       setImageIndex(imgIndex);
       setImageName(images[imgIndex]);
     }
   };
-
-  // const onChangeTitle = (isInView2, titleIndex) => {
-  //   console.log('in onChange title: ' + isInView2 + ', i: ' + titleIndex);
-  //   if (isInView2) {
-  //     setTitleIndex(titleIndex);
-  //     setSectionTitle(captionSections[titleIndex].title);
-  //   }
-  // };
 
   // const captionDissolves = () => {
   //   let captionSequence = [];
@@ -38,7 +35,7 @@ const Newburgh = () => {
   //         // dangerouslySetInnerHTML={{ __html: captions[i] }}
   //         onChange={(inView, entry) => { 
   //           console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + i);
-  //           onChangeImage(inView, i); 
+  //           onCaptionChange(inView, i); 
   //         }
   //         }>
   //         {/* dangerouslySetInnerHTML={{ __html: captions[i] }} */}
@@ -53,19 +50,23 @@ const Newburgh = () => {
 
   const captionDissolves = captions.map((caption, index) => {
   // let captionDissolves = (sectionIndex) => captionSections[sectionIndex].captions.map((caption, index) => {
-      const presetHTML = `${caption.text}`;
-      return (
-        <InView 
-          as="div" 
-          dangerouslySetInnerHTML={{ __html: presetHTML }}
-          onChange={(inView, entry) => { 
-            // console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
-            onChangeImage(inView, index); 
-          }}>
-        </InView>          
-      ) 
+    // key = caption.label;
+    // Handle the caption itself
+    const presetHTML = `${caption.text}`;
+    return (
+      <InView 
+        key={caption.label}
+        as="div" 
+        dangerouslySetInnerHTML={{ __html: presetHTML }}
+        onChange={(inView, entry) => { 
+          // console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
+          // Handle conditional title change
+          onCaptionChange(inView, index, caption.titleIndex); 
+        }}>
+      </InView>          
+    ) 
   })
-  
+
 
   return (
     <div>
@@ -107,23 +108,14 @@ const Newburgh = () => {
                 </motion.div>
               </AnimatePresence>
               <h2 className='section-title'>
-                Section Title Goes Here
+                { sectionTitle }
               </h2>
             </div>
         </div>{/*  /image-panel */}
 
         <div id="caption-sequence1" className="caption-panel">
-          {/* <h2>{ captionSections[0].title}</h2> */}
           {/* { captionDissolves(0) } */}
           { captionDissolves }
-          {/* <InView 
-            as="div" 
-            onChange={(inView2, entry) => { 
-              console.log('in sectionTitle onChange: ' + inView2 + ', i: ' + 1);
-              onChangeTitle(inView2, 1); 
-            }}>
-          </InView>           */}
-
           {/* { captionDissolves(1) }
           { captionDissolves(2) }
           { captionDissolves(3) } */}
