@@ -392,31 +392,3 @@ SlideShow.css etc. */
   padding: 2em;
   position: relative;
 }
-
-/* Main nav should go in common/MainNav.css and
-then that file should be sym linked to be 
-available for model pages */
-nav.main-menu {
-  text-align: center;
-  /* position: fixed;
-  top: 0;
-  left: 0; */
-}
-
-nav.main-menu li {
-  border-right: thin solid #e4e0c7;
-  display: inline;
-  font-size: 0.75em;
-  font-weight: 400;
-  letter-spacing: .15em;
-  padding: 0 2em;
-  text-transform: uppercase;
-}
-
-nav.main-menu li.last-menu-item {
-  border-right: none;
-}
-
-nav.main-menu li.selected a {
-  color: #B25900;
-}

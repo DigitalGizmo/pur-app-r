@@ -107,7 +107,7 @@ const Newburgh = () => {
                   />
                 </motion.div>
               </AnimatePresence>
-              <h2 className='section-title'>
+              <h2 className="section-title">
                 { sectionTitle }
               </h2>
             </div>
