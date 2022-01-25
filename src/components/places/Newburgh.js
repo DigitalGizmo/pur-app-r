@@ -1,21 +1,32 @@
 import React, { useState } from 'react'; // , { useEffect }
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
-import { images, captionSections } from './NewburghContentSections';
+import { images, captions } from './NewburghContent';
 // import CaptionDissolve from './CaptionDissolve';
 import './Newburgh.css';
 
 const Newburgh = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const [imageName, setImageName] = useState(images[imageIndex]);
+  const [titleIndex, setTitleIndex] = useState(0);
+  // const [sectionTitle, setSectionTitle] = 
+  //   useState(captionSections[0].title);
 
   const onChangeImage = (isInView, imgIndex) => {
-    console.log('in Newburgh onChangeImage: ' + isInView + ', i: ' + parseInt(imgIndex));
+    // console.log('in Newburgh onChangeImage: ' + isInView + ', i: ' + parseInt(imgIndex));
     if (isInView) {
       setImageIndex(imgIndex);
       setImageName(images[imgIndex]);
     }
   };
+
+  // const onChangeTitle = (isInView2, titleIndex) => {
+  //   console.log('in onChange title: ' + isInView2 + ', i: ' + titleIndex);
+  //   if (isInView2) {
+  //     setTitleIndex(titleIndex);
+  //     setSectionTitle(captionSections[titleIndex].title);
+  //   }
+  // };
 
   // const captionDissolves = () => {
   //   let captionSequence = [];
@@ -40,15 +51,15 @@ const Newburgh = () => {
   //   return captionSequence;
   // }
 
-  // const captionDissolves = captions.map((caption, index) => {
-  let captionDissolves = (sectionIndex) => captionSections[sectionIndex].captions.map((caption, index) => {
+  const captionDissolves = captions.map((caption, index) => {
+  // let captionDissolves = (sectionIndex) => captionSections[sectionIndex].captions.map((caption, index) => {
       const presetHTML = `${caption.text}`;
       return (
         <InView 
           as="div" 
           dangerouslySetInnerHTML={{ __html: presetHTML }}
           onChange={(inView, entry) => { 
-            console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
+            // console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + index);
             onChangeImage(inView, index); 
           }}>
         </InView>          
@@ -95,18 +106,27 @@ const Newburgh = () => {
                   />
                 </motion.div>
               </AnimatePresence>
+              <h2 className='section-title'>
+                Section Title Goes Here
+              </h2>
             </div>
         </div>{/*  /image-panel */}
 
         <div id="caption-sequence1" className="caption-panel">
-          <h2 className='section-title'>{ captionSections[0].title}</h2>
-          { captionDissolves(0) }
-          <h2 className='section-title'>{ captionSections[1].title}</h2>
-          { captionDissolves(1) }
-          <h2 className='section-title'>{ captionSections[2].title}</h2>
+          {/* <h2>{ captionSections[0].title}</h2> */}
+          {/* { captionDissolves(0) } */}
+          { captionDissolves }
+          {/* <InView 
+            as="div" 
+            onChange={(inView2, entry) => { 
+              console.log('in sectionTitle onChange: ' + inView2 + ', i: ' + 1);
+              onChangeTitle(inView2, 1); 
+            }}>
+          </InView>           */}
+
+          {/* { captionDissolves(1) }
           { captionDissolves(2) }
-          <h2 className='section-title'>{ captionSections[3].title}</h2>
-          { captionDissolves(3) }
+          { captionDissolves(3) } */}
         </div>{/*  /caption-panel */}
 
       </section> {/*  /chapter1 */}

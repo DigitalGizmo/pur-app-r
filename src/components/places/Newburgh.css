@@ -8,6 +8,11 @@
   position: relative;
 }
 
+.section-title {
+  position: fixed;
+  top: 100px;
+  left: 30px;
+}
 /* 
 .image-panel div {
   position: absolute;
