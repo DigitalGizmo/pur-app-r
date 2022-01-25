@@ -1,34 +1,24 @@
-/*All from Vue App.vue*/
-ul, ol {
-  list-style-type: none;
-  padding:  0;
-}
-
-h1 {
-  font-size: 2em;
-  font-style: italic;
-  font-weight: normal;
-  margin: 0;
-}
-
-h2 {
-  font-size: 1.75em;
-  margin: 0;
-}
-
-/* Don's freelancing */
-/* .main-menu {
-  position: fixed;
+nav.main-menu {
+  text-align: center;
+  /* position: fixed;
   top: 0;
-  left: 0;
-} */
+  left: 0; */
+}
 
-/* .main-menu li {
+nav.main-menu li {
+  border-right: thin solid #e4e0c7;
   display: inline;
-} */
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: .15em;
+  padding: 0 2em;
+  text-transform: uppercase;
+}
 
-.little-title {
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
+nav.main-menu li.last-menu-item {
+  border-right: none;
+}
+
+nav.main-menu li.selected a {
+  color: #B25900;
 }
