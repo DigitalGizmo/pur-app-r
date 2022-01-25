@@ -161,6 +161,7 @@ h1 {
 
 div.menu-page {
   padding: .5em 3%;
+  margin-top: 1.25em;
 }
 
 .menu-page ul {
@@ -172,6 +173,7 @@ header.basic-page {
   background-color: #686959;
   padding: .5em 3%;
   max-width: 100%;
+  margin-top: 1.25em;
   text-align: left;
 }
 
