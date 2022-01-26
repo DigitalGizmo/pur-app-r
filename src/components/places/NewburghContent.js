@@ -62,27 +62,27 @@ const sectionTitles = [
     },
     {
       label: 'text-1b image: zoomed in aerial photo - The View from Above',
-      titleIndex: null,
+      titleIndex: 0,
       text: '<p>This was the logic of urban renewal:</p><p>Demolition of existing homes and shops was the first step toward transforming a blighted area.</p>'
     },
     {
       label: 'text-1c image: - The View from Above',
-      titleIndex: null,
+      titleIndex: 0,
       text: '<p>Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
     },
     {
       label: 'text-1d image: - The View from Above',
-      titleIndex: null,
+      titleIndex: 0,
       text: '<p>Those developers would build modern housing and commercial developments.</p>'
     },
     {
       label: 'text-1e image: - The View from Above',
-      titleIndex: null,
+      titleIndex: 0,
       text: '<p>New people (whiter and wealthier than their predecessors) would move into the new homes. New businesses would rent space in the commercial structures.</p>'
     },
     {
       label: 'text-1f image: - The View from Above',
-      titleIndex: null,
+      titleIndex: 0,
       text: '<p>These new businesses and residents would stabilize municipal finances.</p>'
     },
     {
@@ -92,7 +92,7 @@ const sectionTitles = [
     },
     {
       label: 'text-2b image: newburgh-front&water - East Newburgh',
-      titleIndex: null,
+      titleIndex: 1,
       text: '<p>Between 1950 and 1960, Newburgh\'s Black population more than doubled.</p><p>Many were Southern migrants, part of what is known as the Great Migration. Between World War I and the 1970s, roughly six million African Americans moved from the rural South to the urban North in search of a better life.</p> <p>In Newburgh, these migrants made their homes in the eastern section of the city, along the Hudson River. (White realtors and property owners prevented them from settling anywhere else.)</p> <p>During that same period of time, white city residents moved from east to west or out to the suburbs. Federally-backed mortgages facilitated these moves, described collectively as white flight.</p>'
     },
     {
@@ -102,37 +102,37 @@ const sectionTitles = [
     },
     {
       label: 'text-3b image: - The Appraisers Advice',
-      titleIndex: null,
-      text: '<p>The planners\' job was to assess the \"feasibility\" of expanding the urban renewal area to include East Newburgh.</p>'
+      titleIndex: 2,
+      text: '<p>The planners\' job was to assess the &quot;feasibility&quot; of expanding the urban renewal area to include East Newburgh.</p>'
     },
     {
       label: 'text-3c image: - The Appraisers Advice',
-      titleIndex: null,
-      text: '<p>The justification for this expansion was a 1961 report by real estate appraiser Humes Flynn. From the appraiser\'s perspective, the Water Street Urban Renewal Project was \"only the beginning.\" Urban renewal would be a \"miserable failure,\" if more buildings weren\'t demolished. Should the City fail to heed his advice, Mr. Flynn predicted, \"whatever is built in the present area will be greatly reduced in value and effectiveness by the condition of the properties in the surrounding areas.\"</p>'
+      titleIndex: 2,
+      text: '<p>The justification for this expansion was a 1961 report by real estate appraiser Humes Flynn. From the appraiser\'s perspective, the Water Street Urban Renewal Project was &quot;only the beginning.&quot; Urban renewal would be a &quot;miserable failure,&quot; if more buildings weren\'t demolished. Should the City fail to heed his advice, Mr. Flynn predicted, &quot;whatever is built in the present area will be greatly reduced in value and effectiveness by the condition of the properties in the surrounding areas.&quot;</p>'
     },
     {
       label: 'text-4a image: Feasability_Survey_Area_Map3-sized - Good, Fair, Deteriorating, Deteriorated',
       titleIndex: 3,
-      text: '<p>The planners started with the assumption that \"blight and deterioration\" were rampant in the renewal area.</p>'
+      text: '<p>The planners started with the assumption that &quot;blight and deterioration&quot; were rampant in the renewal area.</p>'
     },
     {
       label: 'text-4b image: Feasability_Survey_Area_Map3-fair - Good, Fair, Deteriorating, Deteriorated',
-      titleIndex: null,
-      text: '<p>While the planners classified some buildings as being in \"good\" or \"fair\" condition...</p>'
+      titleIndex: 3,
+      text: '<p>While the planners classified some buildings as being in &quot;good&quot; or &quot;fair&quot; condition...</p>'
     },
     {
       label: 'text-4c image: Feasability_Survey_Area_Map3-deterior - Good, Fair, Deteriorating, Deteriorated',
-      titleIndex: null,
-      text: '...they regarded most as \"deteriorating\" or \"deteriorated.\"</p>'
+      titleIndex: 3,
+      text: '...they regarded most as &quot;deteriorating&quot; or &quot;deteriorated.&quot;</p>'
     },
     {
       label: 'text-4d image: newburgh-map3-5a - Good, Fair, Deteriorating, Deteriorated',
-      titleIndex: null,
+      titleIndex: 3,
       text: '<p>Contemporary photographs show that many East Newburgh buildings were in poor repair. In part this was due to redlining. Redlining was the practice of denying home loans in inner-city neighborhoods or to non-white borrowers.</p>'
     },
     {
       label: 'text-4d image: Feasability_Survey_Area_Map3-sized- Good, Fair, Deteriorating, Deteriorated',
-      titleIndex: null,
+      titleIndex: 3,
       text: '<p>But redlining doesn\'t completely explain the planners\' map.</p>'
     },
     {
@@ -142,7 +142,7 @@ const sectionTitles = [
     },
     {
       label: 'text-5c image: newburgh-map3-5c with churches etc photos',
-      titleIndex: null,
+      titleIndex: 4,
       text: '<p>They also missed what these places (no matter their condition) meant to the people who lived, worked, played, and prayed there.</p><p>When urban planners looked at people living in renewal areas, they saw households to be counted and moved somewhere else.</p><p>The neighborhood ties that bound people together were beyond the scope of planning studies. Severing these ties would prove devastating to displaced communities in Newburgh and across the nation.</p>'
     },
     {
@@ -152,8 +152,8 @@ const sectionTitles = [
     },
     {
       label: 'text-6b image: Williams Home',
-      titleIndex: null,
-      text: '<p>Mattie Williams attended the same meeting. The 67-year-old widow owned two Montgomery Street houses. One was her home, the other, a rental property.</p><p>When it was her turn to speak, Mrs. Williams emphasized the inequity of urban renewal. She pointed out that \"the heart\" of the renewal area was in the heavily segregated city’s \"Negro section.\"</p><p>Those facing displacement \"are our people,\" Mrs. Williams said. \"They are not your people.\"</p>'
+      titleIndex: 5,
+      text: '<p>Mattie Williams attended the same meeting. The 67-year-old widow owned two Montgomery Street houses. One was her home, the other, a rental property.</p><p>When it was her turn to speak, Mrs. Williams emphasized the inequity of urban renewal. She pointed out that &quot;the heart&quot; of the renewal area was in the heavily segregated city’s &quot;Negro section.&quot;</p><p>Those facing displacement &quot;are our people,&quot; Mrs. Williams said. &quot;They are not your people.&quot;</p>'
     },
     {
       label: 'text-7a image: newburgh-guided-map4 - Preservation and Demolition',
@@ -162,12 +162,12 @@ const sectionTitles = [
     },
     {
       label: 'text-7b image: 176-178-Montgomery-before (nice house) - Preservation and Demolition',
-      titleIndex: null,
+      titleIndex: 6,
       text: '<p>Public criticism and a closer inspection of the stately homes along Grand Street would eventually change the planners\' minds. In the end, more houses were preserved than initially planned.</p>'
     },
     {
       label: 'text-7c image: 176-178-Montgomery-after (sad house) - Preservation and Demolition',
-      titleIndex: null,
+      titleIndex: 6,
       text: '<p>But property owners were understandably reluctant to repair buildings slated for demolition. In the meantime, those buildings grew increasingly dilapidated. Once vacated, buildings in the renewal area became targets of vandalism.</p>'
     },
     {
@@ -177,8 +177,8 @@ const sectionTitles = [
     },
     {
       label: 'text-8b image: newburgh-guided-map15 (proposed parcels) - Repackaging East Newburgh',
-      titleIndex: null,
-      text: '<p>In theory, the developers would build the structures designated for those spaces.</p><p>This process of reorganizing and rebuilding was key to the creation of a renewed East Newburgh. In the planners\' words, an \"important new neighborhood\" would take the place of \"an area of blight and physical disorder.\"</p>'
+      titleIndex: 7,
+      text: '<p>In theory, the developers would build the structures designated for those spaces.</p><p>This process of reorganizing and rebuilding was key to the creation of a renewed East Newburgh. In the planners\' words, an &quot;important new neighborhood&quot; would take the place of &quot;an area of blight and physical disorder.&quot;</p>'
     },
     {
       label: 'text-9a image: newburgh-guided-map10 (rendering - full view) - A New Map of East Newburgh',
@@ -187,27 +187,27 @@ const sectionTitles = [
     },
     {
       label: 'text-9b image: newburgh-guided-map10a (rendering - zoomed a bit) - A New Map of East Newburgh',
-      titleIndex: null,
+      titleIndex: 8,
       text: '<p>This version of Newburgh separated residential from commercial functions.</p>'
     },
     {
       label: 'text-9c image: newburgh-guided-map10b (rendering - zoomed to offices) - A New Map of East Newburgh',
-      titleIndex: null,
+      titleIndex: 8,
       text: '<p>It featured modern office buildings,...</p>'
     },
     {
       label: 'text-9d image: newburgh-guided-map10c (rendering - zoomed a bit) - A New Map of East Newburgh',
-      titleIndex: null,
+      titleIndex: 8,
       text: '<p>&hellip;a new public park,&hellip;</p>'
     },
     {
       label: 'text-9e image: newburgh-guided-map10d (rendering - zoomed a bit) - A New Map of East Newburgh',
-      titleIndex: null,
+      titleIndex: 8,
       text: '<p>&hellip;and garden apartments&hellip;</p>'
     },        
     {
       label: 'text-9f image: newburgh-guided-map10 (rendering - full view) - A New Map of East Newburgh',
-      titleIndex: null,
+      titleIndex: 8,
       text: '<p>all connected by a redesigned circulation system consisting of roads, parking lots, and pedestrian walkways.</p>'
     },
     {
@@ -217,17 +217,17 @@ const sectionTitles = [
     },
     {
       label: 'text-10b image: newburgh-map-20 (rendering - mall) - Middle-class Comforts',
-      titleIndex: null,
+      titleIndex: 9,
       text: '<p>The Rosen plan aimed to replace &ldquo;an area of blight and physical disorder&rdquo; with &ldquo;a totally new environment &hellip; carefully adjusted to the needs of attracting new residents.&rdquo;</p>'
     },
     {
       label: 'text-10c image: newburgh-map-22 (rendering - interior) - Middle-class Comforts',
-      titleIndex: null,
+      titleIndex: 9,
       text: '<p>Planners imagined these new residents as white and middle- or upper-income, drawn by modern housing and scenic views of the Hudson River and Mount Beacon.</p>'
     },
     {
       label: 'text-10d image: newburgh-map-22 (rendering - interior) - Middle-class Comforts',
-      titleIndex: null,
+      titleIndex: 9,
       text: '<p>The Rosen plan did not completely banish former residents. One of the structures to be retained was a public housing complex built for Black families in the 1950s.</p><p>In fact, racial integration was part of the justification for renewal. The planners recommended building replacement housing for displaced families on vacant land in all-white West Newburgh. (That part of the plan generated the most local controversy.)</p>'
     },
     {
@@ -237,7 +237,7 @@ const sectionTitles = [
     }, 
     {
       label: 'text-11 same image: newburgh-map-19 (rendering - mall) - Urban Amenities',
-      titleIndex: null,
+      titleIndex: 10,
       text: '<p>Just east of the plaza was space for a future civic amphitheater, designed to take advantage of a steep slope that precluded other uses.</p>'
     },
     {
@@ -247,7 +247,7 @@ const sectionTitles = [
     },     
     {
       label: 'text-12a image: Front&Water-empty-lot - Plan vs. Reality',
-      titleIndex: null,
+      titleIndex: 11,
       text: '<p>But a large section of the East Newburgh Urban Renewal Area is still undeveloped.</p><p>Although some private developers were drawn to East Newburgh by its natural beauty or its potential as a deep-water port, none invested the time or money to turn this area into the place envisioned by the Rosen plan.</p>'
     },
   ]

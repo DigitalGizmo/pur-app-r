@@ -14,12 +14,12 @@ const Newburgh = () => {
   const onCaptionChange = (isInView, imgIndex, titleIndex) => {
     // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));
     if (isInView) {
-      if (titleIndex) { 
+      // if (titleIndex) { 
 
-        setTitleIndex(titleIndex) 
-        setSectionTitle(sectionTitles[titleIndex]) 
-        // console.log('sectionTitle index: ' + titleIndex);
-      };
+      setTitleIndex(titleIndex) 
+      setSectionTitle(sectionTitles[titleIndex]) 
+      // console.log('sectionTitle index: ' + titleIndex);
+      // };
       setImageIndex(imgIndex);
       setImageName(images[imgIndex]);
     }
