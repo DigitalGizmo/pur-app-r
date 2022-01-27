@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './components/App';
+import Home from './components/Home';
 import CitiesMenu from './components/cities/CitiesMenu';
 import PeopleMenu from './components/people/PeopleMenu';
 import PersonalStory from './components/people/PersonalStory';
@@ -13,7 +14,8 @@ import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
 // import Visuals from './components/archive/Visuals';
 import GqlShell from './components/archive/GqlShell';
-import Home from './components/Home';
+import ThemeMenu from './components/themes/ThemeMenu';
+import Theme from './components/themes/Theme';
 // import reportWebVitals from './reportWebVitals';
 
 import {
@@ -47,6 +49,8 @@ render(
           <Route path="/archive/visuals" element={<GqlShell />} />
           <Route path="/places" element={<PlacesMenu />} />
           <Route path="/places/newburgh" element={<Newburgh />} />
+          <Route path="/themes" element={<ThemeMenu />} />
+            <Route path="/themes/theme" element={<Theme />} />
         </Route>
       </Routes>
     </BrowserRouter>

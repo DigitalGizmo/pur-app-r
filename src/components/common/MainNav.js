@@ -21,6 +21,9 @@ const MainNav = (props) => {
         <li className={ props.selected === 'places' ? 'selected' : ''}>
           <Link to="/places">Places</Link>
         </li>  
+        <li className={ props.selected === 'themes' ? 'selected' : ''}>
+          <Link to="/themes">Themes and Essays</Link>
+        </li>  
       </ul>
     </nav>
 );
