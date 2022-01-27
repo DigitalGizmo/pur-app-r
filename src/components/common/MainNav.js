@@ -22,7 +22,9 @@ const MainNav = (props) => {
           <Link to="/places">Places</Link>
         </li>  
         <li className={ props.selected === 'themes' ? 'selected' : ''}>
-          <Link to="/themes">Themes and Essays</Link>
+          <Link 
+          to="/themes"
+          dangerouslySetInnerHTML={{ __html: 'Themes &amp; Essays' }}></Link>
         </li>  
       </ul>
     </nav>
