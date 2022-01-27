@@ -1,0 +1,51 @@
+/* Styles for Themes & Essays pages */
+nav.horiz-menu {
+	overflow-x: scroll;
+}
+
+.horiz-menu	ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+.horiz-menu	ul li {
+  font-size: .85em;
+  display: inline-block;
+  height: 600px;
+  padding: 1em;
+  vertical-align: top;
+	white-space: normal;
+  width: 22vw;
+}
+
+.horiz-menu	ul li a {
+	display: block;
+	font-weight: bold;
+}
+
+.contract-sales {
+	background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/contract-sales.jpg);
+}
+
+.who-lived-here {
+	background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/who-lived-here.jpg);
+}
+
+.anti-urban {
+	background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/anti-urban.jpg);
+}
+
+.root-shock {
+	background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/root-shock.jpg);
+}
+
+.ghost-city {
+	background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/ghost-city.jpg);
+}
+
+.contract-sales, .who-lived-here, .anti-urban, .root-shock, .ghost-city {
+  background-repeat: no-repeat;
+  background-size: contain;
+}

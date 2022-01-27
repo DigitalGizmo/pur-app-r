@@ -93,7 +93,8 @@ html {
 }
 
 body {
-  color: #e4e0c7;
+  /*color: #e4e0c7;*/
+  color:  #eeefdf;
   font-family: "itc-officina-sans-pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
