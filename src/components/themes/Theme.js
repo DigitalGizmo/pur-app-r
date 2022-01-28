@@ -1,6 +1,5 @@
 import React from 'react';
-import themes from './Themes.module.css';
-import basicStory from '../common/basicStory.module.css'
+import './Themes.css';
 
 const Theme = () => {
 
@@ -11,7 +10,7 @@ const Theme = () => {
         <h4>David Hochfelder, SUNY Albany</h4>
       </header>
 
-      <section className={basicStory["basic-grid"]}>
+      <section className="basic-grid">
         <div className="image-full">
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
