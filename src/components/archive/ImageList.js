@@ -5,7 +5,7 @@ import ImageCard from './ImageCard';
 const ImageList = ({loading, error, data}) => {
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <p>Error : { error.message } </p>;
 
   // return data.all_images.map(({ id, slug, title }) => (
   const images = data.all_images.map((image) => {

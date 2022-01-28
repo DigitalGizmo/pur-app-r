@@ -1,4 +1,4 @@
-import React from 'react'; // , { useState }
+import React, { useState } from 'react'; // , { useState }
 import {
     // ApolloClient,
     // InMemoryCache,
@@ -11,12 +11,13 @@ import './Visuals.css';
 import ImageList from './ImageList';
 
 const Visuals= () => {
-  // const [cityID, setCityID] = useState(0);
-  // const cityIdVar = makeVar([]);
-  // cityIdVar([2]);
-  // console.log(cityIdVar);
+  const [cityID, setCityID] = useState(0);
 
-  const { loading, error, data } = useQuery(gql`
+  const onCityChange = (event) => {
+    setCityID(parseInt(event.target.value));
+  }
+
+  const GET_IMAGE_LIST = gql`
     query getImages ($city_id: Int) {
       all_images(city_id: $city_id) {
         id
@@ -30,11 +31,34 @@ const Visuals= () => {
         street_address
       }
     }
-  `
+  `;
+
+  const { loading, error, data } = useQuery(
+    GET_IMAGE_LIST, { variables: { city_id: cityID } }
   );
 
-  // , { variables: { city_id: 1 } }
-  
+  const CITY_RADIO = [
+    { ID: "city-albany", value: 5, label: "Albany"},
+    { ID: "city-kingston", value:3, label: "Kingston"},
+    { ID: "city-newburgh", value: 2, label: "Newburgh"},
+    { ID: "city-stuytown", value: 4, label: "Stuyvesant Town"},
+    { ID: "city-other", value:6, label: "Other"},
+    { ID: "city-all", value: 0, label: "All"},
+  ];
+
+  const cities = CITY_RADIO.map((city) => {
+    return (
+      <li key={city.ID}>
+        <input type="radio" name="city"
+          id={city.ID} value={city.value}
+          checked={ cityID === city.value } 
+          onChange={onCityChange} 
+        />
+        <label htmlFor={city.ID}>{city.label}</label>
+      </li>
+    )    
+  });
+
   return (
     <div>
       <MainNav />
@@ -45,38 +69,9 @@ const Visuals= () => {
         <div>
           <p>Cities</p>
           <ul className="filter-set">
-            <li>
-              <input type="radio" id="city-albany" name="city" value="5"
-                v-model="city_id_ref" />
-              <label htmlFor="city-albany">Albany</label>
-            </li>
-            <li>
-              <input type="radio" id="city-kingston" name="city" value="3"
-                v-model="city_id_ref" />
-              <label htmlFor="city-kingston">Kingston</label>
-            </li>
-            <li>
-              <input type="radio" id="city-newburgh" name="city" value="2"
-                v-model="city_id_ref" />
-              <label htmlFor="city-newburgh">Newburgh</label>
-            </li>
-            <li>
-              <input type="radio" id="city-stuytown" name="city" value="4"
-                v-model="city_id_ref" />
-              <label htmlFor="city-stuytown">Stuyvesant Town</label>
-            </li>
-            <li>
-              <input type="radio" id="city-other" name="city" value="6"
-                v-model="city_id_ref" />
-              <label htmlFor="city-other">Other</label>
-            </li>
-            <li>
-              <input type="radio" id="city-other" name="city" value="null"
-                v-model="city_id_ref" />
-              <label htmlFor="city-other">All</label>
-            </li>
+            { cities }
           </ul>
-        </div> {/* end cities */}
+        </div>
       </div> {/* end filters */}
 
       <ImageList 
