@@ -4,10 +4,19 @@ import {
     gql,
 } from "@apollo/client"; 
 import StuyFirst from './StuyFirst';
+import StuyFourteenth from './StuyFourteenth';
 import "./StuyStroll.css";
 
 const StuyStroll = () => {
+  const [streetName, setStreetName] = useState('first');
   const [partID, setPartID] = useState(2);
+
+  const goToStreet = (street, partID) => {
+    console.log('street: ' + street);
+    // preventDefault();
+    setStreetName(street);
+    setPartID(partID);
+  }
 
   const GET_HOTSPOTS = gql`
     query getHotspots ($interactive_part_id: Int){
@@ -33,11 +42,21 @@ const StuyStroll = () => {
         <h2>Stroll By: 1st Avenue and 14th Street</h2>
       </header>
 
+      { (streetName === 'first') && 
       <StuyFirst 
         loading = {loading}
         error = {error}
         data = {data}
-      />
+        goToStreet = {goToStreet}
+      />};
+
+      { (streetName === 'fourteenth') && 
+      <StuyFourteenth 
+        loading = {loading}
+        error = {error}
+        data = {data}
+        goToStreet = {goToStreet}
+      />};
 
     </div>
   );

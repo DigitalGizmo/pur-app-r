@@ -2,7 +2,7 @@ import React from "react";
 import CaptionBand from "./CaptionBand";
 import "./StuyStroll.css";
 
-const StuyFirst = ({loading, error, data, goToStreet}) => {
+const StuyFourteenth = ({loading, error, data, goToStreet}) => {
 
   return (
     <div id="wrapper">
@@ -23,18 +23,20 @@ const StuyFirst = ({loading, error, data, goToStreet}) => {
         >
           <g id="photo">
             <image  
-                width="5270" height="1479" 
-                href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/first-ave.jpg"  
+                width="6006" height="1500" 
+                href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fourteenth-st.jpg"  
                 transform="translate(0 0)"> 
             </image>
           </g>
 
+
           <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); goToStreet('fourteenth', 1)}}>
-            <polyline className="st9" points="5172.86 356.77 5231.28 404.61 5172.86 454.62"/>
-              <text transform="translate(5037.27 411.46)" className="st10 st2 st11">TURN THE CORNER</text>
+            <a href="/" onClick={ e => { e.preventDefault(); goToStreet('first', 2)}}>
+              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
+              <text transform="translate(85.1718 245)" className="st10 st2 st11">TURN THE CORNER</text>
             </a>
           </g>
+
 
         </svg>
       </section> {/* end view-frame */}
@@ -43,4 +45,4 @@ const StuyFirst = ({loading, error, data, goToStreet}) => {
   );
 }
 
-export default StuyFirst;
+export default StuyFourteenth;

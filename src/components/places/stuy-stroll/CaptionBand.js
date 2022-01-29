@@ -12,13 +12,7 @@ const CaptionBand = ({loading, error, data}) => {
       <div
         key={hotspot.title}
         className="cap"
-
-
-
-        // :style="{left: hotspot.text_percent + '%'}"
-
-
-        
+        style={{ left: hotspot.text_percent + '%' }}
       >
         <h4>{hotspot.title}</h4>
         <p>{hotspot.blurb}
