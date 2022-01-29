@@ -12,8 +12,8 @@ import PersonalStoryCW from './components/people/PersonalStoryCW';
 import PersonalStoryJR from './components/people/PersonalStoryJR';
 import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
-// import Visuals from './components/archive/Visuals';
-import GqlShell from './components/archive/GqlShell';
+import StuyStroll from './components/places/stuy-stroll/StuyStroll';
+import Visuals from './components/archive/Visuals';
 import ThemeMenu from './components/themes/ThemeMenu';
 import Theme from './components/themes/Theme';
 // import reportWebVitals from './reportWebVitals';
@@ -22,16 +22,12 @@ import {
     ApolloClient,
     InMemoryCache,
     ApolloProvider,
-    // useQuery,
-    // gql
 } from "@apollo/client"
 
 const client = new ApolloClient({
   uri: 'http://admin.picturingurbanrenewal.org/archive/graphql/',
   cache: new InMemoryCache()
 });
-
-
 
 const rootElement = document.getElementById('root');
 
@@ -46,9 +42,10 @@ render(
             <Route path="/people/haines-dauner" element={<PersonalStory />} />
             <Route path="/people/carrie-wilson" element={<PersonalStoryCW />} />
             <Route path="/people/joseph-resnick" element={<PersonalStoryJR />} />
-          <Route path="/archive/visuals" element={<GqlShell />} />
+          <Route path="/archive/visuals" element={<Visuals />} />
           <Route path="/places" element={<PlacesMenu />} />
-          <Route path="/places/newburgh" element={<Newburgh />} />
+            <Route path="/places/newburgh" element={<Newburgh />} />
+            <Route path="/places/stuy-stroll" element={<StuyStroll />} />
           <Route path="/themes" element={<ThemeMenu />} />
             <Route path="/themes/theme" element={<Theme />} />
         </Route>

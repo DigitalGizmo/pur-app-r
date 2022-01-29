@@ -25,29 +25,6 @@ const Newburgh = () => {
     }
   };
 
-  // const captionDissolves = () => {
-  //   let captionSequence = [];
-  //   for(let i = 0; i < captions.length; i++) {
-  //     const presetHTML = <div dangerouslySetInnerHTML={{ __html: captions[i] }}></div>;
-  //     captionSequence.push( 
-  //       <InView 
-  //         as="div" 
-  //         // dangerouslySetInnerHTML={{ __html: captions[i] }}
-  //         onChange={(inView, entry) => { 
-  //           console.log('in CaptionDissolve onChange: ' + inView + ', i: ' + i);
-  //           onCaptionChange(inView, i); 
-  //         }
-  //         }>
-  //         {/* dangerouslySetInnerHTML={{ __html: captions[i] }} */}
-  //         {/* { captions[i].text } */}
-  //         { presetHTML}
-  //       </InView>  
-  //       // <div>text: { captions[i].text }</div>
-  //     );
-  //   }
-  //   return captionSequence;
-  // }
-
   const captionDissolves = captions.map((caption, index) => {
   // let captionDissolves = (sectionIndex) => captionSections[sectionIndex].captions.map((caption, index) => {
     // key = caption.label;
@@ -66,7 +43,6 @@ const Newburgh = () => {
       </InView>          
     ) 
   })
-
 
   return (
     <div>

@@ -8,6 +8,9 @@ const PlacesMenu = () => {
       <ul>
         <li><a href="http://app.picturingurbanrenewal.org/places/stuy-stroll">Stroll By: 1st Avenue &amp; 14th Street</a> </li>        
         <li><Link to="/places/newburgh">Newburgh</Link></li>
+        <li><Link to="/places/stuy-stroll">
+          (Developing -- Stroll By: 1st Aveneue and 14th Street)
+        </Link></li>
       </ul>
     </div>
   )
