@@ -8,8 +8,11 @@ const PlacesMenu = () => {
       <ul>
         <li><a href="http://app.picturingurbanrenewal.org/places/stuy-stroll">Stroll By: 1st Avenue &amp; 14th Street</a> </li>        
         <li><Link to="/places/newburgh">Newburgh</Link></li>
-        <li><Link to="/places/stuy-stroll">
-          (Developing -- Stroll By: 1st Aveneue and 14th Street)
+        <li style={{ color: '#333333'}}>
+          <Link 
+            to="/places/stuy-stroll"
+            style={{ color: '#554455'}}>
+          (Developing -- stroll)
         </Link></li>
       </ul>
     </div>

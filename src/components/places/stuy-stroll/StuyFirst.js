@@ -2,7 +2,7 @@ import React from "react";
 import CaptionBand from "./CaptionBand";
 import "./StuyStroll.css";
 
-const StuyFirst = ({loading, error, data, goToStreet}) => {
+const StuyFirst = ({loading, error, data, onPageChange}) => {
 
   return (
     <div id="wrapper">
@@ -30,7 +30,7 @@ const StuyFirst = ({loading, error, data, goToStreet}) => {
           </g>
 
           <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); goToStreet('fourteenth', 1)}}>
+            <a href="/" onClick={ e => { e.preventDefault(); onPageChange(3, 1)}}>
             <polyline className="st9" points="5172.86 356.77 5231.28 404.61 5172.86 454.62"/>
               <text transform="translate(5037.27 411.46)" className="st10 st2 st11">TURN THE CORNER</text>
             </a>
