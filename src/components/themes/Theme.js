@@ -11,7 +11,7 @@ const Theme = () => {
       </header>
 
       <section className="basic-grid">
-        <div className="image-full">
+        <div className="image-full image-fixed">
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
               alt='meaningful alt text'/>

@@ -44,7 +44,7 @@
   margin-bottom: 1.6em;
 }
 
-.chapter-title /* cf: header.basic-page styles */ {
+.chapter-title /* cf: header.basic-page styles in index.css line 165 */ {
   background-color: #B25900;
   margin-top: 24px;
   padding: .5em 3%;

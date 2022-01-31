@@ -1,6 +1,5 @@
 import React from 'react';
 import SlideShow from './SlideShow';
-import './PersonalStory.css';
 
 // function getImgUrl() {
 //   return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';

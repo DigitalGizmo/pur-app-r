@@ -179,32 +179,82 @@ header.basic-page h4 {
   margin: 0;
 }
 
+/* obsolete style
 h3.grid-title {
   color: #B25900;
   letter-spacing: .075em;
   text-shadow: 1px 1px #353526;
   text-transform: uppercase;
+}*/
+
+/* used in Personal Story pages, Theme pages */
+.basic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5em;
 }
 
-.narrative {
-  margin: 1em auto 3em auto;
-  max-width: 60%;
+.first-col  {
+  grid-column: 1/2;
+  grid-row: 2;
+  margin-left: 1.5em;
 }
 
-.narrative p, ol li {
-  font-size: 1.25em;
+.second-col {
+  grid-column: 2/5;
 }
 
-.narrative a {
-  color: #B25900;
+.second-row {
+  grid-row: 3;
+}
+  
+article.text-side {
+  background: rgba(53, 53, 38, 0.8);
+  grid-column: 5/7;
+  grid-row-start:  1;
+  grid-row-end: 4;
+  padding: 1em;
+  z-index: 92;
 }
 
-.narrative div p, div.full-image p {
-  color: #e4e0c7;
-  font-size: 0.75em;
-  margin: .5em 0 2em 0;
+.text-side p.intro {
+ font-size: 1.25em;
+ line-height: 1.25em; 
 }
 
+.image-full {
+  grid-column: 1/7;
+  grid-row: 1;
+}
+
+.image-full img {
+  width: 100%;
+}
+
+.image-fixed {
+  position: fixed;
+  z-index: 0;
+}
+
+.image-full-caption {
+  align-self: end;
+  background: rgba(53, 53, 38, 0.8);
+  grid-column: 1/3;
+  grid-row: 1;
+  margin: 0 0 1.5em 1.5em;
+  z-index: 90;
+}
+
+p.caption {
+  color: #BAB692;
+  border: 1px solid #686959;
+  font-size: .75em;
+  margin: 0;
+  padding: .75em;
+}
+
+/* these styles might be relevant only to the city story - should they get moved? */
 .sidebar-parent {
   width: 100vw;
   overflow: visible;
@@ -244,11 +294,6 @@ div.full-image p {
   z-index: 8;
 }
 
-.narrative div img {
-  border: thin solid #615c3d;
-  width: 90%;
-}
-
 .caption-panel {
   position: relative;
   z-index: 10;
@@ -273,7 +318,6 @@ a.caption-link {
   color: #B25900;
   text-decoration: underline;
 }
-
 
 #mapdiv img {
   border: none;
@@ -369,6 +413,7 @@ header.story-title nav#dropdown-parent {
 .dots-fillup li.current a::after {
   height: 100%;
 }
+/* end of city-story only styles */
 
 /* Don adding this for slimpops -- required */
 .lightbox {
