@@ -63,7 +63,7 @@ const Newburgh = () => {
                     opacity: 0,
                     position: 'absolute',
                     // top: 104, // this works w main nav fixed
-                    top: 91, // works w main nav scrolling away
+                    top: 86, // works w main nav scrolling away
                     left: 0,
                   }}
                   animate={{
