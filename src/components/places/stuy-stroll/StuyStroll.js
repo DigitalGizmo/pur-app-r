@@ -49,20 +49,23 @@ const StuyStroll = () => {
     enter: {
       // At start, w direction 0, new image enters from right
       // x: direction === 0 ? xOffset : -xOffset,
+      // position: 'absolute',
       x: direction === 0 ? '100%' : '-100%',
       opacity: 0.2,
     },
     active: {
       x: 0,
       opacity: 1,
-      transition: { delay: .75, duration: 0.75 }
+      transition: { delay: 0, duration: 0.75 },
+      // transitionEnd: { position: 'absolute'}
     },
     exit:{
       // With direction 0 exit left
       // x: direction === 0 ? -xOffset : xOffset,
       x: direction === 0 ? '-100%' : '100%',
       transition: { delay: 0, duration: 0.75 },
-      opacity: 0.2
+      opacity: 0.2,
+      // position: 'absolute',
     }
   };
 

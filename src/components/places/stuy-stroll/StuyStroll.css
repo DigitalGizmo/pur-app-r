@@ -5,6 +5,8 @@ margin: 1em 0;
 #wrapper {
 width: 100vw;
 overflow-x: scroll;
+/* Don adding this so that images abut during transition */
+position: absolute;
 }
 
 /*Caption-band and view-frame moved to respective sub-comonents*/

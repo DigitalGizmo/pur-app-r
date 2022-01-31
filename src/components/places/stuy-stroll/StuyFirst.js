@@ -4,6 +4,11 @@ import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, data, onPageChange}) => {
 
+
+  const scrollToRight = () => {
+    document.getElementById('wrapper').scrollLeft = 1200;
+  }
+
   return (
     <div id="wrapper">
       <CaptionBand 
@@ -40,6 +45,13 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(1, 2)}}>
               <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
               <text transform="translate(85.1718 245)" className="st10 st2 st11">Intro</text>
+            </a>
+          </g>
+
+          <g id="turn-buttons">
+            <a href="/" onClick={ e => { e.preventDefault(); scrollToRight()}}>
+              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
+              <text transform="translate(85.1718 345)" className="st10 st2 st11">scroll right</text>
             </a>
           </g>
 
