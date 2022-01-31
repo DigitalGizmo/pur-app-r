@@ -36,6 +36,13 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
             </a>
           </g>
 
+          <g id="turn-buttons">
+            <a href="/" onClick={ e => { e.preventDefault(); onPageChange(1, 2)}}>
+              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
+              <text transform="translate(85.1718 245)" className="st10 st2 st11">Intro</text>
+            </a>
+          </g>
+
         </svg>
       </section> {/* end view-frame */}
 

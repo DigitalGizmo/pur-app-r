@@ -6,12 +6,13 @@ import {
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import StuyFirst from './StuyFirst';
 import StuyFourteenth from './StuyFourteenth';
+import StuyFifteenth from './StuyFifteenth';
 import "./StuyStroll.css";
 
 const StuyStroll = () => {
-  const [pageNum, setPageNum] = useState(2);
+  const [pageNum, setPageNum] = useState(1);
   // Direction 0 means 'forward', slide new in from right
-  const [[currentPage, direction], setCurrentPage] = useState([2,0]);
+  const [[currentPage, direction], setCurrentPage] = useState([1,0]);
   const [partID, setPartID] = useState(2);
 
   useEffect(() => {
@@ -43,21 +44,23 @@ const StuyStroll = () => {
     GET_HOTSPOTS, { variables: { interactive_part_id: partID } }
   );
 
-  const xOffset = 1200;
+  // const xOffset = 1000;
   const variants = {
     enter: {
       // At start, w direction 0, new image enters from right
-      x: direction === 0 ? xOffset : -xOffset,
+      // x: direction === 0 ? xOffset : -xOffset,
+      x: direction === 0 ? '100%' : '-100%',
       opacity: 0.2,
     },
     active: {
       x: 0,
       opacity: 1,
-      transition: { delay: 0.75, duration: 0.75 }
+      transition: { delay: .75, duration: 0.75 }
     },
     exit:{
       // With direction 0 exit left
-      x: direction === 0 ? -xOffset : xOffset,
+      // x: direction === 0 ? -xOffset : xOffset,
+      x: direction === 0 ? '-100%' : '100%',
       transition: { delay: 0, duration: 0.75 },
       opacity: 0.2
     }
@@ -77,6 +80,11 @@ const StuyStroll = () => {
         animate="active"
         exit="exit"
       >
+        { (pageNum === 1) && 
+        <StuyFifteenth 
+          onPageChange = {onPageChange}
+        />}
+
         { (pageNum === 2) && 
         <StuyFirst 
           loading = {loading}
