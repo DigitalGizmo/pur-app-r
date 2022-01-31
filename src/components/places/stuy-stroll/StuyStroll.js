@@ -71,7 +71,7 @@ const StuyStroll = () => {
 
   return (
     <div className="menu-page"> {/*Don cheating and borrowing menu-page */}
-      <header>
+      <header className="stuy-stroll-header">
         <h2>Stroll By: 1st Avenue and 14th Street</h2>
       </header>
 

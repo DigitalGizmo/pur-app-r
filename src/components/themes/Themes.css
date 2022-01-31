@@ -53,3 +53,14 @@ nav.horiz-menu {
 }
 
 /* Themes pages  */
+article.theme {
+	margin-top: 0;
+}
+
+article.theme p {
+	font-size: 1em;
+}
+
+article.theme p.intro {
+	font-size: 1.25em;
+}

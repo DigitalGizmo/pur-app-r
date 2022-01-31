@@ -94,7 +94,7 @@ html {
 
 body {
   /*color: #e4e0c7;*/
-  color:  #eeefdf;
+  color:  #e6e7d8;
   font-family: "itc-officina-sans-pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
@@ -232,11 +232,6 @@ article.text-side {
   width: 100%;
 }
 
-.image-fixed {
-  position: fixed;
-  z-index: 0;
-}
-
 .image-full-caption {
   align-self: end;
   background: rgba(53, 53, 38, 0.8);
@@ -252,6 +247,30 @@ p.caption {
   font-size: .75em;
   margin: 0;
   padding: .75em;
+}
+
+.narrative {
+  margin: 1em auto 3em auto;
+  max-width: 60%;
+}
+
+.narrative p, ol li {
+  font-size: 1.25em;
+}
+
+.narrative a {
+  color: #B25900;
+}
+
+.narrative div p, div.full-image p {
+  color: #e4e0c7;
+  font-size: 0.75em;
+  margin: .5em 0 2em 0;
+}
+
+.narrative div img {
+  border: thin solid #615c3d;
+  width: 90%;
 }
 
 /* these styles might be relevant only to the city story - should they get moved? */

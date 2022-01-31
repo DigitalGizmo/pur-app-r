@@ -10,18 +10,15 @@ const Theme = () => {
         <h4>David Hochfelder, SUNY Albany</h4>
       </header>
 
-      <section className="basic-grid">
-        <div className="image-full image-fixed">
+      <section>
+        <div className="full-image">
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
               alt='meaningful alt text'/>
+            <p className="caption">"Buy or Rent - Same amount monthly" Sales pitches like this made contract sales agreements appealing to people of limited means. Lorem ipsum image caption and source info goes here.</p>
         </div>
 
-        <div className="image-full-caption">
-          <p className="caption">image caption goes here</p>
-        </div>
-
-        <article className="text-side">
+        <article className="narrative theme">
       
           <p className="intro">From the 1920s through the 1970s, banks typically refused to make mortgages or home improvement loans in areas they considered undesirable. This practice, commonly known as &ldquo;redlining,&rdquo; gained the sanction of the federal government during the 1930s. The term arose from the color used on the Home Owners Loan Corporation&rsquo;s Residential Security Maps to designate areas ending considered poor lending risks  due to the presence of foreign-born, Black, and low-income families. Banks typically refused to lend money to black and brown buyers, no matter what neighborhood they sought to buy into.</p>
 
