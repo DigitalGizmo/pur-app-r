@@ -3,9 +3,11 @@ import React from 'react';
 
 const CitiesMenu = () => {
   return (
-    <div className="menu-page">
-      <h2>4 Cities / 4 Stories</h2>
-      <ul>
+    <div>
+      <header className="basic-page">
+        <h1>4 Cities / 4 Stories</h1>
+      </header>
+      <ul className="list-menu">
         <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">Albany: Lost Places/Displaced People - The Reaction to Redevelopment</a></li>
       </ul>
     </div>

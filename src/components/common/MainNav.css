@@ -26,7 +26,7 @@ nav.main-menu li.selected a {
 
 nav.main-menu {
   background-color: #353526;
-  height: 1.25em;
+  height: 24px;
   position: fixed;
   text-align: center;
   top: 0;
@@ -46,6 +46,12 @@ nav.main-menu li {
   letter-spacing: .15em;
   padding: 0 2em;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1080px) {
+  nav.main-menu li {
+    font-size: 0.5em;
+  }
 }
 
 nav.main-menu li.last-menu-item {

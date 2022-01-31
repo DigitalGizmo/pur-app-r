@@ -120,10 +120,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "itc-officina-sans-pro", sans-serif;
   font-weight: 400;
   line-height: 1.2;
-  margin: 0;
 }
 
 p {
@@ -156,17 +154,11 @@ blockquote {
   font-style: italic;
 }
 
-h1 {
-  font-size: 3em;
-}
-
-div.menu-page {
+/* for temporary menu pages */
+ul.list-menu {
+  list-style-type: none;
   padding: .5em 3%;
   margin-top: 1.25em;
-}
-
-.menu-page ul {
-  margin-top: 2em;
 }
 
 /* basic-page is for personal stories, essays, etc */
@@ -174,12 +166,17 @@ header.basic-page {
   background-color: #686959;
   padding: .5em 3%;
   max-width: 100%;
-  margin-top: 1.25em;
+  margin-top: 24px;
   text-align: left;
 }
 
 header.basic-page h1 {
-  font-size: 1.5em;
+  font-size: 1.75em;
+  margin: 0;
+}
+
+header.basic-page h4 {
+  margin: 0;
 }
 
 h3.grid-title {

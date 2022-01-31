@@ -44,14 +44,16 @@
   margin-bottom: 1.6em;
 }
 
-
-.chapter-title {
+.chapter-title /* cf: header.basic-page styles */ {
   background-color: #B25900;
-  margin-top: 1.25em;
-  padding: .75em;
-  position: relative;
+  margin-top: 24px;
+  padding: .5em 3%;
   text-align: center;
-  z-index: 9;
+}
+
+.chapter-title h1 {
+  font-size: 1.75em;
+  margin: 0;
 }
 
 .image-panel div img, div.full-image img {
@@ -60,8 +62,6 @@
   height: auto;
   margin-bottom: 1.6em;
 }
-
-
 
 .caption-panel {
   position: relative;
