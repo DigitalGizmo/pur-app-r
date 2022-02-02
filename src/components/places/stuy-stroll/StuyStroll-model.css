@@ -2,21 +2,14 @@
 #stroll-wrapper {
   height: calc(100vh - 100px);
   overflow-x: scroll;
+  position: relative;
+  width: 100%;
 }
-
-/*Caption-band and view-frame moved to respective sub-comonents*/
-
-/*Don: new for svg responsiveness! */
-/* .svg-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
 
 header.stroll {
-  background-color: yellowgreen;
   height: 76px;
 }
+
 /*caption titles*/
 h4 {
     margin: .25em 0 -1em 0;
@@ -106,21 +99,17 @@ h4 {
     position: relative;
     font-size: .75em;
     height: 80px;
-    width: 200%;
+    width: 100%;
 }
 
 #view-frame {
     position: relative;
-    width: 200%;
-}
-
-#view-frame img {
-  height: calc(100% - 80px);
-  max-width:  none;
+    width: 100%;
 }
 
 /* aka view-frame img */
 .svg-content {
     height: calc(100% - 80px);
+    width: auto;
     /* max-width:  none; */
   }
