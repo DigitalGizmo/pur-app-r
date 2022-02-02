@@ -70,9 +70,9 @@ const StuyStroll = () => {
   };
 
   return (
-    <div className="menu-page"> {/*Don cheating and borrowing menu-page */}
-      <header className="stuy-stroll-header">
-        <h2>Stroll By: 1st Avenue and 14th Street</h2>
+    <div className="basic-page stroll"> {/*Don cheating and borrowing menu-page */}
+      <header>
+        <h1>Stroll By: 1st Avenue and 14th Street</h1>
       </header>
 
       <AnimatePresence initial={false}>

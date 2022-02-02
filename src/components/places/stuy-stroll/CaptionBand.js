@@ -16,7 +16,7 @@ const CaptionBand = ({loading, error, data}) => {
       >
         <h4>{hotspot.title}</h4>
         <p>{hotspot.blurb}
-          more..
+          more...
         </p>
       </div>
     )
