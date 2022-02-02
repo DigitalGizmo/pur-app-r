@@ -1,105 +1,112 @@
-header.stuy-stroll-header {
-margin: 1em 0;
-}
 
-#wrapper {
-width: 100vw;
-overflow-x: scroll;
-/* Don adding this so that images abut during transition */
-position: absolute;
+#stroll-wrapper {
+  height: 100vh;
+  overflow-x: scroll;
 }
 
 /*Caption-band and view-frame moved to respective sub-comonents*/
 
 /*Don: new for svg responsiveness! */
 .svg-content {
-display: inline-block;
-position: absolute;
-top: 0;
-left: 0;
-}
-
-h2 {
-font-size: 1.7em;
-font-style: italic;
-font-weight: normal;
-margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /*caption titles*/
 h4 {
-margin: .25em 0 -1em 0;
+    margin: .25em 0 -1em 0;
 }
 
 /*Don's highlighting - from st8 and st10*/
 
 .low-spot {
-fill:#666666;
-opacity: 0;
+    fill: #666666;
+    opacity: 0;
 }
 
 .hi-spot {
-fill:#FFAC06;
-stroke-width:2;
-stroke-miterlimit:10;
-opacity: .25;
-stroke:#FFAC06;
-stroke-opacity: .9;
+    fill: #FFAC06;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    opacity: .25;
+    stroke: #FFAC06;
+    stroke-opacity: .9;
 }
 
 .hi-text {
-color: #FFAC06;
+    color: #FFAC06;
 }
 
 /* changes to caption styles - the width will need to be made responsive*/
 .cap {
-position: absolute;
-width:  160px;
+    position: absolute;
+    width: 160px;
 }
 
 /* End changes to caption styles*/
 
 /*Stroll version of slimpop*/
 .strollbox {
-position: fixed;
-top:100px;
-width: 600px;
-height: 500px;
-z-index: 99;
+    position: fixed;
+    top: 100px;
+    width: 600px;
+    height: 500px;
+    z-index: 99;
 }
 
 /* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
 #stroll-pop-wrapper {
-background-color: #f9f6ea;  
-border: 1px solid gray;
-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-color: #333024;
-overflow:  auto;
-padding: 1.5em;
-position: relative;
+    background-color: #f9f6ea;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+    color: #333024;
+    overflow: auto;
+    padding: 1.5em;
+    position: relative;
 }
 
 
-.st2{font-family:'PTSans-NarrowBold';}
-.st8{fill:none;stroke:#FFAC06;stroke-width:2;stroke-miterlimit:10;}
-.st9{opacity:0.6;fill:none;stroke:#FFA300;stroke-width:19;stroke-linecap:round;stroke-miterlimit:10;}
-.st10{fill:#FFA300;}
-.st11{font-size:20px;}
+.st2 {
+    font-family: 'PTSans-NarrowBold';
+}
+
+.st8 {
+    fill: none;
+    stroke: #FFAC06;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.st9 {
+    opacity: 0.6;
+    fill: none;
+    stroke: #FFA300;
+    stroke-width: 19;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.st10 {
+    fill: #FFA300;
+}
+
+.st11 {
+    font-size: 20px;
+}
 
 /* Caption band styles from StuyFirst.vue */
 #caption-band {
-  background-color: #464231;
-  width: 200%;
-  padding:  .1em;
-  position: relative;
-  font-size: .75em;
-  height: 100px;
+    background-color: #464231;
+    padding: .1em;
+    position: relative;
+    font-size: .75em;
+    height: 80px;
+    width: 200%;
 }
 
 #view-frame {
-  position: relative;
-  width: 200%;
-  /*Don fix*/
-  height: 80vh;
+    position: relative;
+    height: calc(90% - 80px);
+    width: 200%;
 }
-
