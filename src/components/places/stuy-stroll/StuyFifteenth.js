@@ -3,13 +3,13 @@ import React from 'react';
 const StuyFifteenth = ({onPageChange}) => {
 
   return (
-    <div id="stroll-wrapper">
+    <div id="wrapper">
       <div className="image-full">
         <img 
           src= "http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"
           alt="meaningful alt text"/>
 
-        <svg 
+<svg 
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           x="0px" y="0px"
@@ -24,6 +24,7 @@ const StuyFifteenth = ({onPageChange}) => {
           </g>
 
         </svg>
+
 
       </div>
     </div>
