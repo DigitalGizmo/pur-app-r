@@ -5,26 +5,67 @@ import "./StuyStroll.css";
 const StuyFirst = ({loading, error, data, onPageChange}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
-  const [captionWidth, setCaptionWidth] = useState(0);
+  // const [captionWidth, setCaptionWidth] = useState(0);
   
-  const findWidth = () => {
-    // const sWidth = svgEl.current.clientWidth;
+  // const findWidth = () => {
+  //   // const sWidth = svgEl.current.clientWidth;
+  //   setSvgWidth(svgEl.current.clientWidth);
+  // }
+
+  // const updateCaptionWidth = svgWidth => {
+  //   setCaptionWidth(svgWidth);
+  //   console.log('setCaptionWidth: ' + svgWidth);
+  // }
+
+  function debounce(func, milSecs) {
+    let timer;
+    return () => {
+      timer = setTimeout(() => {
+        timer = null;
+        func.apply(this, arguments)
+      }, milSecs)
+    }
+  }
+
+  function handleResize () {
     setSvgWidth(svgEl.current.clientWidth);
+    console.log('svgEl ' + svgEl.current.clientWidth);
+    console.log('svgWidth ' + svgWidth);
   }
 
-  const updateCaptionWidth = svgWidth => {
-    setCaptionWidth(svgWidth);
-    console.log('setCaptionWidth: ' + svgWidth);
-  }
+  // const debounedHandleResize = debounce(function handleResize () {
+  //   setSvgWidth(svgEl.current.clientWidth);
+  //   console.log('svgEl ' + svgEl.current.clientWidth);
+  //   console.log('svgWidth ' + svgWidth);
+  // }, 1000)
 
+  
+  
+  // Change caption size on resize
   useEffect (() => {
-    findWidth();
+    const debounedHandleResize = debounce(handleResize, 1000)
+    // findWidth();
+    // function handleResize () {
+    //   setSvgWidth(svgEl.current.clientWidth);
+    //   console.log('svgEl ' + svgEl.current.clientWidth);
+    //   console.log('svgWidth ' + svgWidth);
+    // }
+    window.addEventListener('resize', debounedHandleResize);
+    return () => {
+      console.log('removing listener');
+      window.removeEventListener('resize', debounedHandleResize);
+    }
   });
 
+  // Size caption on startup
   useEffect (() => {
-    updateCaptionWidth(svgWidth);
-    // console.log('setCaptionWidth: ' + captionWidth);
-  }, [svgWidth]);
+    handleResize();
+  },[]);
+
+  // useEffect (() => {
+  //   updateCaptionWidth(svgWidth);
+  //   // console.log('setCaptionWidth: ' + captionWidth);
+  // }, [svgWidth]);
 
   const scrollToRight = () => {
     document.getElementById('wrapper').scrollLeft = 1200;
@@ -67,7 +108,7 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           </g>
 
           <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); findWidth()}}>
+            <a href="/" onClick={ e => { e.preventDefault(); scrollToRight()}}>
               <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
               <text transform="translate(85.1718 345)" className="st10 st2 st11">find/scroll right</text>
             </a>
@@ -79,9 +120,9 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           loading = {loading}
           error = {error}
           data = {data}
-          captionWidth = {captionWidth}
+          captionWidth = {svgWidth}
         />
-        <p onClick={findWidth}>debug:</p>
+        {/* <p onClick={findWidth}>debug:</p> */}
 
     </div>
   );
