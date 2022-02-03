@@ -5,7 +5,7 @@ import "./StuyStroll.css";
 const StuyFourteenth = ({loading, error, data, onPageChange}) => {
 
   return (
-    <div id="wrapper">
+    <div id="stroll-wrapper">
       <CaptionBand 
         loading = {loading}
         error = {error}

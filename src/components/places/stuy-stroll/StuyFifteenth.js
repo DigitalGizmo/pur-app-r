@@ -3,7 +3,7 @@ import React from 'react';
 const StuyFifteenth = ({onPageChange}) => {
 
   return (
-    <div id="wrapper">
+    <div id="stroll-wrapper">
       <div className="image-full">
         <img 
           src= "http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"

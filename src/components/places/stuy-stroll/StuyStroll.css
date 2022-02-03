@@ -1,7 +1,9 @@
 
 #stroll-wrapper {
-  height: 100vh;
+  /* height: 100vh; */
+  width: 100vw;
   overflow-x: scroll;
+  position: absolute;
 }
 
 /*Caption-band and view-frame moved to respective sub-comonents*/
@@ -107,6 +109,8 @@ h4 {
 
 #view-frame {
     position: relative;
-    height: calc(90% - 80px);
     width: 200%;
+    height: 80vh;    
+    /* height: calc(90% - 80px); */
+    /* width: 200%; */
 }
