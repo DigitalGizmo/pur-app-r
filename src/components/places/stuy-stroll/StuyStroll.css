@@ -1,18 +1,44 @@
 
 #stroll-wrapper {
   /* height: 100vh; */
-  width: 100vw;
   overflow-x: scroll;
   position: absolute;
+  width: 100vw;
 }
 
-/*Caption-band and view-frame moved to respective sub-comonents*/
+#view-frame {
+    position: relative;
+    width: 200%;
+    height: 80vh;    
+    /* height: calc(90% - 80px); */
+    /* width: 200%; */
+}
 
 /*Don: new for svg responsiveness! */
 .svg-content {
-    position: absolute;
-    top: 0;
+/*    position: absolute;
+*/  top: 0;
     left: 0;
+}
+
+.svg-intro-content {
+  position: absolute;
+}
+
+
+/*Caption-band and view-frame moved to respective sub-comonents*/
+/* Caption band styles from StuyFirst.vue */
+#caption-band {
+    background-color: #464231;
+    padding: .1em;
+    position: relative;
+    font-size: .75em;
+    height: 80px;
+    width: 200%;
+}
+
+header.stroll {
+  height: 76px;
 }
 
 /*caption titles*/
@@ -95,22 +121,4 @@ h4 {
 
 .st11 {
     font-size: 20px;
-}
-
-/* Caption band styles from StuyFirst.vue */
-#caption-band {
-    background-color: #464231;
-    padding: .1em;
-    position: relative;
-    font-size: .75em;
-    height: 80px;
-    width: 200%;
-}
-
-#view-frame {
-    position: relative;
-    width: 200%;
-    height: 80vh;    
-    /* height: calc(90% - 80px); */
-    /* width: 200%; */
 }

@@ -11,11 +11,7 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
 
   return (
     <div id="stroll-wrapper">
-      <CaptionBand 
-        loading = {loading}
-        error = {error}
-        data = {data}
-      />
+
       <section id="view-frame">
 
         <svg 
@@ -56,6 +52,13 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           </g>
 
         </svg>
+        
+        <CaptionBand 
+          loading = {loading}
+          error = {error}
+          data = {data}
+        />
+
       </section> {/* end view-frame */}
 
     </div>

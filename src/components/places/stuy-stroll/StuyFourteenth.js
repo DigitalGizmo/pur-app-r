@@ -6,11 +6,7 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
 
   return (
     <div id="stroll-wrapper">
-      <CaptionBand 
-        loading = {loading}
-        error = {error}
-        data = {data}
-      />
+
       <section id="view-frame">
 
         <svg 
@@ -29,7 +25,6 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
             </image>
           </g>
 
-
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 2)}}>
               <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
@@ -37,8 +32,14 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
             </a>
           </g>
 
-
         </svg>
+
+        <CaptionBand 
+          loading = {loading}
+          error = {error}
+          data = {data}
+        />
+
       </section> {/* end view-frame */}
 
     </div>
