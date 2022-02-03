@@ -18,7 +18,7 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           x="0px" y="0px"
-          viewBox="0 0 6006 1479"
+          viewBox="0 0 5270 1479"
           preserveAspectRatio="xMidYMid meet" 
           className="svg-content"
         >
