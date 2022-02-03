@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CaptionBand from "./CaptionBand";
 import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, data, onPageChange}) => {
+  const svgEl = useRef(null);
+  const [svgWidth, setSvgWidth] = useState(0);
+  const [captionWidth, setCaptionWidth] = useState(0);
+  
+  const findWidth = () => {
+    // const sWidth = svgEl.current.clientWidth;
+    setSvgWidth(svgEl.current.clientWidth);
+  }
 
+  const updateCaptionWidth = svgWidth => {
+    setCaptionWidth(svgWidth);
+    console.log('setCaptionWidth: ' + svgWidth);
+  }
+
+  useEffect (() => {
+    findWidth();
+  });
+
+  useEffect (() => {
+    updateCaptionWidth(svgWidth);
+    // console.log('setCaptionWidth: ' + captionWidth);
+  }, [svgWidth]);
 
   const scrollToRight = () => {
     document.getElementById('wrapper').scrollLeft = 1200;
@@ -21,6 +42,7 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           viewBox="0 0 5270 1479"
           preserveAspectRatio="xMidYMid meet" 
           className="svg-content"
+          ref={svgEl}
         >
           <g id="photo">
             <image  
@@ -45,9 +67,9 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           </g>
 
           <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); scrollToRight()}}>
+            <a href="/" onClick={ e => { e.preventDefault(); findWidth()}}>
               <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
-              <text transform="translate(85.1718 345)" className="st10 st2 st11">scroll right</text>
+              <text transform="translate(85.1718 345)" className="st10 st2 st11">find/scroll right</text>
             </a>
           </g>
 
@@ -57,7 +79,9 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           loading = {loading}
           error = {error}
           data = {data}
+          captionWidth = {captionWidth}
         />
+        <p onClick={findWidth}>debug:</p>
 
     </div>
   );

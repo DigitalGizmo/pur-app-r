@@ -1,7 +1,7 @@
 import React from "react";
 import "./StuyStroll.css";
 
-const CaptionBand = ({loading, error, data}) => {
+const CaptionBand = ({loading, error, data, captionWidth}) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: { error.message } </p>;
@@ -23,7 +23,10 @@ const CaptionBand = ({loading, error, data}) => {
   });
 
   return (
-    <div id="caption-band">
+    <div 
+      id="caption-band"
+      style ={{ width: `${captionWidth}px` }}  
+    >
       { captions }
     </div> 
   );
