@@ -42,14 +42,14 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           x="0px" y="0px"
-          viewBox="0 0 5270 1479"
+          viewBox="0 0 5248 1479"
           preserveAspectRatio="xMidYMid meet" 
           className="svg-content"
           ref={svgEl}
         >
           <g id="photo">
             <image  
-                width="5270" height="1479" 
+                width="5248" height="1479" 
                 href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/first-ave.jpg"  
                 transform="translate(0 0)"> 
             </image>

@@ -39,7 +39,7 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
         >
           <g id="photo">
             <image  
-                width="6006" height="1500" 
+                width="6006" height="1479" 
                 href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fourteenth-st.jpg"  
                 transform="translate(0 0)"> 
             </image>

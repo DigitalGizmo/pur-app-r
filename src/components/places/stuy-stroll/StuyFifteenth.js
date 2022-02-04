@@ -10,14 +10,14 @@ const StuyFifteenth = ({onPageChange}) => {
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
           x="0px" y="0px"
-          viewBox="0 0 2000 1479"
+          viewBox="0 0 2486 1479"
           preserveAspectRatio="xMidYMid meet" 
           className="svg-content"
         >
 
           <g id="photo">
             <image  
-                width="2000" height="1254" 
+                width="2486" height="1479" 
                 href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"  
                 transform="translate(0 0)"> 
             </image>
