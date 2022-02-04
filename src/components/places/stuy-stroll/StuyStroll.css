@@ -6,62 +6,72 @@
   width: 100%;
 }
 
-/*Don: new for svg responsiveness! */
-.svg-content {
-    height: calc(100% - 80px);
-    width: auto;
-/*    position: absolute;
-     top: 0;
-    left: 0;*/ 
-}
-
-/*Caption-band and view-frame moved to respective sub-comonents*/
-/* Caption band styles from StuyFirst.vue */
-#caption-band {
-    background-color: #464231;
-    padding: .1em;
-    position: relative;
-    font-size: .75em;
-    height: 80px;
-    width: 100%;
-}
-
 header.stroll {
   height: 76px;
 }
 
-/*caption titles*/
-h4 {
-    margin: .25em 0 -1em 0;
+.svg-content {
+  height: calc(100% - 80px);
+  width: auto;
 }
 
-/*Don's highlighting - from st8 and st10*/
+#caption-band {
+  font-size: .75em;
+  height: 80px;
+  margin-top: -10px;
+  padding: .1em;
+  position: relative;
+}
+
+@media only screen and (max-width: 1080px) {
+  #caption-band {
+    font-size: 0.65em;
+  }
+}
+
+/* for intro text panel */
+div.intro-page {
+  position: relative;
+}
+
+.intro-panel {
+  background-color: rgba(53, 53, 38, 0.8);
+  border: 1px solid #686959;
+  font-size: .85em;
+  left:  20%;
+  padding: 1.5em;
+  position: absolute;
+  top:  10%;
+  width:  60%;
+}
+
+/*caption titles*/
+.cap {
+  position: absolute;
+  width: 6%;
+}
+
+.cap h4, .cap p {
+  margin: 0;
+}
 
 .low-spot {
-    fill: #666666;
-    opacity: 0;
+  fill: #666666;
+  opacity: 0;
 }
 
 .hi-spot {
-    fill: #FFAC06;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    opacity: .25;
-    stroke: #FFAC06;
-    stroke-opacity: .9;
+  fill: #FFAC06;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  opacity: .25;
+  stroke: #FFAC06;
+  stroke-opacity: .9;
 }
 
 .hi-text {
-    color: #FFAC06;
+  color: #FFAC06;
 }
-
-/* changes to caption styles - the width will need to be made responsive*/
-.cap {
-    position: absolute;
-    width: 160px;
-}
-
-/* End changes to caption styles*/
 
 /*Stroll version of slimpop*/
 .strollbox {
@@ -83,7 +93,6 @@ h4 {
   position: relative;
 }
 
-
 .turn-text {
   fill: #FFA300;
   font-size: 1.5em;
@@ -92,18 +101,19 @@ h4 {
   text-transform: uppercase;
 }
 
+.arrows {
+  opacity: 0.6;
+  fill: none;
+  stroke: #FFA300;
+  stroke-width: 19;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+/* Don, is this style being used anywhere? */
 .st8 {
   fill: none;
   stroke: #FFAC06;
   stroke-width: 2;
   stroke-miterlimit: 10;
-}
-
-.arrows {
-    opacity: 0.6;
-    fill: none;
-    stroke: #FFA300;
-    stroke-width: 19;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
 }
