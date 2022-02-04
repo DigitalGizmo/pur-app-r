@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import "./StuyStroll.css";
 
 const StuyFourteenth = ({loading, error, data, onPageChange}) => {
+  const svgEl = useRef(null);
+  const [svgWidth, setSvgWidth] = useState(0);
+
+  function handleResize () {
+    setSvgWidth(svgEl.current.clientWidth);
+  }
+  
+  // Change caption size on resize
+  useEffect (() => {
+    const debouncedHandleResize = debounce(handleResize, 1000)
+    window.addEventListener('resize', debouncedHandleResize);
+    return () => {
+      window.removeEventListener('resize', debouncedHandleResize);
+    }
+  });
+
+  // Size caption on startup
+  useEffect (() => {
+    handleResize();
+  },[]);
 
   return (
     <div id="stroll-wrapper">
@@ -14,6 +35,7 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
           viewBox="0 0 6006 1479"
           preserveAspectRatio="xMidYMid meet" 
           className="svg-content"
+          ref={svgEl}
         >
           <g id="photo">
             <image  
@@ -36,6 +58,7 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
           loading = {loading}
           error = {error}
           data = {data}
+          captionWidth = {svgWidth}
         />
 
     </div>

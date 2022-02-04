@@ -1,59 +1,26 @@
 import React, { useRef, useState, useEffect } from "react";
+import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, data, onPageChange}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
-  // const [captionWidth, setCaptionWidth] = useState(0);
-  
-  // const findWidth = () => {
-  //   // const sWidth = svgEl.current.clientWidth;
-  //   setSvgWidth(svgEl.current.clientWidth);
-  // }
-
-  // const updateCaptionWidth = svgWidth => {
-  //   setCaptionWidth(svgWidth);
-  //   console.log('setCaptionWidth: ' + svgWidth);
-  // }
-
-  function debounce(func, milSecs) {
-    let timer;
-    return () => {
-      timer = setTimeout(() => {
-        timer = null;
-        func.apply(this, arguments)
-      }, milSecs)
-    }
-  }
 
   function handleResize () {
     setSvgWidth(svgEl.current.clientWidth);
-    console.log('svgEl ' + svgEl.current.clientWidth);
-    console.log('svgWidth ' + svgWidth);
+    // console.log('svgEl ' + svgEl.current.clientWidth);
+    // console.log('svgWidth ' + svgWidth);
   }
-
-  // const debounedHandleResize = debounce(function handleResize () {
-  //   setSvgWidth(svgEl.current.clientWidth);
-  //   console.log('svgEl ' + svgEl.current.clientWidth);
-  //   console.log('svgWidth ' + svgWidth);
-  // }, 1000)
-
-  
   
   // Change caption size on resize
+  // https://www.pluralsight.com/guides/re-render-react-component-on-window-resize
   useEffect (() => {
-    const debounedHandleResize = debounce(handleResize, 1000)
-    // findWidth();
-    // function handleResize () {
-    //   setSvgWidth(svgEl.current.clientWidth);
-    //   console.log('svgEl ' + svgEl.current.clientWidth);
-    //   console.log('svgWidth ' + svgWidth);
-    // }
-    window.addEventListener('resize', debounedHandleResize);
+    const debouncedHandleResize = debounce(handleResize, 1000)
+    window.addEventListener('resize', debouncedHandleResize);
     return () => {
-      console.log('removing listener');
-      window.removeEventListener('resize', debounedHandleResize);
+      // console.log('removing listener');
+      window.removeEventListener('resize', debouncedHandleResize);
     }
   });
 
@@ -61,11 +28,6 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
   useEffect (() => {
     handleResize();
   },[]);
-
-  // useEffect (() => {
-  //   updateCaptionWidth(svgWidth);
-  //   // console.log('setCaptionWidth: ' + captionWidth);
-  // }, [svgWidth]);
 
   const scrollToRight = () => {
     document.getElementById('wrapper').scrollLeft = 1200;
@@ -122,7 +84,6 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
           data = {data}
           captionWidth = {svgWidth}
         />
-        {/* <p onClick={findWidth}>debug:</p> */}
 
     </div>
   );
