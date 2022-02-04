@@ -57,22 +57,15 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
 
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(3, 1)}}>
-            <polyline className="st9" points="5172.86 356.77 5231.28 404.61 5172.86 454.62"/>
-              <text transform="translate(5037.27 411.46)" className="st10 st2 st11">TURN THE CORNER</text>
+              <polyline className="arrows" points="5172.86 697 5231.28 745 5172.86 795"/>
+              <text transform="translate(4940 755)" className="turn-text">Turn the Corner</text>
             </a>
           </g>
 
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(1, 2)}}>
-              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
-              <text transform="translate(85.1718 245)" className="st10 st2 st11">Intro</text>
-            </a>
-          </g>
-
-          <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); scrollToRight()}}>
-              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
-              <text transform="translate(85.1718 345)" className="st10 st2 st11">find/scroll right</text>
+              <polyline className="arrows" points="85.2,691 26.8,739 85.2,789  "/>
+              <text transform="translate(85 755)" className="turn-text">Return to Intro</text>
             </a>
           </g>
 

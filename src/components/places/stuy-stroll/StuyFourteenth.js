@@ -47,8 +47,8 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
 
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 2)}}>
-              <polyline className="st9" points="85.2,191 26.8,239 85.2,289  "/>
-              <text transform="translate(85.1718 245)" className="st10 st2 st11">TURN THE CORNER</text>
+              <polyline className="arrows" points="85.2,691 26.8,739 85.2,789  "/>
+              <text transform="translate(85 755)" className="turn-text">Turn the Corner</text>
             </a>
           </g>
 

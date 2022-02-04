@@ -65,49 +65,45 @@ h4 {
 
 /*Stroll version of slimpop*/
 .strollbox {
-    position: fixed;
-    top: 100px;
-    width: 600px;
-    height: 500px;
-    z-index: 99;
+  height: 500px;
+  position: fixed;
+  top: 100px;
+  width: 600px;
+  z-index: 99;
 }
 
 /* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
 #stroll-pop-wrapper {
-    background-color: #f9f6ea;
-    border: 1px solid gray;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-    color: #333024;
-    overflow: auto;
-    padding: 1.5em;
-    position: relative;
+  background-color: #f9f6ea;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  color: #333024;
+  overflow: auto;
+  padding: 1.5em;
+  position: relative;
 }
 
 
-.st2 {
-    font-family: 'PTSans-NarrowBold';
+.turn-text {
+  fill: #FFA300;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .st8 {
-    fill: none;
-    stroke: #FFAC06;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
+  fill: none;
+  stroke: #FFAC06;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
 }
 
-.st9 {
+.arrows {
     opacity: 0.6;
     fill: none;
     stroke: #FFA300;
     stroke-width: 19;
     stroke-linecap: round;
     stroke-miterlimit: 10;
-}
-
-.st10 {
-    fill: #FFA300;
-}
-
-.st11 {
-    font-size: 20px;
 }
