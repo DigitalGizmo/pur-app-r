@@ -9,7 +9,11 @@ const ImageList = ({loading, error, data}) => {
 
   // return data.all_images.map(({ id, slug, title }) => (
   const images = data.all_images.map((image) => {
-    return  <ImageCard key={image.id} image={image} />;
+    return (
+      <ImageCard 
+        key={image.id} 
+        image={image} />
+    ) 
   });
 
   return (
