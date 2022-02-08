@@ -13,19 +13,41 @@ const Visuals= () => {
     setCityID(parseInt(event.target.value));
   }
 
+  // Ariadne django source version
+  // const GET_IMAGE_LIST = gql`
+  //   query getImages ($city_id: Int) {
+  //     all_images(city_id: $city_id) {
+  //       id
+  //       slug
+  //       title
+  //       description
+  //       creation_year
+  //       source_title
+  //       city
+  //       district_title
+  //       street_address
+  //     }
+  //   }
+  // `;
+
   const GET_IMAGE_LIST = gql`
     query getImages ($city_id: Int) {
-      all_images(city_id: $city_id) {
-        id
+      visualRecord (cityId: $city_id) {
         slug
         title
         description
-        creation_year
-        source_title
-        city
-        district_title
-        street_address
-      }
+        creationYear
+        streetAddress
+        city {
+          title
+        }
+        source {
+          title
+        }
+        district {
+          title
+        }
+      }      
     }
   `;
 
