@@ -1,0 +1,31 @@
+.entry-pop {
+  margin: 5% auto;
+  height: 80%;
+  width: 60%;
+}
+
+header {
+  max-width: 80%;
+}
+
+header p {
+  font-size: .8em;
+  margin:  .4em auto;
+}
+
+p.close {
+  font-size: .7em;
+  letter-spacing: .05em;
+  max-width: 20%;
+  float: right;
+}
+
+.close a {
+  color: darkorange;
+}
+
+img.fullpic {
+  float: left;
+  max-height: 60vh;
+  margin-right:  1em;
+}
