@@ -1,21 +1,23 @@
 import React from "react";
 import "./StuyStroll.css";
 
-const CaptionBand = ({loading, error, data, captionWidth}) => {
+const CaptionBand = ({loading, error, hotspots, captionWidth}) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: { error.message } </p>;
 
-  // return data.all_images.map(({ id, slug, title }) => (
-  const captions = data.hotspots.map((hotspot) => {
+  // hotspots = 
+  // {data.interactive.interactiveParts.edges[1].node.hotspots.edges}
+  const captions = 
+    hotspots.map((hotspot) => {
     return (
       <div
-        key={hotspot.title}
+        key={hotspot.node.title}
         className="cap"
-        style={{ left: hotspot.text_percent + '%' }}
+        style={{ left: hotspot.node.textPercent + '%' }}
       >
-        <h4>{hotspot.title}</h4>
-        <p>{hotspot.blurb}
+        <h4>{hotspot.node.title}</h4>
+        <p>{hotspot.node.blurb}
           more..
         </p>
       </div>

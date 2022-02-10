@@ -27,22 +27,57 @@ const StuyStroll = () => {
   }
 
   const GET_HOTSPOTS = gql`
-    query getHotspots ($interactive_part_id: Int){
-      hotspots(interactive_part_id: $interactive_part_id){
-        title
-        blurb
-        text_percent
-        hotspot_x
-        hotspot_y
-        hotspot_r
-        more
+    query {
+      interactive (id: "SW50ZXJhY3RpdmVOb2RlOjE=") {
+        slug,
+        interactiveParts {
+          edges {
+            node {
+              slug,
+              hotspots {
+                edges {
+                  node {
+                    ordinal
+                    title
+                    textPercent
+                    hotspotX
+                    hotspotY
+                    hotspotR
+                    blurb
+                    more
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   `;
 
-  const { loading, error, data } = useQuery(
-    GET_HOTSPOTS, { variables: { interactive_part_id: partID } }
-  );
+const { loading, error, data } = useQuery(
+  GET_HOTSPOTS
+);
+
+
+// const GET_HOTSPOTS = gql`
+// query getHotspots ($interactive_part_id: Int){
+//   hotspots(interactive_part_id: $interactive_part_id){
+//     title
+//     blurb
+//     text_percent
+//     hotspot_x
+//     hotspot_y
+//     hotspot_r
+//     more
+//   }
+// }
+// `;
+
+
+// const { loading, error, data } = useQuery(
+//     GET_HOTSPOTS, { variables: { interactive_part_id: partID } }
+//   );
 
   // const xOffset = 1000;
   const variants = {

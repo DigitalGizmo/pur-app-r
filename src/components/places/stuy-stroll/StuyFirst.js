@@ -74,7 +74,8 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
         <CaptionBand 
           loading = {loading}
           error = {error}
-          data = {data}
+          hotspots = 
+            {data.interactive.interactiveParts.edges[0].node.hotspots.edges}
           captionWidth = {svgWidth}
         />
 
