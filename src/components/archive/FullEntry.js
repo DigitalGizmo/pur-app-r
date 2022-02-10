@@ -4,13 +4,22 @@ import './FullEntry.css';
 const FullEntry = ({images, currIndex,
     closeFullEntry, nextEntry, prevEntry}) => {
 
+  // // Prevent click on FullEntry from closing window
+  // const handleClick = event => {
+  //   event.stopPropagation();
+
+  // }
+
   return (
     <div className="lightbox" onClick={closeFullEntry}>
       <div className="slimpop-wrapper entry-pop">
         <p className="close">
           <a href="/" onClick={prevEntry}>Prev</a> |
           <a href="/" onClick={nextEntry}>Next</a> | 
-          <a href="/" onClick={closeFullEntry}>Close</a>
+          <a
+            id="close-link" 
+            href="/" onClick={closeFullEntry}
+          >Close</a>
         </p>
 
         <header>
@@ -24,7 +33,7 @@ const FullEntry = ({images, currIndex,
           { !images[currIndex].streetAddress &&
             <p>location: { images[currIndex].city.title }</p>
           }
-          { images[currIndex].district.title &&
+          { images[currIndex].district &&
             <p>district: { images[currIndex].district.title }</p>
           }
           <p>date: { images[currIndex].creationYear }</p>

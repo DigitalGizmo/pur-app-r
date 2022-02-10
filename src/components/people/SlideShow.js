@@ -49,7 +49,7 @@ const SlideShow = (props) => {
   }
 
   return (
-    <div className="lightbox"> {/*onClick={this.onSlimClose}*/}
+    <div className="lightbox"> 
       <div className="slimpop-wrapper slide-show">
         <p className="close">
           {currSlide + 1} of {numSlides} |

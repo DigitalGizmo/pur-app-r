@@ -8,27 +8,11 @@ import ImageList from './ImageList';
 
 const Visuals= () => {
   const [cityID, setCityID] = useState(0);
+  // const [numImages, setNumImages] = useState(0);
 
   const onCityChange = (event) => {
     setCityID(parseInt(event.target.value));
   }
-
-  // Ariadne django source version
-  // const GET_IMAGE_LIST = gql`
-  //   query getImages ($city_id: Int) {
-  //     all_images(city_id: $city_id) {
-  //       id
-  //       slug
-  //       title
-  //       description
-  //       creation_year
-  //       source_title
-  //       city
-  //       district_title
-  //       street_address
-  //     }
-  //   }
-  // `;
 
   const GET_IMAGE_LIST = gql`
     query getImages ($city_id: Int) {
@@ -55,6 +39,8 @@ const Visuals= () => {
     GET_IMAGE_LIST, { variables: { city_id: cityID } }
   );
 
+  // console.log('num images: ' + data.visualRecord.length);
+
   const CITY_RADIO = [
     { ID: "city-albany", value: 5, label: "Albany"},
     { ID: "city-kingston", value:3, label: "Kingston"},
@@ -78,9 +64,11 @@ const Visuals= () => {
   });
 
   return (
-    <div className="menu-page"> {/*Don cheating and borrowing menu-page */}
-      <h2>The Visual Record</h2>
-      <h3># Images | Filter Images </h3>
+    <div> 
+      <header className="basic-page">
+        <h1>The Visual Record</h1>
+        <h4># Images | Filter Images </h4>
+      </header>
 
       <div className="filters">
         <div>

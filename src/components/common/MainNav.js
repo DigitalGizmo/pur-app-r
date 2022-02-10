@@ -15,8 +15,8 @@ const MainNav = (props) => {
         <li className={ props.selected === 'people' ? 'selected' : ''}>
           <Link to="/people">Personal Stories</Link>
         </li>
-        <li className={ props.selected === 'visual' ? 'selected' : ''}>
-          <a href="http://app.picturingurbanrenewal.org/visuals">Visual Record</a> 
+        <li className={ props.selected === 'visuals' ? 'selected' : ''}>
+          <Link to="/archive/visuals">Visual Record</Link>
         </li>
         <li className={ props.selected === 'places' ? 'selected' : ''}>
           <Link to="/places">Places</Link>

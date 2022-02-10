@@ -14,9 +14,16 @@ const ImageList = ({loading, error, data}) => {
     setFullEntryOn(true);
   }
 
+  // Prevent click on (non-link) FullEntry from closing window
   function closeFullEntry (event) {
+    // console.log(event.target.className)
     event.preventDefault()
-    setFullEntryOn(false);
+    event.stopPropagation()
+    // Close if click was on lightbox (background) or close
+    if (event.target.className === 'lightbox' ||
+    event.target.id === 'close-link') {
+      setFullEntryOn(false);
+    }
   }
 
   function nextEntry (event) {
