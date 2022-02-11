@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
+import Hotspots from './Hotspots';
 import "./StuyStroll.css";
 
-const StuyFirst = ({loading, error, data, onPageChange}) => {
+const StuyFirst = ({loading, error, interactivePart, onPageChange}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
 
@@ -55,6 +56,10 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
             </image>
           </g>
 
+          <Hotspots
+            hotspots={interactivePart.node.hotspots.edges}
+          />
+
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(3, 1)}}>
               <polyline className="arrows" points="5172.86 697 5231.28 745 5172.86 795"/>
@@ -74,8 +79,7 @@ const StuyFirst = ({loading, error, data, onPageChange}) => {
         <CaptionBand 
           loading = {loading}
           error = {error}
-          hotspots = 
-            {data.interactive.interactiveParts.edges[0].node.hotspots.edges}
+          hotspots = {interactivePart.node.hotspots.edges}
           captionWidth = {svgWidth}
         />
 

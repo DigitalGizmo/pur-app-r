@@ -127,7 +127,7 @@ const { loading, error, data } = useQuery(
         <StuyFirst 
           loading = {loading}
           error = {error}
-          data = {data}
+          interactivePart = { data.interactive.interactiveParts.edges[0] }
           onPageChange = {onPageChange}
         />}
 
@@ -135,7 +135,7 @@ const { loading, error, data } = useQuery(
         <StuyFourteenth 
           loading = {loading}
           error = {error}
-          data = {data}
+          interactivePart = { data.interactive.interactiveParts.edges[1] }
           onPageChange = {onPageChange}
         />}
 

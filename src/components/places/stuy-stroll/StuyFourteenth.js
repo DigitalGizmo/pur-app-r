@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
+import Hotspots from './Hotspots';
 import "./StuyStroll.css";
 
-const StuyFourteenth = ({loading, error, data, onPageChange}) => {
+const StuyFourteenth = ({loading, error, interactivePart, onPageChange}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
 
@@ -20,14 +21,19 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
     }
   });
 
+  // Set array of highlight boolean values to size of immage array
+  const initHighlights = () => {
+    console.log('num highlights: ' + interactivePart.node.hotspots.edges.length);
+  }
+
   // Size caption on startup
   useEffect (() => {
     handleResize();
+    initHighlights();
   },[]);
 
   return (
     <div id="stroll-wrapper">
-
         <svg 
           version="1.1" 
           xmlns="http://www.w3.org/2000/svg" 
@@ -45,6 +51,10 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
             </image>
           </g>
 
+          <Hotspots
+            hotspots={interactivePart.node.hotspots.edges}
+          />
+
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 2)}}>
               <polyline className="arrows" points="85.2,691 26.8,739 85.2,789  "/>
@@ -57,10 +67,9 @@ const StuyFourteenth = ({loading, error, data, onPageChange}) => {
         <CaptionBand 
           loading = {loading}
           error = {error}
-          data = {data}
+          hotspots = {interactivePart.node.hotspots.edges}
           captionWidth = {svgWidth}
         />
-
     </div>
   );
 }
