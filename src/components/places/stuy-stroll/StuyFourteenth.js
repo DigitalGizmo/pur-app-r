@@ -5,10 +5,10 @@ import Hotspots from './Hotspots';
 import "./StuyStroll.css";
 
 const StuyFourteenth = ({loading, error, interactivePart, 
-    onPageChange, highlights, hoverSpot}) => {
+    onPageChange, highlights, hoverSpot, unHoverSpot}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
-  const [highlightStates, setHighlightStates] = useState([]);
+  // const [highlightStates, setHighlightStates] = useState([]);
 
   function handleResize () {
     setSvgWidth(svgEl.current.clientWidth);
@@ -24,14 +24,14 @@ const StuyFourteenth = ({loading, error, interactivePart,
   });
 
   // Set array of highlight boolean values to size of immage array
-  const initHighlightStates = () => {
-    console.log('num highlights: ' + interactivePart.node.hotspots.edges.length);
-  }
+  // const initHighlightStates = () => {
+  //   console.log('num highlights: ' + interactivePart.node.hotspots.edges.length);
+  // }
 
   // Size caption on startup
   useEffect (() => {
     handleResize();
-    initHighlightStates();
+    // initHighlightStates();
   },[]);
 
   return (
@@ -57,7 +57,8 @@ const StuyFourteenth = ({loading, error, interactivePart,
             hotspots={interactivePart.node.hotspots.edges}
             highlights = {highlights}
             hoverSpot = {hoverSpot}
-          />
+            unHoverSpot = {unHoverSpot}
+            />
 
           <g id="turn-buttons">
             <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 2)}}>
@@ -73,7 +74,10 @@ const StuyFourteenth = ({loading, error, interactivePart,
           error = {error}
           hotspots = {interactivePart.node.hotspots.edges}
           captionWidth = {svgWidth}
-        />
+          highlights = {highlights}
+          hoverSpot = {hoverSpot}
+          unHoverSpot = {unHoverSpot}
+      />
     </div>
   );
 }

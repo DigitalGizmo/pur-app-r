@@ -43,6 +43,7 @@ const FullEntry = ({images, currIndex,
 
         <img 
           className="fullpic" 
+          alt={images[currIndex].description}
           src={`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${images[currIndex].slug}.jpg`}
           />
       </div> {/* /#slippop-wrapper */}

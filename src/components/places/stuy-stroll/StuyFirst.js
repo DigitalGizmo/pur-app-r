@@ -5,7 +5,7 @@ import Hotspots from './Hotspots';
 import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, interactivePart, 
-    onPageChange, highlights, hoverSpot }) => {
+    onPageChange, highlights, hoverSpot, unHoverSpot }) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
 
@@ -31,9 +31,9 @@ const StuyFirst = ({loading, error, interactivePart,
     handleResize();
   },[]);
 
-  const scrollToRight = () => {
-    document.getElementById('wrapper').scrollLeft = 1200;
-  }
+  // const scrollToRight = () => {
+  //   document.getElementById('wrapper').scrollLeft = 1200;
+  // }
 
   return (
     <div id="stroll-wrapper">
@@ -58,6 +58,7 @@ const StuyFirst = ({loading, error, interactivePart,
           hotspots={interactivePart.node.hotspots.edges}
           highlights = {highlights}
           hoverSpot = {hoverSpot}
+          unHoverSpot = {unHoverSpot}
         />
 
         <g id="turn-buttons">
@@ -81,7 +82,10 @@ const StuyFirst = ({loading, error, interactivePart,
         error = {error}
         hotspots = {interactivePart.node.hotspots.edges}
         captionWidth = {svgWidth}
-      />
+        highlights = {highlights}
+        hoverSpot = {hoverSpot}
+        unHoverSpot = {unHoverSpot}
+  />
 
     </div>
   );
