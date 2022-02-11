@@ -1,10 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect} from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import Hotspots from './Hotspots';
 import "./StuyStroll.css";
 
-const StuyFirst = ({loading, error, interactivePart, onPageChange}) => {
+const StuyFirst = ({loading, error, interactivePart, 
+    onPageChange, highlights, hoverSpot }) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
 
@@ -36,52 +37,51 @@ const StuyFirst = ({loading, error, interactivePart, onPageChange}) => {
 
   return (
     <div id="stroll-wrapper">
+      <svg 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg" 
+        x="0px" y="0px"
+        viewBox="0 0 5248 1479"
+        preserveAspectRatio="xMidYMid meet" 
+        className="svg-content"
+        ref={svgEl}
+      >
+        <g id="photo">
+          <image  
+              width="5248" height="1479" 
+              href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/first-ave.jpg"  
+              transform="translate(0 0)"> 
+          </image>
+        </g>
 
-{/*      <section id="view-frame">
-*/}
-        <svg 
-          version="1.1" 
-          xmlns="http://www.w3.org/2000/svg" 
-          x="0px" y="0px"
-          viewBox="0 0 5248 1479"
-          preserveAspectRatio="xMidYMid meet" 
-          className="svg-content"
-          ref={svgEl}
-        >
-          <g id="photo">
-            <image  
-                width="5248" height="1479" 
-                href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/first-ave.jpg"  
-                transform="translate(0 0)"> 
-            </image>
-          </g>
-
-          <Hotspots
-            hotspots={interactivePart.node.hotspots.edges}
-          />
-
-          <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); onPageChange(3, 1)}}>
-              <polyline className="arrows" points="5172.86 697 5231.28 745 5172.86 795"/>
-              <text transform="translate(4940 755)" className="turn-text">Turn the Corner</text>
-            </a>
-          </g>
-
-          <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); onPageChange(1, 2)}}>
-              <polyline className="arrows" points="85.2,691 26.8,739 85.2,789  "/>
-              <text transform="translate(85 755)" className="turn-text">Return to Intro</text>
-            </a>
-          </g>
-
-        </svg>
-
-        <CaptionBand 
-          loading = {loading}
-          error = {error}
-          hotspots = {interactivePart.node.hotspots.edges}
-          captionWidth = {svgWidth}
+        <Hotspots
+          hotspots={interactivePart.node.hotspots.edges}
+          highlights = {highlights}
+          hoverSpot = {hoverSpot}
         />
+
+        <g id="turn-buttons">
+          <a href="/" onClick={ e => { e.preventDefault(); onPageChange(3, 1)}}>
+            <polyline className="arrows" points="5172.86 697 5231.28 745 5172.86 795"/>
+            <text transform="translate(4940 755)" className="turn-text">Turn the Corner</text>
+          </a>
+        </g>
+
+        <g id="turn-buttons">
+          <a href="/" onClick={ e => { e.preventDefault(); onPageChange(1, 2)}}>
+            <polyline className="arrows" points="85.2,691 26.8,739 85.2,789  "/>
+            <text transform="translate(85 755)" className="turn-text">Return to Intro</text>
+          </a>
+        </g>
+
+      </svg>
+
+      <CaptionBand 
+        loading = {loading}
+        error = {error}
+        hotspots = {interactivePart.node.hotspots.edges}
+        captionWidth = {svgWidth}
+      />
 
     </div>
   );

@@ -10,10 +10,29 @@ import StuyFifteenth from './StuyFifteenth';
 import "./StuyStroll.css";
 
 const StuyStroll = () => {
+  // For street component transitions
   const [pageNum, setPageNum] = useState(1);
   // Direction 0 means 'forward', slide new in from right
   const [[currentPage, direction], setCurrentPage] = useState([1,0]);
-  const [partID, setPartID] = useState(2);
+  // const [partID, setPartID] = useState(2);
+  // For hotspot handling. Ideally per data hotspot length,
+  // but here hard-wired past imagined mas.
+  const BASE_HIGHLIGHTS = [
+    false, false, false, false, false, false, false, false, 
+    false, false, false, false, false, false, false, false, 
+    false, false, false, false, false, false, false, false 
+  ];
+  const [highlights, setHighlights] = useState(BASE_HIGHLIGHTS);
+
+  const hoverSpot = (index) => {
+    let newHighlights = [...BASE_HIGHLIGHTS];
+    newHighlights[index] = true;
+    setHighlights(newHighlights);
+  }
+
+  const unHoverSpot = () => {
+    setHighlights(BASE_HIGHLIGHTS);
+  }
 
   useEffect(() => {
     setPageNum(currentPage);
@@ -55,31 +74,10 @@ const StuyStroll = () => {
     }
   `;
 
-const { loading, error, data } = useQuery(
-  GET_HOTSPOTS
-);
+  const { loading, error, data } = useQuery(
+    GET_HOTSPOTS
+  );
 
-
-// const GET_HOTSPOTS = gql`
-// query getHotspots ($interactive_part_id: Int){
-//   hotspots(interactive_part_id: $interactive_part_id){
-//     title
-//     blurb
-//     text_percent
-//     hotspot_x
-//     hotspot_y
-//     hotspot_r
-//     more
-//   }
-// }
-// `;
-
-
-// const { loading, error, data } = useQuery(
-//     GET_HOTSPOTS, { variables: { interactive_part_id: partID } }
-//   );
-
-  // const xOffset = 1000;
   const variants = {
     enter: {
       // At start, w direction 0, new image enters from right
@@ -129,6 +127,9 @@ const { loading, error, data } = useQuery(
           error = {error}
           interactivePart = { data.interactive.interactiveParts.edges[0] }
           onPageChange = {onPageChange}
+          highlights = {highlights}
+          hoverSpot = {hoverSpot}
+          unHoverSpot = {unHoverSpot}
         />}
 
         { (pageNum === 3) && 
@@ -137,6 +138,9 @@ const { loading, error, data } = useQuery(
           error = {error}
           interactivePart = { data.interactive.interactiveParts.edges[1] }
           onPageChange = {onPageChange}
+          highlights = {highlights}
+          hoverSpot = {hoverSpot}
+          unHoverSpot = {unHoverSpot}
         />}
 
       </motion.div>
