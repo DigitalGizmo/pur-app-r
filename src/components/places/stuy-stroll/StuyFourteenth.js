@@ -2,10 +2,12 @@ import React, { useRef, useState, useEffect} from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import Hotspots from './Hotspots';
+import StrollMore from './StrollMore';
 import "./StuyStroll.css";
 
 const StuyFourteenth = ({loading, error, interactivePart, 
-    onPageChange, highlights, hoverSpot, unHoverSpot}) => {
+    onPageChange, highlights, hoverSpot, unHoverSpot,
+    showStrollMore, isMoreShowing}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
   // const [highlightStates, setHighlightStates] = useState([]);
@@ -77,7 +79,14 @@ const StuyFourteenth = ({loading, error, interactivePart,
           highlights = {highlights}
           hoverSpot = {hoverSpot}
           unHoverSpot = {unHoverSpot}
-      />
+          showStrollMore = {showStrollMore}
+        />
+      { isMoreShowing &&
+        <StrollMore
+          >
+        </StrollMore>
+      }
+
     </div>
   );
 }

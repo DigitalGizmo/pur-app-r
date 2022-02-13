@@ -23,7 +23,7 @@ const StuyStroll = () => {
     false, false, false, false, false, false, false, false 
   ];
   const [highlights, setHighlights] = useState(BASE_HIGHLIGHTS);
-
+  const [isMoreShowing, setStrollMoreOn] = useState(false);
   const hoverSpot = (index) => {
     let newHighlights = [...BASE_HIGHLIGHTS];
     newHighlights[index] = true;
@@ -33,6 +33,14 @@ const StuyStroll = () => {
   const unHoverSpot = () => {
     setHighlights(BASE_HIGHLIGHTS);
   }
+
+  const showStrollMore = (index) => {
+
+    // hiliteIndex.value = index;
+    // console.log('hiliteIndex: ' + hiliteIndex.value);
+    setStrollMoreOn(true);
+  }
+
 
   useEffect(() => {
     setPageNum(currentPage);
@@ -130,6 +138,8 @@ const StuyStroll = () => {
           highlights = {highlights}
           hoverSpot = {hoverSpot}
           unHoverSpot = {unHoverSpot}
+          showStrollMore = {showStrollMore}
+          isMoreShowing = {isMoreShowing}
         />}
 
         { (pageNum === 3) && 
@@ -141,6 +151,8 @@ const StuyStroll = () => {
           highlights = {highlights}
           hoverSpot = {hoverSpot}
           unHoverSpot = {unHoverSpot}
+          showStrollMore = {showStrollMore}
+          isMoreShowing = {isMoreShowing}
         />}
 
       </motion.div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./StuyStroll.css";
 
 const CaptionBand = ({loading, error, hotspots, captionWidth, 
-    highlights, hoverSpot, unHoverSpot}) => {
+    highlights, hoverSpot, unHoverSpot, showStrollMore}) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: { error.message } </p>;
@@ -20,9 +20,11 @@ const CaptionBand = ({loading, error, hotspots, captionWidth,
         onMouseLeave={unHoverSpot}
       >
         <h4>{hotspot.node.title}</h4>
-        <p>{hotspot.node.blurb}
-          more..
+        <p>{hotspot.node.blurb} <a 
+            onClick={ e => { e.preventDefault(); showStrollMore(index)}}
+            href="/">more...</a>
         </p>
+
       </div>
     )
   });

@@ -76,7 +76,8 @@ div.intro-page {
 /*Stroll version of slimpop*/
 .strollbox {
   height: 500px;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 100px;
   width: 600px;
   z-index: 99;
