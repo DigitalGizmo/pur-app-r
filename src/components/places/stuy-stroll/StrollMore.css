@@ -5,19 +5,19 @@
   width: 60%;
 }
 
-header {
-  max-width: 80%;
+#stroll-pop-wrapper header {
+  max-width: 90%;
 }
 
-header p {
+#stroll-pop-wrapper header p {
   font-size: .8em;
   margin:  .4em auto;
 }
 
-p.close {
+#stroll-pop-wrapper p.close {
   font-size: .7em;
   letter-spacing: .05em;
-  max-width: 20%;
+  max-width: 10%;
   float: right;
 }
 

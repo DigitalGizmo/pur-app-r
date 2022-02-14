@@ -7,7 +7,7 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
   return (
     <div style={{left:  hotspots[highlightIndex].node.textPercent + '%'}}
       className="strollbox" >
-      <div id="stroll-pop-wrapper" className="entry-pop">
+      <div id="stroll-pop-wrapper">
         <p className="close">
           <a href="/" onClick={ e => { e.preventDefault(); closeStrollMore()}}>
             close
@@ -15,8 +15,7 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
         </p>       
         <header>
           <h1>{ hotspots[highlightIndex].node.title }</h1>
-          <p>{ hotspots[highlightIndex].node.more }</p>
-        </header>
+
         { highlightIndex===8 &&
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/morepics/james-strawn-600.jpg"
@@ -24,7 +23,8 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
             width="400" height="266"
           />
         }
-
+          <p>{ hotspots[highlightIndex].node.more }</p>
+        </header>
       </div>
     </div>
   )
