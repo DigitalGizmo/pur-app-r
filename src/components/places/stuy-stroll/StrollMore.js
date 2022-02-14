@@ -17,7 +17,7 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
           <h1>{ hotspots[highlightIndex].node.title }</h1>
           <p>{ hotspots[highlightIndex].node.more }</p>
         </header>
-        { highlightIndex===37 &&
+        { highlightIndex===8 &&
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/morepics/james-strawn-600.jpg"
             alt="tenement interior"

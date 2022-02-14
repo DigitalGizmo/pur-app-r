@@ -26,8 +26,8 @@ import {
 
 const client = new ApolloClient({
   // uri: 'http://admin.picturingurbanrenewal.org/archive/graphql/',
-  // uri: 'http://admin.picturingurbanrenewal.org/graphql/',
-  uri: 'http://127.0.0.1:8000/graphql/',
+  uri: 'http://admin.picturingurbanrenewal.org/graphql/',
+  // uri: 'http://127.0.0.1:8000/graphql/',
   cache: new InMemoryCache()
 });
 

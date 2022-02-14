@@ -24,7 +24,7 @@ const Hotspots = ({hotspots, highlights, hoverSpot, unHoverSpot}) => {
   return (
     <g id="hilights">
       { hotspotElements }
-      { highlights[8] &&
+      { highlights[4] &&
         <g>
           <image  
             width="400" height="400" 
