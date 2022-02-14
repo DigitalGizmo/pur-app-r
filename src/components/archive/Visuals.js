@@ -71,13 +71,91 @@ const Visuals= () => {
       </header>
 
       <div className="filters">
+
+      <div>
+        <p>Era</p>
+        <ul class="filter-set">
+          <li>
+            <input type="checkbox" id="era-1940s" name="1940s"/>
+            <label for="era-1940s">1940s</label>
+          </li>
+          <li>
+            <input type="checkbox" id="era-1950s" name="1950s"/>
+            <label for="era-1950s">1950s</label>
+          </li>
+          <li>
+            <input type="checkbox" id="era-1960s" name="1960s"/>
+            <label for="era-1960s">1960s</label>
+          </li>
+          <li>
+            <input type="checkbox" id="era-1970s" name="1970s"/>
+            <label for="era-1970s">1970s</label>
+          </li>
+        </ul>
+      </div>
+
+
         <div>
           <p>Cities</p>
           <ul className="filter-set">
             { cities }
           </ul>
         </div>
-      </div> {/* end filters */}
+
+        <div>
+          <p>Topic</p>
+          <ul class="filter-set">
+            <li>
+              <input type="checkbox" id="topic-demolition" name="demolition"/>
+              <label for="topic-demolition">Demolition</label>
+            </li>
+            <li>
+              <input type="checkbox" id="" name="topic-plans"/>
+              <label for="topic-plans">Plans</label>
+            </li>
+            <li>
+              <input type="checkbox" id="" name="topic-people"/>
+              <label for="topic-people">People/Daily Life</label>
+            </li>
+            <li>
+              <input type="checkbox" id="" name="topic-arch"/>
+              <label for="topic-arch">Architecture</label>
+            </li>
+            <li>
+              <input type="checkbox" id="" name="topic-before"/>
+              <label for="topic-before">Before Redevelopment</label>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p>Format</p>
+          <ul class="filter-set">
+            <li>
+              <input type="checkbox" id="format-photos" name="photos"/>
+              <label for="format-photos">Photographs</label>
+            </li>
+            <li>
+              <input type="checkbox" id="format-graphics" name="graphics"/>
+              <label for="format-graphics">Graphics/Ephemera</label>
+            </li>
+            <li>
+              <input type="checkbox" id="format-drawings" name="drawings"/>
+              <label for="format-drawings">Architectural Drawings</label>
+            </li>
+            <li>
+              <input type="checkbox" id="format-maps" name="maps"/>
+              <label for="format-maps">Maps</label>
+            </li>
+            <li>
+              <input type="checkbox" id="format-docs" name="documents"/>
+              <label for="format-docs">Documents</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+        
 
       <ImageList 
         loading = {loading}

@@ -13,7 +13,7 @@ class Home extends React.Component {
         <ul className="list-menu">
           <li><Link to="/cities">4 Cities / 4 Stories</Link></li>
           <li><Link to="/people">Personal Stories</Link></li>
-          <li><a href="http://app.picturingurbanrenewal.org/visuals">Visual Record</a> </li>
+          <li><Link to="/archive/visuals">Visual Record</Link></li>
           <li><Link to="/places">Place-Based Explorations</Link></li>
         </ul>  
       </div>
