@@ -35,8 +35,7 @@
 .images-menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 1.25em .52em;
-  margin: auto;
+  grid-gap: 2em 0;
 }
 
 .images-menu-item {
@@ -50,17 +49,18 @@
   display: block;
 }
 
-.menu-image img {
-  height: 100px;
-}
-
 .menu-title {
-  color: grey;
-  font-size: .75em;
-/*  width: 100%;
-  white-space: nowrap;
+  color: #acae9a;
+  line-height: 1.2em;
+  padding: 0 .25em;
+  width: 100%;
+/*  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;*/
+}
+
+.menu-title:hover {
+    color: #ff7f00;
 }
 
 /* The attempt to convert the column sizing to rows */

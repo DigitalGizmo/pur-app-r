@@ -67,13 +67,13 @@ const Visuals= () => {
     <div> 
       <header className="basic-page">
         <h1>The Visual Record</h1>
-        <h4># Images | Filter Images </h4>
+        <h4># Images | Filter Images</h4>
       </header>
 
       <div className="filters">
 
       <div>
-        <p>Era</p>
+        <h4>Era</h4>
         <ul class="filter-set">
           <li>
             <input type="checkbox" id="era-1940s" name="1940s"/>
@@ -96,14 +96,14 @@ const Visuals= () => {
 
 
         <div>
-          <p>Cities</p>
+          <h4>Cities</h4>
           <ul className="filter-set">
             { cities }
           </ul>
         </div>
 
         <div>
-          <p>Topic</p>
+          <h4>Topic</h4>
           <ul class="filter-set">
             <li>
               <input type="checkbox" id="topic-demolition" name="demolition"/>
@@ -129,7 +129,7 @@ const Visuals= () => {
         </div>
 
         <div>
-          <p>Format</p>
+          <h4>Format</h4>
           <ul class="filter-set">
             <li>
               <input type="checkbox" id="format-photos" name="photos"/>

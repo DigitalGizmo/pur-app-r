@@ -1,8 +1,25 @@
 
+.filters, .images-menu {
+  padding: 0.5em 3%;
+  font-size: .75em;
+}
+
 .filters {
   display:  grid;
-  font-size: .8em;
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+}
+
+.filter-set {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.filters div h4 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: .15em;
+  margin: 0;
+  text-transform: uppercase;
 }
