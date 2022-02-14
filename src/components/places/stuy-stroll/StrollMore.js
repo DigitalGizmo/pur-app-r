@@ -1,35 +1,33 @@
 import React from 'react';
 import './StuyStroll.css';
+import './StrollMore.css';
 
-const StrollMore = () => {
+const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
 
   return (
-    <div className="strollbox" >
+    <div style={{left:  hotspots[highlightIndex].node.textPercent + '%'}}
+      className="strollbox" >
       <div id="stroll-pop-wrapper" className="entry-pop">
-
+        <p className="close">
+          <a href="/" onClick={ e => { e.preventDefault(); closeStrollMore()}}>
+            close
+          </a>
+        </p>       
         <header>
-          <h1>Title</h1>
+          <h1>{ hotspots[highlightIndex].node.title }</h1>
+          <p>{ hotspots[highlightIndex].node.more }</p>
         </header>
-        <p>more text</p>
+        { highlightIndex===37 &&
+          <img 
+            src="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/morepics/james-strawn-600.jpg"
+            alt="tenement interior"
+            width="400" height="266"
+          />
+        }
+
       </div>
     </div>
   )
-
 }
 
 export default StrollMore;
-
-//   <div class="strollbox" :style="{left: hotspots[hiliteIndex].text_percent + '%'}">
-//   <div id="stroll-pop-wrapper" class="entry-pop">
-//     <p class="close">
-//       <a href="#" @click="closeStrollMore">Close</a>
-//     </p>
-
-//     <header>
-//       <h1>{{ hotspots[hiliteIndex].title }}</h1>
-//     </header>
-//     <p>{{ hotspots[hiliteIndex].more }}</p>
-
-
-//   </div><!-- /#slippop-wrapper -->
-// </div><!-- /.lightbox -->

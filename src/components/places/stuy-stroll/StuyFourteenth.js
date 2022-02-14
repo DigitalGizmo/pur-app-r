@@ -7,7 +7,8 @@ import "./StuyStroll.css";
 
 const StuyFourteenth = ({loading, error, interactivePart, 
     onPageChange, highlights, hoverSpot, unHoverSpot,
-    showStrollMore, isMoreShowing}) => {
+    showStrollMore, isMoreShowing, highlightIndex,
+    closeStrollMore}) => {
   const svgEl = useRef(null);
   const [svgWidth, setSvgWidth] = useState(0);
   // const [highlightStates, setHighlightStates] = useState([]);
@@ -83,7 +84,10 @@ const StuyFourteenth = ({loading, error, interactivePart,
         />
       { isMoreShowing &&
         <StrollMore
-          >
+          hotspots = {interactivePart.node.hotspots.edges}
+          highlightIndex = {highlightIndex}
+          closeStrollMore = {closeStrollMore}
+        >
         </StrollMore>
       }
 

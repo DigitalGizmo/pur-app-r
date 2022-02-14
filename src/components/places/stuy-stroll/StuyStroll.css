@@ -118,3 +118,11 @@ div.intro-page {
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
+
+/* I think this should be closer to the base css */
+h1 {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+}
