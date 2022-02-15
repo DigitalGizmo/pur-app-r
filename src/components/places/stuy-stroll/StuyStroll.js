@@ -70,12 +70,17 @@ const StuyStroll = () => {
                   node {
                     ordinal
                     title
+                    slug
                     textPercent
                     hotspotX
                     hotspotY
                     hotspotR
+                    zoomPercent
                     blurb
                     more
+                    archiveItem {
+                      slug
+                    }
                   }
                 }
               }

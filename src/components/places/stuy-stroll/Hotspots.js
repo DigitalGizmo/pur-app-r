@@ -4,7 +4,8 @@ import './StuyStroll.css';
 const Hotspots = ({hotspots, highlights, hoverSpot, unHoverSpot}) => {
 
   const hotspotElements = hotspots.map((hotspot, index) => {
-    return (
+    let zoomRadius = hotspot.node.hotspotR * (hotspot.node.zoomPercent / 100)
+     return (
       <g
         key = {index}
         onMouseOver={() => hoverSpot(index)}
@@ -16,24 +17,26 @@ const Hotspots = ({hotspots, highlights, hoverSpot, unHoverSpot}) => {
           cy={hotspot.node.hotspotY}
           r={hotspot.node.hotspotR}
         />
-      </g>
-      
+        { highlights[index] && hotspot.node.slug &&
+          <g>
+            <image  
+              width={zoomRadius * 2} 
+              height={zoomRadius * 2}  
+              href={`http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/zoompics/${hotspot.node.slug}.png`}  
+              transform={`translate(
+                ${hotspot.node.hotspotX - zoomRadius} 
+                ${hotspot.node.hotspotY - zoomRadius}
+                )`}>
+            </image>
+          </g>     
+        }
+      </g>      
     )
   }); 
 
   return (
     <g id="hilights">
       { hotspotElements }
-      { highlights[4] &&
-        <g>
-          <image  
-            width="400" height="400" 
-            href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/penny-scale.png"  
-            transform="translate(1900 1010)">
-          </image>
-        </g>
-      }
-
     </g>
   );
 }

@@ -16,9 +16,9 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
         <header>
           <h1>{ hotspots[highlightIndex].node.title }</h1>
 
-        { highlightIndex===8 &&
+        { hotspots[highlightIndex].node.archiveItem &&
           <img 
-            src="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/morepics/james-strawn-600.jpg"
+            src={`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${hotspots[highlightIndex].node.archiveItem.slug}.jpg`}
             alt="tenement interior"
             width="400" height="266"
           />
