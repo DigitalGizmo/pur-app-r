@@ -5,7 +5,7 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
 
   return (
     <div style={{left:  (hotspots[highlightIndex].node.textPercent + 3) + '%'}}
-      className="strollbox" >
+      className="stroll-more-pop" >
       <div id="stroll-pop-wrapper">
         <p className="close">
           <a href="/" onClick={ e => { e.preventDefault(); closeStrollMore()}}>

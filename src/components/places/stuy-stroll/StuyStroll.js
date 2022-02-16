@@ -121,7 +121,7 @@ const StuyStroll = () => {
 
   return (
     <div> {/*Don cheating and borrowing menu-page */}
-      <header className="basic-page stroll">
+      <header className="basic-page">
         <h1>Stroll By: 1st Avenue and 14th Street</h1>
       </header>
 

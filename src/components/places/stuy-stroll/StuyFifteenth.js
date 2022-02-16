@@ -26,7 +26,7 @@ const StuyFifteenth = ({onPageChange}) => {
             <g id="turn-buttons">
               <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 1)}}>
                 <polyline className="arrows" points="2400 697 2458 745 2400 795"/>
-                <text transform="translate(2150 755)" className="turn-text">Turn the Corner</text>
+                <text transform="translate(2300 755)" className="turn-text">start</text>
               </a>
             </g>
 

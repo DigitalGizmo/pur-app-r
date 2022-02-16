@@ -1,13 +1,10 @@
 
+/*  main layout elements  */
 #stroll-wrapper {
   height: calc(100vh - 100px);
   overflow-x: scroll;
   position: absolute;
   width: 100%;
-}
-
-header.stroll {
-  height: 76px;
 }
 
 .svg-content {
@@ -23,13 +20,13 @@ header.stroll {
   position: relative;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1000px) {
   #caption-band {
     font-size: 0.65em;
   }
 }
 
-/* for intro text panel */
+/* intro page  */
 div.intro-page {
   position: relative;
 }
@@ -55,6 +52,25 @@ div.intro-page {
   margin: 0;
 }
 
+/*  turn corner buttons  */
+.turn-text {
+  fill: #FFA300;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.arrows {
+  opacity: 0.6;
+  fill: none;
+  stroke: #FFA300;
+  stroke-width: 19;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+/*  highlighting  */
 .low-spot {
   fill: #666666;
   opacity: 0;
@@ -73,86 +89,43 @@ div.intro-page {
   color: #FFAC06;
 }
 
-/*Stroll version of slimpop*/
-.strollbox {
-  /* height: 50%; */
-  height: 500%;
-  /* position: fixed; */
+/* More pops - Stroll version of slimpop*/
+.stroll-more-pop {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  height:  350px;
+  margin-top: -450px;
+  margin-left: 5%;
   overflow-y: scroll;
   position: absolute;
-  /* top: 100px; */
-  top: -550px;
-  /* width: 30%; */
-  width: 400px;
+  width: 15%;
   z-index: 99;
 }
 
-/* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
 #stroll-pop-wrapper {
   background-color: #EDEEE4;  
   border: 1px solid #BDBEA7;
   color: #353626;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  overflow: auto;
   padding: 1em;
   position: relative;
 }
 
-.turn-text {
-  fill: #FFA300;
-  font-size: 1.5em;
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.arrows {
-  opacity: 0.6;
-  fill: none;
-  stroke: #FFA300;
-  stroke-width: 19;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-}
-
-/* Don, is this style being used anywhere? */
-.st8 {
-  fill: none;
-  stroke: #FFAC06;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-}
-
-/* I think this should be closer to the base css */
-h1 {
-  font-size: 2em;
-  font-style: italic;
-  font-weight: normal;
-  margin: 0;
+#stroll-pop-wrapper p.close {
+  color: #FFAC06;
+  font-size: .75em;
+  float: right;
+  letter-spacing: .05em;
+  max-width: 10%;
 }
 
 #stroll-pop-wrapper header {
+  font-size: 1.25em;
   max-width: 90%;
 }
 
+#stroll-pop-wrapper header h1 {
+  margin: 0;
+}
+
 #stroll-pop-wrapper header p {
-  font-size: .8em;
-  margin:  .4em auto;
-}
-
-#stroll-pop-wrapper p.close {
-  font-size: .7em;
-  letter-spacing: .05em;
-  max-width: 10%;
-  float: right;
-}
-
-.close a {
-  color: darkorange;
-}
-
-img.fullpic {
-  float: left;
-  max-height: 60vh;
-  margin-right:  1em;
+  margin: 0.4em auto;
 }
