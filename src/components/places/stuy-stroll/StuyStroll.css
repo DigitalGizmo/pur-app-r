@@ -130,3 +130,29 @@ h1 {
   font-weight: normal;
   margin: 0;
 }
+
+#stroll-pop-wrapper header {
+  max-width: 90%;
+}
+
+#stroll-pop-wrapper header p {
+  font-size: .8em;
+  margin:  .4em auto;
+}
+
+#stroll-pop-wrapper p.close {
+  font-size: .7em;
+  letter-spacing: .05em;
+  max-width: 10%;
+  float: right;
+}
+
+.close a {
+  color: darkorange;
+}
+
+img.fullpic {
+  float: left;
+  max-height: 60vh;
+  margin-right:  1em;
+}
