@@ -81,15 +81,12 @@ const StuyFourteenth = ({loading, error, interactivePart,
           hoverSpot = {hoverSpot}
           unHoverSpot = {unHoverSpot}
           showStrollMore = {showStrollMore}
-        />
-      { isMoreShowing &&
-        <StrollMore
-          hotspots = {interactivePart.node.hotspots.edges}
-          highlightIndex = {highlightIndex}
           closeStrollMore = {closeStrollMore}
-        >
-        </StrollMore>
-      }
+          highlightIndex = {highlightIndex}
+          isMoreShowing = {isMoreShowing}
+        />
+
+
 
     </div>
   );
