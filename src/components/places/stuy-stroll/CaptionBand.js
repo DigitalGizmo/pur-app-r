@@ -21,11 +21,13 @@ const CaptionBand = ({loading, error, hotspots, captionWidth,
         onMouseOver={() => hoverSpot(index)}
         onMouseLeave={unHoverSpot}
       >
-        <h4>{hotspot.node.title}</h4>
-        <p>{hotspot.node.blurb} <a 
-            onClick={ e => { e.preventDefault(); showStrollMore(index)}}
-            href="/">more...</a>
-        </p>
+        <h4>
+          <a href="/"
+            onClick={ e => { e.preventDefault(); showStrollMore(index)}}>
+            {hotspot.node.title}
+          </a>
+        </h4>
+        <p>{hotspot.node.blurb}</p>
       </div>
     )
   });

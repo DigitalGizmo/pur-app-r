@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect} from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import Hotspots from './Hotspots';
-import StrollMore from './StrollMore';
 import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, interactivePart, 
@@ -14,8 +13,6 @@ const StuyFirst = ({loading, error, interactivePart,
 
   function handleResize () {
     setSvgWidth(svgEl.current.clientWidth);
-    // console.log('svgEl ' + svgEl.current.clientWidth);
-    // console.log('svgWidth ' + svgWidth);
   }
   
   // Change caption size on resize
@@ -89,15 +86,10 @@ const StuyFirst = ({loading, error, interactivePart,
         hoverSpot = {hoverSpot}
         unHoverSpot = {unHoverSpot}
         showStrollMore = {showStrollMore}
-        />
-      { isMoreShowing &&
-        <StrollMore
-          hotspots = {interactivePart.node.hotspots.edges}
-          highlightIndex = {highlightIndex}
-          closeStrollMore = {closeStrollMore}        >
-        </StrollMore>
-      }
-
+        closeStrollMore = {closeStrollMore}
+        highlightIndex = {highlightIndex}
+        isMoreShowing = {isMoreShowing}
+    />
     </div>
   );
 }

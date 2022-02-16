@@ -4,7 +4,7 @@ import './StuyStroll.css';
 const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
 
   return (
-    <div style={{left:  (hotspots[highlightIndex].node.textPercent + 3) + '%'}}
+    <div style={{left:  (hotspots[highlightIndex].node.textPercent + 2) + '%'}}
       className="stroll-more-pop" >
       <div id="stroll-pop-wrapper">
         <p className="close">

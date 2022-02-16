@@ -24,7 +24,7 @@ const StuyStroll = () => {
   ];
   const [highlights, setHighlights] = useState(BASE_HIGHLIGHTS);
   const [highlightIndex, setHiglightIndex] = useState(0);
-  const [isMoreShowing, setStrollMoreOn] = useState(false);
+  const [isMoreShowing, setIsMoreShowing] = useState(false);
 
   const hoverSpot = (index) => {
     let newHighlights = [...BASE_HIGHLIGHTS];
@@ -39,11 +39,11 @@ const StuyStroll = () => {
   const showStrollMore = (index) => {
     setHiglightIndex(index);
     console.log('- highlightIndex: ' + highlightIndex);
-    setStrollMoreOn(true);
+    setIsMoreShowing(true);
   }
 
   function closeStrollMore () {
-    setStrollMoreOn(false);
+    setIsMoreShowing(false);
   }
 
   useEffect(() => {
@@ -51,6 +51,9 @@ const StuyStroll = () => {
   }, [currentPage, direction])
 
   const onPageChange = (newPageNum, partID) => {
+    // In case More box is up
+    setIsMoreShowing(false);
+    // Direction for transition
     const newDirection =  (newPageNum > currentPage) ? 0 : 1;
     // Have to useEffect because of closure on setState
     // https://stackoverflow.com/questions/54069253/usestate-set-method-not-reflecting-change-immediately
