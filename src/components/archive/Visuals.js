@@ -79,6 +79,7 @@ const Visuals= () => {
     { ID: "format-personal", value: 6, label: "Personal Documents"},
     { ID: "format-published", value: 7, label: "Published Docuements"},
     { ID: "format-legal", value: 8, label: "Legal Documents"},
+    { ID: "format-all", value: 0, label: "All"},
   ];
 
   const formats = FORMAT_RADIO.map((format) => {
