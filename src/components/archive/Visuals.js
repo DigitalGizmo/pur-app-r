@@ -8,7 +8,7 @@ import ImageList from './ImageList';
 
 const Visuals= () => {
   const [cityID, setCityID] = useState(0);
-  const [formatID, setFormatID] = useState(0);
+  const [formatIDs, setFormatIDs] = useState([]);
   const [numImages, setNumImages] = useState(0);
 
   const onCityChange = (event) => {
@@ -16,12 +16,39 @@ const Visuals= () => {
   }
 
   const onFormatChange = (event) => {
-    setFormatID(parseInt(event.target.value));
+    event.preventDefault();
+    const isChecked = event.target.checked;
+    console.log('isChecked: ' + isChecked);
+    if (isChecked){
+      setFormatIDs([...formatIDs, parseInt(event.target.value)]);
+    } else {
+      console.log('in checked false. target value is: ' + event.target.value);
+
+      const index = formatIDs.indexOf(parseInt(event.target.value));
+      
+      console.log('index of that value is: ' + index);
+
+      // Per Redux reducer approach, need to return new array
+      console.log('formatIDs in false before splice: ' + formatIDs);
+
+      const newFormatIDs =  formatIDs;
+      // const newFormatIDs =  formatIDs.splice(index, 1);
+
+      console.log('newFormatIDs in false: ' + newFormatIDs);
+      setFormatIDs(newFormatIDs.splice(index, 1));
+      console.log('formatIDs in false: ' + formatIDs);
+      
+      // setFormatIDs([6]);
+    }
+  }
+
+  const clearFormats = () => {
+    setFormatIDs([]);
   }
 
   const GET_IMAGE_LIST = gql`
-    query getImages ($city_id: Int, $media_format_id: Int) {
-      visualRecord (cityId: $city_id, mediaFormatId: $media_format_id) {
+    query getImages ($city_id: Int, $media_format_ids: [Int]) {
+      visualRecord (cityId: $city_id, mediaFormatIds: $media_format_ids) {
         slug
         title
         description
@@ -41,12 +68,13 @@ const Visuals= () => {
   `;
 
   const { loading, error, data } = useQuery(
-    GET_IMAGE_LIST, { variables: { city_id: cityID, media_format_id: formatID } }
+    GET_IMAGE_LIST, { variables: { city_id: cityID, media_format_ids: formatIDs } }
   );
 
   useEffect(() => {
     if (typeof data !== 'undefined') {
       setNumImages(data.visualRecord.length);
+      // console.log('formatIDs: ' + formatIDs);
     }
   }, [data])
 
@@ -72,22 +100,21 @@ const Visuals= () => {
     )    
   });
 
-  const FORMAT_RADIO = [
+  const FORMATS = [
     { ID: "format-photo", value: 1, label: "Photographs"},
     { ID: "format-graphgic", value: 2, label: "Graphics/Ephemera"},
     { ID: "format-maps", value: 3, label: "Maps"},
     { ID: "format-personal", value: 6, label: "Personal Documents"},
     { ID: "format-published", value: 7, label: "Published Docuements"},
     { ID: "format-legal", value: 8, label: "Legal Documents"},
-    { ID: "format-all", value: 0, label: "All"},
   ];
 
-  const formats = FORMAT_RADIO.map((format) => {
+  const formats = FORMATS.map((format) => {
     return (
       <li key={format.ID}>
-        <input type="radio" name="format"
+        <input type="checkbox" name="formats"
           id={format.ID} value={format.value}
-          checked={ formatID === format.value } 
+          checked={ formatIDs.includes(format.value) } 
           onChange={onFormatChange} 
         />
         <label htmlFor={format.ID}>{format.label}</label>
@@ -106,26 +133,26 @@ const Visuals= () => {
 
       <div>
         <h4>Era</h4>
-        <ul class="filter-set">
+        <ul className="filter-set">
           <li>
             <input type="checkbox" id="era-1940s" name="1940s"
               disabled/>
-            <label for="era-1940s">1940s</label>
+            <label htmlFor="era-1940s">1940s</label>
           </li>
           <li>
             <input type="checkbox" id="era-1950s" name="1950s"
               disabled/>
-            <label for="era-1950s">1950s</label>
+            <label htmlFor="era-1950s">1950s</label>
           </li>
           <li>
             <input type="checkbox" id="era-1960s" name="1960s"
               disabled/>
-            <label for="era-1960s">1960s</label>
+            <label htmlFor="era-1960s">1960s</label>
           </li>
           <li>
             <input type="checkbox" id="era-1970s" name="1970s"
               disabled/>
-            <label for="era-1970s">1970s</label>
+            <label htmlFor="era-1970s">1970s</label>
           </li>
         </ul>
       </div>
@@ -140,39 +167,45 @@ const Visuals= () => {
 
         <div>
           <h4>Topic</h4>
-          <ul class="filter-set">
+          <ul className="filter-set">
             <li>
               <input type="checkbox" id="topic-demolition" name="demolition"
               disabled/>
-              <label for="topic-demolition">Demolition</label>
+              <label htmlFor="topic-demolition">Demolition</label>
             </li>
             <li>
               <input type="checkbox" id="" name="topic-plans"
               disabled/>
-              <label for="topic-plans">Plans</label>
+              <label htmlFor="topic-plans">Plans</label>
             </li>
             <li>
               <input type="checkbox" id="" name="topic-people"
               disabled/>
-              <label for="topic-people">People/Daily Life</label>
+              <label htmlFor="topic-people">People/Daily Life</label>
             </li>
             <li>
               <input type="checkbox" id="" name="topic-arch"
               disabled/>
-              <label for="topic-arch">Architecture</label>
+              <label htmlFor="topic-arch">Architecture</label>
             </li>
             <li>
               <input type="checkbox" id="" name="topic-before"
               disabled/>
-              <label for="topic-before">Before Redevelopment</label>
+              <label htmlFor="topic-before">Before Redevelopment</label>
             </li>
           </ul>
         </div>
 
         <div>
           <h4>Format</h4>
-          <ul class="filter-set">
+          <ul className="filter-set">
             { formats }
+            <li>
+              <button 
+                onClick={ clearFormats }
+                className="don-button"
+              >Clear (show all)</button>
+            </li>           
           </ul>
         </div>
       </div>
