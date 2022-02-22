@@ -17,30 +17,18 @@ const Visuals= () => {
 
   const onFormatChange = (event) => {
     event.preventDefault();
-    const isChecked = event.target.checked;
-    console.log('isChecked: ' + isChecked);
-    if (isChecked){
-      setFormatIDs([...formatIDs, parseInt(event.target.value)]);
+    let newFormatIDs = [...formatIDs];
+    if (event.target.checked){
+      newFormatIDs = [...formatIDs, parseInt(event.target.value)];
     } else {
-      console.log('in checked false. target value is: ' + event.target.value);
-
-      const index = formatIDs.indexOf(parseInt(event.target.value));
-      
-      console.log('index of that value is: ' + index);
-
-      // Per Redux reducer approach, need to return new array
-      console.log('formatIDs in false before splice: ' + formatIDs);
-
-      const newFormatIDs =  formatIDs;
-      // const newFormatIDs =  formatIDs.splice(index, 1);
-
-      console.log('newFormatIDs in false: ' + newFormatIDs);
-      setFormatIDs(newFormatIDs.splice(index, 1));
-      console.log('formatIDs in false: ' + formatIDs);
-      
-      // setFormatIDs([6]);
+      const indexToRemove = formatIDs.indexOf(parseInt(event.target.value));
+      newFormatIDs.splice(indexToRemove, 1);
     }
-  }
+    setFormatIDs(newFormatIDs);
+  } 
+
+  const isFormatChecked = (formatID) => 
+    formatIDs.includes(formatID) ? true : false;
 
   const clearFormats = () => {
     setFormatIDs([]);
@@ -109,12 +97,12 @@ const Visuals= () => {
     { ID: "format-legal", value: 8, label: "Legal Documents"},
   ];
 
-  const formats = FORMATS.map((format) => {
+  const formats = FORMATS.map((format, index) => {
     return (
-      <li key={format.ID}>
+      <li key={index}>
         <input type="checkbox" name="formats"
           id={format.ID} value={format.value}
-          checked={ formatIDs.includes(format.value) } 
+          checked={ isFormatChecked(format.value) } 
           onChange={onFormatChange} 
         />
         <label htmlFor={format.ID}>{format.label}</label>
@@ -209,8 +197,6 @@ const Visuals= () => {
           </ul>
         </div>
       </div>
-
-        
 
       <ImageList 
         loading = {loading}
