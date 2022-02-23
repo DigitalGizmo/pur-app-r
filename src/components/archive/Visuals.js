@@ -16,25 +16,6 @@ const Visuals= () => {
     setCityID(parseInt(event.target.value));
   }
 
-  // const onFormatChange = (event) => {
-  //   event.preventDefault();
-  //   let newFormatIDs = [...formatIDs];
-  //   if (event.target.checked){
-  //     newFormatIDs = [...formatIDs, parseInt(event.target.value)];
-  //   } else {
-  //     const indexToRemove = formatIDs.indexOf(parseInt(event.target.value));
-  //     newFormatIDs.splice(indexToRemove, 1);
-  //   }
-  //   setFormatIDs(newFormatIDs);
-  // } 
-
-  // const isFormatChecked = (formatID) => 
-  //   formatIDs.includes(formatID) ? true : false;
-
-  // const clearFormats = () => {
-  //   setFormatIDs([]);
-  // }
-
   const GET_IMAGE_LIST = gql`
     query getImages ($city_id: Int, $media_format_ids: [Int]) {
       visualRecord (cityId: $city_id, mediaFormatIds: $media_format_ids) {
@@ -88,28 +69,6 @@ const Visuals= () => {
       </li>
     )    
   });
-
-  // const FORMATS = [
-  //   { ID: "format-photo", value: 1, label: "Photographs"},
-  //   { ID: "format-graphgic", value: 2, label: "Graphics/Ephemera"},
-  //   { ID: "format-maps", value: 3, label: "Maps"},
-  //   { ID: "format-personal", value: 6, label: "Personal Documents"},
-  //   { ID: "format-published", value: 7, label: "Published Docuements"},
-  //   { ID: "format-legal", value: 8, label: "Legal Documents"},
-  // ];
-
-  // const formats = FORMATS.map((format, index) => {
-  //   return (
-  //     <li key={index}>
-  //       <input type="checkbox" name="formats"
-  //         id={format.ID} value={format.value}
-  //         checked={ isFormatChecked(format.value) } 
-  //         onChange={onFormatChange} 
-  //       />
-  //       <label htmlFor={format.ID}>{format.label}</label>
-  //     </li>
-  //   )    
-  // });
 
   return (
     <div> 

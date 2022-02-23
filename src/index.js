@@ -17,6 +17,7 @@ import StuyStroll from './components/places/stuy-stroll/StuyStroll';
 import Visuals from './components/archive/Visuals';
 import ThemeMenu from './components/themes/ThemeMenu';
 import Theme from './components/themes/Theme';
+import Timeline from './components/timeline/Timeline';
 // import reportWebVitals from './reportWebVitals';
 
 import {
@@ -51,6 +52,7 @@ render(
             <Route path="/places/stuy-stroll" element={<StuyStroll />} />
           <Route path="/themes" element={<ThemeMenu />} />
             <Route path="/themes/theme" element={<Theme />} />
+          <Route path="/timeline" element={<Timeline />} />
         </Route>
       </Routes>
     </BrowserRouter>
