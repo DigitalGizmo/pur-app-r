@@ -2,7 +2,7 @@ import React from 'react';
 import {getNewChosenArray} from '../common/Utility';
 
 
-const Topics = ({topicIDs, setTopicIDs}) => {
+const Topics = ({itemIDs, setItemIDs}) => {
   
   const ITEMS = [
     { ID: "topic-architecture", value: 4, label: "Architecture"},
@@ -23,18 +23,18 @@ const Topics = ({topicIDs, setTopicIDs}) => {
 
   ];
 
-  const onTopicChange = (event) => {
+  const onItemChange = (event) => {
     event.preventDefault();
-    const newTopicIDs = getNewChosenArray(event, topicIDs);
+    const newTopicIDs = getNewChosenArray(event, itemIDs);
     // console.log('topics: ' + newTopicIDs);
-    setTopicIDs(newTopicIDs);
+    setItemIDs(newTopicIDs);
   } 
 
-  const isTopicChecked = (topicID) => 
-    topicIDs.includes(topicID) ? true : false;
+  const isItemChecked = (itemID) => 
+    itemIDs.includes(itemID) ? true : false;
 
-  const clearTopics = () => {
-    setTopicIDs([]);
+  const clearItems = () => {
+    setItemIDs([]);
   }
 
   // const items = checkboxListById(FORMATS);
@@ -44,10 +44,10 @@ const Topics = ({topicIDs, setTopicIDs}) => {
   const items = ITEMS.map((item, index) => {
     return (
       <li key={index}>
-        <input type="checkbox" name="formats"
+        <input type="checkbox" name="items"
           id={item.ID} value={item.value}
-          checked={ isTopicChecked(item.value) } 
-          onChange={onTopicChange} 
+          checked={ isItemChecked(item.value) } 
+          onChange={onItemChange} 
         />
         <label htmlFor={item.ID}>{item.label}</label>
       </li>
@@ -59,7 +59,7 @@ const Topics = ({topicIDs, setTopicIDs}) => {
       { items }
       <li>
         <button 
-          onClick={ clearTopics }
+          onClick={ clearItems }
           className="don-button"
         >Clear (show all)</button>
       </li>           

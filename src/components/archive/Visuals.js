@@ -56,8 +56,8 @@ const Visuals= () => {
   useEffect(() => {
     if (typeof data !== 'undefined') {
       setNumImages(data.visualRecord.length);
-      console.log('formatIDs: ' + formatIDs);
-      console.log('topicIDs: ' + topicIDs);
+      // console.log('formatIDs: ' + formatIDs);
+      // console.log('topicIDs: ' + topicIDs);
     }
   }, [data])
 
@@ -129,8 +129,8 @@ const Visuals= () => {
         <div>
           <h4>Topic</h4>
           <Topics
-            topicIDs = {topicIDs}
-            setTopicIDs = {setTopicIDs}
+            itemIDs = {topicIDs}
+            setItemIDs = {setTopicIDs}
           />
         </div>
 
