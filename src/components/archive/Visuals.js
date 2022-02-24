@@ -6,10 +6,12 @@ import {
 import './Visuals.css';
 import ImageList from './ImageList';
 import Formats from './Formats';
+import Topics from './Topics';
 
 const Visuals= () => {
   const [cityID, setCityID] = useState(0);
   const [formatIDs, setFormatIDs] = useState([]);
+  const [topicIDs, setTopicIDs] = useState([]);
   const [numImages, setNumImages] = useState(0);
 
   const onCityChange = (event) => {
@@ -17,8 +19,14 @@ const Visuals= () => {
   }
 
   const GET_IMAGE_LIST = gql`
-    query getImages ($city_id: Int, $media_format_ids: [Int]) {
-      visualRecord (cityId: $city_id, mediaFormatIds: $media_format_ids) {
+    query getImages ($city_id: Int, 
+      $media_format_ids: [Int],
+      $topic_ids: [Int],
+      ) {
+      visualRecord (cityId: $city_id, 
+        mediaFormatIds: $media_format_ids,
+        topicIds: $topic_ids,
+        ) {
         slug
         title
         description
@@ -38,13 +46,18 @@ const Visuals= () => {
   `;
 
   const { loading, error, data } = useQuery(
-    GET_IMAGE_LIST, { variables: { city_id: cityID, media_format_ids: formatIDs } }
+    GET_IMAGE_LIST, { variables: { 
+      city_id: cityID, 
+      media_format_ids: formatIDs,
+      topic_ids: topicIDs,
+    } }
   );
 
   useEffect(() => {
     if (typeof data !== 'undefined') {
       setNumImages(data.visualRecord.length);
-      // console.log('formatIDs: ' + formatIDs);
+      console.log('formatIDs: ' + formatIDs);
+      console.log('topicIDs: ' + topicIDs);
     }
   }, [data])
 
@@ -115,50 +128,14 @@ const Visuals= () => {
 
         <div>
           <h4>Topic</h4>
-          <ul className="filter-set">
-            <li>
-              <input type="checkbox" id="topic-demolition" name="demolition"
-              disabled/>
-              <label htmlFor="topic-demolition">Demolition</label>
-            </li>
-            <li>
-              <input type="checkbox" id="" name="topic-plans"
-              disabled/>
-              <label htmlFor="topic-plans">Plans</label>
-            </li>
-            <li>
-              <input type="checkbox" id="" name="topic-people"
-              disabled/>
-              <label htmlFor="topic-people">People/Daily Life</label>
-            </li>
-            <li>
-              <input type="checkbox" id="" name="topic-arch"
-              disabled/>
-              <label htmlFor="topic-arch">Architecture</label>
-            </li>
-            <li>
-              <input type="checkbox" id="" name="topic-before"
-              disabled/>
-              <label htmlFor="topic-before">Before Redevelopment</label>
-            </li>
-          </ul>
+          <Topics
+            topicIDs = {topicIDs}
+            setTopicIDs = {setTopicIDs}
+          />
         </div>
 
-        {/* <div>
-          <h4>Format</h4>
-          <ul className="filter-set">
-            { formats }
-            <li>
-              <button 
-                onClick={ clearFormats }
-                className="don-button"
-              >Clear (show all)</button>
-            </li>           
-          </ul>
-        </div> */}
-
         <div>
-          <h4>Format X</h4>
+          <h4>Format</h4>
           <Formats
             formatIDs = {formatIDs}
             setFormatIDs = {setFormatIDs}
