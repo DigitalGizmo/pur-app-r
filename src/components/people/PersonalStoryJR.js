@@ -44,7 +44,7 @@ class PersonalStory extends React.Component {
     return (
       <div>
         <header className="basic-page">
-          <h1>Joseph Y. Resnick, US Congressman</h1>
+          <h1>Joseph Y. Resnick, I&rsquo;m for Joe</h1>
           <h4>Kingston, NY</h4>
         </header>
 
