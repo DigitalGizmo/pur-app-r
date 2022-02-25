@@ -10,6 +10,8 @@ import PeopleMenu from './components/people/PeopleMenu';
 import PersonalStory from './components/people/PersonalStory';
 import PersonalStoryCW from './components/people/PersonalStoryCW';
 import PersonalStoryJR from './components/people/PersonalStoryJR';
+import PersonalStoryJS from './components/people/PersonalStoryJS';
+import PersonalStoryGR from './components/people/PersonalStoryGR';
 import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
 import Kingston from './components/places/Kingston';
@@ -45,6 +47,8 @@ render(
             <Route path="/people/haines-dauner" element={<PersonalStory />} />
             <Route path="/people/carrie-wilson" element={<PersonalStoryCW />} />
             <Route path="/people/joseph-resnick" element={<PersonalStoryJR />} />
+            <Route path="/people/jimmy-strawn" element={<PersonalStoryJS />} />
+            <Route path="/people/george-raymond" element={<PersonalStoryGR />} />
           <Route path="/archive/visuals" element={<Visuals />} />
           <Route path="/places" element={<PlacesMenu />} />
             <Route path="/places/newburgh" element={<Newburgh />} />
