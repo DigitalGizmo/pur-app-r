@@ -1,0 +1,65 @@
+/* Timeline Styles */
+.timeline-page {
+	display: grid;
+	grid-template-columns: 60px repeat(15, 160px [col-start]);
+	grid-auto-columns: 200px;
+	grid-template-rows: 60px 120px 120px 120px 120px 120px;
+}
+
+h4.ny, h4.albany, h4.kingston, h4.newburgh, h4.us {
+	padding: 1em;
+	width: 120px;
+	transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.thru-lines {
+	grid-row: 1;
+	grid-column: 1 / 16;
+	font-size: .85em;
+}
+
+.timeline-content {
+	grid-row: 2 / 7;
+	grid-column: 2 / 16;	background-color: cornflowerblue;
+}
+
+h4.ny {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+h4.newburgh {
+	grid-row: 3;
+	grid-column: 1;
+}
+
+h4.kingston {
+	grid-row: 4;
+	grid-column: 1;
+}
+
+h4.albany {
+	grid-row: 5;
+	grid-column: 1;
+}
+
+h4.us {
+	grid-row: 6;
+	grid-column: 1;
+}
+
+.thru-lines ul li {
+	display: inline-block;
+	padding-right:  2em;
+}

@@ -48,7 +48,7 @@ nav.main-menu li {
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
   nav.main-menu li {
     font-size: 0.5em;
   }
