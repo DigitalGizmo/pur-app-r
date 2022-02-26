@@ -1,8 +1,7 @@
 import React from 'react';
-import {getNewChosenArray} from '../common/Utility';
+import CheckboxesById from './CheckboxesById';
 
-
-const Topics = ({itemIDs, setItemIDs}) => {
+const Topics = ({topicIDs, setTopicIDs}) => {
   
   const ITEMS = [
     { ID: "topic-architecture", value: 4, label: "Architecture"},
@@ -23,47 +22,13 @@ const Topics = ({itemIDs, setItemIDs}) => {
 
   ];
 
-  const onItemChange = (event) => {
-    event.preventDefault();
-    const newTopicIDs = getNewChosenArray(event, itemIDs);
-    // console.log('topics: ' + newTopicIDs);
-    setItemIDs(newTopicIDs);
-  } 
-
-  const isItemChecked = (itemID) => 
-    itemIDs.includes(itemID) ? true : false;
-
-  const clearItems = () => {
-    setItemIDs([]);
-  }
-
-  // const items = checkboxListById(FORMATS);
-  // I don't think I can move this out to utility because
-  // onFormatChange seems to need to be specific to
-  // this list type
-  const items = ITEMS.map((item, index) => {
-    return (
-      <li key={index}>
-        <input type="checkbox" name="items"
-          id={item.ID} value={item.value}
-          checked={ isItemChecked(item.value) } 
-          onChange={onItemChange} 
-        />
-        <label htmlFor={item.ID}>{item.label}</label>
-      </li>
-    )    
-  });
-
   return (
-    <ul className="filter-set">
-      { items }
-      <li>
-        <button 
-          onClick={ clearItems }
-          className="don-button"
-        >Clear (show all)</button>
-      </li>           
-    </ul>
+    <CheckboxesById
+      itemIDs={topicIDs}
+      setItemIDs={setTopicIDs}
+      itemArray={ITEMS}
+    />
+
   );
 
 }

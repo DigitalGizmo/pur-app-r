@@ -129,8 +129,8 @@ const Visuals= () => {
         <div>
           <h4>Topic</h4>
           <Topics
-            itemIDs = {topicIDs}
-            setItemIDs = {setTopicIDs}
+            topicIDs = {topicIDs}
+            setTopicIDs = {setTopicIDs}
           />
         </div>
 
