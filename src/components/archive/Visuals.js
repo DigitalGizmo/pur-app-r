@@ -7,11 +7,13 @@ import './Visuals.css';
 import ImageList from './ImageList';
 import Formats from './Formats';
 import Topics from './Topics';
+import Search from './Search';
 
 const Visuals= () => {
   const [cityID, setCityID] = useState(0);
   const [formatIDs, setFormatIDs] = useState([]);
   const [topicIDs, setTopicIDs] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [numImages, setNumImages] = useState(0);
 
   const onCityChange = (event) => {
@@ -22,10 +24,12 @@ const Visuals= () => {
     query getImages ($city_id: Int, 
       $media_format_ids: [Int],
       $topic_ids: [Int],
+      $search_term: String
       ) {
       visualRecord (cityId: $city_id, 
         mediaFormatIds: $media_format_ids,
         topicIds: $topic_ids,
+        searchTerm: $search_term
         ) {
         slug
         title
@@ -50,6 +54,7 @@ const Visuals= () => {
       city_id: cityID, 
       media_format_ids: formatIDs,
       topic_ids: topicIDs,
+      search_term: searchTerm
     } }
   );
 
@@ -139,6 +144,13 @@ const Visuals= () => {
           <Formats
             formatIDs = {formatIDs}
             setFormatIDs = {setFormatIDs}
+          />
+        </div>
+
+        <div>
+          <h4>Search</h4>
+          <Search
+            setSearchTerm= {setSearchTerm}
           />
         </div>
 
