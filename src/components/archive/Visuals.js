@@ -7,12 +7,14 @@ import './Visuals.css';
 import ImageList from './ImageList';
 import Formats from './Formats';
 import Topics from './Topics';
+import Eras from './Eras';
 import Search from './Search';
 
 const Visuals= () => {
   const [cityID, setCityID] = useState(0);
   const [formatIDs, setFormatIDs] = useState([]);
   const [topicIDs, setTopicIDs] = useState([]);
+  const [eraIDs, setEraIDs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [numImages, setNumImages] = useState(0);
 
@@ -24,11 +26,13 @@ const Visuals= () => {
     query getImages ($city_id: Int, 
       $media_format_ids: [Int],
       $topic_ids: [Int],
+      $era_ids: [Int],
       $search_term: String
       ) {
       visualRecord (cityId: $city_id, 
         mediaFormatIds: $media_format_ids,
         topicIds: $topic_ids,
+        eraIds: $era_ids,
         searchTerm: $search_term
         ) {
         slug
@@ -54,6 +58,7 @@ const Visuals= () => {
       city_id: cityID, 
       media_format_ids: formatIDs,
       topic_ids: topicIDs,
+      era_ids: eraIDs,
       search_term: searchTerm
     } }
   );
@@ -97,32 +102,13 @@ const Visuals= () => {
 
       <div className="filters">
 
-      <div>
-        <h4>Era</h4>
-        <ul className="filter-set">
-          <li>
-            <input type="checkbox" id="era-1940s" name="1940s"
-              disabled/>
-            <label htmlFor="era-1940s">1940s</label>
-          </li>
-          <li>
-            <input type="checkbox" id="era-1950s" name="1950s"
-              disabled/>
-            <label htmlFor="era-1950s">1950s</label>
-          </li>
-          <li>
-            <input type="checkbox" id="era-1960s" name="1960s"
-              disabled/>
-            <label htmlFor="era-1960s">1960s</label>
-          </li>
-          <li>
-            <input type="checkbox" id="era-1970s" name="1970s"
-              disabled/>
-            <label htmlFor="era-1970s">1970s</label>
-          </li>
-        </ul>
-      </div>
-
+        <div>
+          <h4>Era</h4>
+          <Eras
+            eraIDs = {eraIDs}
+            setEraIDs = {setEraIDs}
+          />
+        </div>
 
         <div>
           <h4>Cities</h4>
