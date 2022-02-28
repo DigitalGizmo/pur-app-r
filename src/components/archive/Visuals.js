@@ -4,32 +4,29 @@ import {
     gql
 } from "@apollo/client"; 
 import './Visuals.css';
-import ImageList from './ImageList';
-import Formats from './Formats';
-import Topics from './Topics';
 import Eras from './Eras';
+import Cities from './Cities';
+import Topics from './Topics';
+import Formats from './Formats';
 import Search from './Search';
+import ImageList from './ImageList';
 
 const Visuals= () => {
-  const [cityID, setCityID] = useState(0);
+  const [cityIDs, setCityIDs] = useState([]);
   const [formatIDs, setFormatIDs] = useState([]);
   const [topicIDs, setTopicIDs] = useState([]);
   const [eraIDs, setEraIDs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [numImages, setNumImages] = useState(0);
 
-  const onCityChange = (event) => {
-    setCityID(parseInt(event.target.value));
-  }
-
   const GET_IMAGE_LIST = gql`
-    query getImages ($city_id: Int, 
+    query getImages ($city_ids: [Int], 
       $media_format_ids: [Int],
       $topic_ids: [Int],
       $era_ids: [Int],
       $search_term: String
       ) {
-      visualRecord (cityId: $city_id, 
+      visualRecord (cityIds: $city_ids, 
         mediaFormatIds: $media_format_ids,
         topicIds: $topic_ids,
         eraIds: $era_ids,
@@ -55,7 +52,7 @@ const Visuals= () => {
 
   const { loading, error, data } = useQuery(
     GET_IMAGE_LIST, { variables: { 
-      city_id: cityID, 
+      city_ids: cityIDs, 
       media_format_ids: formatIDs,
       topic_ids: topicIDs,
       era_ids: eraIDs,
@@ -70,28 +67,6 @@ const Visuals= () => {
       // console.log('topicIDs: ' + topicIDs);
     }
   }, [data])
-
-  const CITY_RADIO = [
-    { ID: "city-albany", value: 5, label: "Albany"},
-    { ID: "city-kingston", value:3, label: "Kingston"},
-    { ID: "city-newburgh", value: 2, label: "Newburgh"},
-    { ID: "city-stuytown", value: 4, label: "Stuyvesant Town"},
-    { ID: "city-other", value:6, label: "Other"},
-    { ID: "city-all", value: 0, label: "All"},
-  ];
-
-  const cities = CITY_RADIO.map((city) => {
-    return (
-      <li key={city.ID}>
-        <input type="radio" name="city"
-          id={city.ID} value={city.value}
-          checked={ cityID === city.value } 
-          onChange={onCityChange} 
-        />
-        <label htmlFor={city.ID}>{city.label}</label>
-      </li>
-    )    
-  });
 
   return (
     <div> 
@@ -112,9 +87,10 @@ const Visuals= () => {
 
         <div>
           <h4>Cities</h4>
-          <ul className="filter-set">
-            { cities }
-          </ul>
+          <Cities
+            cityIDs = {cityIDs}
+            setCityIDs = {setCityIDs}
+          />
         </div>
 
         <div>

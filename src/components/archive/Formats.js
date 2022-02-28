@@ -7,7 +7,7 @@ const Formats = ({formatIDs, setFormatIDs}) => {
     { ID: "format-graphgic", value: 2, label: "Graphics/Ephemera"},
     { ID: "format-maps", value: 3, label: "Maps"},
     { ID: "format-personal", value: 6, label: "Personal Documents"},
-    { ID: "format-published", value: 7, label: "Published Docuements"},
+    { ID: "format-published", value: 7, label: "Published Documents"},
     { ID: "format-legal", value: 8, label: "Legal Documents"},
   ];
 
