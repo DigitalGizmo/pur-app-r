@@ -25,15 +25,75 @@ const Timeline = () => {
           </ul>
         </section>
 
-        <h4 className="ny">New York City</h4>
-        <h4 className="newburgh">Newburgh</h4>
-        <h4 className="kingston">Kingston</h4>
-        <h4 className="albany">Albany</h4>
-        <h4 className="us">NY &amp; US</h4>
+        <table className="timeline-content">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>1950</th>
+              <th>1951</th>
+              <th>1952</th>
+              <th>1953</th>
+              <th>1954</th>
+            </tr>
+          </thead>
 
-        <section className="timeline-content">
-          <p>timeline content goes here</p>
-        </section>
+          <tbody>
+            <tr className="row-nyc">
+              <th>New York City</th>
+              <td>The obvious rejoinder to this spin is that Trump got impeached for withholding military aid to strongarm Ukrainian President into manufacturing propaganda to help Trump’s reelection. This came even as Zelensky pleaded for help against Russian aggression, which the world is now witnessing unfold in all its horror.</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>
+
+            <tr className="row-newburgh">
+              <th>Newburgh</th>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>
+
+            <tr className="row-kingston">
+              <th>Kingston</th>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>
+
+
+            <tr className="row-albany">
+              <th>Albany</th>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>
+
+            <tr className="row-nystate">
+              <th>NY State</th>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>
+
+            <tr className="row-us">
+              <th>US</th>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>lorem ipsum</td>
+              <td>acet dorcit</td>
+              <td>fodus rotim</td>
+            </tr>                     
+          </tbody>
+        </table>
 
       </div>
     </div>

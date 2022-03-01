@@ -1,65 +1,108 @@
 /* Timeline Styles */
 .timeline-page {
-	display: grid;
-	grid-template-columns: 60px repeat(15, 160px [col-start]);
-	grid-auto-columns: 200px;
-	grid-template-rows: 60px 120px 120px 120px 120px 120px;
-}
 
-h4.ny, h4.albany, h4.kingston, h4.newburgh, h4.us {
-	padding: 1em;
-	width: 120px;
-	transform: rotate(-90deg);
-  /* Legacy vendor prefixes that you probably don't need... */
-  /* Safari */
-  -webkit-transform: rotate(-90deg);
-  /* Firefox */
-  -moz-transform: rotate(-90deg);
-  /* IE */
-  -ms-transform: rotate(-90deg);
-  /* Opera */
-  -o-transform: rotate(-90deg);
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .thru-lines {
-	grid-row: 1;
-	grid-column: 1 / 16;
 	font-size: .85em;
-}
-
-.timeline-content {
-	grid-row: 2 / 7;
-	grid-column: 2 / 16;	background-color: cornflowerblue;
-}
-
-h4.ny {
-	grid-row: 2;
-	grid-column: 1;
-}
-
-h4.newburgh {
-	grid-row: 3;
-	grid-column: 1;
-}
-
-h4.kingston {
-	grid-row: 4;
-	grid-column: 1;
-}
-
-h4.albany {
-	grid-row: 5;
-	grid-column: 1;
-}
-
-h4.us {
-	grid-row: 6;
-	grid-column: 1;
 }
 
 .thru-lines ul li {
 	display: inline-block;
 	padding-right:  2em;
+}
+
+.timeline-content {
+
+}
+
+/* from css tricks https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/ */
+table {
+  margin: 0;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+table td,
+table th {
+  border: 1px solid #686959;
+  padding: 0.5rem 1rem;
+}
+
+table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+table thead th {
+  padding: 0px;
+	font-size: 3em;
+	height: 60px;
+	opacity: 0.3;
+}
+
+tbody tr {
+	max-height: 80px;
+  overflow: hidden;
+}
+
+table td {
+  font-size: 0.75em;
+  font-weight: normal;
+  padding: 4px 5px;
+  text-align: left;
+}
+
+table tbody th {
+  font-size: 0.85em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+  width: 60px;
+  position: relative;
+}
+
+table thead th:first-child {
+  background-color: #353526;
+  position: sticky;
+  left: 0;
+  width: 60px;
+  z-index: 2;
+}
+
+table tbody th {
+  background-color: #353526;
+  left: 0;
+  position: sticky;
+  writing-mode: vertical-rl;
+  /*-ms-transform: rotate(270deg); /* IE 9
+  transform: rotate(270deg);*/
+
+  z-index: 1;
+}
+
+tr.row-nyc td {
+	background-color: #394718;
+}
+
+tr.row-newburgh td {
+	background-color: #1f2452;
+}
+
+tr.row-kingston td {
+	background-color: #544213;
+}
+
+tr.row-albany td {
+	background-color: #4d0e16;
+}
+
+tr.row-nystate {
+}
+
+tr.row-us {
 }
