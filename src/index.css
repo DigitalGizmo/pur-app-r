@@ -59,7 +59,7 @@ dl dd {
   margin: 0;
 }
 
-table {
+/*table {
   border-collapse: collapse;
   margin: 0.8em 0;
   table-layout: fixed;
@@ -82,7 +82,7 @@ tr,
 td,
 th {
   vertical-align: middle;
-}
+}*/
 
 html {
   background-color: #353526;

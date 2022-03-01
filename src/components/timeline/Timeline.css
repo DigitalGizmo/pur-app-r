@@ -9,7 +9,7 @@
 
 .thru-lines ul li {
 	display: inline-block;
-	padding-right:  2em;
+	padding-right: 2em;
 }
 
 .timeline-content {
@@ -25,10 +25,17 @@ table {
   table-layout: fixed;
 }
 
+table tr {
+	vertical-align: top;
+}
+
 table td,
 table th {
   border: 1px solid #686959;
   padding: 0.5rem 1rem;
+/*	width: 120px;
+	overflow: hidden;
+  overflow-wrap: break-word;*/
 }
 
 table thead {
@@ -40,13 +47,13 @@ table thead {
 table thead th {
   padding: 0px;
 	font-size: 3em;
-	height: 60px;
+	/*height: 60px;*/
 	opacity: 0.3;
 }
-
+	
 tbody tr {
-	max-height: 80px;
-  overflow: hidden;
+/*	max-height: 80px;
+  overflow: hidden;*/
 }
 
 table td {
@@ -62,15 +69,19 @@ table tbody th {
   letter-spacing: 0.05em;
   text-align: left;
   text-transform: uppercase;
-  width: 60px;
+/*  width: 60px;*/
   position: relative;
+}
+
+table tbody td, table tbody th {
+
 }
 
 table thead th:first-child {
   background-color: #353526;
   position: sticky;
   left: 0;
-  width: 60px;
+/*  width: 60px;*/
   z-index: 2;
 }
 
@@ -81,7 +92,6 @@ table tbody th {
   writing-mode: vertical-rl;
   /*-ms-transform: rotate(270deg); /* IE 9
   transform: rotate(270deg);*/
-
   z-index: 1;
 }
 

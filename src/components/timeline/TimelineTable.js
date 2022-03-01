@@ -11,8 +11,8 @@ const TimelineTable = () => {
         <tr>
           <th>&nbsp;</th>
           {years.map((year) => (
-          <th>{year}</th>
-        ))}
+            <th>{year}</th>
+          ))}
         </tr>
       </thead> 
        
