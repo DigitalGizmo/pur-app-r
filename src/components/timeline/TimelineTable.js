@@ -19,7 +19,7 @@ const TimelineTable = () => {
       <tbody>
 
         {timelineContent.map ((row) => (
-          <tr className="row-nyc">
+          <tr className={row.class}>
             <th>{row.city}</th>
             {row.years.map((content) => (
               <td>{content.text}</td>
