@@ -6,6 +6,7 @@ const years = [
 const timelineContent = [
   {
     "city" : "New York City",
+    "class" : "row-nyc",
     "years" : [
        {
           "year": "1943",
@@ -155,6 +156,7 @@ const timelineContent = [
  },
  {
     "city" : "Newburgh",
+    "class" : "row-newburgh",
     "years" : [
        {
           "year": "1943",
@@ -304,6 +306,7 @@ const timelineContent = [
  },
  {
     "city" : "Kingston",
+    "class" : "row-kingston",
     "years" : [
        {
           "year": "1943",
@@ -453,6 +456,7 @@ const timelineContent = [
  },
  {
     "city" : "Albany",
+    "class" : "row-albany",
     "years" : [
        {
           "year": "1943",
@@ -602,6 +606,7 @@ const timelineContent = [
  },
  {
     "city" : "New York State",
+    "class" : "row-nystate",
     "years" : [
        {
           "year": "1943",
@@ -751,6 +756,7 @@ const timelineContent = [
  },
  {
     "city" : "United States",
+    "class" : "row-us",
     "years" : [
        {
           "year": "1943",
