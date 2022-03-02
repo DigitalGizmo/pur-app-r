@@ -1,4 +1,4 @@
-const years = [
+const yearArray = [
   1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 
   1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 
   1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978]
@@ -11,26 +11,6 @@ const timelineContent = [
        {
           "year": "1943",
           "text": "Metropolitan Life Insurance Co. (MetLife) announces plans to build Stuyvesant Town apartment complex on the Lower East Side of Manhattan. The city grants MetLife the power of eminent domain.",
-       },
-       {
-          "year": "1944",
-          "text": "",
-       },
-       {
-          "year": "1945",
-          "text": "",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
        },
        {
           "year": "1949",
@@ -49,20 +29,8 @@ const timelineContent = [
           "text": "Stuyvesant Town management drops eviction proceedings and grants first lease to an African American family. Management proposes first rent increase.",
        },
        {
-          "year": "1953",
-          "text": "",
-       },
-       {
           "year": "1954",
           "text": "New York State Appeals Court affirms right to increase rent by more than 14%.",
-       },
-       {
-          "year": "1955",
-          "text": "",
-       },
-       {
-          "year": "1956",
-          "text": "",
        },
        {
           "year": "1957",
@@ -116,42 +84,7 @@ const timelineContent = [
           "year": "1969",
           "text": "H~~City passes rent stabilization law.",
        },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
+
     ]
  },
  {
@@ -159,56 +92,8 @@ const timelineContent = [
     "class" : "row-newburgh",
     "years" : [
        {
-          "year": "1943",
-          "text": "",
-       },
-       {
-          "year": "1944",
-          "text": "",
-       },
-       {
-          "year": "1945",
-          "text": "",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
-       },
-       {
-          "year": "1949",
-          "text": "",
-       },
-       {
-          "year": "1950",
-          "text": "",
-       },
-       {
-          "year": "1951",
-          "text": "",
-       },
-       {
-          "year": "1952",
-          "text": "",
-       },
-       {
           "year": "1953",
           "text": "State authorizes construction of Newburgh-Beacon Bridge.",
-       },
-       {
-          "year": "1954",
-          "text": "",
-       },
-       {
-          "year": "1955",
-          "text": "",
        },
        {
           "year": "1956",
@@ -262,46 +147,6 @@ const timelineContent = [
           "year": "1968",
           "text": "R   S~~\nNewburgh's city council unanimously approves an agreement to work with New York State Urban Development Corporation (UDC). It is the first of many cities to sign such an agreement. A citywide fundraising campaign to help pay for planning is the first step in this collaboration.",
        },
-       {
-          "year": "1969",
-          "text": "",
-       },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
     ]
  },
  {
@@ -908,5 +753,5 @@ const timelineContent = [
 
 ]
 
-export {years}
+export {yearArray}
 export {timelineContent}
