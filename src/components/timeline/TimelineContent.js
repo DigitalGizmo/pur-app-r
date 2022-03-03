@@ -153,63 +153,8 @@ const timelineContent = [
     "city" : "Kingston",
     "class" : "row-kingston",
     "years" : [
-       {
-          "year": "1943",
-          "text": "",
-       },
-       {
-          "year": "1944",
-          "text": "",
-       },
-       {
-          "year": "1945",
-          "text": "",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
-       },
-       {
-          "year": "1949",
-          "text": "",
-       },
-       {
-          "year": "1950",
-          "text": "",
-       },
-       {
-          "year": "1951",
-          "text": "",
-       },
-       {
-          "year": "1952",
-          "text": "",
-       },
-       {
-          "year": "1953",
-          "text": "",
-       },
-       {
-          "year": "1954",
-          "text": "",
-       },
-       {
-          "year": "1955",
-          "text": "",
-       },
-       {
-          "year": "1956",
-          "text": "",
-       },
-       {
+
+      {
           "year": "1957",
           "text": "Kingston-Rhinecliff Bridge opens, routing traffic away from the city downtown Rondout area and uptown shopping district.",
        },

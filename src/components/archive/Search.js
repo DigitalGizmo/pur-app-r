@@ -12,6 +12,12 @@ const Search = ({setSearchTerm}) => {
     setSearchTerm('');
   }
   
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      setSearchTerm(term)
+    }
+  }
+
   return (
     <div>
       <div>
@@ -19,6 +25,7 @@ const Search = ({setSearchTerm}) => {
         <input
           value={term}
           onChange={(e) => setTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <p>
           <button 

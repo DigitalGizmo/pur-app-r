@@ -26,18 +26,18 @@ const FullEntry = ({images, currIndex,
           <h1>{ images[currIndex].title }</h1>
           <p>{ images[currIndex].description }</p>
           { images[currIndex].streetAddress &&
-            <p>location: 
+            <p>Location: 
               { images[currIndex].streetAddress }, { images[currIndex].city.title }
             </p>
           }
           { !images[currIndex].streetAddress &&
-            <p>location: { images[currIndex].city.title }</p>
+            <p>Location: { images[currIndex].city.title }</p>
           }
           { images[currIndex].district &&
-            <p>district: { images[currIndex].district.title }</p>
+            <p>District: { images[currIndex].district.title }</p>
           }
-          <p>date: { images[currIndex].creationYear }</p>
-          <p>Courtesy of { images[currIndex].source.title }</p>
+          <p>Date: { images[currIndex].creationYear }</p>
+          <p>Source: { images[currIndex].source.title }</p>
         </header>
 
 
