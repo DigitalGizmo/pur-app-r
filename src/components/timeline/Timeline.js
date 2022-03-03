@@ -11,7 +11,7 @@ const Timeline = () => {
 
       <div className="timeline-page">
 
-        <section className="thru-lines">
+        {/* <section className="thru-lines">
           <ul>
             <li className="title">Through Lines</li>
             <li>Urban Planning</li>
@@ -23,7 +23,7 @@ const Timeline = () => {
             <li>Civil Rights</li>
             <li>Support for Urban Renewal</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* <TimelineTable
         /> */}
