@@ -7,6 +7,7 @@ import App from './components/App';
 import Home from './components/Home';
 import CitiesMenu from './components/cities/CitiesMenu';
 import PeopleMenu from './components/people/PeopleMenu';
+import PeopleMenuCities from './components/people/PeopleMenuCities';
 import PersonalStory from './components/people/PersonalStory';
 import PersonalStoryCW from './components/people/PersonalStoryCW';
 import PersonalStoryJR from './components/people/PersonalStoryJR';
@@ -44,6 +45,7 @@ render(
           <Route index element={<Home />} />
           <Route path="/cities" element={<CitiesMenu />} />
           <Route path="/people" element={<PeopleMenu />} />
+          <Route path="/people/people-menu-cities" element={<PeopleMenuCities />} />
             <Route path="/people/haines-dauner" element={<PersonalStory />} />
             <Route path="/people/carrie-wilson" element={<PersonalStoryCW />} />
             <Route path="/people/joseph-resnick" element={<PersonalStoryJR />} />
