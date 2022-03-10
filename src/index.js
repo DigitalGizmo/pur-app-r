@@ -20,6 +20,9 @@ import StuyStroll from './components/places/stuy-stroll/StuyStroll';
 import Visuals from './components/archive/Visuals';
 import ThemeMenu from './components/themes/ThemeMenu';
 import Theme from './components/themes/Theme';
+import ThemeCampbell from './components/themes/ThemeCampbell';
+import ThemeFullilove from './components/themes/ThemeFullilove';
+import ThemeZipp from './components/themes/ThemeZipp';
 import Timeline from './components/timeline/Timeline';
 // import reportWebVitals from './reportWebVitals';
 
@@ -58,6 +61,9 @@ render(
             <Route path="/places/stuy-stroll" element={<StuyStroll />} />
           <Route path="/themes" element={<ThemeMenu />} />
             <Route path="/themes/theme" element={<Theme />} />
+            <Route path="/themes/theme-campbell" element={<ThemeCampbell />} />
+            <Route path="/themes/theme-fullilove" element={<ThemeFullilove />} />
+            <Route path="/themes/theme-zipp" element={<ThemeZipp />} />
           <Route path="/timeline" element={<Timeline />} />
         </Route>
       </Routes>
