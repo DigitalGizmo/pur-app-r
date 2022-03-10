@@ -215,95 +215,6 @@ p.caption {
   width: 90%;
 }
 
-/* Personal Stories Menu */
-.ps-full-menu {
-  padding: 0 3% 5% 3%;
-}
-
-.ps-menu {
-  grid-column: span 2;
-}
-
-.ps-menu h2 {
-  font-size: 1.25em;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.ps-menu ul {
-  font-size: 0.75em;
-  list-style-type: none;
-  padding: 0.5em;
-}
-
-.ps-menu ul li {
-  line-height: 1.2em;
-  padding: 0.5em 0;
-}
-
-.politicians ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/politicians.jpg);
-}
-
-.displaced ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/displaced.jpg);
-}
-
-.organizers ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/organizers.jpg);
-}
-
-.builders ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/builders.jpg);
-}
-
-.arrivals ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/politicians.jpg);
-}
-
-.reporters ul {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/reporters.jpg);
-}
-
-.horiz-menu ul li.city-stuytown, .horiz-menu ul li.city-albany, .horiz-menu ul li.city-kingston, .horiz-menu ul li.city-newburgh {
-  width: 25vw;
-}
-
-.horiz-menu ul ul.ps-city-menu li {
-  display: block;
-  height: auto;
-  letter-spacing: normal;
-  line-height: 1.2em;
-  padding: 0 1em 0.5em 0;
-  text-transform: none;
-}
-
-.city-albany {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/albany.jpg);
-}
-
-.city-stuytown {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/stuytown.jpg);
-}
-
-.city-kingston {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/kingston.jpg);
-}
-
-.city-newburgh {
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/newburgh.jpg);
-}
-
-.city-newburgh, .city-kingston, .city-stuytown, .city-albany {
-  background-repeat: no-repeat;
-  font-size: 1.25em;
-  font-weight: normal;
-  letter-spacing: 0.05em;
-  overflow: auto;
-  text-transform: uppercase;
-}
-
 /* Styles for Themes & Essays pages */
 
 /* Themes & Essays Menu page  */
@@ -321,7 +232,7 @@ nav.horiz-menu {
 .horiz-menu ul li {
   font-size: .85em;
   display: inline-block;
-  height: 600px;
+  height: 100vh;
   padding: 1em;
   vertical-align: top;
   white-space: normal;
@@ -330,7 +241,11 @@ nav.horiz-menu {
 
 .horiz-menu ul li a {
   display: block;
-  font-weight: bold;
+  font-size: 1.25em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 .contract-sales {
@@ -362,6 +277,99 @@ nav.horiz-menu {
 article.theme {
   margin-top: 0;
 }
+
+/* Personal Stories Menu */
+.ps-full-menu {
+  padding: 0 3% 5% 3%;
+}
+
+.ps-menu {
+  grid-column: span 2;
+}
+
+.ps-city-menu {
+  grid-column: span 3;
+}
+
+.ps-menu h2, .ps-city-menu h2 {
+  font-size: 1.25em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ps-menu ul, .ps-city-menu ul {
+  font-size: 0.75em;
+  list-style-type: none;
+  padding: 0.5em;
+}
+
+.ps-menu ul li, .ps-city-menu ul li {
+  line-height: 1.2em;
+  padding: 0.5em 0;
+}
+
+.politicians ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/politicians.jpg);
+}
+
+.displaced ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/displaced.jpg);
+}
+
+.organizers ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/organizers.jpg);
+}
+
+.builders ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/builders.jpg);
+}
+
+.arrivals ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/politicians.jpg);
+}
+
+.reporters ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/reporters.jpg);
+}
+/*only used by people menu - decouple from horiz-menu 
+.horiz-menu ul li.city-stuytown, .horiz-menu ul li.city-albany, .horiz-menu ul li.city-kingston, .horiz-menu ul li.city-newburgh {
+  width: 25vw;
+}*/
+/*only used by people menu - decouple from horiz-menu 
+.horiz-menu ul li ul.ps-city-menu li {
+  display: block;
+  height: auto;
+  letter-spacing: normal;
+  line-height: 1.2em;
+  padding: 0 1em 0.5em 0;
+  text-transform: none;
+}*/
+
+.city-albany ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/albany.jpg);
+}
+
+.city-stuytown ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/stuytown.jpg);
+}
+
+.city-kingston ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/kingston.jpg);
+}
+
+.city-newburgh ul {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/people/menupics/newburgh.jpg);
+}
+
+/*.city-newburgh, .city-kingston, .city-stuytown, .city-albany {
+  font-size: 1.25em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  overflow: auto;
+}*/
 
 /* Don adding this for slimpops -- required */
 .lightbox {
