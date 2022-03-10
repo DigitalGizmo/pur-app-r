@@ -535,10 +535,10 @@ header.story-title nav#dropdown-parent {
 
 .city-newburgh, .city-kingston, .city-stuytown, .city-albany {
   background-repeat: no-repeat;
-  background-size: contain;
   font-size: 1.25em;
   font-weight: normal;
   letter-spacing: 0.05em;
+  overflow: auto;
   text-transform: uppercase;
 }
 
