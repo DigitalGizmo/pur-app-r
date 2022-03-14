@@ -13,7 +13,7 @@ const ThemeFullilove = () => {
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">"Buy or Rent - Same amount monthly" Sales pitches like this made contract sales agreements appealing to people of limited means. Source info goes here.</p>
+            <p className="caption">"lorem ipsum yadda yadda. Source info goes here.</p>
         </div>
 
         <article className="narrative theme">

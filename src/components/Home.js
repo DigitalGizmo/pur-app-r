@@ -15,6 +15,7 @@ class Home extends React.Component {
           <li><Link to="/people">Personal Stories</Link></li>
           <li><Link to="/archive/visuals">Visual Record</Link></li>
           <li><Link to="/places">Place-Based Explorations</Link></li>
+          <li><Link to="/themes">Themes &amp; Essays</Link></li>
           <li style={{ color: '#333333'}}>
             <Link 
               to="/timeline"
