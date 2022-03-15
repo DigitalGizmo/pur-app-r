@@ -1,5 +1,4 @@
 import React from 'react';
-import './FullEntry.css';
 
 const FullEntry = ({images, currIndex,
     closeFullEntry, nextEntry, prevEntry}) => {
@@ -13,7 +12,7 @@ const FullEntry = ({images, currIndex,
   return (
     <div className="lightbox" onClick={closeFullEntry}>
       <div className="slimpop-wrapper entry-pop">
-        <p className="close">
+        <p className="pop-nav">
           <a href="/" onClick={prevEntry}>Prev</a> |
           <a href="/" onClick={nextEntry}>Next</a> | 
           <a

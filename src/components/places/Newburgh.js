@@ -3,7 +3,6 @@ import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , 
 import { InView } from "react-intersection-observer"; // useInView, 
 import { images, captions, sectionTitles } from './NewburghContent';
 // import CaptionDissolve from './CaptionDissolve';
-import './Newburgh.css';
 
 const Newburgh = () => {
   const [imageIndex, setImageIndex] = useState(0);

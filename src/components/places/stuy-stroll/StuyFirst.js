@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect} from "react";
 import { debounce } from "../../common/Utility";
 import CaptionBand from "./CaptionBand";
 import Hotspots from './Hotspots';
-import "./StuyStroll.css";
 
 const StuyFirst = ({loading, error, interactivePart, 
     onPageChange, highlights, hoverSpot, unHoverSpot,

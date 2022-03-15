@@ -1,6 +1,5 @@
 import React from 'react';
 import TimelineTable from './TimelineTable';
-import './Timeline.css';
 
 const Timeline = () => {
   return (
@@ -14,8 +13,8 @@ const Timeline = () => {
         <section className="thru-lines">
           <ul>
             <li className="title">Through Lines</li>
-            <li>Urban Planning</li>
-            <li>Demolition and Displacement</li>
+            <li><button className="button urban">Urban Planning</button></li>
+            <li><button className="button demo-selected">Demolition and Displacement</button></li>
             <li>Housing</li>
             <li>Reconstruction</li>
             <li>Preservation</li>

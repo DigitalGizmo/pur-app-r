@@ -1,5 +1,4 @@
 import React from 'react';
-import './StuyStroll.css';
 
 const Hotspots = ({hotspots, highlights, hoverSpot, unHoverSpot}) => {
 

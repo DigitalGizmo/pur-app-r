@@ -3,7 +3,6 @@ import {
     useQuery,
     gql
 } from "@apollo/client"; 
-import './Visuals.css';
 import Eras from './Eras';
 import Cities from './Cities';
 import Topics from './Topics';

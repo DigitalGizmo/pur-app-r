@@ -1,7 +1,6 @@
 import React from "react";
 import "./TimelineContent";
 import { yearArray, timelineContent } from "./TimelineContent";
-import './Timeline.css';
 
 let yearEntry = null;
 

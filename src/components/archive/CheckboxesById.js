@@ -47,7 +47,7 @@ const CheckboxesById = ({itemIDs, setItemIDs, itemArray}) => {
       <li>
         <button 
           onClick={ clearItems }
-          className="don-button"
+          className="button"
         >Reset (show all)</button>
       </li>           
     </ul>

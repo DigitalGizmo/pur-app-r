@@ -118,13 +118,102 @@ header.basic-page p.blurb {
   top: 15%;
   width: 35%;
 }
-/* obsolete style
-h3.grid-title {
-  color: #B25900;
-  letter-spacing: .075em;
-  text-shadow: 1px 1px #353526;
+/*   =============   */
+/*   VISUAL RECORD   */
+/*   =============   */
+.images-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2em 0;
+}
+
+.images-menu-item {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.menu-image {
+  width: 100%;
+  display: block;
+}
+
+.menu-title {
+  color: #acae9a;
+  line-height: 1.2em;
+  padding: 0 .25em;
+  width: 100%;
+/*  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+
+.menu-title:hover {
+    color: #ff7f00;
+}
+.filters, .images-menu {
+  padding: 0.5em 3%;
+  font-size: .75em;
+}
+
+.filters {
+  display:  grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.filter-set {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.filters div h4 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: .15em;
+  margin: 0;
   text-transform: uppercase;
-}*/
+}
+
+/* reset buttons */
+.button {
+  appearance: none;
+  background-color: #686959;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "itc-officina-sans-pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  padding: 0.4em 0.6em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.filter-set .button {
+  color: #e4e0c7;
+}
+
+.button:hover, button:focus {
+  background-color: shade(#686959, 20%);
+  color: #ff7f00;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button:disabled:hover {
+  background-color: #e4e0c7;
+}
+
+
 
 /* used in Personal Story pages, Theme pages */
 .basic-grid {
@@ -370,6 +459,443 @@ article.theme {
   background-repeat: no-repeat;
   overflow: auto;
 }*/
+/* ====================== */
+/* Timeline Styles        */
+/* ====================== */
+.timeline-page {
+}
+
+.thru-lines {
+  font-size: .85em;
+}
+
+.thru-lines ul li {
+  display: inline-block;
+  padding-right: 2em;
+}
+
+button.urban {
+  background-color: #353526;
+  border: 1px solid greenyellow;
+  color:  greenyellow;
+}
+
+button.urban .selected {
+  background-color: greenyellow;
+  border: 1px solid greenyellow;
+  color: #353526;
+}
+
+button.demo {
+  background-color: #353526;
+  border: 1px solid purple;
+  color:  purple;
+}
+
+button.demo-selected {
+  background-color: purple;
+  border: 1px solid purple;
+  color: #e4e0c7;
+}
+
+.timeline-content {
+}
+
+/* from css tricks https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/ */
+table {
+  margin: 0;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+table tr {
+  vertical-align: top;
+}
+
+table td,
+table th {
+  border: 1px solid #686959;
+  padding: 0.5rem 1rem;
+/*width: 120px;
+  overflow: hidden;
+  overflow-wrap: break-word;*/
+}
+
+table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+table thead th {
+  padding: 0px;
+  font-size: 3em;
+/*height: 60px;*/
+  opacity: 0.3;
+}
+  
+tbody tr {
+/*max-height: 80px;
+  overflow: hidden;*/
+}
+
+table td {
+  color:  #e4e0c7;
+  font-size: 0.65em;
+  font-weight: normal;
+  padding: 4px 5px;
+  text-align: left;
+}
+
+table tbody th {
+  font-size: 0.85em;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+/*width: 60px;*/
+  position: relative;
+}
+
+table tbody td, table tbody th {
+
+}
+
+table thead th:first-child {
+  background-color: #353526;
+  position: sticky;
+  left: 0;
+/*width: 60px;*/
+  z-index: 2;
+}
+
+table tbody th {
+  background-color: #353526;
+  left: 0;
+  position: sticky;
+  writing-mode: vertical-rl;
+/*-ms-transform: rotate(270deg); /* IE 9
+  transform: rotate(270deg);*/
+  z-index: 1;
+}
+
+tr.row-nyc td {
+  background-color: #394718;
+}
+
+tr.row-newburgh td {
+  background-color: #1f2452;
+}
+
+tr.row-kingston td {
+  background-color: #544213;
+}
+
+tr.row-albany td {
+  background-color: #4d0e16;
+}
+
+tr.row-nystate {
+}
+
+tr.row-us {
+}
+
+/* ====================== */
+/*   NEWBURGH/GAS TOWN SCROLL        */
+/* ====================== */
+
+/*  main layout elements  */
+#stroll-wrapper {
+  height: calc(100vh - 100px);
+  overflow-x: scroll;
+  position: absolute;
+  width: 100%;
+}
+
+.svg-content {
+  height: calc(100% - 80px);
+  width: auto;
+}
+
+#caption-band {
+  font-size: .75em;
+  height: 80px;
+  margin-top: -10px;
+  padding: .1em;
+  position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+  #caption-band {
+    font-size: 0.65em;
+  }
+}
+
+/* intro page  */
+div.intro-page {
+  position: relative;
+}
+
+.intro-panel {
+  background-color: rgba(53, 53, 38, 0.8);
+  border: 1px solid #686959;
+  font-size: .85em;
+  left:  20%;
+  padding: 1.5em;
+  position: absolute;
+  top:  10%;
+  width:  60%;
+}
+
+/*caption titles*/
+.cap {
+  position: absolute;
+  width: 6%;
+}
+
+.cap h4, .cap p {
+  margin: 0;
+}
+
+/*  turn corner buttons  */
+.turn-text {
+  fill: #FFA300;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.arrows {
+  opacity: 0.6;
+  fill: none;
+  stroke: #FFA300;
+  stroke-width: 19;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+/*  highlighting  */
+.low-spot {
+  fill: #666666;
+  opacity: 0;
+}
+
+.hi-spot {
+  fill: #FFAC06;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  opacity: .25;
+  stroke: #FFAC06;
+  stroke-opacity: .9;
+}
+
+.hi-text {
+  color: #FFAC06;
+}
+
+/* More pops - Stroll version of slimpop*/
+.stroll-more-pop {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  height:  350px;
+  margin-top: -450px;
+  margin-left: 5%;
+  overflow-y: scroll;
+  position: absolute;
+  width: 15%;
+  z-index: 99;
+}
+
+#stroll-pop-wrapper {
+  background-color: #EDEEE4;  
+  border: 1px solid #BDBEA7;
+  color: #353626;
+  padding: 1em;
+  position: relative;
+}
+
+#stroll-pop-wrapper p.close {
+  color: #FFAC06;
+  font-size: .75em;
+  float: right;
+  letter-spacing: .05em;
+  max-width: 10%;
+}
+
+#stroll-pop-wrapper header {
+  font-size: 1.25em;
+  max-width: 90%;
+}
+
+#stroll-pop-wrapper header h1 {
+  margin: 0;
+}
+
+#stroll-pop-wrapper header p {
+  margin: 0.4em auto;
+}
+
+/* NEWBURGH */
+/* Don adding this main section */
+.main-section {
+  position: relative;
+}
+
+.image-panel {
+  height: 80vh;
+  position: relative;
+}
+
+.section-title {
+  color: #d17316;
+  font-size: 2em;
+  font-weight: bold;
+  left: 3%;
+  position: fixed;
+  text-shadow: 1px 1px black;
+  top: 120px;
+}
+/* 
+.image-panel div {
+  position: absolute;
+  top: 160;
+  left: 0;
+} */
+
+/* .image-panel div {
+  position: fixed;
+  top: 100;
+  left: 10;
+} */
+
+
+.image-panel-outer-div {
+  position: fixed;
+  top: 100;
+  left: 10;
+}
+
+/*.image-panel div img, div.full-image img {
+  border: thin solid #615c3d;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.6em;
+}
+*/
+.chapter-title /* cf: header.basic-page styles in index.css line 165 */ {
+  background-color: #B25900;
+  margin-top: 24px;
+  padding: .5em 3%;
+  text-align: center;
+}
+
+.chapter-title h1 {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+/*.image-panel div img, div.full-image img {
+  border: thin solid #615c3d;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.6em;
+}
+*/
+.caption-panel {
+  position: relative;
+  z-index: 10;
+  margin: 1em 1em 1em 50%;
+  width: 100%;
+}
+
+.caption-panel div {
+  background-color: #353526;
+  border: 1px solid #e4e0c7;
+  opacity: 0.75;
+  margin-bottom: 90vh;
+  padding: 1em;
+  margin-top: -10em;
+  width: 40%;
+}
+
+.caption-panel div.narrower {
+  width: 30%;
+}
+
+.caption-panel div p.gallery-caption {
+  width: 25%;
+  font-size: 0.75em;
+  float: left;
+}
+
+.caption-panel div p.gallery-quote {
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.caption-panel div p.gallery-text {
+  font-size: 1em;
+  font-style: normal;
+}
+
+.caption-panel div h4 {
+  font-weight: bold;
+}
+
+a.caption-link {
+  color: #B25900;
+  text-decoration: underline;
+}
+
+#thing10 p.gallery-text {
+  height: 10em;
+}
+
+/* Pop Up Windows for Visual Record and Slide Shows */
+.entry-pop {
+  margin: 5% auto;
+  height: 80%;
+  width: 60%;
+}
+
+.entry-pop header {
+  max-width: 75%;
+}
+
+.entry-pop header h1 {
+  font-size: 1.5em;
+  font-style: normal;
+  margin-top: 0;
+}
+
+.entry-pop header p {
+  font-size: .8em;
+  margin:  .4em auto;
+}
+
+p.pop-nav {
+  font-size: .7em;
+  float: right;
+  letter-spacing: .05em;
+  max-width: 25%;
+}
+
+p.pop-nav a {
+  color: #353526;
+}
+
+p.pop-nav a:hover {
+  color: #ff7f00;
+}
+
+img.fullpic {
+  float: left;
+  max-height: 60vh;
+  margin-right: 1em;
+}
 
 /* Don adding this for slimpops -- required */
 .lightbox {
