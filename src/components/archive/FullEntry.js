@@ -1,5 +1,5 @@
 import React from 'react';
-import './FullEntry.css';
+import { Link } from 'react-router-dom';
 
 const FullEntry = ({images, currIndex,
     closeFullEntry, nextEntry, prevEntry}) => {
@@ -13,7 +13,7 @@ const FullEntry = ({images, currIndex,
   return (
     <div className="lightbox" onClick={closeFullEntry}>
       <div className="slimpop-wrapper entry-pop">
-        <p className="close">
+        <p className="pop-nav">
           <a href="/" onClick={prevEntry}>Prev</a> |
           <a href="/" onClick={nextEntry}>Next</a> | 
           <a
@@ -36,7 +36,16 @@ const FullEntry = ({images, currIndex,
           { images[currIndex].district &&
             <p>District: { images[currIndex].district.title }</p>
           }
-          <p>Date: { images[currIndex].creationYear }</p>
+          <p>
+            Date: { images[currIndex].creationYear }
+          </p>
+          
+          {images[currIndex].usedIn &&
+            <p>Used In: <Link to={`../../${images[currIndex].usedIn}`}>
+              {images[currIndex].usedInTitle}</Link> 
+            </p>
+          }
+          
           <p>Source: { images[currIndex].source.title }</p>
         </header>
 

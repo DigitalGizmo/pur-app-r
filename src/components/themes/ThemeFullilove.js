@@ -9,9 +9,9 @@ const ThemeFullilove = () => {
       </header>
 
       <section>
-        <div className="full-image">
+        <div className="image-full">
           <img 
-            src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
+            src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/root-shock.jpg"
               alt='meaningful alt text'/>
             <p className="caption">"lorem ipsum yadda yadda. Source info goes here.</p>
         </div>

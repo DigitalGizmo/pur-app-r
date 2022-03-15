@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './SlideShow.css';
 
 const slides = [
   {imgName: 'dauner-arch-details', caption: 'Architectural details of a building soon to be demolished for Kingston\'s Broadway East Urban Renewal Project, 1967.'},
@@ -50,15 +49,18 @@ const SlideShow = (props) => {
 
   return (
     <div className="lightbox"> 
-      <div className="slimpop-wrapper slide-show">
-        <p className="close">
+      <div className="slimpop-wrapper entry-pop">
+        <p className="pop-nav">
           {currSlide + 1} of {numSlides} |
           <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
           <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
           <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
         </p>
-        <h2>Slide Show: {props.title}</h2> {/*props.title*/}
-        <p>{slides[currSlide].caption}</p>
+        <header>
+          <h1>Slide Show: {props.title}</h1> {/*props.title*/}
+          <p>{slides[currSlide].caption}</p>
+        </header>
+        
         <img 
           src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[currSlide].imgName}.jpg`}
           alt='meaningful alt text'/>

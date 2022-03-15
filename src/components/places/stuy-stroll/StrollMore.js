@@ -1,5 +1,4 @@
 import React from 'react';
-import './StuyStroll.css';
 
 const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
 

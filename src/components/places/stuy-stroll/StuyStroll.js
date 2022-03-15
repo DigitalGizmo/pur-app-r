@@ -7,7 +7,6 @@ import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , 
 import StuyFirst from './StuyFirst';
 import StuyFourteenth from './StuyFourteenth';
 import StuyFifteenth from './StuyFifteenth';
-import "./StuyStroll.css";
 
 const StuyStroll = () => {
   // For street component transitions

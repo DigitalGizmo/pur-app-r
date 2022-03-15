@@ -9,7 +9,7 @@ const Theme = () => {
       </header>
 
       <section>
-        <div className="full-image">
+        <div className="image-full">
           <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/contract-sales.jpg"
               alt='meaningful alt text'/>

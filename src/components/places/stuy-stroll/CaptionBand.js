@@ -1,6 +1,5 @@
 import React from "react";
 import StrollMore from './StrollMore';
-import "./StuyStroll.css";
 
 const CaptionBand = ({loading, error, hotspots, captionWidth, 
     highlights, hoverSpot, unHoverSpot, showStrollMore,

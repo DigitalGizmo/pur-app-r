@@ -30,13 +30,13 @@ const Search = ({setSearchTerm}) => {
         <p>
           <button 
             onClick={ onTermSet }
-            className="don-button"
+            className="button"
           >Search</button>
         </p>
         <p>
           <button 
             onClick={ onTermClear }
-            className="don-button"
+            className="button"
           >Clear</button>
         </p>
 
