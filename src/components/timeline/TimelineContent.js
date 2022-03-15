@@ -1,7 +1,8 @@
 const yearArray = [
-  1943, 1944, 1945, 1946, 1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 
+  1949, 1950, 1951, 1952, 1953, 1954, 
   1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 
-  1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978]
+  1967, 1968, 1969]
+  // 1943, 1944, 1945, 1946, 1947, 1948, 
 
 const timelineContent = [
   {
@@ -202,46 +203,6 @@ const timelineContent = [
           "year": "1968",
           "text": "O  @Uptown homeowners organize to protest plans to demolish their property. Like their Rondout counterparts, they complain of low reimbursement payments. ",
        },
-       {
-          "year": "1969",
-          "text": "",
-       },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
     ]
  },
  {
@@ -249,60 +210,12 @@ const timelineContent = [
     "class" : "row-albany",
     "years" : [
        {
-          "year": "1943",
-          "text": "",
-       },
-       {
-          "year": "1944",
-          "text": "",
-       },
-       {
-          "year": "1945",
-          "text": "",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
-       },
-       {
-          "year": "1949",
-          "text": "",
-       },
-       {
-          "year": "1950",
-          "text": "",
-       },
-       {
           "year": "1951",
           "text": "State unveils plans to build $80-million office campus on 400 acres in uptown Albany.",
        },
        {
-          "year": "1952",
-          "text": "",
-       },
-       {
-          "year": "1953",
-          "text": "",
-       },
-       {
-          "year": "1954",
-          "text": "",
-       },
-       {
           "year": "1955",
           "text": "State begins construction of uptown office campus.",
-       },
-       {
-          "year": "1956",
-          "text": "",
        },
        {
           "year": "1957",
@@ -352,76 +265,12 @@ const timelineContent = [
           "year": "1968",
           "text": "P   C   O   Preservationists, neighborhood leaders, and civil rights activists join forces to oppose construction of an arterial highway from the Empire State Plaza through residential sections of the city.",
        },
-       {
-          "year": "1969",
-          "text": "",
-       },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
     ]
  },
  {
     "city" : "New York State",
     "class" : "row-nystate",
     "years" : [
-       {
-          "year": "1943",
-          "text": "",
-       },
-       {
-          "year": "1944",
-          "text": "",
-       },
-       {
-          "year": "1945",
-          "text": "",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
-       },
        {
           "year": "1949",
           "text": "Court of Appeals upholds Stuyvesant town's discrimination policy.",
@@ -431,32 +280,12 @@ const timelineContent = [
           "text": "Wicks-Austin Law prohibits discrimination in state-aided housing.",
        },
        {
-          "year": "1951",
-          "text": "",
-       },
-       {
-          "year": "1952",
-          "text": "",
-       },
-       {
-          "year": "1953",
-          "text": "",
-       },
-       {
           "year": "1954",
           "text": "New York Thruway opens.",
        },
        {
           "year": "1955",
           "text": "Mitchell-Lama Law provides tax abatement for middle-income housing.",
-       },
-       {
-          "year": "1956",
-          "text": "",
-       },
-       {
-          "year": "1957",
-          "text": "",
        },
        {
           "year": "1958",
@@ -502,46 +331,6 @@ const timelineContent = [
           "year": "1968",
           "text": "R  @Gov. Nelson Rockefeller establishes a new public benefit corporation, the Urban Development Corp. Under Edward Logue's leadership, it is charged with redeveloping cleared land passed over by private builders.",
        },
-       {
-          "year": "1969",
-          "text": "",
-       },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
     ]
  },
  {
@@ -549,28 +338,12 @@ const timelineContent = [
     "class" : "row-us",
     "years" : [
        {
-          "year": "1943",
-          "text": "",
-       },
-       {
           "year": "1944",
           "text": "Congress passes the GI Bill of Rights unanimously. It provided World War II veterans with numerous benefits, including access to low-interest mortgages. But federal rules and local administrators prevented Black veterans from accessing many of these benefits.",
        },
        {
           "year": "1945",
           "text": "World War II ends. National leaders fear that returning veterans will face a severe housing shortage.",
-       },
-       {
-          "year": "1946",
-          "text": "",
-       },
-       {
-          "year": "1947",
-          "text": "",
-       },
-       {
-          "year": "1948",
-          "text": "",
        },
        {
           "year": "1949",
@@ -581,20 +354,8 @@ const timelineContent = [
           "text": "Something about the 1950 Census and the Second Great Migration?",
        },
        {
-          "year": "1951",
-          "text": "",
-       },
-       {
-          "year": "1952",
-          "text": "",
-       },
-       {
-          "year": "1953",
-          "text": "",
-       },
-       {
           "year": "1954",
-          "text": "Housing Act of 1954 allows clearance of non \"slum\" areas for nonresidential construction. Communitywide 'workable programs\" to prevent blight become a funding requirement. ~~OR: PRESIDENT DWIGHT EISENHOWER ANNOUNCES FORMATION OF PRO-URBAN RENEWAL ORGANIZATION, AMERICAN COUNCIL TO IMPROVE OUR NEIGHBORHOODS. ~~and embed parts of film \"Man of ACTION\" https://archive.org/details/0050_Man_of_Action_02_25_05_00",
+          "text": "Housing Act of 1954 allows clearance of non \"slum\" areas for nonresidential construction. Communitywide 'workable programs\" to prevent blight become a funding requirement. ~~OR: PRESIDENT DWIGHT EISENHOWER ANNOUNCES FORMATION OF PRO-URBAN RENEWAL ORGANIZATION, AMERICAN COUNCIL TO IMPROVE OUR NEIGHBORHOODS. ~~and embed parts of film \"Man of ACTION\" ",
        },
        {
           "year": "1955",
@@ -653,46 +414,6 @@ const timelineContent = [
           "year": "1968",
           "text": "H   C  @Martin Luther King is assassinated on April 4. A week later, President Lyndon Johnson signs the Civil Rights Act into law. It includes the Fair Housing Act, outlawing racial discrimination in housing.  ",
        },
-       {
-          "year": "1969",
-          "text": "",
-       },
-       {
-          "year": "1970",
-          "text": "",
-       },
-       {
-          "year": "1971",
-          "text": "",
-       },
-       {
-          "year": "1972",
-          "text": "",
-       },
-       {
-          "year": "1973",
-          "text": "",
-       },
-       {
-          "year": "1974",
-          "text": "",
-       },
-       {
-          "year": "1975",
-          "text": "",
-       },
-       {
-          "year": "1976",
-          "text": "",
-       },
-       {
-          "year": "1977",
-          "text": "",
-       },
-       {
-          "year": "1978",
-          "text": "",
-       }
     ]
  },
 

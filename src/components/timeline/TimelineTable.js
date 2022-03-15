@@ -7,13 +7,22 @@ let yearEntry = null;
 
 const TimelineTable = () => {
 
+  function getTableCell (aYear, rowYears) {
+    let yearEntry = rowYears.find(o => o.year === aYear.toString());
+    if (yearEntry) {
+      return yearEntry.text.substring(0, 100);
+    }
+    // } else {
+    //   return "-";
+    // }    
+  }
   return (
     <table className="timeline-content">
       <thead>
         <tr>
           <th>&nbsp;</th>
           {yearArray.map((aYear) => (
-            <th>{aYear}</th>
+            <th key={aYear}>{aYear}</th>
           ))}
         </tr>
       </thead> 
@@ -21,18 +30,17 @@ const TimelineTable = () => {
       <tbody>
 
         {timelineContent.map ((row) => (
-          <tr className={row.class}>
+          <tr className={row.class}
+            key={row.class}
+          >
             <th>{row.city}</th>
 
-            {yearArray.map((aYear) => {
-              // Note bracket above rather than paren - enables function
-              // See if there's an entry for this year
-              if (yearEntry = row.years.find(o => o.year === aYear.toString())) {
-                return <td>{yearEntry.text}</td>
-              } else {
-                return <td>-&nbsp;</td>
-              }    
-            })}
+            {yearArray.map((aYear) => (
+              <td key={aYear}>
+                {getTableCell(aYear, row.years)} 
+              </td>
+              )
+            )}
           </tr>
         ))}        
 
