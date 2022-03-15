@@ -36,6 +36,8 @@ const Visuals= () => {
         description
         creationYear
         streetAddress
+        usedIn
+        usedInTitle
         city {
           title
         }
