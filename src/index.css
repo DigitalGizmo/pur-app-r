@@ -614,7 +614,8 @@ table td {
   color:  #e4e0c7;
   font-size: 0.65em;
   font-weight: normal;
-  padding: 4px 5px;
+  padding: 0;
+  position: relative;
   text-align: left;
 }
 
@@ -672,6 +673,24 @@ tr.row-nystate {
 tr.row-us {
 }
 
+.row-nyc-1949 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/row-nyc-1949.jpg);
+  background-size: cover;
+}
+
+.row-us-1950 {
+
+}
+
+td img.thruline {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+td span.text {
+  padding: 4px;
+}
 /* ======================= */
 /*     GASHOUSE STROLL     */
 /* ======================= */

@@ -28,9 +28,6 @@ const TimelineTable = () => {
       // }
       return (
         <Fragment>
-          <img 
-            src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/${cellImage}.jpg`}
-            alt='cell image'/>
           {getThrulines()}
           {cellText}
         </Fragment>
@@ -60,7 +57,7 @@ const TimelineTable = () => {
             <th>{row.city}</th>
 
             {yearArray.map((aYear) => (
-              <td key={aYear}>
+              <td className="row-nyc-1949" key={aYear}>
                 {getTableCell(aYear, row.years)} 
               </td>
               )
