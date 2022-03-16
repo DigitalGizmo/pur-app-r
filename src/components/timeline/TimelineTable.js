@@ -5,6 +5,7 @@ import { yearArray, timelineContent } from "./TimelineContent";
 let yearEntry = null;
 
 const TimelineTable = () => {
+
   const getThrulines = () => {
     const thrulines = ['c', 'd'];
     const thrulineImages = thrulines.map((thruline) => (
@@ -20,13 +21,17 @@ const TimelineTable = () => {
     let yearEntry = rowYears.find(o => o.year === aYear.toString());
     if (yearEntry) {
       const cellText = yearEntry.text.substring(0, 100);
-      // const thruline = "c";
+      const cellImage = 'row-nyc-1949';
+      const hasImage = false;
+      // if (yearEntry.hasImage) {
+      //   con
+      // }
       return (
         <Fragment>
+          <img 
+            src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/${cellImage}.jpg`}
+            alt='cell image'/>
           {getThrulines()}
-          {/* <img 
-            src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
-            alt='thruline'/> */}
           {cellText}
         </Fragment>
       )
@@ -34,6 +39,7 @@ const TimelineTable = () => {
       return "-";
     }    
   }
+
   return (
     <table className="timeline-content">
       <thead>

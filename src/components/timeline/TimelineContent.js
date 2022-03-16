@@ -16,6 +16,7 @@ const timelineContent = [
        {
           "year": "1949",
           "text": "Stuyvesant Town housing development reaches full occupancy. Most residents are World War II veterans and their families.",
+          "hasImage": "true",
        },
        {
           "year": "1950",
@@ -352,6 +353,7 @@ const timelineContent = [
        {
           "year": "1950",
           "text": "Something about the 1950 Census and the Second Great Migration?",
+          "hasImage": "true",
        },
        {
           "year": "1954",
