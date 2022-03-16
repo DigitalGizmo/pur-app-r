@@ -684,13 +684,15 @@ tr.row-us {
 
 td img.thruline {
   margin: 0;
-  padding: 0;
-  width: 100%;
+  display: table-cell;
 }
 
-td span.text {
+td span {
+  display: block;
+  line-height: 1.2em;
   padding: 4px;
 }
+
 /* ======================= */
 /*     GASHOUSE STROLL     */
 /* ======================= */

@@ -9,7 +9,8 @@ const TimelineTable = () => {
   const getThrulines = () => {
     const thrulines = ['c', 'd'];
     const thrulineImages = thrulines.map((thruline) => (
-      <img 
+      <img
+        className="thruline"
         src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
         alt='thruline'/>
     ));
@@ -29,7 +30,7 @@ const TimelineTable = () => {
       return (
         <Fragment>
           {getThrulines()}
-          {cellText}
+          <span>{cellText}</span>
         </Fragment>
       )
     } else {
