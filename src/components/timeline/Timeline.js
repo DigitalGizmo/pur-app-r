@@ -3,7 +3,7 @@ import TimelineTable from './TimelineTable';
 
 const Timeline = () => {
   const BASE_THRULINES = [
-    true, false, false, false, false, false, false, false, 
+    true, true, false, false, false, false, false, false, 
   ];
   const [thrulines, setThrulines] = useState(BASE_THRULINES);
 

@@ -1,23 +1,34 @@
-import React from "react";
+import React, {Fragment} from "react";
 import "./TimelineContent";
 import { yearArray, timelineContent } from "./TimelineContent";
 
 let yearEntry = null;
 
 const TimelineTable = () => {
+  const getThrulines = () => {
+    const thrulines = ['c', 'd'];
+    const thrulineImages = thrulines.map((thruline) => (
+      <img 
+        src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
+        alt='thruline'/>
+    ));
 
-  function getTableCell (aYear, rowYears) {
+    return thrulineImages;
+  }
+
+  const getTableCell = (aYear, rowYears) => {
     let yearEntry = rowYears.find(o => o.year === aYear.toString());
     if (yearEntry) {
       const cellText = yearEntry.text.substring(0, 100);
-      const thruline = "c";
+      // const thruline = "c";
       return (
-        <div>
-          <img 
+        <Fragment>
+          {getThrulines()}
+          {/* <img 
             src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
-            alt='thruline'/>
-          <p>{cellText}</p>
-        </div>
+            alt='thruline'/> */}
+          {cellText}
+        </Fragment>
       )
     } else {
       return "-";
