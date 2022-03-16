@@ -7,7 +7,7 @@ let yearEntry = null;
 const TimelineTable = () => {
 
   const getThrulines = () => {
-    const thrulines = ['c', 'd'];
+    const thrulines = ['d']; //, 'd'
     const thrulineImages = thrulines.map((thruline) => (
       <img
         className="thruline"
@@ -38,6 +38,18 @@ const TimelineTable = () => {
     }    
   }
 
+  const getTableRow = (rowYears) => {
+    const tableRow = yearArray.map((aYear) => (
+      <td className="row-nyc-1949" key={aYear}>
+        {getTableCell(aYear, rowYears)} 
+      </td>
+      )
+    )
+
+    return tableRow;
+
+  }
+
   return (
     <table className="timeline-content">
       <thead>
@@ -57,12 +69,14 @@ const TimelineTable = () => {
           >
             <th>{row.city}</th>
 
-            {yearArray.map((aYear) => (
+            {getTableRow(row.years)}
+
+            {/* {yearArray.map((aYear) => (
               <td className="row-nyc-1949" key={aYear}>
                 {getTableCell(aYear, row.years)} 
               </td>
               )
-            )}
+            )} */}
           </tr>
         ))}        
 
