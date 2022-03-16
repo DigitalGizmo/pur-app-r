@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TimelineTable from './TimelineTable';
 
 const Timeline = () => {
+  const BASE_THRULINES = [
+    true, false, false, false, false, false, false, false, 
+  ];
+  const [thrulines, setThrulines] = useState(BASE_THRULINES);
+
   return (
     <div> 
       <header className="basic-page">

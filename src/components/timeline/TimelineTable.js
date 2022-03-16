@@ -9,11 +9,19 @@ const TimelineTable = () => {
   function getTableCell (aYear, rowYears) {
     let yearEntry = rowYears.find(o => o.year === aYear.toString());
     if (yearEntry) {
-      return yearEntry.text.substring(0, 100);
-    }
-    // } else {
-    //   return "-";
-    // }    
+      const cellText = yearEntry.text.substring(0, 100);
+      const thruline = "c";
+      return (
+        <div>
+          <img 
+            src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
+            alt='thruline'/>
+          <p>{cellText}</p>
+        </div>
+      )
+    } else {
+      return "-";
+    }    
   }
   return (
     <table className="timeline-content">
