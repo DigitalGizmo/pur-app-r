@@ -98,11 +98,12 @@ const timelineContent = [
        {
           "year": "1953",
           "text": "State authorizes construction of Newburgh-Beacon Bridge.",
+          "thrulines": [3]
        },
        {
           "year": "1956",
           "text": "U~~Newburgh  receives federal urban renewal survey and planning grant.",
-          "thrulines": [0,5]
+          "thrulines": [0,4]
        },
        {
           "year": "1957",
@@ -220,6 +221,7 @@ const timelineContent = [
        {
           "year": "1955",
           "text": "State begins construction of uptown office campus.",
+          "thrulines": [2,4],
        },
        {
           "year": "1957",

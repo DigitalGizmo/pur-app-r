@@ -549,12 +549,18 @@ button.urban {
   border: 1px solid greenyellow;
   color:  greenyellow;
 }
+/* Don mucking about here in order to move forward! */
+button.urban.selected {
+  background-color: greenyellow;
+  border: 1px solid greenyellow;
 
-button.urban .selected {
+  color: #353526;
+}
+/* button.urban .selected {
   background-color: greenyellow;
   border: 1px solid greenyellow;
   color: #353526;
-}
+} */
 
 button.demo {
   background-color: #353526;
@@ -562,6 +568,12 @@ button.demo {
   color:  purple;
 }
 
+/* Nominatino to fit pattern of urban selected */
+button.demo.selected {
+  background-color: purple;
+  border: 1px solid purple;
+  color: #e4e0c7;
+}
 button.demo-selected {
   background-color: purple;
   border: 1px solid purple;

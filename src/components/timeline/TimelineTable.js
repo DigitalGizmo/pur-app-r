@@ -20,6 +20,7 @@ const TimelineTable = ({thrulines}) => {
           )
         }
       }
+      return null;
     });
     return thrulineImages;
 
@@ -35,7 +36,6 @@ const TimelineTable = ({thrulines}) => {
         let cellClass = "";
         if (yearEntry.hasImage) {
           if (yearEntry.hasImage === "true") {
-            console.log("class short name: " + row.class + "-" + aYear);
             cellClass = row.class + "-" + aYear;
           }
         }

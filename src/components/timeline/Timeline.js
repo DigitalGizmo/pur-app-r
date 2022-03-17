@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import TimelineTable from './TimelineTable';
+import ThrulineButton from './ThrulineButton';
 
 const Timeline = () => {
   const BASE_THRULINES = [
-    true, false, false, true, true, false, true, false, 
+    false, false, false, false, false, false, false, false, 
   ];
   /*
   * 0 U Planning, 1 D Demo, 2 H Housing, 3 R Reconstruction, 
   * 4 P Preservation, 5 O Protest, 6 C CivilRights, 7 M PublicRelations
   */
   const [thrulines, setThrulines] = useState(BASE_THRULINES);
+  const setThruline = (index) => {
+    let newThrulines = [...thrulines];
+    newThrulines[index] = !newThrulines[index];
+    setThrulines(newThrulines);
+  }
 
   return (
     <div> 
@@ -24,9 +30,33 @@ const Timeline = () => {
             <li className="title">Through Lines</li>
             <li><button className="button urban">Urban Planning</button></li>
             <li><button className="button demo-selected">Demolition and Displacement</button></li>
-            <li>Housing</li>
-            <li>Reconstruction</li>
-            <li>Preservation</li>
+            <li>
+              <ThrulineButton
+                setThruline={setThruline}
+                thrulines={thrulines}
+                thruIndex={2}
+                subclass="urban"
+                label = "Housing" 
+              />
+            </li>
+            <li>
+              <ThrulineButton
+                setThruline={setThruline}
+                thrulines={thrulines}
+                thruIndex={3}
+                subclass="demo"
+                label = "Reconstruction" 
+              />
+            </li>
+            <li>
+              <ThrulineButton
+                setThruline={setThruline}
+                thrulines={thrulines}
+                thruIndex={4}
+                subclass="urban"
+                label = "Preservation" 
+              />
+            </li>
             <li>Protest</li>
             <li>Civil Rights</li>
             <li>Support for Urban Renewal</li>
