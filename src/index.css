@@ -81,13 +81,14 @@ blockquote {
   font-style: italic;
 }
 
-.button {
+button {
   appearance: none;
   background-color: #686959;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
   display: inline-block;
+  font-size: 1em;
   font-family: "itc-officina-sans-pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
@@ -99,17 +100,17 @@ blockquote {
   white-space: nowrap;
 }
 
-.button:hover, button:focus {
+button:hover, button:focus {
   background-color: shade(#686959, 20%);
   color: #ff7f00;
 }
 
-.button:disabled {
+button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.button:disabled:hover {
+button:disabled:hover {
   background-color: #e4e0c7;
 }
 
@@ -546,41 +547,99 @@ article.theme { /* themes pages  */
 
 button.urban {
   background-color: #353526;
-  border: 1px solid greenyellow;
-  color:  greenyellow;
+  border: 1px solid #fb5e5e;
+  color:  #fb5e5e;
 }
-/* Don mucking about here in order to move forward! */
-button.urban.selected {
-  background-color: greenyellow;
-  border: 1px solid greenyellow;
 
-  color: #353526;
+button.urban-selected {
+  background-color: #fb5e5e;
+  border: 1px solid #fb5e5e;
+  color: #e4e0c7;
 }
-/* button.urban .selected {
-  background-color: greenyellow;
-  border: 1px solid greenyellow;
-  color: #353526;
-} */
 
 button.demo {
   background-color: #353526;
-  border: 1px solid purple;
-  color:  purple;
+  border: 1px solid #a8fb5e;
+  color:  #a8fb5e;
 }
 
-/* Nominatino to fit pattern of urban selected */
-button.demo.selected {
-  background-color: purple;
-  border: 1px solid purple;
-  color: #e4e0c7;
-}
 button.demo-selected {
-  background-color: purple;
-  border: 1px solid purple;
+  background-color: #a8fb5e;
+  border: 1px solid #a8fb5e;
   color: #e4e0c7;
 }
 
-.timeline-content {
+button.housing {
+  background-color: #353526;
+  border: 1px solid #ffea39;
+  color: #ffea39;
+}
+
+button.housing-selected {
+  background-color: #ffea39;
+  border: 1px solid #ffea39;
+  color: #e4e0c7;
+}
+
+
+button.recon {
+  background-color: #353526;
+  border: 1px solid #39f3ff;
+  color: #39f3ff;
+}
+
+button.recon-selected {
+  background-color: #39f3ff;
+  border: 1px solid #39f3ff;
+  color: #e4e0c7;
+}
+
+button.preserv {
+  background-color: #353526;
+  border: 1px solid #fb88ff;
+  color: #fb88ff;
+}
+
+button.preserv-selected {
+  background-color: #fb88ff;
+  border: 1px solid #fb88ff;
+  color: #e4e0c7;
+}
+
+button.protest {
+  background-color: #353526;
+  border: 1px solid #fce95f;
+  color: #fce95f;
+}
+
+button.protest-selected {
+  background-color: #fce95f;
+  border: 1px solid #fce95f;
+  color: #e4e0c7;
+}
+
+button.civil {
+  background-color: #353526;
+  border: 1px solid #33ffb5;
+  color: #33ffb5;
+}
+
+button.civil-selected {
+  background-color: #33ffb5;
+  border: 1px solid #33ffb5;
+  color: #e4e0c7;
+}
+
+button.public {
+  background-color: #353526;
+  border: 1px solid #b05ff6;
+  color: #b05ff6;
+}
+
+button.public-selected {
+  background-color: #b05ff6;
+  border: 1px solid #b05ff6;
+  color: #e4e0c7;
 }
 
 table {/* from css tricks https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/ */

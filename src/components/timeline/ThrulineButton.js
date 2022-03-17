@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ThrulineButton = ({subclass,label,
+const ThrulineButton = ({lineName,label,
    setThruline, thruIndex, thrulines}) => {
 
   return (
     <button 
-      className={`button ${subclass} ${thrulines[thruIndex] ? "selected" : ""}`}
+      className={`${lineName}${thrulines[thruIndex] ? "-selected" : ""}`}
       onClick={() => setThruline(thruIndex)}
     >
       {label}

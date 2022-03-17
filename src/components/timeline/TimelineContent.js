@@ -221,11 +221,12 @@ const timelineContent = [
        {
           "year": "1955",
           "text": "State begins construction of uptown office campus.",
-          "thrulines": [2,4],
+          "thrulines": [2,5,4],
        },
        {
           "year": "1957",
           "text": "First uptown office building opens.",
+          "thrulines": [1,5],
        },
        {
           "year": "1958",
@@ -292,6 +293,7 @@ const timelineContent = [
        {
           "year": "1955",
           "text": "Mitchell-Lama Law provides tax abatement for middle-income housing.",
+          "thrulines": [0,6, 7],
        },
        {
           "year": "1958",
