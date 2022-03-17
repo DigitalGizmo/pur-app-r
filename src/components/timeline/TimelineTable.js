@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React from "react"; // , {Fragment}
 import "./TimelineContent";
 import { yearArray, timelineContent } from "./TimelineContent";
 
@@ -10,6 +10,7 @@ const TimelineTable = () => {
     const thrulines = ['d']; //, 'd'
     const thrulineImages = thrulines.map((thruline) => (
       <img
+        key={thruline}
         className="thruline"
         src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
         alt='thruline'/>
@@ -18,36 +19,56 @@ const TimelineTable = () => {
     return thrulineImages;
   }
 
-  const getTableCell = (aYear, rowYears) => {
-    let yearEntry = rowYears.find(o => o.year === aYear.toString());
-    if (yearEntry) {
-      const cellText = yearEntry.text.substring(0, 100);
-      const cellImage = 'row-nyc-1949';
-      const hasImage = false;
-      // if (yearEntry.hasImage) {
-      //   con
-      // }
+  // const getTableCell = (aYear, rowYears) => {
+  //   let yearEntry = rowYears.find(o => o.year === aYear.toString());
+  //   if (yearEntry) {
+  //     const cellText = yearEntry.text.substring(0, 100);
+  //     const cellImage = 'row-nyc-1949';
+  //     const hasImage = false;
+  //     // if (yearEntry.hasImage) {
+  //     //   con
+  //     // }
+  //     return (
+  //       <Fragment>
+  //         {getThrulines()}
+  //         <span>{cellText}</span>
+  //       </Fragment>
+  //     )
+  //   } else {
+  //     return "-";
+  //   }    
+  // }
+
+  const getTableRow = (row) => {
+    const tableRow = yearArray.map((aYear) => {
+      let yearEntry = row.years.find(o => o.year === aYear.toString());
+      if (yearEntry) {
+        const cellText = yearEntry.text.substring(0, 100);
+        // const cellImage = 'row-nyc-1949';
+        // const hasImage = false;
+        let cellClass = "";
+        if (yearEntry.hasImage) {
+          if (yearEntry.hasImage === "true") {
+            console.log("class short name: " + row.class + "-" + aYear);
+            cellClass = row.class + "-" + aYear;
+          }
+        }
+        return (
+          <td 
+            className={cellClass} 
+            key={aYear}>
+            {getThrulines()}
+            <span>{cellText}</span>
+          </td>
+        )
+      }
       return (
-        <Fragment>
-          {getThrulines()}
-          <span>{cellText}</span>
-        </Fragment>
+        <td key={aYear}>
+          -
+        </td>        
       )
-    } else {
-      return "-";
-    }    
-  }
-
-  const getTableRow = (rowYears) => {
-    const tableRow = yearArray.map((aYear) => (
-      <td className="row-nyc-1949" key={aYear}>
-        {getTableCell(aYear, rowYears)} 
-      </td>
-      )
-    )
-
+    })
     return tableRow;
-
   }
 
   return (
@@ -69,7 +90,7 @@ const TimelineTable = () => {
           >
             <th>{row.city}</th>
 
-            {getTableRow(row.years)}
+            {getTableRow(row)}
 
             {/* {yearArray.map((aYear) => (
               <td className="row-nyc-1949" key={aYear}>

@@ -679,7 +679,8 @@ tr.row-us {
 }
 
 .row-us-1950 {
-
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/row-us-1950.jpg);
+  background-size: cover;
 }
 
 td img.thruline {
