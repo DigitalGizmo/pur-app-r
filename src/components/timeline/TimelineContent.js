@@ -17,6 +17,7 @@ const timelineContent = [
           "year": "1949",
           "text": "Stuyvesant Town housing development reaches full occupancy. Most residents are World War II veterans and their families.",
           "hasImage": "true",
+          "thrulines": [1,4]
        },
        {
           "year": "1950",
@@ -25,6 +26,7 @@ const timelineContent = [
        {
           "year": "1951",
           "text": "New York City law prohibits discrimination in publicly-aided housing, including Stuyvesant Town. Future violations are misdemeanors punishable by a $500 fine. ",
+          "thrulines": [2,3]
        },
        {
           "year": "1952",
@@ -100,6 +102,7 @@ const timelineContent = [
        {
           "year": "1956",
           "text": "U~~Newburgh  receives federal urban renewal survey and planning grant.",
+          "thrulines": [0,5]
        },
        {
           "year": "1957",

@@ -3,8 +3,12 @@ import TimelineTable from './TimelineTable';
 
 const Timeline = () => {
   const BASE_THRULINES = [
-    true, true, false, false, false, false, false, false, 
+    true, false, false, true, true, false, true, false, 
   ];
+  /*
+  * 0 U Planning, 1 D Demo, 2 H Housing, 3 R Reconstruction, 
+  * 4 P Preservation, 5 O Protest, 6 C CivilRights, 7 M PublicRelations
+  */
   const [thrulines, setThrulines] = useState(BASE_THRULINES);
 
   return (
@@ -30,6 +34,7 @@ const Timeline = () => {
         </section>
 
         <TimelineTable
+          thrulines = {thrulines}
         />
 
         {/* <iframe 

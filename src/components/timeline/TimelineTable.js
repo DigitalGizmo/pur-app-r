@@ -2,42 +2,28 @@ import React from "react"; // , {Fragment}
 import "./TimelineContent";
 import { yearArray, timelineContent } from "./TimelineContent";
 
-let yearEntry = null;
+// let yearEntry = null;
 
-const TimelineTable = () => {
+const TimelineTable = ({thrulines}) => {
 
-  const getThrulines = () => {
-    const thrulines = ['d']; //, 'd'
-    const thrulineImages = thrulines.map((thruline) => (
-      <img
-        key={thruline}
-        className="thruline"
-        src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${thruline}.gif`}
-        alt='thruline'/>
-    ));
+  const getThrulines = (yearEntry) => {
 
+    const thrulineImages = thrulines.map((thruline, index) => {
+      if (thrulines[index]) {
+        if (yearEntry.thrulines && yearEntry.thrulines.includes(index)) {
+          return (
+            <img
+              key={index}
+              className="thruline"
+              src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
+              alt={`thruline for ${index}`}/>
+          )
+        }
+      }
+    });
     return thrulineImages;
-  }
 
-  // const getTableCell = (aYear, rowYears) => {
-  //   let yearEntry = rowYears.find(o => o.year === aYear.toString());
-  //   if (yearEntry) {
-  //     const cellText = yearEntry.text.substring(0, 100);
-  //     const cellImage = 'row-nyc-1949';
-  //     const hasImage = false;
-  //     // if (yearEntry.hasImage) {
-  //     //   con
-  //     // }
-  //     return (
-  //       <Fragment>
-  //         {getThrulines()}
-  //         <span>{cellText}</span>
-  //       </Fragment>
-  //     )
-  //   } else {
-  //     return "-";
-  //   }    
-  // }
+  }
 
   const getTableRow = (row) => {
     const tableRow = yearArray.map((aYear) => {
@@ -57,7 +43,7 @@ const TimelineTable = () => {
           <td 
             className={cellClass} 
             key={aYear}>
-            {getThrulines()}
+            {getThrulines(yearEntry)}
             <span>{cellText}</span>
           </td>
         )
