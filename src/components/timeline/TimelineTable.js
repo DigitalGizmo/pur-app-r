@@ -78,12 +78,6 @@ const TimelineTable = ({thrulines}) => {
 
             {getTableRow(row)}
 
-            {/* {yearArray.map((aYear) => (
-              <td className="row-nyc-1949" key={aYear}>
-                {getTableCell(aYear, row.years)} 
-              </td>
-              )
-            )} */}
           </tr>
         ))}        
 

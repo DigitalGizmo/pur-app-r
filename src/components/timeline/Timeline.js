@@ -23,91 +23,88 @@ const Timeline = () => {
         <h1>Timeline</h1>
       </header>
 
-      <div className="timeline-page">
+      <section className="thru-lines">
+        <ul>
+          <li className="title">Through Lines</li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={0}
+              lineName="urban"
+              label = "Urban Planning" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={1}
+              lineName="demo"
+              label = "Demolition" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={2}
+              lineName="housing"
+              label = "Housing" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={3}
+              lineName="recon"
+              label = "Reconstruction" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={4}
+              lineName="preserv"
+              label = "Preservation" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={5}
+              lineName="protest"
+              label = "Protest" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={6}
+              lineName="civil"
+              label = "Civil Rights" 
+            />
+          </li>
+          <li>
+            <ThrulineButton
+              setThruline={setThruline}
+              thrulines={thrulines}
+              thruIndex={7}
+              lineName="public"
+              label = "Support for Urban Renewal" 
+            />
+          </li>
+        </ul>
+      </section>
 
-        <section className="thru-lines">
-          <ul>
-            <li className="title">Through Lines</li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={0}
-                lineName="urban"
-                label = "Urban Planning" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={1}
-                lineName="demo"
-                label = "Demolition" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={2}
-                lineName="housing"
-                label = "Housing" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={3}
-                lineName="recon"
-                label = "Reconstruction" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={4}
-                lineName="preserv"
-                label = "Preservation" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={5}
-                lineName="protest"
-                label = "Protest" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={6}
-                lineName="civil"
-                label = "Civil Rights" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={7}
-                lineName="public"
-                label = "Support for Urban Renewal" 
-              />
-            </li>
-          </ul>
-        </section>
+      <TimelineTable
+        thrulines = {thrulines}
+      />
 
-        <TimelineTable
-          thrulines = {thrulines}
-        />
-
-      </div>
     </div>
   )
 }
