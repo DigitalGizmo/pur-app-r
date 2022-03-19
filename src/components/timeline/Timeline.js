@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import {
+  useQuery,
+  gql,
+} from "@apollo/client"; 
 import TimelineTable from './TimelineTable';
 import ThrulineButton from './ThrulineButton';
 
@@ -16,6 +20,44 @@ const Timeline = () => {
     newThrulines[index] = !newThrulines[index];
     setThrulines(newThrulines);
   }
+
+
+  const GET_TIMELINE_ENTRIES = gql`
+    query {
+      timelineLayers {
+        edges {
+          node {
+            slug
+            title
+            timelineEntries {
+              edges {
+                node {
+                  year
+                  blurb
+                  hasCellImage
+                  thrulines{
+                    edges {
+                      node {
+                        slug
+                        ordinal
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+      }
+      }
+    }
+  `;
+
+  const { loading, error, data } = useQuery(
+    GET_TIMELINE_ENTRIES
+  );
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: { error.message } </p>;
 
   return (
     <div> 
@@ -103,7 +145,19 @@ const Timeline = () => {
 
       <TimelineTable
         thrulines = {thrulines}
+        loading = {loading}
+        error = {error}
+        timelineLayers = {data.timelineLayers.edges}
       />
+
+      <ul>
+        {data.timelineLayers.edges.map((row) => (
+          <li key={row.node.slug}>
+            item: {row.node.slug}
+          </li>
+        ))}
+
+      </ul>
 
     </div>
   )
