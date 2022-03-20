@@ -1,28 +1,65 @@
-import React from "react"; // , {Fragment}
-import "./TimelineContent";
-import { yearArray } from "./TimelineContent"; //, timelineContent
+import React from "react"; 
 
 const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
+  const yearArray = [
+    // 1943, 1944, 1945, 1946, 1947, 1948, 1949, 
+    // 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 
+      1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 
+      1967, 1968]
 
-  // const getThrulines = (yearEntry) => {
+  const getThrulines = (yearEntry) => {
 
-  //   const thrulineImages = thrulines.map((thruline, index) => {
-  //     if (thrulines[index]) {
-  //       if (yearEntry.thrulines && yearEntry.thrulines.includes(index)) {
-  //         return (
-  //           <img
-  //             key={index}
-  //             className="thruline"
-  //             src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
-  //             alt={`thruline for ${index}`}/>
-  //         )
-  //       }
-  //     }
-  //     return null;
-  //   });
-  //   return thrulineImages;
+    const thrulineImages = thrulines.map((thruline, index) => {
+      // True if throughline is activated by its button
+      if (thrulines[index]) {
+        // If there are any throughline entries at all
+        if (yearEntry.node.thrulines.edges.length > 0) {
+          let hasMatchingOrdinal = false;
+          // console.log("1st ordingal: " + yearEntry.node.thrulines.edges[0].node.ordinal);
 
-  // }
+          for (let tlIndex = 0; tlIndex < yearEntry.node.thrulines.edges.length; tlIndex++) {
+            if (yearEntry.node.thrulines.edges[tlIndex].node.ordinal === index) hasMatchingOrdinal = true;
+          }
+
+          // ack! Don't directly have an array!
+          // for (let item in yearEntry.node.thrulines.edges) {
+          //   if (item.node.ordinal === index) hasMatchingOrdinal = true;
+          // }
+          /*
+          * let's say that on this iteration we have a true for 5
+                    "hasCellImage": false,
+                    "thrulines": {
+                      "edges": [                        {
+                          "node": {
+                            "slug": "housing",
+                            "ordinal": 2
+                          }
+                        },
+                        {
+                          "node": {
+                            "slug": "protest",
+                            "ordinal": 5
+                          }
+          * Brute force
+          */
+          // yearEntry.thrulines.includes(index)) {
+
+          if (hasMatchingOrdinal) {
+            return (
+              <img
+                key={index}
+                className="thruline"
+                src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
+                alt={`thruline for ${index}`}/>
+            )
+          }
+        }
+      }
+      return null;
+    });
+    return thrulineImages;
+
+  }
 
   const getTableRow = (row) => {
     const tableRow = yearArray.map((aYear) => {
@@ -37,7 +74,7 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
           <td 
             className={cellClass} 
             key={aYear}>
-            {/* {getThrulines(yearEntry)} */}
+            {getThrulines(yearEntry)}
             <span>{cellText}</span>
           </td>
         )
