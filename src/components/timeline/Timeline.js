@@ -152,15 +152,6 @@ const Timeline = () => {
         timelineLayers = {data.timelineLayers.edges}
       />
 
-      <ul>
-        {data.timelineLayers.edges.map((row) => (
-          <li key={row.node.slug}>
-            item: {row.node.slug}
-          </li>
-        ))}
-
-      </ul>
-
     </div>
   )
 }

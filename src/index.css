@@ -758,13 +758,53 @@ tr.row-nystate {
 tr.row-us {
 }
 
-.row-nyc-1949 {
-  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/row-nyc-1949.jpg);
+.row-nyc-1960 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/nyc-1960.jpg);
   background-size: cover;
 }
 
-.row-us-1950 {
-  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/row-us-1950.jpg);
+.row-nyc-1963 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/nyc-1963.jpg);
+  background-size: cover;
+}
+
+.row-nyc-1964 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/nyc-1964.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1959 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1959.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1962 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1962.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1963 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1963.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1965 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1965.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1966 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1966.jpg);
+  background-size: cover;
+}
+
+.row-kingston-1967 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/kingston-1967.jpg);
+  background-size: cover;
+}
+
+.row-us-1961 {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/timeline/us-1961.jpg);
   background-size: cover;
 }
 

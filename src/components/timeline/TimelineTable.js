@@ -21,29 +21,6 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
             if (yearEntry.node.thrulines.edges[tlIndex].node.ordinal === index) hasMatchingOrdinal = true;
           }
 
-          // ack! Don't directly have an array!
-          // for (let item in yearEntry.node.thrulines.edges) {
-          //   if (item.node.ordinal === index) hasMatchingOrdinal = true;
-          // }
-          /*
-          * let's say that on this iteration we have a true for 5
-                    "hasCellImage": false,
-                    "thrulines": {
-                      "edges": [                        {
-                          "node": {
-                            "slug": "housing",
-                            "ordinal": 2
-                          }
-                        },
-                        {
-                          "node": {
-                            "slug": "protest",
-                            "ordinal": 5
-                          }
-          * Brute force
-          */
-          // yearEntry.thrulines.includes(index)) {
-
           if (hasMatchingOrdinal) {
             return (
               <img
@@ -58,7 +35,6 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
       return null;
     });
     return thrulineImages;
-
   }
 
   const getTableRow = (row) => {
