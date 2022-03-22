@@ -133,7 +133,10 @@ header.basic-page {/* for menu pages, personal stories, essays, etc */
 }
 
 header.basic-page h1 {
-  font-size: 1.75em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 500;
 }
 
 header.basic-page h4, header.basic-page h1 {
@@ -214,6 +217,11 @@ p.intro {
   z-index: 90;
 }
 
+ol.footnotes li {
+  font-size: .8em;
+  padding-bottom: .5em;
+}
+
 p.caption {
   color: #BAB692;
   border: 1px solid #686959;
@@ -241,6 +249,7 @@ p.caption {
   border: thin solid #615c3d;
   width: 90%;
 }
+
 .entry-pop {/* Pop Up Windows for Visual Record and Slide Shows */
   margin: 5% auto;
   height: 80%;
@@ -431,8 +440,24 @@ nav.horiz-menu {/* menu page  */
   background-size: contain;
 }
 
-article.theme { /* themes pages  */
-  margin-top: 0;
+.theme { /* themes pages  */
+  background-color: rgba(53, 53, 38, 0.5);
+  margin-top: -12em;
+  padding-top: 0.5em;
+  position: relative;
+  z-index: 100;
+}
+
+.theme p.caption {
+  border: none;
+  float: left;
+  padding: 0 1em 1em 0;
+  width: 20%;
+}
+
+.theme p.first {
+  color: #e6e7d8;
+  padding: 1em .75em;
 }
 
 /* ========================== */
