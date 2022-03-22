@@ -21,7 +21,6 @@ const Timeline = () => {
     setThrulines(newThrulines);
   }
 
-
   const GET_TIMELINE_ENTRIES = gql`
     query {
       timelineLayers {
@@ -35,6 +34,7 @@ const Timeline = () => {
                   year
                   blurb
                   hasCellImage
+                  priority
                   thrulines{
                     edges {
                       node {
@@ -141,6 +141,7 @@ const Timeline = () => {
                 label = "Support for Urban Renewal" 
               />
             </li>
+
           </ul>
         </section>
       </div>
@@ -151,6 +152,7 @@ const Timeline = () => {
         error = {error}
         timelineLayers = {data.timelineLayers.edges}
       />
+
 
     </div>
   )

@@ -1,11 +1,14 @@
-import React from "react"; 
+import React, { useState } from 'react';
 
-const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
+const TimelineTable = ({thrulines, loading, error, 
+  timelineLayers}) => {
   const yearArray = [
     // 1943, 1944, 1945, 1946, 1947, 1948, 1949, 
     // 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 
       1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 
       1967, 1968]
+  
+  // const [priorityLevel, setPriorityLevel] = useState(3);
 
   const getThrulines = (yearEntry) => {
 
@@ -40,7 +43,9 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
   const getTableRow = (row) => {
     const tableRow = yearArray.map((aYear) => {
       let yearEntry = row.node.timelineEntries.edges.find(edge => edge.node.year === aYear);
-      if (yearEntry) {
+      // For some reason graphene is returning e.g. A_3 for priority
+      if (yearEntry && 
+          parseInt(yearEntry.node.priority.substring(2)) > 2 ) {
         const cellText = yearEntry.node.blurb;
         let cellClass = "";
         if (yearEntry.node.hasCellImage) {
@@ -51,13 +56,13 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
             className={cellClass} 
             key={aYear}>
             {getThrulines(yearEntry)}
-            <span>{cellText}</span>
+            <span>{} - {cellText}</span>
           </td>
         )
       }
       return (
         <td key={aYear}>
-          -
+          
         </td>        
       )
     })
@@ -86,7 +91,12 @@ const TimelineTable = ({thrulines, loading, error, timelineLayers}) => {
             {getTableRow(row)}
 
           </tr>
-        ))}        
+        ))}  
+        {/* <tr>
+          <td onClick={setPriorityLevel(3)} >Show only level 3</td>
+          <td onClick={setPriorityLevel(2)} >Show 2 and 3</td>
+ 
+        </tr>       */}
 
       </tbody>  
     </table>
