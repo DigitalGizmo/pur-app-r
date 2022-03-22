@@ -16,12 +16,7 @@ class Home extends React.Component {
           <li><Link to="/archive/visuals">Visual Record</Link></li>
           <li><Link to="/places">Place-Based Explorations</Link></li>
           <li><Link to="/themes">Themes &amp; Essays</Link></li>
-          <li style={{ color: '#333333'}}>
-            <Link 
-              to="/timeline"
-              style={{ color: '#554455'}}>
-            (Developing -- Timeline)
-          </Link></li>
+          <li><Link to="/timeline">Timeline</Link></li>
         </ul>  
       </div>
     );
