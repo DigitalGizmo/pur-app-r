@@ -24,6 +24,8 @@ import ThemeCampbell from './components/themes/ThemeCampbell';
 import ThemeFullilove from './components/themes/ThemeFullilove';
 import ThemeZipp from './components/themes/ThemeZipp';
 import Timeline from './components/timeline/Timeline';
+import SightsMenu from './components/sights/SightsMenu';
+import StuyTownVideo from './components/sights/StuyTownVideo';
 // import reportWebVitals from './reportWebVitals';
 
 import {
@@ -65,6 +67,8 @@ render(
             <Route path="/themes/theme-fullilove" element={<ThemeFullilove />} />
             <Route path="/themes/theme-zipp" element={<ThemeZipp />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/sights/*" element={<SightsMenu/>} />
+          <Route path='/sights/gastown-stuytown' element={<StuyTownVideo/>} />
         </Route>
       </Routes>
     </BrowserRouter>
