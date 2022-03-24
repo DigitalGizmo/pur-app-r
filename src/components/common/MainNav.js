@@ -12,24 +12,21 @@ const MainNav = (props) => {
         <li className={ props.selected === 'cities' ? 'selected' : ''}>
           <Link to="/cities">4 Cities / 4 Stories</Link>
         </li>
-        <li className={ props.selected === 'people' ? 'selected' : ''}>
-          <Link to="/people">Personal Stories</Link>
-        </li>
-        <li className={ props.selected === 'visuals' ? 'selected' : ''}>
-          <Link to="/archive/visuals">Visual Record</Link>
-        </li>
+        <li className={ props.selected === 'sights' ? 'selected' : ''}>
+          <Link 
+          to="/sights"
+          dangerouslySetInnerHTML={{ __html: 'Sights &amp; Sounds' }}></Link>
+        </li>  
         <li className={ props.selected === 'places' ? 'selected' : ''}>
           <Link to="/places">Places</Link>
         </li>  
-        <li className={ props.selected === 'themes' ? 'selected' : ''}>
-          <Link 
-          to="/themes"
-          dangerouslySetInnerHTML={{ __html: 'Themes &amp; Essays' }}></Link>
-        </li>  
+        <li className={ props.selected === 'people' ? 'selected' : ''}>
+          <Link to="/people">Personal Stories</Link>
+        </li>        
+
       </ul>
     </nav>
 );
 }
 
 export default MainNav;
-
