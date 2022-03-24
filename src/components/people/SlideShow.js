@@ -50,13 +50,15 @@ const SlideShow = (props) => {
   return (
     <div className="lightbox"> 
       <div className="slimpop-wrapper entry-pop">
-        <p className="pop-nav">
-          {currSlide + 1} of {numSlides} |
-          <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
-          <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
-          <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
-        </p>
-        
+        <div className="pop-nav">
+          <p>
+            {currSlide + 1} of {numSlides} |
+            <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
+            <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
+            <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
+          </p>
+        </div>
+
         <header>
           <h1>Slide Show: {props.title}</h1> {/*props.title*/}
           <p>{slides[currSlide].caption}</p>
