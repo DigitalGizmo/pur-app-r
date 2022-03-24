@@ -1,10 +1,5 @@
-import React from 'react';
-
-const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
-
-  return (
     <div style={{left:  (hotspots[highlightIndex].node.textPercent + 2) + '%'}}
-      className="more-pop stroll" >
+      className="more-pop timeline" >
       <div className="slimpop-wrapper morepop-wrapper">
         <p className="close">
           <a href="/" onClick={ e => { e.preventDefault(); closeStrollMore()}}>
@@ -13,7 +8,7 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
         </p>       
         <header>
           <h1>{ hotspots[highlightIndex].node.title }</h1>
-
+          <p>This is the more text which could include <a href="#">a link to elsewhere</a> in the site</p>
         { hotspots[highlightIndex].node.archiveItem &&
           <img 
             src={`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${hotspots[highlightIndex].node.archiveItem.slug}.jpg`}
@@ -25,7 +20,3 @@ const StrollMore = ({hotspots, highlightIndex, closeStrollMore}) => {
         </header>
       </div>
     </div>
-  )
-}
-
-export default StrollMore;

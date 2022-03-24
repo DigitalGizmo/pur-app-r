@@ -56,6 +56,7 @@ const SlideShow = (props) => {
           <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
           <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
         </p>
+        
         <header>
           <h1>Slide Show: {props.title}</h1> {/*props.title*/}
           <p>{slides[currSlide].caption}</p>
@@ -74,3 +75,19 @@ SlideShow.defaultProps = {
 };
 
 export default SlideShow;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

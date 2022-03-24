@@ -250,7 +250,7 @@ p.caption {
   width: 90%;
 }
 
-.entry-pop {/* Pop Up Windows for Visual Record and Slide Shows */
+.entry-pop {/* Large Pop Up Windows for Visual Record and Slide Shows */
   margin: 5% auto;
   height: 80%;
   width: 60%;
@@ -268,7 +268,7 @@ p.caption {
 
 .entry-pop header p {
   font-size: .8em;
-  margin:  .4em auto;
+  margin: .4em auto;
 }
 
 p.pop-nav {
@@ -292,7 +292,7 @@ img.fullpic {
   margin-right: 1em;
 }
 
-/* Don adding this for slimpops -- required */
+/* Don adding this for large slimpops -- required */
 .lightbox {
   position: fixed;
   top: 0px;
@@ -314,6 +314,44 @@ SlideShow.css etc. */
   padding: 2em;
   position: relative;
 }
+
+.morepop-wrapper {/*  styles for small slimpops on stroll, timeline, etc. */
+  padding: 1em;
+}
+
+.more-pop {/*  all More pops */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  height: 350px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 15%;
+  z-index: 99;
+}
+
+.more-pop p.close {
+  color: #FFAC06;
+  font-size: .75em;
+  float: right;
+  letter-spacing: .05em;
+  max-width: 10%;
+}
+
+.more-pop p.close a {
+  color: #353626;
+}
+
+.more-pop header {
+  max-width: 90%;
+}
+
+.more-pop header h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/*.more-popheader p {
+  margin: 0.4em auto;
+}*/
 /*   ===================   */
 /*      VISUAL RECORD      */
 /*   ===================   */
@@ -935,47 +973,9 @@ div.intro-page {
   color: #FFAC06;
 }
 
-.stroll-more-pop {/* More pops - Stroll version of slimpop -- JJ these should be refactored with other popup styles */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  height:  350px;
+.more-pop.stroll {/* More pops - Stroll version */
   margin-top: -450px;
   margin-left: 5%;
-  overflow-y: scroll;
-  position: absolute;
-  width: 15%;
-  z-index: 99;
-}
-
-#stroll-pop-wrapper {
-  background-color: #EDEEE4;  
-  border: 1px solid #BDBEA7;
-  color: #353626;
-  padding: 1em;
-  position: relative;
-}
-
-#stroll-pop-wrapper p.close {
-  color: #FFAC06;
-  font-size: .75em;
-  float: right;
-  letter-spacing: .05em;
-  max-width: 10%;
-}
-#stroll-pop-wrapper p.close a {
-  color: #353626;
-}
-
-#stroll-pop-wrapper header {
-  max-width: 90%;
-}
-
-#stroll-pop-wrapper header h1 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-#stroll-pop-wrapper header p {
-  margin: 0.4em auto;
 }
 
 /* ======================= */
