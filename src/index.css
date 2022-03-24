@@ -11,7 +11,7 @@ html {
 
 body {
   /*color: #e4e0c7;*/
-  color:  #e6e7d8;
+  color:  #E6E7D8;
   font-family: "itc-officina-sans-pro", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
@@ -50,22 +50,22 @@ ul, ol {
 }
 
 a {
-  color: #e4e0c7;
+  color: #E4E0C7;
   text-decoration: none;
   transition: color 150ms ease;
 }
 
 a:visited {
-  color: shade(#e4e0c7, 25%);
+  color: shade(#E4E0C7, 25%);
 }
 
 a:hover {
-  color: #ff7f00;
+  color: #D17316;
   text-decoration: underline;
 }
 
 hr {
-  border-bottom: 1px solid #e4e0c7;
+  border-bottom: 1px solid #E4E0C7;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -102,7 +102,7 @@ button {
 
 button:hover, button:focus {
   background-color: shade(#686959, 20%);
-  color: #ff7f00;
+  color: #D17316;
 }
 
 button:disabled {
@@ -111,7 +111,7 @@ button:disabled {
 }
 
 button:disabled:hover {
-  background-color: #e4e0c7;
+  background-color: #E4E0C7;
 }
 
 /* for temporary menu pages */
@@ -144,11 +144,11 @@ header.basic-page h4, header.basic-page h1 {
 }
 
 .basic-page h4 span.selected { /* used on Personal Stories Menu pages */
-  color: #ff7f00;
+  color: #B25900;
 }
 
 header.basic-page p.blurb {
-  color: #cac6ab;
+  color: #BDBEA7;
   font-size: 0.7em;
   left: 35%;
   line-height: 1.2em;
@@ -223,7 +223,7 @@ ol.footnotes li {
 }
 
 p.caption {
-  color: #BAB692;
+  color: #BDBEA7;
   border: 1px solid #686959;
   font-size: .75em;
   margin: 0;
@@ -246,7 +246,7 @@ p.caption {
 }
 
 .narrative div img {
-  border: thin solid #615c3d;
+  border: thin solid #686959;
   width: 90%;
 }
 
@@ -277,7 +277,7 @@ img.fullpic {
 
 /* shared styles for all pop ups  */
 .slimpop-wrapper {
-  background-color: #EDEEE4;  
+  background-color: #E6E7D8;  
   border: 1px solid #BDBEA7;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
   color: #353626;
@@ -330,7 +330,7 @@ img.fullpic {
 }
 
 .entry-pop a {
-  color: #bc5b00;
+  color: #B25900;
 }
 
 .pop-nav a:hover {
@@ -351,7 +351,7 @@ img.fullpic {
 }
 
 .more-pop p.close {
-  color: #FFAC06;
+  color: #B25900;
   font-size: .75em;
   float: right;
   letter-spacing: .05em;
@@ -392,7 +392,7 @@ img.fullpic {
 }
 
 .menu-title {
-  color: #acae9a;
+  color: #BDBEA7;
   line-height: 1.2em;
   padding: 0 .25em;
   width: 100%;
@@ -402,7 +402,7 @@ img.fullpic {
 }
 
 .menu-title:hover {
-    color: #ff7f00;
+    color: #D17316;
 }
 .filters, .images-menu {
   padding: 0.5em 3%;
@@ -430,12 +430,12 @@ img.fullpic {
 }
 
 .filter-set .button {/* reset buttons */
-  color: #e4e0c7;
+  color: #E6E7D8;
 }
 
 .filter-set .button:hover, button:focus {
   background-color: shade(#686959, 20%);
-  color: #ff7f00;
+  color: #D17316;
 }
 
 /* ========================== */
@@ -513,7 +513,7 @@ nav.horiz-menu {/* menu page  */
 }
 
 .theme p.first {
-  color: #e6e7d8;
+  color: #E6E7D8;
   padding: 1em .75em;
 }
 
@@ -639,8 +639,8 @@ nav.horiz-menu {/* menu page  */
 
 .thru-lines ul li button {
   background-color: #353526;
-  border: 1px solid #e4e0c7;
-  color: #e4e0c7;
+  border: 1px solid #E4E0C7;
+  color: #E4E0C7;
 }
 
 .thru-lines ul li button.urban:hover {
@@ -781,7 +781,7 @@ tbody tr {
 }
 
 table td {
-  color:  #e4e0c7;
+  color:  #E4E0C7;
   font-size: 0.65em;
   font-weight: normal;
   padding: 0;
@@ -962,7 +962,7 @@ div.intro-page {
 }
 
 .turn-text {/*  turn corner buttons  */
-  fill: #FFA300;
+  fill: #B25900;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 0.05em;
@@ -972,7 +972,7 @@ div.intro-page {
 .arrows {
   opacity: 0.6;
   fill: none;
-  stroke: #FFA300;
+  stroke: #B25900;
   stroke-width: 19;
   stroke-linecap: round;
   stroke-miterlimit: 10;
@@ -984,16 +984,16 @@ div.intro-page {
 }
 
 .hi-spot {
-  fill: #FFAC06;
+  fill: #D17316;
   stroke-width: 2;
   stroke-miterlimit: 10;
   opacity: .25;
-  stroke: #FFAC06;
+  stroke: #D17316;
   stroke-opacity: .9;
 }
 
 .hi-text {
-  color: #FFAC06;
+  color: #D17316;
 }
 
 .more-pop.stroll {/* More pops - Stroll version */
@@ -1014,7 +1014,7 @@ div.intro-page {
 }
 
 .section-title {
-  color: #d17316;
+  color: #D17316;
   font-size: 2em;
   font-weight: bold;
   left: 3%;
@@ -1076,7 +1076,7 @@ div.intro-page {
 
 .caption-panel div {
   background-color: #353526;
-  border: 1px solid #e4e0c7;
+  border: 1px solid #BDBEA7;
   opacity: 0.75;
   margin-bottom: 90vh;
   padding: 1em;
@@ -1116,3 +1116,18 @@ a.caption-link {
 #thing10 p.gallery-text {
   height: 10em;
 }
+
+/*   ===================   */
+/*         COLORS          */
+/*   ===================   */
+/* #353526 dark background */
+/* #686959 medium background */
+/* #E6E7D8 light text */
+/* #E4E0C7 shaded light text */
+/* #353526 dark text */
+/* #B25900 burnt orange background / links */
+/* #D17316 orange link hover */
+/* #394718 city: stuy town green */
+/* #544213 city: kingston brown */
+/* #1F2452 city: newburgh blue */
+/* #FFA300 city: albany maroon */
