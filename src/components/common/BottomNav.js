@@ -4,7 +4,7 @@ import './MainNav.css';
 
 const BottomNav = (props) => {
   return (
-    <nav className="">
+    <nav className="bottom-menu">
       <ul>
         <li>
           About

@@ -256,6 +256,10 @@ img.fullpic {
   margin-right: 1em;
 }
 
+.short-pages nav.bottom-menu {
+  position: fixed;
+  bottom:  0;
+}
 /*   ===================   */
 /*         POP UPS         */
 /*   ===================   */
