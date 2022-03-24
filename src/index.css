@@ -815,6 +815,10 @@ table tbody th {
   z-index: 1;
 }
 
+table tbody td.dim {
+  opacity: 0.25;
+}
+
 tr.row-nyc td {
   background-color: #394718;
 }
