@@ -6,7 +6,7 @@ nav.main-menu {
   text-align: center;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 150;
 }
 
 nav.main-menu ul {

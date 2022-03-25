@@ -685,9 +685,16 @@ nav.horiz-menu {/* menu page  */
 /* ====================== */
 .timeline-top {
   background-color: #353526;
+  height: 150px; /* not sure I need this */
   position: fixed;
   width: 100vw;
   z-index: 99;
+}
+
+.timeline-content {
+  padding-top: 150px;
+  position: relative;
+  z-index: 90;
 }
 
 .thru-lines {
@@ -807,16 +814,14 @@ button.public:hover {
   color: #353526;
 }
 
-.timeline-content {
-  padding-top: 150px;
-}
-
 table {/* from css tricks https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/ */
   margin: 0;
   border: none;
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
+  width: fit-content;
+  overflow-x: scroll;
 }
 
 table tr {
@@ -827,12 +832,13 @@ table td,
 table th {
   border: 1px solid #686959;
   padding: 0.5rem 1rem;
+  width: 150px;
 }
 
 table thead {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 99;
 }
 
 table thead th {
@@ -849,7 +855,7 @@ tbody tr {
 }
 
 table td {
-  color:  #E4E0C7;
+  color: #E4E0C7;
   font-size: 0.65em;
   font-weight: normal;
   padding: 0;
@@ -871,13 +877,11 @@ table tbody td, table tbody th {
 }
 
 table thead th:first-child {
-  background-color: #353526;
   position: sticky;
   left: 0;
-  z-index: 2;
 }
 
-table tbody th {
+table tbody th {  /* first column - city names */
   background-color: #353526;
   left: 0;
   position: sticky;
@@ -885,6 +889,10 @@ table tbody th {
 /*-ms-transform: rotate(270deg); /* IE 9
   transform: rotate(270deg);*/
   z-index: 1;
+}
+
+table tbody td {
+  width: 150px;
 }
 
 table tbody td.dim {
