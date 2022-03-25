@@ -5,6 +5,7 @@ import {
 } from "@apollo/client"; 
 import TimelineTable from './TimelineTable';
 import ThrulineButton from './ThrulineButton';
+import MoreTime from './MoreTime';
 
 const Timeline = () => {
   const BASE_THRULINES = [
@@ -15,12 +16,34 @@ const Timeline = () => {
   * 4 P Preservation #fb88ff, 5 O Protest #fce95f, 6 C CivilRights #33ffb5, 7 M PublicRelations #b05ff6
   */
   const [thrulines, setThrulines] = useState(BASE_THRULINES);
+  const [showingMore, setShowingMore] = useState(false);
+  const [yearEntry, setYearEntry] = useState(null);
+
   const setThruline = (index) => {
     let newThrulines = [...thrulines];
     newThrulines[index] = !newThrulines[index];
     setThrulines(newThrulines);
   }
 
+  function showMore(event, yearEntry) {
+    event.preventDefault();
+    setYearEntry(yearEntry);
+    setShowingMore(true);
+    console.log('showing more');
+  }
+
+  // Prevent click on (non-link) FullEntry from closing window
+  function closeMore (event) {
+    // console.log(event.target.className)
+    event.preventDefault()
+    event.stopPropagation()
+    // Close if click was on lightbox (background) or close
+    // if (event.target.className === 'timeline-content' ||
+    // event.target.id === 'close-link') {
+      setShowingMore(false);
+    // }
+  }
+   
   const GET_TIMELINE_ENTRIES = gql`
     query {
       timelineLayers {
@@ -35,6 +58,10 @@ const Timeline = () => {
                   blurb
                   hasCellImage
                   priority
+                  hasMore
+                  moreText
+                  usedIn
+                  usedInTitle
                   thrulines{
                     edges {
                       node {
@@ -75,7 +102,7 @@ const Timeline = () => {
                 thrulines={thrulines}
                 thruIndex={0}
                 lineName="urban"
-                label = "Urban Planning" 
+                label = "Planning" 
               />
             </li>
             <li>
@@ -84,7 +111,7 @@ const Timeline = () => {
                 thrulines={thrulines}
                 thruIndex={1}
                 lineName="demo"
-                label = "Demolition" 
+                label = "Demolition &amp; Displacement" 
               />
             </li>
             <li>
@@ -138,7 +165,7 @@ const Timeline = () => {
                 thrulines={thrulines}
                 thruIndex={7}
                 lineName="public"
-                label = "Support for Urban Renewal" 
+                label = "Urban Renewal P.R." 
               />
             </li>
 
@@ -151,8 +178,16 @@ const Timeline = () => {
         loading = {loading}
         error = {error}
         timelineLayers = {data.timelineLayers.edges}
+        showMore = {showMore}
+        closeMore = {closeMore}
       />
 
+      { showingMore && 
+        <MoreTime
+          closeMore = {closeMore}
+          yearEntry = {yearEntry}
+        />
+      }
 
     </div>
   )
