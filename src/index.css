@@ -325,9 +325,8 @@ img.fullpic {
   margin-right: 1em;
 }
 
-.short-pages nav.bottom-menu {
-  position: fixed;
-  bottom:  0;
+.short-page {
+  height: calc(100vh - 60px);
 }
 /*   ===================   */
 /*         POP UPS         */
@@ -398,7 +397,7 @@ img.fullpic {
   max-width: 25%;
 }
 
-.entry-pop a {
+.entry-pop a, .more-pop a {
   color: #B25900;
 }
 
@@ -412,7 +411,7 @@ img.fullpic {
 
 .more-pop {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  height: 350px;
+  max-height: 350px;
   overflow-y: scroll;
   position: absolute;
   width: 15%;
@@ -686,9 +685,16 @@ nav.horiz-menu {/* menu page  */
 /* ====================== */
 .timeline-top {
   background-color: #353526;
+  height: 150px; /* not sure I need this */
   position: fixed;
   width: 100vw;
   z-index: 99;
+}
+
+.timeline-content {
+  padding: 150px 0 4em 0;
+  position: relative;
+  z-index: 90;
 }
 
 .thru-lines {
@@ -774,13 +780,13 @@ button.preserv:hover {
 
 button.protest:hover {
   background-color: #353526;
-  border: 1px solid #fce95f;
-  color: #fce95f;
+  border: 1px solid #ff9833;
+  color: #ff9833;
 }
 
 .thru-lines ul li button.protest-selected {
-  background-color: #fce95f;
-  border: 1px solid #fce95f;
+  background-color: #ff9833;
+  border: 1px solid #ff9833;
   color: #353526;
 }
 
@@ -808,16 +814,14 @@ button.public:hover {
   color: #353526;
 }
 
-.timeline-content {
-  padding-top: 150px;
-}
-
 table {/* from css tricks https://css-tricks.com/making-tables-with-sticky-header-and-footers-got-a-bit-easier/ */
   margin: 0;
   border: none;
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
+  width: fit-content;
+  overflow-x: scroll;
 }
 
 table tr {
@@ -828,12 +832,13 @@ table td,
 table th {
   border: 1px solid #686959;
   padding: 0.5rem 1rem;
+  width: 150px;
 }
 
 table thead {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 99;
 }
 
 table thead th {
@@ -850,7 +855,7 @@ tbody tr {
 }
 
 table td {
-  color:  #E4E0C7;
+  color: #E4E0C7;
   font-size: 0.65em;
   font-weight: normal;
   padding: 0;
@@ -872,13 +877,11 @@ table tbody td, table tbody th {
 }
 
 table thead th:first-child {
-  background-color: #353526;
   position: sticky;
   left: 0;
-  z-index: 2;
 }
 
-table tbody th {
+table tbody th {  /* first column - city names */
   background-color: #353526;
   left: 0;
   position: sticky;
@@ -886,6 +889,10 @@ table tbody th {
 /*-ms-transform: rotate(270deg); /* IE 9
   transform: rotate(270deg);*/
   z-index: 1;
+}
+
+table tbody td {
+  width: 150px;
 }
 
 table tbody td.dim {
@@ -973,6 +980,12 @@ td span {
   display: block;
   line-height: 1.2em;
   padding: 4px;
+}
+
+.more-pop.timeline {/* More pops - Stroll version */
+    margin-top: -120vh;
+    margin-left: 40vw;
+    width: 30vw;
 }
 
 /* ======================= */

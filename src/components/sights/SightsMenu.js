@@ -4,7 +4,7 @@ import StuyTownVideo from './StuyTownVideo';
 
 const SightsMenu = () => {
   return (
-    <div>
+    <div className="short-page">
       <header className="basic-page">
         <h1>Sights &amp; Sounds</h1>
       </header>
