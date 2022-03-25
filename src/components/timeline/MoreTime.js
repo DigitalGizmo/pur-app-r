@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MoreTime = ({closeMore, yearEntry}) => {
+const MoreTime = ({closeMore, yearEntry, rowSlug}) => {
 
   return (
     <div className="more-pop timeline" >
@@ -27,7 +27,7 @@ const MoreTime = ({closeMore, yearEntry}) => {
 
           { yearEntry.node.hasCellImage &&
           <img 
-            src={`http://dev.picturingurbanrenewal.org/prod-assets/timeline/nyc-1960.jpg`}
+            src={`http://dev.picturingurbanrenewal.org/prod-assets/timeline/${rowSlug}-${yearEntry.node.year}.jpg`}
             alt="tenement interior"
             width="400" height="266"
           />

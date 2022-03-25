@@ -41,7 +41,7 @@ const TimelineTable = ({thrulines, loading, error,
     return thrulineImages;
   }
 
-  const getMoreLink = (yearEntry) => {
+  const getMoreLink = (yearEntry, rowSlug) => {
     // let moreLink = "";
     if (yearEntry.node.hasMore) {
       return (
@@ -49,7 +49,7 @@ const TimelineTable = ({thrulines, loading, error,
           <a
             className = ""
             href="/"
-            onClick={(event) => showMore(event, yearEntry)}
+            onClick={(event) => showMore(event, yearEntry, rowSlug)}
           >
           More..
           </a>
@@ -76,7 +76,7 @@ const TimelineTable = ({thrulines, loading, error,
             key={aYear}>
             {getThrulines(yearEntry)}
             <span>{cellText}</span>
-            {getMoreLink(yearEntry)}
+            {getMoreLink(yearEntry, row.node.slug)}
           </td>
         )
       }

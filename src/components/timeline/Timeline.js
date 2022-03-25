@@ -18,6 +18,7 @@ const Timeline = () => {
   const [thrulines, setThrulines] = useState(BASE_THRULINES);
   const [showingMore, setShowingMore] = useState(false);
   const [yearEntry, setYearEntry] = useState(null);
+  const [rowSlug, setRowSlug] = useState(null);
 
   const setThruline = (index) => {
     let newThrulines = [...thrulines];
@@ -25,9 +26,10 @@ const Timeline = () => {
     setThrulines(newThrulines);
   }
 
-  function showMore(event, yearEntry) {
+  function showMore(event, yearEntry, rowSlug) {
     event.preventDefault();
     setYearEntry(yearEntry);
+    setRowSlug(rowSlug);
     setShowingMore(true);
     console.log('showing more');
   }
@@ -186,6 +188,7 @@ const Timeline = () => {
         <MoreTime
           closeMore = {closeMore}
           yearEntry = {yearEntry}
+          rowSlug = {rowSlug}
         />
       }
 
