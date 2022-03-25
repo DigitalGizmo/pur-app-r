@@ -325,9 +325,8 @@ img.fullpic {
   margin-right: 1em;
 }
 
-.short-pages nav.bottom-menu {
-  position: fixed;
-  bottom:  0;
+.short-page {
+  height: calc(100vh - 50px);
 }
 /*   ===================   */
 /*         POP UPS         */

@@ -3,7 +3,7 @@ import React from 'react';
 
 const CitiesMenu = () => {
   return (
-    <div className="short-pages">
+    <div className="short-page">
       <header className="basic-page">
         <h1>4 Cities / 4 Stories</h1>
       </header>

@@ -40,6 +40,7 @@ nav.main-menu li.selected a {
 /*  Bottom Menu  */
 nav.bottom-menu {
   background-color: #68695A;
+  height: 40px;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   width: 100%;

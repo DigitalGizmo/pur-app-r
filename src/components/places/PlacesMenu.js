@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PlacesMenu = () => {
   return (
-    <div>
+    <div className="short-page">
       <header className="basic-page">
         <h1>Place-Based Explorations</h1>
       </header>
