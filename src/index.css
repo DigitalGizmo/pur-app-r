@@ -326,7 +326,7 @@ img.fullpic {
 }
 
 .short-page {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
 }
 /*   ===================   */
 /*         POP UPS         */
@@ -397,7 +397,7 @@ img.fullpic {
   max-width: 25%;
 }
 
-.entry-pop a {
+.entry-pop a, .more-pop a {
   color: #B25900;
 }
 
@@ -411,7 +411,7 @@ img.fullpic {
 
 .more-pop {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  height: 350px;
+  max-height: 350px;
   overflow-y: scroll;
   position: absolute;
   width: 15%;
@@ -692,7 +692,7 @@ nav.horiz-menu {/* menu page  */
 }
 
 .timeline-content {
-  padding-top: 150px;
+  padding: 150px 0 4em 0;
   position: relative;
   z-index: 90;
 }
@@ -780,13 +780,13 @@ button.preserv:hover {
 
 button.protest:hover {
   background-color: #353526;
-  border: 1px solid #fce95f;
-  color: #fce95f;
+  border: 1px solid #ff9833;
+  color: #ff9833;
 }
 
 .thru-lines ul li button.protest-selected {
-  background-color: #fce95f;
-  border: 1px solid #fce95f;
+  background-color: #ff9833;
+  border: 1px solid #ff9833;
   color: #353526;
 }
 
@@ -980,6 +980,12 @@ td span {
   display: block;
   line-height: 1.2em;
   padding: 4px;
+}
+
+.more-pop.timeline {/* More pops - Stroll version */
+    margin-top: -120vh;
+    margin-left: 40vw;
+    width: 30vw;
 }
 
 /* ======================= */
