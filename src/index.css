@@ -121,6 +121,75 @@ ul.list-menu {
   margin-top: 1.25em;
 }
 
+/*   ===================   */
+/*        HOME PAGE        */
+/*   ===================   */
+.home {
+  background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/home/home-bkgnd.jpg);
+  background-size: cover;
+  color: #dedfcf;
+  padding: 2em 0;
+  text-align: center;
+ }
+
+section.home-test {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.home header {
+  margin-bottom: 2em;
+}
+
+.home header h1 {
+  font-size: 3em;
+  margin-bottom: 0.25em;
+}
+
+.home header p {
+  font-size: .75em;
+}
+
+ul.home-primary-menu, ul.home-secondary-menu {
+  list-style-type: none;
+}
+
+ul.home-primary-menu {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+ul.home-primary-menu li {
+  display: inline-block;
+  width: 300px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+ul.home-primary-menu li.city-stories {
+  font-size: 1.5em;
+  width: 450px;
+  height: 100px;
+}
+
+ul.home-primary-menu li a {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #686959;
+  display: block;
+  margin:  .5em 0;
+  padding: 0.5em;
+}
+
+ul.home-primary-menu li a:hover {
+  background-color: rgba(178, 89, 0, 0.5);
+}
+
+ul.home-secondary-menu li {
+  display: inline-block;
+  margin: 3em 1em;
+}
 /* ====================== */
 /*      SHARED LAYOUT     */
 /* ====================== */
