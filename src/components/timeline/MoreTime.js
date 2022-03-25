@@ -24,6 +24,15 @@ const MoreTime = ({closeMore, yearEntry}) => {
           }
 
           <p>{yearEntry.node.moreText}</p>
+
+          { yearEntry.node.hasCellImage &&
+          <img 
+            src={`http://dev.picturingurbanrenewal.org/prod-assets/timeline/nyc-1960.jpg`}
+            alt="tenement interior"
+            width="400" height="266"
+          />
+        }
+
         </header>
       </div>
     </div>
