@@ -6,11 +6,14 @@ const StuyTownVideo = () => {
     <div> 
       <header className="basic-page">
         <h1>Gas Town to Stuyvesant Town</h1>
-        <h4>to be iFramed</h4>
+        <h4></h4>
       </header>  
 
       <div>
-        <p>Video</p>
+        <video width="1280" height="720" controls> 
+            <source src="http://dev.picturingurbanrenewal.org/prod-assets/sights/gastown-stuytown.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>    
       </div>
 
 
