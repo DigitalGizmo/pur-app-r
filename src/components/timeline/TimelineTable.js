@@ -10,15 +10,15 @@ const TimelineTable = ({thrulines, loading, error,
   
   // const [showingMore, setShowingMore] = useState(false);
 
-  const getThrulines = (yearEntry, cellClass) => {
+  const getThrulines = (yearEntry) => {
     // Getting highlight lines for this one cell, if there are any
     // Also handling dimmed state for this cell
-
+    let cellClass = "";
     const thrulineImages = thrulines.map((thruline, index) => {
-      // True if throughline is activated by its button
-      if (thrulines[index]) {
-        // If there are any throughline entries at all
+      if (thrulines[index]) { // This thruline is activate
+        // If there are _any_ throughline entries for this cell
         if (yearEntry.node.thrulines.edges.length > 0) {
+          // See if this cell has an id for this throughline
           let hasMatchingOrdinal = false;
           // console.log("1st ordingal: " + yearEntry.node.thrulines.edges[0].node.ordinal);
 
@@ -27,6 +27,7 @@ const TimelineTable = ({thrulines, loading, error,
           }
 
           if (hasMatchingOrdinal) {
+            cellClass = "";
             return (
               <img
                 key={index}
@@ -34,13 +35,13 @@ const TimelineTable = ({thrulines, loading, error,
                 src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
                 alt={`thruline for ${index}`}/>
             )
-          } // else { // There wasn't a match
-          //   cellClass += " dim";
-          // }
+          }  else { // There wasn't a match
+            cellClass = " dim ";
+          }
         } // else { // No throughline entries for this cell
         //   cellClass += " dim";
         // }
-      }
+      } // End going through thrulines
       return null;
     });
     
@@ -50,10 +51,11 @@ const TimelineTable = ({thrulines, loading, error,
   const getEmptyCellClass = () => {
     // Dim if any throughlines are chosen
     let emptyCellClass = "";
-    const isEmpty = thrulines.every(value => value === false);
-    if (!isEmpty) { // some throughlines active
-      emptyCellClass = " dim";
-    }
+    // Abandoing dim effort for now
+    // const isEmpty = thrulines.every(value => value === false);
+    // if (!isEmpty) { // some throughlines active
+    //   emptyCellClass = " dim";
+    // }
     return emptyCellClass;
   }
   
@@ -82,17 +84,19 @@ const TimelineTable = ({thrulines, loading, error,
         // For some reason graphene is returning e.g. A_3 for priority
           parseInt(yearEntry.node.priority.substring(2)) > 2 ) {
         const cellText = yearEntry.node.blurb;
-        let cellClass = ""; // May receive css for background image
+        // Abandoning dim effort for now
+        // let cellClass = getThrulines(yearEntry)[1]; 
+        let cellClass = "";
+        // May need css for background image
         if (yearEntry.node.hasCellImage) {
-            cellClass = "row-" + row.node.slug + "-" + aYear;
+            cellClass += " row-" + row.node.slug + "-" + aYear;
         }
-        // cellClass
         return (
           <td 
-            className={getThrulines(yearEntry, cellClass)[1]} 
+            className={cellClass}
             key={aYear}
           >
-            {getThrulines(yearEntry, cellClass)[0]}
+            {getThrulines(yearEntry)[0]}
             <span>{cellText}</span>
             {getMoreLink(yearEntry, row.node.slug)}
           </td>

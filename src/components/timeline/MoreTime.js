@@ -2,6 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MoreTime = ({closeMore, yearEntry, rowSlug}) => {
+  const getJumpToLink = () => {
+    if (yearEntry.node.usedIn) {
+      if (yearEntry.node.usedIn.substring(0,4) === "http") {
+        // We have a full, absolute url
+        return (
+          <a
+            href={yearEntry.node.usedIn}
+          >{yearEntry.node.usedInTitle}</a>
+        )
+      }
+      return (
+        <Link to={`../../${yearEntry.node.usedIn}`}>
+            {yearEntry.node.usedInTitle}</Link>
+      )
+    }
+    return null;
+  }
 
   return (
     <div className="more-pop timeline" >
@@ -17,9 +34,8 @@ const MoreTime = ({closeMore, yearEntry, rowSlug}) => {
         <header>
           {/* <h1>[we have no data for title]</h1> */}
 
-          {yearEntry.node.usedIn &&
-            <p>Jump to this image in: <Link to={`../../${yearEntry.node.usedIn}`}>
-            {yearEntry.node.usedInTitle}</Link> 
+          {getJumpToLink() &&
+            <p>Jump to this image in: {getJumpToLink()}
             </p>
           }
 
