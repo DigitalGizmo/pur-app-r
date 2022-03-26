@@ -13,7 +13,13 @@ const TimelineTable = ({thrulines, loading, error,
   const getThrulines = (yearEntry) => {
     // Getting highlight lines for this one cell, if there are any
     // Also handling dimmed state for this cell
-    let cellClass = "";
+    const isEmpty = thrulines.every(value => value === false);
+    let cellClass = " dim";
+    if (isEmpty) {
+      cellClass = "";
+    } // else { // Thrulines active, so default is dim
+    //   let cellClass = " dim";
+    // }
     const thrulineImages = thrulines.map((thruline, index) => {
       if (thrulines[index]) { // This thruline is activate
         // If there are _any_ throughline entries for this cell
@@ -35,14 +41,12 @@ const TimelineTable = ({thrulines, loading, error,
                 src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
                 alt={`thruline for ${index}`}/>
             )
-          }  else { // There wasn't a match
-            cellClass = " dim ";
-          }
-        } // else { // No throughline entries for this cell
-        //   cellClass += " dim";
-        // }
+          } // else  There wasn't a match - leave default dim
+
+        } // else  No throughline entries for this cell, leave dim
+
       } // End going through thrulines
-      return null;
+      return null; // This null is just for the hightlight images
     });
     
     return [thrulineImages, cellClass];
@@ -52,10 +56,10 @@ const TimelineTable = ({thrulines, loading, error,
     // Dim if any throughlines are chosen
     let emptyCellClass = "";
     // Abandoing dim effort for now
-    // const isEmpty = thrulines.every(value => value === false);
-    // if (!isEmpty) { // some throughlines active
-    //   emptyCellClass = " dim";
-    // }
+    const isEmpty = thrulines.every(value => value === false);
+    if (!isEmpty) { // some throughlines active
+      emptyCellClass = " dim";
+    }
     return emptyCellClass;
   }
   
@@ -85,8 +89,8 @@ const TimelineTable = ({thrulines, loading, error,
           parseInt(yearEntry.node.priority.substring(2)) > 2 ) {
         const cellText = yearEntry.node.blurb;
         // Abandoning dim effort for now
-        // let cellClass = getThrulines(yearEntry)[1]; 
-        let cellClass = "";
+        let cellClass = getThrulines(yearEntry)[1]; 
+        // let cellClass = "";
         // May need css for background image
         if (yearEntry.node.hasCellImage) {
             cellClass += " row-" + row.node.slug + "-" + aYear;
