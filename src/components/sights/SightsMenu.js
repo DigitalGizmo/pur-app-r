@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import StuyTownVideo from './StuyTownVideo';
+// import StuyTownVideo from './StuyTownVideo';
 
 const SightsMenu = () => {
   return (

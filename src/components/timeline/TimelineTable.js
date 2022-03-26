@@ -10,8 +10,9 @@ const TimelineTable = ({thrulines, loading, error,
   
   // const [showingMore, setShowingMore] = useState(false);
 
-  const getThrulines = (yearEntry) => {
+  const getThrulines = (yearEntry, cellClass) => {
     // Getting highlight lines for this one cell, if there are any
+    // Also handling dimmed state for this cell
 
     const thrulineImages = thrulines.map((thruline, index) => {
       // True if throughline is activated by its button
@@ -33,14 +34,29 @@ const TimelineTable = ({thrulines, loading, error,
                 src= {`http://dev.picturingurbanrenewal.org/prod-assets/timeline/thruline-${index}.gif`}
                 alt={`thruline for ${index}`}/>
             )
-          }
-        }
+          } // else { // There wasn't a match
+          //   cellClass += " dim";
+          // }
+        } // else { // No throughline entries for this cell
+        //   cellClass += " dim";
+        // }
       }
       return null;
     });
-    return thrulineImages;
+    
+    return [thrulineImages, cellClass];
   }
 
+  const getEmptyCellClass = () => {
+    // Dim if any throughlines are chosen
+    let emptyCellClass = "";
+    const isEmpty = thrulines.every(value => value === false);
+    if (!isEmpty) { // some throughlines active
+      emptyCellClass = " dim";
+    }
+    return emptyCellClass;
+  }
+  
   const getMoreLink = (yearEntry, rowSlug) => {
     // let moreLink = "";
     if (yearEntry.node.hasMore) {
@@ -62,27 +78,31 @@ const TimelineTable = ({thrulines, loading, error,
   const getTableRow = (row) => {
     const tableRow = yearArray.map((aYear) => {
       let yearEntry = row.node.timelineEntries.edges.find(edge => edge.node.year === aYear);
-      // For some reason graphene is returning e.g. A_3 for priority
       if (yearEntry && 
+        // For some reason graphene is returning e.g. A_3 for priority
           parseInt(yearEntry.node.priority.substring(2)) > 2 ) {
         const cellText = yearEntry.node.blurb;
-        let cellClass = "";
+        let cellClass = ""; // May receive css for background image
         if (yearEntry.node.hasCellImage) {
             cellClass = "row-" + row.node.slug + "-" + aYear;
         }
+        // cellClass
         return (
           <td 
-            className={cellClass} 
-            key={aYear}>
-            {getThrulines(yearEntry)}
+            className={getThrulines(yearEntry, cellClass)[1]} 
+            key={aYear}
+          >
+            {getThrulines(yearEntry, cellClass)[0]}
             <span>{cellText}</span>
             {getMoreLink(yearEntry, row.node.slug)}
           </td>
         )
       }
       return (
-        <td key={aYear}>
-          
+        <td 
+          key={aYear}
+          className={getEmptyCellClass()}
+          >        
         </td>        
       )
     })

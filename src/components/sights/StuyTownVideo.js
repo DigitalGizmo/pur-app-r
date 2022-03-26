@@ -6,7 +6,7 @@ const StuyTownVideo = () => {
     <div> 
       <header className="basic-page">
         <h1>Gas Town to Stuyvesant Town</h1>
-        <h4></h4>
+        <h4>Part 1</h4>
       </header>  
 
       <div>
