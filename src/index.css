@@ -277,6 +277,11 @@ p.intro {
   width: 100%;
 }
 
+.sights-menu {
+  position: relative;
+  height: 90vh;
+}
+
 .image-full-caption {
   align-self: end;
   background: rgba(53, 53, 38, 0.8);

@@ -8,10 +8,14 @@ const SightsMenu = () => {
       <header className="basic-page">
         <h1>Sights &amp; Sounds</h1>
       </header>
-      <ul className="list-menu">
-        <li><Link to="/sights/gastown-stuytown">Gas Town to StuyTown</Link></li>
-      </ul>
 
+      <div className="image-full sights-menu">
+        <img src="http://dev.picturingurbanrenewal.org/prod-assets/sights/images/sightssounds-menu.jpg" /> 
+
+        <article className="intro-panel">
+          <p>Play video: <Link to="/sights/gastown-stuytown">A Suburb in the City</Link></p>
+        </article>
+      </div>
     </div>
   )
 }
