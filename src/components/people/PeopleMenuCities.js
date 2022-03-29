@@ -17,7 +17,6 @@ const PeopleMenuCities = () => {
             <li className="">James Felt: The Tenant Relocation Bureau, Inc.</li>
             <li className="">Robert Moses: You Can't Make an Omelet without Breaking Eggs</li>
             <li className="">Fiorello La Guardia: Impeach the Mayor</li>
-            <li className="">William O'Dwyer: No Comment</li>
             <li className="">Harry Delman: The Last to Leave</li>
             <li className="">Connie Zimmardo: Dear Mr. Mayor</li>
             <li className="">May Springer: My Neighborhood is not a Slum</li>
@@ -26,7 +25,6 @@ const PeopleMenuCities = () => {
             <li className="">Raphael Hendrix: "All I Want Is a Nice, Clean Apartment"</li>
             <li className="">Leo and Diana Miller: "Without Struggle There Is No Progress"</li>
             <li className="">Esther and David Smith: Tenants Committee to End Discrimination in Stuyvesant Town</li>
-            <li className="">Paul O'Dwyer: The Mayor's Brother</li>
             <li className="">Charles Abrams: "Threat to Our Liberties"</li>
             <li className="">Frederick Ecker: "Negroes and Whites Don't Mix"</li>
             <li className="">Vincent Pasquale and Eddie O'Brien: "I Wasn't Cut out for a Cop"</li>
@@ -50,11 +48,9 @@ const PeopleMenuCities = () => {
             <li className="">Jack Present: The Bureaucratic Survivor</li>
             <li className=""><Link to="/people/carrie-wilson">Carrie Wilson: A Homeowner &ldquo;by Sufferance and Permission&rdquo;</Link></li>
             <li className="">Elizabeth Patton: Elizabeth Patton &ldquo;Does Not Intend To Move&rdquo;</li>
-            <li className="">Runston Lewis: Leaving Newburgh Behind</li>
-            <li className="">Nellie ("Big Nell') Williams: The Brothel and the Dutch Church</li>
+            <li className="">Nellie ("Big Nell") Williams: The Brothel and the Dutch Church</li>
             <li className="">Gilbert and Sally Sharpe: &ldquo;Pushed from One Slum to Another&rdquo;</li>
             <li className="">Frank E. Jones: Rev. Jones and Gov. Rockefeller</li>
-            <li className="">Barry Benepe: What Might Have Been</li>
             <li className="">Samuel A. T. Hodge: "No Negro Asked for 'Urban Removal'"</li>
             <li className="">Jeh V. Johnson: The Pathbreaker</li>
             <li className="">William Zeckendorf: "I Make Grapefruits out of Lemons"</li>
@@ -62,7 +58,6 @@ const PeopleMenuCities = () => {
             <li className="">Tom Porfidio: Plastered for Six Years</li>
             <li className="">Tom Daley: Preserving Newburgh's Lost Architecture</li>
             <li className="">Joseph Ritz: Joseph Ritz and "The Despised Poor"</li>
-            <li className="">Terrence MacDonald: The Ex-Priest</li>
           </ul>
         </div>
 
@@ -80,8 +75,6 @@ const PeopleMenuCities = () => {
             <li className="">Leonard Van Dyke: The Voice of Opposition</li>
             <li className="">Annie Jackson: "We're People, We're Citzens"</li>
             <li className="">Ed Ford: Saving City Hall</li>
-            <li className="">John Pike: The Pike Plan</li>
-            <li className="">John McClelland: Rebuilding Rondout</li>
             <li className="">Geoffrey Miller: Preserving Kingston's Immigrant Heritage</li>
             <li className="">Hugh Reynolds: An Insider in an "Insider's Town"</li>
             <li className=""><Link to="/people/haines-dauner">Gene Dauner and Bob Haines: One Step Ahead of the Wrecking Ball</Link></li>
@@ -97,7 +90,6 @@ const PeopleMenuCities = () => {
           <h2>Albany</h2>
           <ul className="">
               <li className="">Michael Nardolillo: "A Good Man for a Tough Job"</li>
-              <li className="">John Mesick: Rezoning Center Square</li>
               <li className="">John and Vivian Robinson: No Down Payment</li>
               <li className="">Mae Carlson: Albany's Rooming House Queen</li>
               <li className="">Frederick Binseel: Mr. Binseel and the Temporary Commission</li>
@@ -105,13 +97,11 @@ const PeopleMenuCities = () => {
               <li className=""><Link to="/people/jimmy-strawn">Jimmy Strawn: The Sultan of Swing</Link></li>
               <li className="">Harold Rubin: Preserving Center Square</li>
               <li className="">Elinor Hemstead Posner: An Old Neighborhood Doesn't Have to be Ugly</li>
-              <li className="">Leon VanDyke: The Brothers vs. the Construction Trades</li>
               <li className="">Harry Vodery: The Firebrand</li>
               <li className="">Randolph Nugent: Minister to the Displaced</li>
               <li className="">Hank Landau: The Labor Leader</li>
               <li className="">Gerry and Mary Dwileski: Gerry's Gamble</li>
               <li className="">Wallace K. Harrison: The Governor's Architect</li>
-              <li className="">Henry Blatner: Designed but Unbuilt</li>
               <li className="">Grant Van Patten: Hoax or Hope?</li>
               <li className="">Scott Christianson: The "Typewriter Guerilla"</li>
               <li className="">William Kennedy: Albany's Bard</li>
