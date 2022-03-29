@@ -33,13 +33,13 @@ const MoreTime = ({closeMore, yearEntry, rowSlug}) => {
         </p>       
         <header>
           {/* <h1>[we have no data for title]</h1> */}
+          <p>{yearEntry.node.moreText}:</p>
 
           {getJumpToLink() &&
-            <p>Jump to this image in: {getJumpToLink()}
+            <p>{getJumpToLink()}
             </p>
           }
 
-          <p>{yearEntry.node.moreText}</p>
 
           { yearEntry.node.hasCellImage &&
           <img 
