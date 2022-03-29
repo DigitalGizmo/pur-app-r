@@ -613,9 +613,14 @@ nav.horiz-menu {/* menu page  */
   padding: 0.5em;
 }
 
-.ps-menu ul li, .ps-city-menu ul li {
+.ps-city-menu ul li {
   line-height: 1.2em;
   padding: 0.5em 0;
+}
+
+.ps-menu ul li {
+  line-height: 1.2em;
+  padding: 0.5em 30px;
 }
 
 .politicians ul {
@@ -672,20 +677,25 @@ nav.horiz-menu {/* menu page  */
 }
 
 .icon-kingston {
-
-}
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg) no-repeat;
+  background-position: left;
+  background-size: 24px 24px; }
 
 .icon-albany {
-  
-}
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
+  background-position: left;
+  background-size: 24px 24px; }
 
 .icon-stuytown {
-  
-}
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg) no-repeat;
+  background-position: left;
+  background-size: 24px 24px; }
 
 .icon-newburgh {
-  
-}
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg) no-repeat;
+  background-position: left;
+  background-size: 24px 24px; }
+
 /*.city-newburgh, .city-kingston, .city-stuytown, .city-albany {
   font-size: 1.25em;
   font-weight: normal;
