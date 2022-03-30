@@ -8,8 +8,7 @@ const Kingston = () => {
   return (
     <div> 
       <header className="basic-page">
-        <h1>Kingston</h1>
-        <h4>to be developed!</h4>
+        <h1>Kingston: Plans Change</h1>
       </header>  
 
       <iframe 

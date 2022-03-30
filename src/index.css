@@ -279,7 +279,13 @@ p.intro {
 
 .sights-menu {
   position: relative;
-  height: 90vh;
+}
+
+.sights-menu article.intro-panel {
+  left: 40%;
+  position: absolute;
+  top: 30%;
+  width: 30%;
 }
 
 .image-full-caption {
@@ -902,10 +908,6 @@ table tbody th {
   position: relative;
 }
 
-table tbody td, table tbody th {
-
-}
-
 table thead th:first-child {
   position: sticky;
   left: 0;
@@ -943,12 +945,6 @@ tr.row-kingston td {
 
 tr.row-albany td {
   background-color: #4d0e16;
-}
-
-tr.row-nystate {
-}
-
-tr.row-us {
 }
 
 .row-nyc-1960 {
@@ -1134,18 +1130,6 @@ div.intro-page {
   text-shadow: 1px 1px black;
   top: 10%;
 }
-/* 
-.image-panel div {
-  position: absolute;
-  top: 160;
-  left: 0;
-} */
-
-/* .image-panel div {
-  position: fixed;
-  top: 100;
-  left: 10;
-} */
 
 .image-panel-outer-div {
   position: fixed;
@@ -1153,13 +1137,6 @@ div.intro-page {
   left: 10;
 }
 
-/*.image-panel div img, div.full-image img {
-  border: thin solid #615c3d;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1.6em;
-}
-*/
 .chapter-title /* JJ cf: header.basic-page styles5 */ {
   background-color: #B25900;
   margin-top: 24px;
@@ -1172,13 +1149,6 @@ div.intro-page {
   margin: 0;
 }
 
-/*.image-panel div img, div.full-image img {
-  border: thin solid #615c3d;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1.6em;
-}
-*/
 .caption-panel {
   position: relative;
   z-index: 10;

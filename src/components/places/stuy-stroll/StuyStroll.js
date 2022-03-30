@@ -124,7 +124,7 @@ const StuyStroll = () => {
   return (
     <div> {/*Don cheating and borrowing menu-page */}
       <header className="basic-page">
-        <h1>Stroll By: 1st Avenue and 14th Street</h1>
+        <h1>Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</h1>
       </header>
 
       <AnimatePresence initial={false}>
