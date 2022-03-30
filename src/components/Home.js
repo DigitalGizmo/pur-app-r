@@ -1,17 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import HomePop from './HomePop';
 
-class Home extends React.Component {
+const Home = () => {
+  const [showingHomePop, setShowingHomePop] = useState(false);
 
-  render() {
+  function showHomePop (indx) {
+    setShowingHomePop(true);
+  }  
 
-    return (
-      <div className="home">
+  function closesHomePop (event) {
+    // console.log(event.target.className)
+    event.preventDefault()
+    event.stopPropagation()
+    // Close if click was on lightbox (background) or close
+    if (event.target.className === 'lightbox' ||
+    event.target.id === 'close-link') {
+      setShowingHomePop(false);
+    }
+  }
+ 
+  return (
+    <div className="home">
       <section className="home-test">
         <header>
           <h1>Picturing Urban Renewal</h1>
           <p>Picturing Urban Renewal invites visitors to explore the visual history of urban renewal in four U.S. cities. Each city’s story is different. Combined, these stories shed light on an era of  optimism, tragedy, and transformation.</p>
-          <Link to="">What Was Urban Renewal?</Link>
+          <p>
+            <a 
+              href='/' 
+              onClick={e => { e.preventDefault(); showHomePop();}}
+            >What Was Urban Renewal?</a>
+          </p>
         </header>
 
         <ul className="home-primary-menu">
@@ -28,10 +48,16 @@ class Home extends React.Component {
           <li><Link to="/timeline">Timeline</Link></li>
           <li><Link to="">Resources</Link></li>
         </ul>
-        </section>
-      </div>
-    );
-  } // end render
-} // end class
+      </section>
+
+      { showingHomePop && 
+        <HomePop
+          closesHomePop = {closesHomePop}
+        />
+      }
+
+    </div>
+  )
+} // end Home
 
 export default Home;
