@@ -1132,7 +1132,7 @@ div.intro-page {
   left: 3%;
   position: fixed;
   text-shadow: 1px 1px black;
-  top: 120px;
+  top: 10%;
 }
 /* 
 .image-panel div {
@@ -1187,9 +1187,8 @@ div.intro-page {
 }
 
 .caption-panel div {
-  background-color: #353526;
+  background-color: rgba(53, 53, 38, 0.8);
   border: 1px solid #BDBEA7;
-  opacity: 0.75;
   margin-bottom: 90vh;
   padding: 1em;
   margin-top: -10em;
