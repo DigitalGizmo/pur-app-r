@@ -8,9 +8,9 @@ const PlacesMenu = () => {
         <h1>Place-Based Explorations</h1>
       </header>
       <ul className="list-menu">
-        <li><Link to="/places/stuy-stroll">Stroll By: 1st Avenue &amp; 14th Street</Link></li>
-        <li><Link to="/places/newburgh">Newburgh</Link></li>
-        <li><Link to="/places/kingston">Kingston</Link></li>
+        <li><Link to="/places/stuy-stroll">Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</Link></li>
+        <li><Link to="/places/newburgh">Newburgh from the Planner&rsquo;s Perspective</Link></li>
+        <li><Link to="/places/kingston">Kingston: Plans Change</Link></li>
       </ul>
     </div>
   )

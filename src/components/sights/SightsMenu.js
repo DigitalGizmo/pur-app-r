@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 
 const SightsMenu = () => {
   return (
-    <div className="short-page">
+    <div className="">
       <header className="basic-page">
         <h1>Sights &amp; Sounds</h1>
-      </header>
+        <p className="blurb">This menu offers links to eight brief videos (6 to 8 minutes) that introduce the four cities and four themes comprising this website.</p>
+    </header>
 
-      <div className="image-full sights-menu">
+      <div className="sights-menu">
         <img src="http://dev.picturingurbanrenewal.org/prod-assets/sights/images/sightssounds-menu.jpg" /> 
 
         <article className="intro-panel">
