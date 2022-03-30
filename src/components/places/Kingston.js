@@ -13,12 +13,11 @@ const Kingston = () => {
       </header>  
 
       <iframe 
-        style={{border: `1px solid rgba(0, 0, 0, 0.1)`}}
-        width="1200" height="900" 
-        src="https://framer.com/embed/City-Story-Menu--hbA7M8KLJF1SERQjjP4i/IrcEX2DOx?highlights=0" 
+        style={{border: `1px solid rgba(0, 0, 0, 0.1)`}} 
+        width="1200" height="1000" 
+        src="https://framer.com/embed/Kingston-2--99GNo549S11L9sLBQ7Zb/LreYDatxk?highlights=0" 
       >
-
-      </iframe>
+      </iframe>      
 
     </div>
   );

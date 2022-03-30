@@ -10,6 +10,7 @@ const PlacesMenu = () => {
       <ul className="list-menu">
         <li><Link to="/places/stuy-stroll">Stroll By: 1st Avenue &amp; 14th Street</Link></li>
         <li><Link to="/places/newburgh">Newburgh</Link></li>
+        <li><Link to="/places/kingston">Kingston</Link></li>
       </ul>
     </div>
   )
