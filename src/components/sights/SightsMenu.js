@@ -11,7 +11,10 @@ const SightsMenu = () => {
     </header>
 
       <div className="sights-menu">
-        <img src="http://dev.picturingurbanrenewal.org/prod-assets/sights/images/sightssounds-menu.jpg" /> 
+        <img 
+          alt="design for what the sites and sounds menu will look like"
+          src="http://dev.picturingurbanrenewal.org/prod-assets/sights/images/sightssounds-menu.jpg" 
+        /> 
 
         <article className="intro-panel">
           <p>Play video: <Link to="/sights/gastown-stuytown">A Suburb in the City</Link></p>

@@ -1,3 +1,5 @@
+// Used in StuyStroll so that the resize calculation
+// only happens once a second. StuyFirst and StuyFourteenth.js
 function debounce(func, milSecs) {
   let timer;
   return () => {

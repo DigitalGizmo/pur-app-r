@@ -12,6 +12,7 @@ const CitiesMenu = () => {
       </ul>*/}
 
       <iframe 
+        title = "Cities Menu"
         style={{border: `1px solid rgba(0, 0, 0, 0.1)`}} 
         width="1250px" height="1250px" 
         src="https://framer.com/embed/Scroll-Trigger-Hopefully--hbA7M8KLJF1SERQjjP4i/IrcEX2DOx?highlights=0" 
