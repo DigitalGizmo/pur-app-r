@@ -26,12 +26,10 @@ const Home = () => {
         <header>
           <h1>Picturing Urban Renewal</h1>
           <p>Picturing Urban Renewal invites visitors to explore the visual history of urban renewal in four U.S. cities. Each city’s story is different. Combined, these stories shed light on an era of  optimism, tragedy, and transformation.</p>
-          <p>
             <a 
               href='/' 
               onClick={e => { e.preventDefault(); showHomePop();}}
             >What Was Urban Renewal?</a>
-          </p>
         </header>
 
         <ul className="home-primary-menu">
