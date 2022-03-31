@@ -368,6 +368,7 @@ img.fullpic {
 .entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
   margin: 5% auto;
   height: 80%;
+  text-align: left;
   width: 60%;
 }
 
