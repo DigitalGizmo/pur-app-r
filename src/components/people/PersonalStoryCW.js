@@ -64,7 +64,7 @@ class PersonalStory extends React.Component {
             <p className="intro">On Dec. 11, 1964, 55-year-old Carrie Wilson, a widow and mother of ten, signed a contract with local realtor Frank Clarino and his wife Julia to buy a four-story brick building with three apartments at 68 South St. for $10,000. Wilson put $1,000 down,the remaining $9,000 to be paid in monthly installments of $100 at 6 per cent interest, the maximum rate allowed by New York State&rsquo;s usury law. At this rate, it would have taken Wilson ten years to pay off the contract with a total cost of about $12,600.</p>
 
             <span dangerouslySetInnerHTML={{ __html: storyBody }}></span>
-            <Link to="/themes/theme">Read Essay Contract Buying</Link>
+            <Link to="/themes/theme">Read Essay: Buyer Beware: Contract Sales</Link>
           </article>
 
           <div className="second-col">
