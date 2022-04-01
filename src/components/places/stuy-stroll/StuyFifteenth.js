@@ -17,9 +17,10 @@ const StuyFifteenth = ({onPageChange}) => {
 
             <g id="photo">
               <image  
-                  width="2486" height="1479" 
+                  // width="2486" height="1479"
                   href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"  
-                  transform="translate(0 0)"> 
+                  transform="translate(0 0)"
+                  className="intro-photo"> 
               </image>
             </g>
 

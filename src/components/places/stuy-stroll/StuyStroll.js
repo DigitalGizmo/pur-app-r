@@ -122,7 +122,7 @@ const StuyStroll = () => {
   };
 
   return (
-    <div> {/*Don cheating and borrowing menu-page */}
+    <div className="stroll-page">
       <header className="basic-page">
         <h1>Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</h1>
       </header>

@@ -193,6 +193,7 @@ ul.home-secondary-menu li {
 /* ====================== */
 /*      SHARED LAYOUT     */
 /* ====================== */
+
 header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
   width: 100%;
@@ -1019,6 +1020,9 @@ td span {
 /* ======================= */
 /*     GASHOUSE STROLL     */
 /* ======================= */
+.stroll-page {/* to get bottom nav to the bottom of the page */
+  height: calc(100vh - 50px);
+}
 
 #stroll-wrapper {/*  gashouse main layout elements  */
   height: calc(100vh - 100px);
@@ -1030,6 +1034,9 @@ td span {
 .svg-content {
   height: calc(100% - 80px);
   width: auto;
+}
+
+.intro-photo {
 }
 
 #caption-band {
@@ -1072,17 +1079,22 @@ div.intro-page {
 }
 
 .turn-text {/*  turn corner buttons  */
-  fill: #B25900;
+  fill: #f09234;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-shadow: 1px 1px gray;
+}
+
+a:hover .turn-text {
+  text-decoration: none;
 }
 
 .arrows {
-  opacity: 0.6;
+  opacity: 0.8;
   fill: none;
-  stroke: #B25900;
+  stroke: #f09234;
   stroke-width: 19;
   stroke-linecap: round;
   stroke-miterlimit: 10;
