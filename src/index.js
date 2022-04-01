@@ -17,6 +17,7 @@ import PersonalStoryGR from './components/people/PersonalStoryGR';
 import PlacesMenu from './components/places/PlacesMenu';
 import Newburgh from './components/places/Newburgh';
 import Kingston from './components/places/Kingston';
+import Lucy from './components/places/Lucy';
 import StuyStroll from './components/places/stuy-stroll/StuyStroll';
 import Visuals from './components/archive/Visuals';
 import ThemeMenu from './components/themes/ThemeMenu';
@@ -63,6 +64,7 @@ render(
             <Route path="/places/newburgh" element={<Newburgh />} />
             <Route path="/places/kingston" element={<Kingston />} />
             <Route path="/places/stuy-stroll" element={<StuyStroll />} />
+            <Route path="/places/lucy" element={<Lucy />} />
           <Route path="/themes" element={<ThemeMenu />} />
             <Route path="/themes/theme" element={<Theme />} />
             <Route path="/themes/theme-campbell" element={<ThemeCampbell />} />

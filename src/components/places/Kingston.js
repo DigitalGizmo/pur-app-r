@@ -14,7 +14,7 @@ const Kingston = () => {
       <iframe 
         title = "Kingston"
         style={{border: `none`}} 
-        width="1200" height="1000" 
+        width="1250" height="850" 
         src="https://framer.com/embed/Kingston-2--99GNo549S11L9sLBQ7Zb/LreYDatxk?highlights=0" 
       >
       </iframe>      
