@@ -8,12 +8,12 @@ const Kingston = () => {
   return (
     <div> 
       <header className="basic-page">
-        <h1>Kingston: Plans Change</h1>
+        <h1>Kingston: Best Laid Plans&hellip;</h1>
       </header>  
 
       <iframe 
         title = "Kingston"
-        style={{border: `1px solid rgba(0, 0, 0, 0.1)`}} 
+        style={{border: `none`}} 
         width="1200" height="1000" 
         src="https://framer.com/embed/Kingston-2--99GNo549S11L9sLBQ7Zb/LreYDatxk?highlights=0" 
       >

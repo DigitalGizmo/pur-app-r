@@ -29,7 +29,7 @@ const Home = () => {
             <a 
               href='/' 
               onClick={e => { e.preventDefault(); showHomePop();}}
-            >What Was Urban Renewal?</a>
+            >Introduction: What Was Urban Renewal?</a>
         </header>
 
         <ul className="home-primary-menu">

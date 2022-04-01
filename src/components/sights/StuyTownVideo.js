@@ -6,6 +6,7 @@ const StuyTownVideo = () => {
     <div> 
       <header className="basic-page">
         <h1>A Suburb in the City</h1>
+        <p className="blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.</p>
       </header>  
 
       <div>

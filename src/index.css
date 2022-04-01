@@ -195,9 +195,9 @@ ul.home-secondary-menu li {
 /* ====================== */
 header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
-  padding: .5em 3%;
-  max-width: 100%;
+  width: 100%;
   margin-top: 24px;
+  padding: .5em 3%;
   position: relative;
 }
 
@@ -219,11 +219,12 @@ header.basic-page h4, header.basic-page h1 {
 header.basic-page p.blurb {
   color: #BDBEA7;
   font-size: 0.7em;
-  left: 35%;
+  left: 40%;
   line-height: 1.2em;
+  padding: 1em;
   position: absolute;
-  top: 15%;
-  width: 35%;
+  top:  5%;
+  width: 45%;
 }
 
 .basic-grid {/* used in Personal Story pages, Theme pages */
