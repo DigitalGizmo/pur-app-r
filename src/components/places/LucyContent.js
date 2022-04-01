@@ -1,7 +1,10 @@
 const images = [
-  '01-LTP-1st-draft',
-  '03-LTP-1st-draft',
-  '05-LTP-1st-draft',
+  'LTP-1st-draft-01',
+  'hunters-pharmacy',
+  'james-strawn',
+  'LTP-1st-draft-01',
+  'LTP-1st-draft-03',
+  'LTP-1st-draft-05',
 
 ];
 
@@ -21,18 +24,33 @@ const sectionTitles = [
 ]
   const captions = [
     {
-      label: 'The View from Above, text-1a, image: newburgh-aerial-1 (aerial photo)',
+      label: '1st image',
       titleIndex: 0,
       text: '<p>Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city\'s population, as well as its tax base, was in decline. The planners\' solution to this cluster of problems was to start over from scratch.</p>',
     },
     {
-      label: 'The View from Above, text-1b image: newburgh-aerial-2 (zoomed in aerial photo)',
-      titleIndex: 0,
+      label: 'second image',
+      titleIndex: 1,
       text: '<p>This was the logic of urban renewal:</p><p>Demolition of existing homes and shops was the first step toward transforming a blighted area.</p>'
     },
     {
-      label: 'The View from Above, text-1c image: newburgh-aerial-2-map1 (aerial w/ map1)',
-      titleIndex: 0,
+      label: 'third',
+      titleIndex: 1,
+      text: '<p>Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
+    },
+    {
+      label: 'fourth - the labels have to be unique',
+      titleIndex: 2,
+      text: '<p>Looking down on East Newburgh, urban planners saw blighted buildings, obsolete land-use patterns, and an outdated street grid. The city\'s population, as well as its tax base, was in decline. The planners\' solution to this cluster of problems was to start over from scratch.</p>',
+    },
+    {
+      label: 'five',
+      titleIndex: 2,
+      text: '<p>This was the logic of urban renewal:</p><p>Demolition of existing homes and shops was the first step toward transforming a blighted area.</p>'
+    },
+    {
+      label: 'six',
+      titleIndex: 2,
       text: '<p>Once cleared, small lots could be repackaged into larger parcels for sale to private developers.</p>'
     },
 
