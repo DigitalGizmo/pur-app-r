@@ -1,9 +1,5 @@
-import React from 'react';
-import SlideShow from './SlideShow';
-
-// function getImgUrl() {
-//   return 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
-// }
+import React, { useEffect, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 
 const storyBody = "<p>Throughout his long career, George deeply believed that cities were essential to human progress, culture, and social improvement. And that they needed to be made better for their residents. Programs like urban renewal were necessary to halt the downward spiral of central cities and to ensure that Americans of all classes and races would be able to live in them. Otherwise, he warned in 1965, the city of the 21st century would be &ldquo;a chaos of low-density, characterless suburbs, spattered with neon signs and hamburger stands&rdquo; surrounded by &ldquo;rapidly proliferating slums in the central core.&rdquo; To avoid this fate, a full national commitment&mdash;with adequate resources&mdash;was essential.</p>" +
 "<p>He was born George Rabinovici in Odessa, Russia, in 1919. His family emigrated to Bucharest, Romania, sometime after that. He moved to New York in 1937 to attend Columbia University&rsquo;s School of Architecture. He enlisted in the U.S. Army in October 1941, a couple of months before the Japanese attack on Pearl Harbor. While on active service, he changed his name to George Marc Raymond and received American citizenship in May 1942. (His sergeant and lieutenant signed his citizenship affidavit as official witnesses.) After military service, he returned home to finish his education. He won the American Institute of Architects Medal for academic achievement and a design award for a retail and entertainment center in rural Minnesota.</p>" +
@@ -20,34 +16,14 @@ const storyBody = "<p>Throughout his long career, George deeply believed that ci
 "<p>He tried to apply what he seen in New Jersey to his home county. In a ruling similar to the Mount Laurel cases, New York&rsquo;s highest court ruled in 1975 that suburban communities ought to provide affordable housing. But unlike the New Jersey ruling, the decision stopped short of requiring that they do so. His daughter Valerie describes  his housing advocacy as the aspect of his career of which he was most proud. Yet he was &ldquo;very discouraged&rdquo; about the slow progress he witnessed in Westchester county. Despite his decades of work, he &ldquo;had not gotten these folks to budge very much.&rdquo;</p>" +
 "<p>George believed that careful planning and public engagement could improve America&rsquo;s cities for residents of all classes and backgrounds. But when he tried to apply these principles to his own community, he ran into a suburban stonewall.</p>";
 
-// function PersonalStory(props) {
-class PersonalStory extends React.Component {
-  state = {lat: null, errorMessage: '', isShowing: false};
+const PersonalStory = () => {
+  const imgName = 'raymond-pratt-institute';
+  const { changePageName } = useContext(GlobalContext);
 
-  onSlideLinkClick = event => {
-    event.preventDefault();
-    this.setState({ isShowing: true });
-    console.log('slideshow clicked');
-  }
+  useEffect(() => {
+    changePageName('people');
+  }, [])
 
-  onSlideClose = () => {
-    console.log('ins story close ');
-    this.setState({ isShowing: false });
-  }
-
-  componentDidMount() {
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        // console.log('lat: ' + position.coords.latitude);
-        this.setState({ lat: position.coords.latitude });
-      },
-      (err) => this.setState({ errorMessage: err.message })
-    );
-  }
-
-  render() {
-    // const imgUrl = 'http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/haines-mcmillan-bldg.jpg';
-    const imgName = 'raymond-pratt-institute';
 
     return (
       <div>
@@ -96,18 +72,8 @@ class PersonalStory extends React.Component {
 
         </section>
 
-        {this.state.isShowing && 
-          <SlideShow 
-          lat={this.state.lat}
-          title="Haines-Dauner"
-          closeSlim = {this.onSlideClose}
-        />};
-
-{/*          title= 'Haines - Dauner'
-*/}
       </div>
     );
-  } // end render
 } // end class
 
 export default PersonalStory;

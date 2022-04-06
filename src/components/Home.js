@@ -5,7 +5,7 @@ import HomePop from './HomePop';
 
 const Home = () => {
   const [showingHomePop, setShowingHomePop] = useState(false);
-  const { currPage, changePageName } = useContext(GlobalContext);
+  const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
     changePageName('home');

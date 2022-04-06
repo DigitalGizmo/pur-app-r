@@ -9,14 +9,13 @@ const MainNav = (props) => {
   return (
     <nav className="main-menu">
       <ul>
-        <li>debug: {currPage}</li>
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li className={ props.selected === 'cities' ? 'selected' : ''}>
+        <li className={ currPage === 'cities' ? 'selected' : ''}>
           <Link to="/cities">4 Cities / 4 Stories</Link>
         </li>
-        <li className={ props.selected === 'sights' ? 'selected' : ''}>
+        <li className={ currPage === 'sights' ? 'selected' : ''}>
           <Link 
           to="/sights"
           dangerouslySetInnerHTML={{ __html: 'Sights &amp; Sounds' }}></Link>
@@ -24,7 +23,7 @@ const MainNav = (props) => {
         <li className={ currPage === 'places' ? 'selected' : ''}>
           <Link to="/places">Places</Link>
         </li>  
-        <li className={ props.selected === 'people' ? 'selected' : ''}>
+        <li className={ currPage === 'people' ? 'selected' : ''}>
           <Link to="/people">Personal Stories</Link>
         </li>        
 

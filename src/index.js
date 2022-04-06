@@ -1,7 +1,7 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalProvider } from './context/GlobalState';
 import ScrollToTop from './components/common/ScrollToTop';
 import './index.css';
 import App from './components/App';
@@ -48,6 +48,7 @@ render(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <ScrollToTop>
+      <GlobalProvider>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
@@ -75,6 +76,7 @@ render(
           <Route path='/sights/gastown-stuytown' element={<StuyTownVideo/>} />
         </Route>
       </Routes>
+      </GlobalProvider>        
       </ScrollToTop>
     </BrowserRouter>
   </ApolloProvider>,

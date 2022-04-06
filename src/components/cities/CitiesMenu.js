@@ -1,7 +1,13 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
+import React, {useEffect, useContext} from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 
 const CitiesMenu = () => {
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('cities');
+  }, [])
+
   return (
     <div className="">
       <header className="basic-page">

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Outlet } from 'react-router-dom'; // , Link
-import {GlobalProvider, GlobalContext } from '../context/GlobalState';
+import {GlobalContext } from '../context/GlobalState';
 import MainNav from './common/MainNav';
 import BottomNav from './common/BottomNav';
 
@@ -9,19 +9,17 @@ function App() {
 
   return (
     <div >
-      <GlobalProvider>
-        {/* { currPage !== "home" && */}
-        { 1 !== 2 &&
-          <MainNav/>
-        }
+      { currPage !== "home" &&
+        <MainNav/>
+      }
 
-        <Outlet 
-          message="test message"
-          />
-        <BottomNav />
-        <p>debug currPage: {currPage}</p>
+      <Outlet 
+        message="test message"
+        />
 
-      </GlobalProvider>
+      { currPage !== "home" &&
+        <BottomNav/>
+      }
     </div>
   );
 }
