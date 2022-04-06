@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useEffect, useContext} from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 
 const ThemeCampbell = () => {
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('themes');
+  }, [])
+
   return (
     <div>
       <header className="basic-page">

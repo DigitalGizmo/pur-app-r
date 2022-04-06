@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 import {
   useQuery,
   gql,
@@ -19,12 +20,17 @@ const Timeline = () => {
   const [showingMore, setShowingMore] = useState(false);
   const [yearEntry, setYearEntry] = useState(null);
   const [rowSlug, setRowSlug] = useState(null);
-
   const setThruline = (index) => {
     let newThrulines = [...thrulines];
     newThrulines[index] = !newThrulines[index];
     setThrulines(newThrulines);
   }
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('timeline');
+  }, [])
+
 
   function showMore(event, yearEntry, rowSlug) {
     event.preventDefault();

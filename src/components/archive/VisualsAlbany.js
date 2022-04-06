@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 import {
     useQuery,
     gql
@@ -17,6 +18,12 @@ const Visuals= () => {
   const [eraIDs, setEraIDs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [numImages, setNumImages] = useState(0);
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('visuals');
+  }, [])
+
 
   const GET_IMAGE_LIST = gql`
     query getImages ($city_ids: [Int], 

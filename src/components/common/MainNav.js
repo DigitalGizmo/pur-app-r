@@ -29,7 +29,7 @@ const MainNav = (props) => {
 
       </ul>
     </nav>
-);
+  );
 }
 
 export default MainNav;
