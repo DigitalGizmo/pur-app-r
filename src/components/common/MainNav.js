@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 import { Link } from 'react-router-dom';
 import './MainNav.css';
 
 const MainNav = (props) => {
+  const { currPage } = useContext(GlobalContext);
+
   return (
     <nav className="main-menu">
       <ul>
+        <li>debug: {currPage}</li>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -17,7 +21,7 @@ const MainNav = (props) => {
           to="/sights"
           dangerouslySetInnerHTML={{ __html: 'Sights &amp; Sounds' }}></Link>
         </li>  
-        <li className={ props.selected === 'places' ? 'selected' : ''}>
+        <li className={ currPage === 'places' ? 'selected' : ''}>
           <Link to="/places">Places</Link>
         </li>  
         <li className={ props.selected === 'people' ? 'selected' : ''}>

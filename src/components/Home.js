@@ -1,9 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
 import { Link } from 'react-router-dom';
 import HomePop from './HomePop';
 
 const Home = () => {
   const [showingHomePop, setShowingHomePop] = useState(false);
+  const { currPage, changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('home');
+  }, [])
 
   function showHomePop (indx) {
     setShowingHomePop(true);
