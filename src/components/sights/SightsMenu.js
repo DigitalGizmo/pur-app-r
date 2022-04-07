@@ -13,7 +13,7 @@ const SightsMenu = () => {
     <div className="">
       <header className="basic-page">
         <h1>Sights &amp; Sounds</h1>
-        <p className="blurb">This menu offers links to eight brief videos (6 to 8 minutes) that introduce the four cities and four themes comprising this website.</p>
+        <p className="blurb">These brief video documentaries bring you the sights and sounds of city life before, during, and after urban renewal.</p>
     </header>
 
       <div className="sights-menu">

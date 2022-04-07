@@ -43,9 +43,9 @@ const MoreTime = ({closeMore, yearEntry, rowSlug}) => {
 
           { yearEntry.node.hasCellImage &&
           <img 
-            src={`http://dev.picturingurbanrenewal.org/prod-assets/timeline/${rowSlug}-${yearEntry.node.year}.jpg`}
-            alt="tenement interior"
-            width="400" height="266"
+            src={`http://dev.picturingurbanrenewal.org/prod-assets/timeline/poppics/${rowSlug}-${yearEntry.node.year}.jpg`}
+            alt="alt text"
+            // width="400" height="266"
           />
         }
 
