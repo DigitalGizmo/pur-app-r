@@ -18,6 +18,7 @@ const PlacesMenu = () => {
         <li><Link to="/places/stuy-stroll">Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</Link></li>
         <li><Link to="/places/newburgh">Newburgh from the Planner&rsquo;s Perspective</Link></li>
         <li><Link to="/places/kingston">Kingston: Best Laid Plans&hellip;</Link></li>
+        <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/then-now.html">Kingston: Then and Now</a></li>
       </ul>
     </div>
   )
