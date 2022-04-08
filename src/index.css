@@ -1315,6 +1315,11 @@ div.city-story iframe {
   margin-top: -100px;
 }
 
+div.kingston-scroll iframe {
+  margin-left: -40px;
+  background: #353526;
+}
+
 /*   ===================   */
 /*         COLORS          */
 /*   ===================   */

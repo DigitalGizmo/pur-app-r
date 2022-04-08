@@ -6,7 +6,7 @@ import React from "react";
 const Kingston = () => {
 
   return (
-    <div> 
+    <div className="kingston-scroll"> 
       <header className="basic-page">
         <h1>Kingston: Best Laid Plans&hellip;</h1>
       </header>  
