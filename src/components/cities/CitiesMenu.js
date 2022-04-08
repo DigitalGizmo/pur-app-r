@@ -9,7 +9,7 @@ const CitiesMenu = () => {
   }, [])
 
   return (
-    <div className="">
+    <div className="city-story">
       <header className="basic-page">
         <h1>4 Cities / 4 Stories</h1>
       </header>

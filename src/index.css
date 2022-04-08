@@ -1311,6 +1311,10 @@ a.caption-link {
   height: 10em;
 }
 
+div.city-story iframe {
+  margin-top: -100px;
+}
+
 /*   ===================   */
 /*         COLORS          */
 /*   ===================   */
