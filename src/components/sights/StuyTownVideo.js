@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useEffect, useContext} from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 
 const StuyTownVideo = () => {
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('sights');
+  }, [])
 
   return (
     <div> 
