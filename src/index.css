@@ -121,6 +121,11 @@ ul.list-menu {
   margin-top: 1.25em;
 }
 
+ul.list-menu li span {
+  color: #E4E0C7;
+  font-size: 0.75em;
+}
+
 /*   ===================   */
 /*        HOME PAGE        */
 /*   ===================   */
