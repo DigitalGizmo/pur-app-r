@@ -1,4 +1,5 @@
-import React, { useState } from 'react'; // , { useEffect }
+import React, { useState, useEffect, useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
 import { InView } from "react-intersection-observer"; // useInView, 
 import { images, captions, sectionTitles } from './NewburghContent';
@@ -9,6 +10,11 @@ const Newburgh = () => {
   const [imageName, setImageName] = useState(images[imageIndex]);
   const [titleIndex, setTitleIndex] = useState(0);
   const [sectionTitle, setSectionTitle] = useState(sectionTitles[titleIndex]);
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('places');
+  }, [])
 
   const onCaptionChange = (isInView, imgIndex, titleIndex) => {
     // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));

@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useEffect, useContext} from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 // import KingstonComponent from "https://framer.com/m/KingstonComponent-VqYd.js@KoQOsYcwFc3xzdnYIFEX";
 // import KingstonComponent from './KingstonComonent';
 // import ScrollTest from "https://framer.com/m/ScrollTest-cMx5.js@zxWEZHsHxNc93QAUUMob"
 
 const Kingston = () => {
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('places');
+  }, [])
 
   return (
     <div className="kingston-scroll"> 

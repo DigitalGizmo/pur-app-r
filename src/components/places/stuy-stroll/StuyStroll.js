@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'; // , { useState }
+import React, { useState, useEffect, useContext } from 'react';
+import { GlobalContext } from '../../../context/GlobalState';
 import {
     useQuery,
     gql,
@@ -24,6 +25,11 @@ const StuyStroll = () => {
   const [highlights, setHighlights] = useState(BASE_HIGHLIGHTS);
   const [highlightIndex, setHiglightIndex] = useState(0);
   const [isMoreShowing, setIsMoreShowing] = useState(false);
+  const { changePageName } = useContext(GlobalContext);
+
+  useEffect(() => {
+    changePageName('places');
+  }, [])
 
   const hoverSpot = (index) => {
     let newHighlights = [...BASE_HIGHLIGHTS];
