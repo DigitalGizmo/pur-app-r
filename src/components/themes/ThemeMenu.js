@@ -12,7 +12,7 @@ const ThemeMenu = () => {
   return (
     <div className="">
         <header className="basic-page">
-          <h1>Themes &amp; Essays</h1>
+          <h1>Essays</h1>
         </header>
 
         <nav className="horiz-menu">

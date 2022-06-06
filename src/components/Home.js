@@ -48,7 +48,7 @@ const Home = () => {
         <ul className="home-secondary-menu">
           <li><Link to="">About</Link></li>
           <li><Link to="/archive/visuals">The Visual Record</Link></li>
-          <li><Link to="/themes">Themes &amp; Essays</Link></li>
+          <li><Link to="/themes">Essays</Link></li>
           <li><Link to="/timeline">Timeline</Link></li>
           <li><Link to="">Resources</Link></li>
         </ul>
