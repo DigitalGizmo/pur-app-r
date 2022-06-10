@@ -9,9 +9,6 @@ const BottomNav = (props) => {
   return (
     <nav className="bottom-menu">
       <ul>
-        <li>
-          About
-        </li>        
         <li className={ currPage === 'visuals' ? 'selected' : ''}>
           <Link to="/archive/visuals">Visual Record</Link>
         </li>
@@ -23,7 +20,13 @@ const BottomNav = (props) => {
           dangerouslySetInnerHTML={{ __html: 'Essays' }}></Link>
         </li>  
         <li>
-          Resources
+          Educational Resources
+        </li>
+        <li>
+          About
+        </li>        
+        <li>
+          Contact Us
         </li>        
       </ul>
     </nav>

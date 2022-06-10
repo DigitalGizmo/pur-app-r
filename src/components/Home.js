@@ -46,11 +46,12 @@ const Home = () => {
         </ul>
 
         <ul className="home-secondary-menu">
-          <li><Link to="">About</Link></li>
           <li><Link to="/archive/visuals">The Visual Record</Link></li>
-          <li><Link to="/themes">Essays</Link></li>
           <li><Link to="/timeline">Timeline</Link></li>
-          <li><Link to="">Resources</Link></li>
+          <li><Link to="/themes">Essays</Link></li>
+          <li><Link to="">Educational Resources</Link></li>
+          <li><Link to="">About</Link></li>
+          <li><Link to="">Contact Us</Link></li>
         </ul>
       </section>
 
@@ -59,7 +60,8 @@ const Home = () => {
           closesHomePop = {closesHomePop}
         />
       }
-
+        <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
+              alt='NEH logo' className="neh-logo"/>
     </div>
   )
 } // end Home

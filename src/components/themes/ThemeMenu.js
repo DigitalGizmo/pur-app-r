@@ -23,10 +23,10 @@ const ThemeMenu = () => {
             <li className="root-shock"><Link to="/themes/theme-fullilove">Root Shock</Link>Mindy Thompson Fullilove, The New School</li>
             <li className="ghost-city"><Link to="/themes/theme-zipp">Ghost City: Met Life&rsquo;s Gas House District Photos</Link>Samuel Zipp, Brown University</li>
             <li className="root-shock"><Link to="">What is Blight?</Link>Colin Gordon</li>
-            <li className="ghost-city"><Link to="">Streetscapes: Kingston</Link>J.P. Krattinger</li>
-            <li className="root-shock"><Link to="">Streetscapes: Stuyvesant Town</Link>J.P. Krattinger</li>
-            <li className="ghost-city"><Link to="">Streetscapes: Newburgh</Link>J.P. Krattinger</li>
-            <li className="root-shock"><Link to="">Streetscapes: Albany</Link>J.P. Krattinger</li>
+            <li className="ghost-city"><Link to="">Streetscapes: Kingston</Link>William Krattinger</li>
+            <li className="root-shock"><Link to="">Streetscapes: Stuyvesant Town</Link>William Krattinger</li>
+            <li className="ghost-city"><Link to="">Streetscapes: Newburgh</Link>William Krattinger</li>
+            <li className="root-shock"><Link to="">Streetscapes: Albany</Link>William Krattinger</li>
           </ul>
         </nav>
     </div>

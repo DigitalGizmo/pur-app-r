@@ -12,7 +12,7 @@ const ThenNow = () => {
   return (
     <div className="">
       <header className="basic-page">
-        <h1>Then and Now - Kingston </h1>
+        <h1>Kingston: Before and After</h1>
       </header>
 
       <ThenNowD3 />

@@ -21,10 +21,10 @@ const PeopleMenu = () => {
         <div className="ps-menu politicians">
           <h2>Politicians &amp; Government Officials</h2>
           <ul className="">
+            <li className="icon-kingston"><Link to="/people/joseph-resnick">Joseph Y. Resnick: I&rsquo;m for Joe</Link></li>
             <li className="icon-albany">Nelson A. Rockefeller: America's "Buildingest" Governor</li>
             <li className="icon-newburgh">George McKneally: "Let's Have Some Answers, Mr. Mayor"</li>
             <li className="icon-newburgh">George Shaw: An "Analytical" Mind</li>
-            <li className="icon-kingston"><Link to="/people/joseph-resnick">Joseph Y. Resnick: I&rsquo;m for Joe</Link></li>
             <li className="icon-albany">Erastus Corning 2d: The O'Connell-Corning Machine</li>
             <li className="icon-kingston">John Schwenk: Renewing Uptown</li>
             <li className="icon-kingston">Edwin Radel: An Advocate for Renewal</li>
@@ -39,10 +39,11 @@ const PeopleMenu = () => {
         <div className="ps-menu displaced">
           <h2>The Displaced</h2>
           <ul className="">
+            <li className="icon-newburgh"><Link to="/people/carrie-wilson">Carrie Wilson: A Homeowner &ldquo;by Sufferance and Permission&rdquo;</Link></li>
+            <li className="icon-albany"><Link to="/people/jimmy-strawn">Jimmy Strawn: The Sultan of Swing</Link></li>
             <li className="icon-kingston">Joe Epstein: An Alderman and Business Owner</li>
             <li className="icon-kingston">Sophie Miller: Do You Remember?</li>
             <li className="icon-albany">John and Vivian Robinson: No Down Payment</li>
-            <li className="icon-newburgh"><Link to="/people/carrie-wilson">Carrie Wilson: A Homeowner &ldquo;by Sufferance and Permission&rdquo;</Link></li>
             <li className="icon-newburgh">Elizabeth Patton: Elizabeth Patton &ldquo;Does Not Intend To Move&rdquo;</li>
             <li className="icon-albany">Mae Carlson: Albany's Rooming House Queen</li>
             <li className="icon-albany">Frederick Binseel: Mr. Binseel and the Temporary Commission</li>
@@ -52,7 +53,6 @@ const PeopleMenu = () => {
             <li className="icon-stuytown">May Springer: My Neighborhood is not a Slum</li>
             <li className="icon-newburgh">Nellie ("Big Nell") Williams: The Brothel and the Dutch Church</li>
             <li className="icon-albany">Ken Hunter: Hunter's Pharmacy</li>
-            <li className="icon-albany"><Link to="/people/jimmy-strawn">Jimmy Strawn: The Sultan of Swing</Link></li>
             <li className="icon-newburgh">Gilbert and Sally Sharpe: &ldquo;Pushed from One Slum to Another&rdquo;</li>
           </ul>
         </div>
@@ -81,8 +81,8 @@ const PeopleMenu = () => {
       <div className="ps-menu builders">
         <h2>Planners &amp; Builders</h2>
           <ul className="">
-            <li className="icon-newburgh">Edward J. Logue: "New York's Mr. Urban Renewal"</li>
             <li className="icon-kingston"><Link to="/people/george-raymond">George M. Raymond: A Passionate Believer in Cities</Link></li>
+            <li className="icon-newburgh">Edward J. Logue: "New York's Mr. Urban Renewal"</li>
             <li className="icon-kingston">Daniel Shuster: Six Decades of Planning</li>
             <li className="icon-stuytown">James Felt: The Tenant Relocation Bureau, Inc.</li>
             <li className="icon-stuytown">Robert Moses: You Can't Make an Omelet without Breaking Eggs</li>
@@ -117,13 +117,13 @@ const PeopleMenu = () => {
         <div className="ps-menu reporters">
           <h2>Reporters &amp; Photographers</h2>
           <ul className="">
+            <li className="icon-kingston"><Link to="/people/haines-dauner">Gene Dauner and Bob Haines: One Step Ahead of the Wrecking Ball</Link></li>
             <li className="icon-albany">Grant Van Patten: Hoax or Hope?</li>
             <li className="icon-newburgh">Tom Daley: Preserving Newburgh's Lost Architecture</li>
             <li className="icon-stuytown">Mark Stuart: Chronicling the Stuy Town Story</li>
             <li className="icon-albany">Scott Christianson:  The "Typewriter Guerilla"</li>
             <li className="icon-albany">William Kennedy: Albany's Bard</li>
             <li className="icon-kingston">Hugh Reynolds: An Insider in an "Insider's Town"</li>
-            <li className="icon-kingston"><Link to="/people/haines-dauner">Gene Dauner and Bob Haines: One Step Ahead of the Wrecking Ball</Link></li>
             <li className="icon-newburgh">Joseph Ritz: Joseph Ritz and "The Despised Poor"</li>
             <li className="icon-kingston">Herman Boyle: The Collector</li>
           </ul>

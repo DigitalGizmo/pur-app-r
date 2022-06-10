@@ -75,7 +75,7 @@ const PersonalStory = () => {
           Your browser does not support the video tag.
           </video>      
           <p className="caption">
-              Bob Haines filmed the tragic demolition of these stately brick buildings along Water street with his 8mm movie camera. Courtesy of Bob Haines
+              Bob Haines captured this 8mm footage of demolition work in Kingston's Broadway East Urban Renewal Project in 1967. Courtesy of Bob Haines.
           </p>
         </div>
 

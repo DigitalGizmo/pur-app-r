@@ -195,6 +195,11 @@ ul.home-secondary-menu li {
   display: inline-block;
   margin: 3em 1em;
 }
+
+.neh-logo {
+  max-width: 200px;
+  opacity: 0.7;
+}
 /* ====================== */
 /*      SHARED LAYOUT     */
 /* ====================== */
@@ -631,6 +636,26 @@ nav.horiz-menu {/* menu page  */
   text-transform: uppercase;
 }
 
+.ps-city-menu h2 {
+  padding-left: 40px;
+}
+
+.ps-city-menu h2.stuytown-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg) no-repeat;
+}
+
+.ps-city-menu h2.newburgh-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg) no-repeat;
+}
+
+.ps-city-menu h2.kingston-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg) no-repeat;
+}
+
+.ps-city-menu h2.albany-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
+}
+
 .ps-menu ul, .ps-city-menu ul {
   font-size: 0.75em;
   list-style-type: none;
@@ -928,6 +953,7 @@ table thead th:first-child {
 
 table tbody th {  /* first column - city names */
   background-color: #353526;
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
   left: 0;
   position: sticky;
   writing-mode: vertical-rl;
