@@ -1,16 +1,16 @@
 import React from 'react';
 
-const HomePop = ({closeHomePop}) => {
+const HomePop = ({closePop}) => {
 
   return (
-    <div className="lightbox" onClick={closeHomePop}>
+    <div className="lightbox" onClick={closePop}>
       <div className="slimpop-wrapper entry-pop">
         <div className="pop-nav">
           <p>
             <a
               id="close-link" 
               href="/" 
-              onClick={closeHomePop}
+              onClick={closePop}
             >Close</a>
           </p>
         </div>

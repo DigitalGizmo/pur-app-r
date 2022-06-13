@@ -2,20 +2,18 @@ import React, {useState, useEffect, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { Link } from 'react-router-dom';
 import HomePop from './HomePop';
+import ViewTips from './ViewTips';
 
 const Home = () => {
   const [showingHomePop, setShowingHomePop] = useState(false);
+  const [showingViewTips, setShowingViewTips] = useState(false);
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
     changePageName('home');
   }, [])
 
-  function showHomePop (indx) {
-    setShowingHomePop(true);
-  }  
-
-  function closesHomePop (event) {
+  function closePop (event) {
     // console.log(event.target.className)
     event.preventDefault()
     event.stopPropagation()
@@ -23,6 +21,7 @@ const Home = () => {
     if (event.target.className === 'lightbox' ||
     event.target.id === 'close-link') {
       setShowingHomePop(false);
+      setShowingViewTips(false);
     }
   }
  
@@ -34,8 +33,13 @@ const Home = () => {
           <p>Picturing Urban Renewal invites visitors to explore the visual history of urban renewal in four U.S. cities. Each city’s story is different. Combined, these stories shed light on an era of  optimism, tragedy, and transformation.</p>
             <a 
               href='/' 
-              onClick={e => { e.preventDefault(); showHomePop();}}
+              onClick={e => { e.preventDefault(); setShowingHomePop(true);}}
             >Introduction: What Was Urban Renewal?</a>
+            |
+            <a 
+              href='/' 
+              onClick={e => { e.preventDefault(); setShowingViewTips(true);}}
+            >Prototype Viewing Tip</a>
         </header>
 
         <ul className="home-primary-menu">
@@ -57,7 +61,12 @@ const Home = () => {
 
       { showingHomePop && 
         <HomePop
-          closesHomePop = {closesHomePop}
+          closePop = {closePop}
+        />
+      }
+      { showingViewTips && 
+        <ViewTips
+        closePop = {closePop}
         />
       }
         <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
