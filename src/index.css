@@ -953,13 +953,32 @@ table thead th:first-child {
 
 table tbody th {  /* first column - city names */
   background-color: #353526;
-  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
   left: 0;
   position: sticky;
   writing-mode: vertical-rl;
 /*-ms-transform: rotate(270deg); /* IE 9
   transform: rotate(270deg);*/
   z-index: 1;
+}
+
+table tbody th.albany-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
+  background-size:  50px 50px;
+}
+
+table tbody th.nyc-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg) no-repeat;
+  background-size:  50px 50px;
+}
+
+table tbody th.kingston-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg) no-repeat;
+  background-size:  50px 50px;
+}
+
+table tbody th.newburgh-icon {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg) no-repeat;
+  background-size:  50px 50px;
 }
 
 table tbody td {
