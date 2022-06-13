@@ -23,7 +23,7 @@ const Theme = () => {
         </div>
 
         <div className="theme">
-          <p className="caption first">"Buy or Rent - Same amount monthly" Sales pitches like this made contract sales agreements appealing to people of limited means. Source info goes here.</p>
+          <p className="caption first">"Buy or Rent - Same amount monthly" Sales pitches like this made contract sales agreements appealing to people of limited means. Source <em>Times Union</em>.</p>
 
           <article className="narrative">
         

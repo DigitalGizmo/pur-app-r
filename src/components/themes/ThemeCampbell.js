@@ -11,7 +11,7 @@ const ThemeCampbell = () => {
   return (
     <div>
       <header className="basic-page">
-        <h1>Who Lived Here? The Life of Albany&rsquo;s Residents Revealed in Photographs</h1>
+        <h1>Who Lived Here? The Lives of Albany Residents Revealed in Photographs</h1>
         <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
       </header>
 
@@ -23,7 +23,7 @@ const ThemeCampbell = () => {
         </div>
 
         <div className="theme">
-          <p className="caption first">Carefully looking at photographs of the interiors of homes can reveal many details about the people who lived in them. Source info goes here.</p>
+          <p className="caption first">From looking at this photo, what can you tell about the people who once lived here? Source: New York State Archives.</p>
 
           <article className="narrative">
             <p className="intro">This essay is based on a series of appraisal photographs taken by the State of New York, 1962-1964. Material culture depicted in these photographs, whether richly appointed domestic interiors or sparsely furnished rooming houses, reveal much about the people who inhabited those spaces.</p>
@@ -35,12 +35,12 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/parlor-bedroom.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Former parlor sectioned off into a bedroom. Here a dropped ceiling has been added. NYSA_15727-89_93_8385_0024.</p>
+            <p className="caption">Former parlor sectioned off into a bedroom. Here a dropped ceiling has been added. Source: New York State Archives.</p>
 
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/kitchen.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Spacious kitchen with a 1930s gas stove, 40s refrigerator and a contemporary dinette set. NYSA_15727-89_93_8381_0014.</p>
+            <p className="caption">Spacious kitchen with a 1930s gas stove, 40s refrigerator and a contemporary dinette set. Source: New York State Archives.</p>
 
             <p>Kitchens and bathrooms were crammed into small, inadequate spaces. Some had windows while others were dark and airless. Even within a single building, kitchens varied in size and scale. For example, 23 Chestnut Street had at least three kitchens. One was spacious with a large window, an exterior door and an eat-in area furnished with a modern dinette set. Another was narrow but well equipped, and the third was tiny with very little workspace. Generally all the kitchen stoves and refrigerators appear to date from the 1940s, although there are definitely some from the 1930s and the 1960s. Small appliances such as electric skillets, toasters, and mixers are scattered here and there. There were no dishwashers, although in 1962, these were still not standard appliances even in middle-class suburban houses. One or two kitchens did have older washing machines tucked into the corner of the kitchen, and many still had freestanding hot water heaters dating from the early 20<sup>th</sup> century.  Several of the smaller studio apartments had tiny kitchenettes that could be closed off from the rest of the room by a set of doors. In these, the sinks, stoves, and refrigerators are lined up against a wall with a few metal cabinets positioned overhead, but there&rsquo;s no counter/prep space. When the doors were closed, you would think it was simply a closet.</p>
             <p>Some of the kitchens were crammed full of pots, pans, kettles, and other equipment indicative of extensive meal preparations. A lot of it appears to be relatively new shiny stainless steel of the type that was popular in the late 1950s/early &lsquo;60s. Clearly whoever cooked in these kitchens did not skimp on their tools. Decorative touches indicate that the cook took pleasure in her  surroundings. Photographs of the interior of a housewares store at 118 and 120 South Pearl Street show kitchenware and metal cupboards similar to those seen in many of the interiors. It is reasonable to surmise that residents shopped locally for their housewares.</p>
@@ -50,7 +50,7 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/sparsely-furnished.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Sparsely furnished interior of a young family. NYSA_15727-89_93_8578_0048.</p>
+            <p className="caption">Sparsely furnished interior of a young family. Source: New York State Archives.</p>
 
             <p>These furnishings are very similar to pieces seen in the neighborhood furniture stores. Other residents appear to have acquired an assortment of furnishings and décor over the course of a lifetime. While interiors with furniture dating to the 1920s, 30s, and 40s could be reflective of younger couples who  inherited an assortment of furnishings and other objects from family members or who purchased second-hand furniture, these interiors have more the feel of a purposeful accumulation over a long period of time.</p>
             <p>By looking at the interiors, unless there are people or framed photographs visible, there is no way to determine the race of the residents based upon their choice of furniture and décor. Black and white neighbors appear to have made similar furnishing choices, probably based upon economics. While most of the interior images are devoid of residents (excepting a few children, pets, and the occasional adult) there are indications in some of the restaurants and bars, such as Jim and Willie&rsquo;s Delux Bar-B-Q, that the owners and/or clientele were African American. On a side wall at Willie's, there is a liquor store calendar featuring a light-skinned African American woman. A poster for the Ebony Fashion Fair<sup>1</sup> hangs on the back wall of Champ&rsquo;s Grill.</p>
@@ -58,12 +58,12 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/delux-bbq.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Inside Jim &amp; Willie's Delux Bar-B-Q and Champ&rsquo;s Grill. NYSA_15727-89_93_8385_0051.</p>
+            <p className="caption">Inside Jim &amp; Willie's Delux Bar-B-Q and Champ&rsquo;s Grill. Source: New York State Archives.</p>
 
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/champs-grill.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">NYSA_15727-89_93_8385_0055.</p>
+            <p className="caption">Source: New York State Archives.</p>
 
             <p>Most of the interiors contained some form of electronic entertainment device such as a TV, radio, or record player. Radios included large cabinet models from the 1930s and 40s and much smaller ones contemporaneous with the photographs. Most of the televisions were of more recent vintage dating from the late 1950s. Some households only had radios or TVs, while others had all three types of equipment. Generally, those households with all three types of equipment appeared to be younger families. Telephones do not feature prominently in the domestic interiors. Some of the restaurants and bars have phone booths, as did most commercial establishments in the 1960s.</p>
             <p>A number of photographs depict spaces in rooming houses. These are narrow, often airless rooms with just enough space for a twin bed, a table, and possibly a chair or a small chest of drawers. Sometimes there was a shelf on the wall and occasionally a sink. The tables often held hot plates and a few other items that indicate the resident was able to make a hot beverage or perhaps heat up a can of soup or stew. Many of these spaces were messy while others were quite tidy.</p>
@@ -71,7 +71,7 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/rooming-house-room.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">A room in the Hamilton Street rooming house. NYSA_15727-89_93_8578_0023.</p>
+            <p className="caption">A room in the Hamilton Street rooming house. Source: New York State Archives.</p>
 
             <p>The images of the domestic spaces reveal a neighborhood very much in flux. Some apartments and rooms have clearly been abandoned, perhaps for quite awhile. Wallpapers and paint are peeling from ceilings, walls, and floors. Toilets, sinks, and tubs, ripped free from their plumbing attachments, are dumped on the floor. Mold stains darken many of the walls. Large pieces of furniture such as bed frames and sofas, perhaps too cumbersome to move have been left behind, often overturned. It is difficult to know if these rooms were this rough when lived in or if they deteriorated rapidly once vacant. Other spaces depict families in transition, with packing materials in evidence and kitchen cupboards and shelves devoid of foodstuffs and cooking equipment. Still other photographs reveal residents who show absolutely no indication that they plan to go anywhere. They are firmly entrenched and their domestic spaces fully furnished, many with potted plants thriving on their windowsills.</p>
             <p>Frequently these intact residences contained religious iconography indicative of Christian, most probably Catholic, residents. These items include crucifixes and framed prints of the Madonna, the Pope, and Christ as well as an assortment of small statues of saints. While Protestants could certainly have chosen to own and display similar religious items, this type of display is typically associated with Catholic households. Some Protestant families might hang a cross in their home or perhaps a framed sampler of the Lord&rsquo;s Prayer, but usually the crucifix appeared only in Catholic households. Certainly the small religious statues of saints, the crucifixes, and the framed pictures strongly suggest Catholicism.<sup>2</sup></p>
@@ -80,14 +80,14 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/tidy-living-room.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Tidy living room with contemporary furniture. NYSA_15727-89_93_8381_0013.</p>
+            <p className="caption">Tidy living room with contemporary furniture. Source: New York State Archives.</p>
 
             <p>Even when furnishings are meager, the beds are made, frequently with a spread of some sort and a decorative pillow or doll positioned at the head. If the spaces were tidied up in advance of the photographer, that tells us that people considered it important not to be caught with an unmade bed or a messy house. Some residents took additional steps to preserve their furnishings, particularly textiles, from soil and wear. In at least one dining room, a lace tablecloth is protected by a clear plastic one laid over the top.<sup>3</sup></p>
 
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/slip-cover.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">One of the residents of this house upholstered the seat of a mid-19th century parlor chair in damask (probably silk) fabric and then covered it with a fitted plastic slip cover. NYSA_15727-89_93_8381_0007.</p>
+            <p className="caption">One of the residents of this house upholstered the seat of a mid-19th century parlor chair in damask (probably silk) fabric and then covered it with a fitted plastic slip cover. Source: New York State Archives.</p>
 
             <p>Crocheted or lace antimacassars are used extensively by some residents to protect the upholstery on chairs and sofas in a decorative manner.<sup>4</sup> This type of décor, along with lacy dresser scarves and table runners, tends to fade out by the early 1960s.</p>
             <p>The community revealed in this series of photographs is complex. The residents themselves are a diverse lot. Some people appear to be one step removed from homelessness. They may have a roof over their heads but just barely. This included those individuals occupying one of the many iron bedsteads crammed into the airless rooming houses as well as parents attempting to provide their children with food and a place to sleep. Other residents have established very modest homes for themselves that are certainly at the lower end of the socio-economic spectrum. Yet, mixed into this neighborhood are people living very middle-class lives. Except for the housing stock itself, these interiors are virtually indistinguishable from those found in 1950s middle-class suburbia including china cupboards filled with crystal and silver.</p>
