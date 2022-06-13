@@ -134,10 +134,13 @@ const TimelineTable = ({thrulines, loading, error,
       <tbody>
 
         {timelineLayers.map ((row) => (
-          <tr className={`row-${row.node.slug}`}
+          <tr 
+            className={`row-${row.node.slug}`}
             key={row.node.slug}
           >
-            <th>{row.node.title}</th>
+            <th 
+              className={`${row.node.slug}-icon`}
+            >{row.node.title} -</th>
 
             {getTableRow(row)}
 
