@@ -1232,7 +1232,7 @@ div.intro-page {
   margin: 0;
 }
 
-.turn-text {/*  turn corner buttons  */
+.intro-panel #turn-buttons .turn-text {/*  turn corner buttons  */
   fill: #f09234;
   font-size: 1.5em;
   font-weight: bold;
