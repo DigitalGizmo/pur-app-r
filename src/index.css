@@ -968,22 +968,23 @@ table tbody th {  /* first column - city names */
 
 table tbody th.albany-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.nyc-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.kingston-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.newburgh-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg) no-repeat;
+}
+
+table tbody th.albany-icon, table tbody th.nyc-icon, table tbody th.kingston-icon, table tbody th.newburgh-icon {
   background-size:  50px 50px;
+  background-position: 10px 10px;
 }
 
 table tbody td {
