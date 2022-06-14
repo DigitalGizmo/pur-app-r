@@ -137,10 +137,8 @@ ul.list-menu li span {
   text-align: center;
  }
 
-section.home-test {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+.home-wrapper {
+  margin: 0 20%;
 }
 
 .home header {
@@ -158,6 +156,7 @@ section.home-test {
 
 ul.home-primary-menu, ul.home-secondary-menu {
   list-style-type: none;
+  padding: 0;
 }
 
 ul.home-primary-menu {
@@ -191,15 +190,30 @@ ul.home-primary-menu li a:hover {
   background-color: rgba(178, 89, 0, 0.5);
 }
 
-ul.home-secondary-menu li {
-  display: inline-block;
-  margin: 3em 1em;
+ul.home-secondary-menu {
+  margin: 3em 0;
 }
 
+ul.home-secondary-menu li {
+  display: inline-block;
+}
+
+ul.home-secondary-menu li a {
+  padding: .5em;
+}
+
+.tips {
+  font-size: .75em;
+}
+
+.tips a {
+  color:  yellowgreen;
+}
 .neh-logo {
   max-width: 200px;
   opacity: 0.7;
 }
+
 /* ====================== */
 /*      SHARED LAYOUT     */
 /* ====================== */
@@ -351,6 +365,7 @@ img.fullpic {
 .short-page {
   height: calc(100vh - 60px);
 }
+
 /*   ===================   */
 /*         POP UPS         */
 /*   ===================   */
@@ -378,10 +393,21 @@ img.fullpic {
 }
 
 .entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
-  margin: 5% auto;
   height: 80%;
+  margin: 5% auto;
   text-align: left;
   width: 60%;
+}
+
+.tips-pop {
+  height: fit-content;
+  margin: 15% auto;
+  padding: 1.25em;
+  width: 35%;
+}
+
+.tips-pop h3 {
+  font-weight: bold;
 }
 
 .entry-pop header {
