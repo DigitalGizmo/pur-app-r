@@ -50,10 +50,6 @@ const PersonalStory = () => {
 
             <span dangerouslySetInnerHTML={{ __html: storyBody }}></span>
 
-            <audio 
-              src="http://dev.picturingurbanrenewal.org/prod-assets/people/media/wnyc-raymond-19680203-ur-ww2.mp3" 
-              type="audio/mpeg" controls/>
-            <p className="caption">George M. Raymond speaks about the need for full national commitment to urban renewal at the Urban Leadership Symposium, Feb. 3, 1968.</p>
 
             <span dangerouslySetInnerHTML={{ __html: storyBody2 }}></span>
           </article>
@@ -70,6 +66,11 @@ const PersonalStory = () => {
               alt="Contract"
             />
             <p className="caption">Map of Kingston Rondout area.</p>
+
+            <audio className="personal-story-quote"
+              src="http://dev.picturingurbanrenewal.org/prod-assets/people/media/wnyc-raymond-19680203-ur-ww2.mp3" 
+              type="audio/mpeg" controls/>
+            <p className="caption">George M. Raymond speaks about the need for full national commitment to urban renewal at the Urban Leadership Symposium, Feb. 3, 1968.</p>
           </div>
 
           <div className="second-col fourth-row">

@@ -776,6 +776,9 @@ nav.horiz-menu {/* menu page  */
   background-position: left;
   background-size: 24px 24px; }
 
+audio.personal-story-quote {
+  margin-top:  1.5em;
+}
 /*.city-newburgh, .city-kingston, .city-stuytown, .city-albany {
   font-size: 1.25em;
   font-weight: normal;
