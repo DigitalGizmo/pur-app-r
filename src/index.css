@@ -1223,6 +1223,11 @@ div.intro-page {
   width:  60%;
 }
 
+.intro-panel a.start {
+  color: #f09234;
+  font-size: .75em;
+  text-align: center;
+}
 .cap {/*caption titles*/
   position: absolute;
   width: 6%;
@@ -1232,13 +1237,13 @@ div.intro-page {
   margin: 0;
 }
 
-.intro-panel #turn-buttons .turn-text {/*  turn corner buttons  */
+.turn-text {/*  turn corner buttons  */
   fill: #f09234;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  text-shadow: 1px 1px gray;
+  text-shadow: 1px 1px #333;
 }
 
 a:hover .turn-text {

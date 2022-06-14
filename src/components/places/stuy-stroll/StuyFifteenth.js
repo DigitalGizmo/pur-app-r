@@ -15,14 +15,21 @@ const StuyFifteenth = ({onPageChange}) => {
           className="svg-content"
         >
 
-          <g id="photo">
-            <image  
-                // width="2486" height="1479"
-                href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"  
-                transform="translate(0 0)"
-                className="intro-photo"> 
-            </image>
-          </g>
+            <g id="photo">
+              <image  
+                  // width="2486" height="1479"
+                  href="http://dev.picturingurbanrenewal.org/prod-assets/places/stuy-stroll/fifteenth.jpg"  
+                  transform="translate(0 0)"
+                  className="intro-photo"> 
+              </image>
+            </g>
+
+            <g id="turn-buttons">
+              <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 1)}}>
+                <polyline className="arrows" points="2400 697 2458 745 2400 795"/>
+                <text transform="translate(2300 755)" className="turn-text">start</text>
+              </a>
+            </g>
 
         </svg>
 
@@ -33,12 +40,9 @@ const StuyFifteenth = ({onPageChange}) => {
  
           <p>Join us for a jaunt down 1st Avenue and around the block to 14th Street. Stop and see the sights we&rsquo;ve spotlighted along the way. Click the spotlight or the list of topics along the street to take a closer look and learn more.</p>
 
-          <g id="turn-buttons">
-            <a href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 1)}}>
-              <polyline className="arrows" points="2400 697 2458 745 2400 795"/>
-              <text transform="translate(2300 755)" className="turn-text">start</text>
+            <a className="start" href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 1)}}>
+              <p className="turn-text">START &rarr;</p>
             </a>
-          </g>
         </article>
       </div>
     </div>

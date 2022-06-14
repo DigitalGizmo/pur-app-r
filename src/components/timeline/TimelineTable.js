@@ -138,9 +138,8 @@ const TimelineTable = ({thrulines, loading, error,
             className={`row-${row.node.slug}`}
             key={row.node.slug}
           >
-            <th 
-              className={`${row.node.slug}-icon`}
-            >{row.node.title} -</th>
+            <th className={`${row.node.slug}-icon`}>{row.node.title}
+            </th>
 
             {getTableRow(row)}
 
