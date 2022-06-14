@@ -27,7 +27,7 @@ const Home = () => {
  
   return (
     <div className="home">
-      <section className="home-test">
+      <section className="home-wrapper">
         <header>
           <h1>Picturing Urban Renewal</h1>
           <p>Picturing Urban Renewal invites visitors to explore the visual history of urban renewal in four U.S. cities. Each city’s story is different. Combined, these stories shed light on an era of  optimism, tragedy, and transformation.</p>
@@ -35,11 +35,6 @@ const Home = () => {
               href='/' 
               onClick={e => { e.preventDefault(); setShowingHomePop(true);}}
             >Introduction: What Was Urban Renewal?</a>
-            |
-            <a 
-              href='/' 
-              onClick={e => { e.preventDefault(); setShowingViewTips(true);}}
-            >Prototype Viewing Tip</a>
         </header>
 
         <ul className="home-primary-menu">
@@ -50,13 +45,21 @@ const Home = () => {
         </ul>
 
         <ul className="home-secondary-menu">
-          <li><Link to="/archive/visuals">The Visual Record</Link></li>
-          <li><Link to="/timeline">Timeline</Link></li>
-          <li><Link to="/themes">Essays</Link></li>
-          <li><Link to="">Educational Resources</Link></li>
-          <li><Link to="">About</Link></li>
+          <li><Link to="/archive/visuals">The Visual Record</Link> | </li>
+          <li><Link to="/timeline">Timeline</Link> | </li>
+          <li><Link to="/themes">Essays</Link> | </li>
+          <li><Link to="">Educational Resources</Link> | </li>
+          <li><Link to="">About</Link> | </li>
           <li><Link to="">Contact Us</Link></li>
         </ul>
+
+        <p className="tips">    
+          <a 
+              href='/' 
+              onClick={e => { e.preventDefault(); setShowingViewTips(true);}}
+            >[Prototype Viewing Tips]</a>
+        </p>
+
       </section>
 
       { showingHomePop && 

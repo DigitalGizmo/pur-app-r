@@ -4,7 +4,7 @@ const ViewTips = ({closePop}) => {
 
   return (
     <div className="lightbox" onClick={closePop}>
-      <div className="slimpop-wrapper entry-pop">
+      <div className="slimpop-wrapper tips-pop entry-pop">
         <div className="pop-nav">
           <p>
             <a
@@ -15,14 +15,9 @@ const ViewTips = ({closePop}) => {
           </p>
         </div>
 
-        <header>
-          <h2>Prototype Viewing Tips</h2>
-        </header>
- 
-        <article>
-          <p>This prototype is best viewed on a tablet, laptop or desktop computer, not a smartphone. Some features may require resizing your browser window for optimal viewing — notably the Albany City Story and the Stroll By: Gas House District features.</p>
+        <h3>Prototype Viewing Tips</h3>
+        <p>This prototype is best viewed on a tablet, laptop or desktop computer as it has not yet been optimized for use on a smartphone. Some features may display better by resizing or adjusting the proportions of your browser window &mdash; notably the Albany City Story and the Stroll By: Gas House District features.</p>
 
-        </article>
       </div> {/* /#slimpop-wrapper */}
     {/* end lightbox: */}
     </div>

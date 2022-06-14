@@ -137,10 +137,8 @@ ul.list-menu li span {
   text-align: center;
  }
 
-section.home-test {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+.home-wrapper {
+  margin: 0 20%;
 }
 
 .home header {
@@ -158,6 +156,7 @@ section.home-test {
 
 ul.home-primary-menu, ul.home-secondary-menu {
   list-style-type: none;
+  padding: 0;
 }
 
 ul.home-primary-menu {
@@ -191,15 +190,30 @@ ul.home-primary-menu li a:hover {
   background-color: rgba(178, 89, 0, 0.5);
 }
 
-ul.home-secondary-menu li {
-  display: inline-block;
-  margin: 3em 1em;
+ul.home-secondary-menu {
+  margin: 3em 0;
 }
 
+ul.home-secondary-menu li {
+  display: inline-block;
+}
+
+ul.home-secondary-menu li a {
+  padding: .5em;
+}
+
+.tips {
+  font-size: .75em;
+}
+
+.tips a {
+  color:  yellowgreen;
+}
 .neh-logo {
   max-width: 200px;
   opacity: 0.7;
 }
+
 /* ====================== */
 /*      SHARED LAYOUT     */
 /* ====================== */
@@ -351,6 +365,7 @@ img.fullpic {
 .short-page {
   height: calc(100vh - 60px);
 }
+
 /*   ===================   */
 /*         POP UPS         */
 /*   ===================   */
@@ -378,10 +393,21 @@ img.fullpic {
 }
 
 .entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
-  margin: 5% auto;
   height: 80%;
+  margin: 5% auto;
   text-align: left;
   width: 60%;
+}
+
+.tips-pop {
+  height: fit-content;
+  margin: 15% auto;
+  padding: 1.25em;
+  width: 35%;
+}
+
+.tips-pop h3 {
+  font-weight: bold;
 }
 
 .entry-pop header {
@@ -968,22 +994,23 @@ table tbody th {  /* first column - city names */
 
 table tbody th.albany-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.nyc-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.kingston-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg) no-repeat;
-  background-size:  50px 50px;
 }
 
 table tbody th.newburgh-icon {
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg) no-repeat;
+}
+
+table tbody th.albany-icon, table tbody th.nyc-icon, table tbody th.kingston-icon, table tbody th.newburgh-icon {
   background-size:  50px 50px;
+  background-position: 10px 10px;
 }
 
 table tbody td {
@@ -1223,6 +1250,11 @@ div.intro-page {
   width:  60%;
 }
 
+.intro-panel a.start {
+  color: #f09234;
+  font-size: .75em;
+  text-align: center;
+}
 .cap {/*caption titles*/
   position: absolute;
   width: 6%;
@@ -1232,13 +1264,13 @@ div.intro-page {
   margin: 0;
 }
 
-.intro-panel #turn-buttons .turn-text {/*  turn corner buttons  */
+.turn-text {/*  turn corner buttons  */
   fill: #f09234;
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  text-shadow: 1px 1px gray;
+  text-shadow: 1px 1px #333;
 }
 
 a:hover .turn-text {
