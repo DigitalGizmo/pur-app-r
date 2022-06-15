@@ -160,9 +160,10 @@ const StuyStroll = () => {
           // top: 10,
           // left: 85,
           // originZ: -100,
-          originZ: direction === 0 ? -100 : -10,
+          originZ: direction === 0 ? -15 : -10,
           // originX: 1,
-          // originX: direction === 0 ? 1 : 0
+          originX: direction === 0 ? 1 : 0
+          // originX: 1,
         }}
 
         key={pageNum}
