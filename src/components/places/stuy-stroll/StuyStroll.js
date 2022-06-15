@@ -109,32 +109,62 @@ const StuyStroll = () => {
       // x: direction === 0 ? xOffset : -xOffset,
       // position: 'absolute',
       x: direction === 0 ? '100%' : '-100%',
+
+      rotateY: direction === 0 ? 50 : -50,
+      originX: direction === 0 ? 0 : 1,
+      // originX: 0,
       opacity: 0.2,
     },
     active: {
       x: 0,
       opacity: 1,
-      transition: { delay: 0, duration: 0.75 },
+
+      rotateY: 0,
+      // originX: 0.5,
+      // originZ: -500,
+      // originX: 1,
+
+      transition: { delay: 0, duration: 2 },
       // transitionEnd: { position: 'absolute'}
     },
     exit:{
       // With direction 0 exit left
       // x: direction === 0 ? -xOffset : xOffset,
       x: direction === 0 ? '-100%' : '100%',
-      transition: { delay: 0, duration: 0.75 },
+
+      // rotateY: -90,
+      rotateY: direction === 0 ? -50 : 50,
+      originX: direction === 0 ? 1 : 0,
+
+      transition: { delay: 0, duration: 2 },
       opacity: 0.2,
       // position: 'absolute',
     }
   };
 
   return (
-    <div className="stroll-page">
+    <div 
+    className="stroll-page"
+    style={{
+      perspective: 1000,
+    }}       
+    >
       <header className="basic-page">
         <h1>Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</h1>
       </header>
 
       <AnimatePresence initial={false}>
       <motion.div
+
+        style={{
+          // top: 10,
+          // left: 85,
+          // originZ: -100,
+          originZ: direction === 0 ? -100 : -10,
+          // originX: 1,
+          // originX: direction === 0 ? 1 : 0
+        }}
+
         key={pageNum}
         variants={variants}
         initial="enter"
