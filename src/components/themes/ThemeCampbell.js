@@ -50,7 +50,7 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/sparsely-furnished.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Sparsely furnished interior of a young family. Source: New York State Archives.</p>
+            <p className="caption">Sparsely furnished interior of a young family&rsquo;s apartment. Source: New York State Archives.</p>
 
             <p>These furnishings are very similar to pieces seen in the neighborhood furniture stores. Other residents appear to have acquired an assortment of furnishings and décor over the course of a lifetime. While interiors with furniture dating to the 1920s, 30s, and 40s could be reflective of younger couples who  inherited an assortment of furnishings and other objects from family members or who purchased second-hand furniture, these interiors have more the feel of a purposeful accumulation over a long period of time.</p>
             <p>By looking at the interiors, unless there are people or framed photographs visible, there is no way to determine the race of the residents based upon their choice of furniture and décor. Black and white neighbors appear to have made similar furnishing choices, probably based upon economics. While most of the interior images are devoid of residents (excepting a few children, pets, and the occasional adult) there are indications in some of the restaurants and bars, such as Jim and Willie&rsquo;s Delux Bar-B-Q, that the owners and/or clientele were African American. On a side wall at Willie's, there is a liquor store calendar featuring a light-skinned African American woman. A poster for the Ebony Fashion Fair<sup>1</sup> hangs on the back wall of Champ&rsquo;s Grill.</p>
@@ -58,7 +58,7 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/delux-bbq.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">Inside Jim &amp; Willie's Delux Bar-B-Q and Champ&rsquo;s Grill. Source: New York State Archives.</p>
+            <p className="caption">Champ&rsquo;s Grill. Source: New York State Archives.</p>
 
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/champs-grill.jpg"
@@ -71,7 +71,7 @@ const ThemeCampbell = () => {
             <img 
             src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/rooming-house-room.jpg"
               alt='meaningful alt text'/>
-            <p className="caption">A room in the Hamilton Street rooming house. Source: New York State Archives.</p>
+            <p className="caption">A room in a Hamilton Street rooming house. Source: New York State Archives.</p>
 
             <p>The images of the domestic spaces reveal a neighborhood very much in flux. Some apartments and rooms have clearly been abandoned, perhaps for quite awhile. Wallpapers and paint are peeling from ceilings, walls, and floors. Toilets, sinks, and tubs, ripped free from their plumbing attachments, are dumped on the floor. Mold stains darken many of the walls. Large pieces of furniture such as bed frames and sofas, perhaps too cumbersome to move have been left behind, often overturned. It is difficult to know if these rooms were this rough when lived in or if they deteriorated rapidly once vacant. Other spaces depict families in transition, with packing materials in evidence and kitchen cupboards and shelves devoid of foodstuffs and cooking equipment. Still other photographs reveal residents who show absolutely no indication that they plan to go anywhere. They are firmly entrenched and their domestic spaces fully furnished, many with potted plants thriving on their windowsills.</p>
             <p>Frequently these intact residences contained religious iconography indicative of Christian, most probably Catholic, residents. These items include crucifixes and framed prints of the Madonna, the Pope, and Christ as well as an assortment of small statues of saints. While Protestants could certainly have chosen to own and display similar religious items, this type of display is typically associated with Catholic households. Some Protestant families might hang a cross in their home or perhaps a framed sampler of the Lord&rsquo;s Prayer, but usually the crucifix appeared only in Catholic households. Certainly the small religious statues of saints, the crucifixes, and the framed pictures strongly suggest Catholicism.<sup>2</sup></p>
