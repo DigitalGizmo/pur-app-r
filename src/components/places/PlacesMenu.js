@@ -19,11 +19,11 @@ const PlacesMenu = () => {
         <li><Link to="/places/newburgh">Newburgh from the Planner&rsquo;s Perspective</Link></li>
         <li><Link to="/places/kingston">Kingston: Best Laid Plans&hellip;</Link> <span>(NB: this feature is still in the early stages of development)</span></li>
         <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/then-now.html">Kingston: Before and After</a></li>
-        <li>Stroll By: Albany</li>
-        <li>Stroll By: Newburgh</li>
-        <li>Albany: Construction Stop-action Animation</li>
-        <li>Stuyvesant Town: Construction Stop-action Animation</li>
-        <li>Albany: Who Built the Empire State Plaza?</li>
+        <li className='dim-some'>Stroll By: Albany</li>
+        <li className='dim-some'>Stroll By: Newburgh</li>
+        <li className='dim-some'>Albany: Construction Stop-action Animation</li>
+        <li className='dim-some'>Stuyvesant Town: Construction Stop-action Animation</li>
+        <li className='dim-some'>Albany: Who Built the Empire State Plaza?</li>
       </ul>
     </div>
   )

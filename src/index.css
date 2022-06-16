@@ -126,6 +126,9 @@ ul.list-menu li span {
   font-size: 0.75em;
 }
 
+ul.list-menu .dim-some {
+  color: #A3A390;
+}
 /*   ===================   */
 /*        HOME PAGE        */
 /*   ===================   */
