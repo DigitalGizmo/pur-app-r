@@ -13,7 +13,8 @@ const StuyStroll = () => {
   // For street component transitions
   const [pageNum, setPageNum] = useState(1);
   // Direction 0 means 'forward', slide new in from right
-  const [[currentPage, direction], setCurrentPage] = useState([1,0]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [direction, setDirection] = useState(0);
   // const [partID, setPartID] = useState(2);
   // For hotspot handling. Ideally per data hotspot length,
   // but here hard-wired past imagined mas.
@@ -52,6 +53,7 @@ const StuyStroll = () => {
   }
 
   useEffect(() => {
+    // console.log('direction: ' + direction);
     setPageNum(currentPage);
   }, [currentPage, direction])
 
@@ -62,7 +64,11 @@ const StuyStroll = () => {
     const newDirection =  (newPageNum > currentPage) ? 0 : 1;
     // Have to useEffect because of closure on setState
     // https://stackoverflow.com/questions/54069253/usestate-set-method-not-reflecting-change-immediately
-    setCurrentPage([newPageNum, newDirection]);
+    setDirection(newDirection);
+    process.nextTick(() => {
+      //do something
+      setCurrentPage(newPageNum);
+    })
   }
 
   const GET_HOTSPOTS = gql`
@@ -108,10 +114,10 @@ const StuyStroll = () => {
       // At start, w direction 0, new image enters from right
       // x: direction === 0 ? xOffset : -xOffset,
       // position: 'absolute',
-      x: direction === 0 ? '100%' : '-100%',
-
-      rotateY: direction === 0 ? 50 : -50,
+      
       originX: direction === 0 ? 0 : 1,
+      rotateY: direction === 0 ? 50 : -50,
+      x: direction === 0 ? '100%' : '-100%',
       // originX: 0,
       opacity: 0.2,
     },
@@ -130,11 +136,11 @@ const StuyStroll = () => {
     exit:{
       // With direction 0 exit left
       // x: direction === 0 ? -xOffset : xOffset,
-      x: direction === 0 ? '-100%' : '100%',
-
+      
       // rotateY: -90,
-      rotateY: direction === 0 ? -50 : 50,
       originX: direction === 0 ? 1 : 0,
+      rotateY: direction === 0 ? -50 : 50,
+      x: direction === 0 ? '-100%' : '100%',
 
       transition: { delay: 0, duration: 2 },
       opacity: 0.2,
