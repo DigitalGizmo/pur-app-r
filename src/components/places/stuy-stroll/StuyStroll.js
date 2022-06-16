@@ -65,10 +65,7 @@ const StuyStroll = () => {
     // Have to useEffect because of closure on setState
     // https://stackoverflow.com/questions/54069253/usestate-set-method-not-reflecting-change-immediately
     setDirection(newDirection);
-    process.nextTick(() => {
-      //do something
-      setCurrentPage(newPageNum);
-    })
+    setCurrentPage(newPageNum);
   }
 
   const GET_HOTSPOTS = gql`
@@ -110,6 +107,9 @@ const StuyStroll = () => {
   );
 
   const variants = {
+    // initial: {
+    //   originX: 1,
+    // },
     enter: {
       // At start, w direction 0, new image enters from right
       // x: direction === 0 ? xOffset : -xOffset,
