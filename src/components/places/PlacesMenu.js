@@ -21,9 +21,11 @@ const PlacesMenu = () => {
         <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/then-now.html">Kingston: Before and After</a></li>
         <li className='dim-some'>Stroll By: Albany</li>
         <li className='dim-some'>Stroll By: Newburgh</li>
-        <li className='dim-some'>Albany: Construction Stop-action Animation</li>
-        <li className='dim-some'>Stuyvesant Town: Construction Stop-action Animation</li>
+        <li className='dim-some'>Stroll By: Kingston</li>
+        {/* <li className='dim-some'>Albany: Construction Stop-action Animation</li> */}
+        {/* <li className='dim-some'>Stuyvesant Town: Construction Stop-action Animation</li> */}
         <li className='dim-some'>Albany: Who Built the Empire State Plaza?</li>
+        <li className='dim-some'>Where Did They Go?: Displaced Tenants and Businesses</li>
       </ul>
     </div>
   )
