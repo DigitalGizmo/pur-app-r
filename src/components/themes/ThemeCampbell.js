@@ -6,7 +6,8 @@ const ThemeCampbell = () => {
 
   useEffect(() => {
     changePageName('themes');
-  }, [])
+    document.title = 'Essay: Who Lived Here?';
+  }, [changePageName])
 
   return (
     <div>

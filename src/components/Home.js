@@ -11,7 +11,13 @@ const Home = () => {
 
   useEffect(() => {
     changePageName('home');
+    document.title = 'Home';
   }, [changePageName])
+
+  // useEffect(() => {
+  //   // changePageName('home');
+  //   document.title = 'Home';
+  // }, [])
 
   function closePop (event) {
     // console.log(event.target.className)

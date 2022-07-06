@@ -22,8 +22,13 @@ const Visuals= () => {
 
   useEffect(() => {
     changePageName('visuals');
+    document.title = 'Visual Record';
   }, [changePageName])
 
+  // useEffect(() => {
+  //   document.title = 'Visual Record';
+  // }, [])
+  
   const GET_IMAGE_LIST = gql`
     query getImages ($city_ids: [Int], 
       $media_format_ids: [Int],

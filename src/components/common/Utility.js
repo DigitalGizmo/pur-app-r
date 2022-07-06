@@ -3,8 +3,8 @@
 function debounce(func, milSecs) {
   let timer;
   return () => {
-    timer = setTimeout(() => {
-      timer = null;
+    timer = setTimeout(() => { // eslint-disable-line
+      timer = null;  // eslint-disable-line
       func.apply(this, arguments)
     }, milSecs)
   }

@@ -7,7 +7,8 @@ const PeopleMenu = () => {
 
   useEffect(() => {
     changePageName('people');
-  }, [])
+    document.title = 'People';
+  }, [changePageName])
 
   return (
     <div>

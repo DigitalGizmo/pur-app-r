@@ -6,7 +6,8 @@ const ThemeFullilove = () => {
 
   useEffect(() => {
     changePageName('themes');
-  }, [])
+    document.title = 'Theme: Root Shock';
+  }, [changePageName])
 
   return (
     <div>

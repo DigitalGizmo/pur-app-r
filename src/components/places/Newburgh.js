@@ -14,7 +14,8 @@ const Newburgh = () => {
 
   useEffect(() => {
     changePageName('places');
-  }, [])
+    document.title = 'Places - Newburgh';
+  }, [changePageName])
 
   const onCaptionChange = (isInView, imgIndex, titleIndex) => {
     // console.log('-- onCaptionChange: ' + isInView + ', i: ' + parseInt(imgIndex));
@@ -84,7 +85,7 @@ const Newburgh = () => {
                 >
                   <img 
                     alt={imageName}
-                    src={`http://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
+                    src={`https://dev.picturingurbanrenewal.org/prod-assets/places/newburgh/images/${imageName}.jpg`}
                   />
                 </motion.div>
               </AnimatePresence>

@@ -7,7 +7,8 @@ const SightsMenu = () => {
 
   useEffect(() => {
     changePageName('sights');
-  }, [])
+    document.title = 'Sights &amp; Sounds';
+  }, [changePageName])
 
   return (
     <div className="">

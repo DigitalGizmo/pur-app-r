@@ -29,7 +29,8 @@ const Timeline = () => {
 
   useEffect(() => {
     changePageName('timeline');
-  }, [])
+    document.title = 'Timeline';
+  }, [changePageName])
 
 
   function showMore(event, yearEntry, rowSlug) {

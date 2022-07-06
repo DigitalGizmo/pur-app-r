@@ -30,7 +30,8 @@ const StuyStroll = () => {
 
   useEffect(() => {
     changePageName('places');
-  }, [])
+    document.title = 'Stroll By: Gass House District';
+  }, [changePageName])
 
   const hoverSpot = (index) => {
     let newHighlights = [...BASE_HIGHLIGHTS];

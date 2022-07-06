@@ -6,7 +6,8 @@ const StuyTownVideo = () => {
 
   useEffect(() => {
     changePageName('sights');
-  }, [])
+    document.title = 'A Suburb in the City';
+  }, [changePageName])
 
   return (
     <div> 

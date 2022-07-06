@@ -7,7 +7,8 @@ const PlacesMenu = () => {
 
   useEffect(() => {
     changePageName('places');
-  }, [])
+    document.title = 'Places';
+  }, [changePageName])
 
   return (
     <div className="short-page">
@@ -18,7 +19,7 @@ const PlacesMenu = () => {
         <li><Link to="/places/stuy-stroll">Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</Link></li>
         <li><Link to="/places/newburgh">Newburgh from the Planner&rsquo;s Perspective</Link></li>
         <li><Link to="/places/kingston">Kingston: Best Laid Plans&hellip;</Link> <span>(NB: this feature is still in the early stages of development)</span></li>
-        <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/then-now.html">Kingston: Before and After</a></li>
+        <li><a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/then-now.html">Kingston: Before and After</a></li>
         <li className='dim-some'>Stroll By: Albany</li>
         <li className='dim-some'>Stroll By: Newburgh</li>
         <li className='dim-some'>Stroll By: Kingston</li>

@@ -6,7 +6,8 @@ const CitiesMenu = () => {
 
   useEffect(() => {
     changePageName('cities');
-  }, [])
+    document.title = '4 Cities / 4 Stories';
+  }, [changePageName])
 
   return (
     <div className="city-story">

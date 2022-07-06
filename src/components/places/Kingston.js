@@ -9,7 +9,8 @@ const Kingston = () => {
 
   useEffect(() => {
     changePageName('places');
-  }, [])
+    document.title = 'Places - Kingston';
+  }, [changePageName])
 
   return (
     <div className="kingston-scroll"> 

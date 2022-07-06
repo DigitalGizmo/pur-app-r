@@ -6,7 +6,8 @@ const ThemeZipp = () => {
 
   useEffect(() => {
     changePageName('themes');
-  }, [])
+    document.title = 'Essay: Ghost City';
+  }, [changePageName])
 
   return (
     <div>

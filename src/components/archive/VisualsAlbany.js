@@ -21,8 +21,9 @@ const Visuals= () => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('visuals');
-  }, [])
+    changePageName('visuals'); 
+    document.title = 'Visual Record - Albany';
+  }, [changePageName])
 
 
   const GET_IMAGE_LIST = gql`

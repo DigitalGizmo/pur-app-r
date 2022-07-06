@@ -7,7 +7,8 @@ const ThemeMenu = () => {
 
   useEffect(() => {
     changePageName('themes');
-  }, [])
+    document.title = 'Essays';
+  }, [changePageName])
 
   return (
     <div className="">

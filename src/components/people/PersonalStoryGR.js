@@ -23,7 +23,8 @@ const PersonalStory = () => {
 
   useEffect(() => {
     changePageName('people');
-  }, [])
+    document.title = 'Personal Story - George Raymond';
+  }, [changePageName])
 
 
     return (
