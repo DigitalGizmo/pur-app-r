@@ -1,28 +1,16 @@
-import React, { createContext, useReducer } from 'react';
-import AppReducer from './AppReducer';
+import React, { createContext, useState } from 'react'; // useReducer
 
-const initialState = {
-  currPage: "home"
-}
+export const GlobalPageNameStateContext = createContext();
+export const GlobalContext = createContext();
 
-export const GlobalContext = createContext(initialState);
-
-export const GlobalProvider = ({children}) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
-
-  // Actions for changing state
-
-  function changePageName(pageName) {
-    dispatch({
-      type:'CHANGE_PAGE',
-      payload: pageName
-    });
-  }
+export const GlobalProvider = (props) => {
+  const [currPage, changePageName] = useState('home');
 
   return(
-    <GlobalContext.Provider value = {{ 
-      currPage: state.currPage, changePageName }}>
-        {children}
-    </GlobalContext.Provider>
+    <GlobalPageNameStateContext.Provider value={currPage}>
+      <GlobalContext.Provider value = {{ changePageName }}>
+          {props.children}
+      </GlobalContext.Provider>
+    </GlobalPageNameStateContext.Provider>
   )
 }

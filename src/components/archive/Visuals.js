@@ -22,7 +22,7 @@ const Visuals= () => {
 
   useEffect(() => {
     changePageName('visuals');
-  }, [])
+  }, [changePageName])
 
   const GET_IMAGE_LIST = gql`
     query getImages ($city_ids: [Int], 

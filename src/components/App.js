@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Outlet } from 'react-router-dom'; // , Link
-import {GlobalContext } from '../context/GlobalState';
+import { GlobalPageNameStateContext } from '../context/GlobalState';
 import MainNav from './common/MainNav';
 import BottomNav from './common/BottomNav';
 
 function App() {
-  const { currPage } = useContext(GlobalContext);
+  const currPage = useContext(GlobalPageNameStateContext);
 
   return (
     <div >

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalPageNameStateContext } from '../../context/GlobalState';
 import { Link } from 'react-router-dom';
 import './MainNav.css';
 
 const BottomNav = (props) => {
-  const { currPage } = useContext(GlobalContext);
+  const currPage = useContext(GlobalPageNameStateContext);
 
   return (
     <nav className="bottom-menu">
