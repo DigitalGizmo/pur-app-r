@@ -38,7 +38,7 @@ const StuyFifteenth = ({onPageChange}) => {
  
           <p>Many residents and business owners fought to save their neighborhood and lost. But the district survives in photographs from the Met Life archive.</p>
  
-          <p>Join us for a jaunt down 1st Avenue and around the block to 14th Street. Stop and see the sights we&rsquo;ve spotlighted along the way. Click the spotlight or the list of topics along the street to take a closer look and learn more.</p>
+          <p>Join us for a jaunt down 1st Avenue and around the block to 14th Street. Stop and see the sights we&rsquo;ve spotlighted along the way. Click the list of topics along the street to learn more.</p>
 
             <a className="start" href="/" onClick={ e => { e.preventDefault(); onPageChange(2, 1)}}>
               <p className="turn-text">START &rarr;</p>
