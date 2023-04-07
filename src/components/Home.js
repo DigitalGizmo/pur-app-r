@@ -45,13 +45,12 @@ const Home = () => {
 
         <ul className="home-primary-menu">
           <li className="city-stories"><Link to="/cities">4 Cities / 4 Stories</Link></li>
-          <li><Link to="/sights">Sights &amp; Sounds</Link></li>
-          <li><Link to="/places">Place-Based Explorations</Link></li>
-          <li><Link to="/people">Personal Stories</Link></li>
         </ul>
 
         <ul className="home-secondary-menu">
-          <li><Link to="/archive/visuals">The Visual Record</Link> | </li>
+          <li><Link to="/people">People</Link> | </li>
+          <li><Link to="/places">Places</Link> | </li>
+          <li><Link to="/archive/visuals">Visuals</Link> | </li>
           <li><Link to="/timeline">Timeline</Link> | </li>
           <li><Link to="/themes">Essays</Link> | </li>
           <li><Link to="">Educational Resources</Link> | </li>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 import {
     useQuery,
     gql
@@ -83,7 +84,8 @@ const Visuals= () => {
   return (
     <div> 
       <header className="basic-page">
-        <h1>The Visual Record</h1>
+        <h1><Link to="/">Picturing Urban Renewal</Link> &gt;
+          The Visual Record</h1>
         <h4>{numImages} Images | Filter Images</h4>
       </header>
 

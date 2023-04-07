@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 import {
   useQuery,
   gql,
@@ -99,7 +100,8 @@ const Timeline = () => {
     <div>
       <div className="timeline-top">
         <header className="basic-page">
-          <h1>Timeline</h1>
+          <h1><Link to="/">Picturing Urban Renewal</Link> &gt; 
+            Timeline</h1>
         </header>
 
         <section className="thru-lines">

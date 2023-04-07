@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Outlet } from 'react-router-dom'; // , Link
 import { GlobalPageNameStateContext } from '../context/GlobalState';
-import MainNav from './common/MainNav';
+// import MainNav from './common/MainNav';
 import BottomNav from './common/BottomNav';
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div >
-      { currPage !== "home" &&
+      {/* { currPage !== "home" &&
         <MainNav/>
-      }
+      } */}
 
       <Outlet 
         message="test message"

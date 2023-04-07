@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
@@ -12,7 +13,8 @@ const CitiesMenu = () => {
   return (
     <div className="city-story">
       <header className="basic-page">
-        <h1>4 Cities / 4 Stories</h1>
+        <h1><Link to="/">Picturing Urban Renewal</Link> &gt; 
+          4 Cities / 4 Stories</h1>
       </header>
 {/*      <ul className="list-menu">
         <li><a href="http://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">Albany: Lost Places/Displaced People - The Reaction to Redevelopment</a></li>

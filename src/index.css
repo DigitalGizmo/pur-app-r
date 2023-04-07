@@ -224,7 +224,7 @@ ul.home-secondary-menu li a {
 header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
   width: 100%;
-  margin-top: 24px;
+  /* margin-top: 24px;  excized by Don 2023-04-07 */
   padding: .75em 3%;
   position: relative;
 }
