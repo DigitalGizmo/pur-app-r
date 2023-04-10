@@ -521,6 +521,7 @@ div.city-story ul li {
   background-size: 20vw;
   outline: 1px solid #68695A;
   padding: .25em;
+  position: relative;
   line-height: 1em;
 }
 
@@ -570,7 +571,6 @@ div.city-story ul li.legacy.nyc {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-legacy.jpg");
 } 
 
-
 div.city-story ul li.roots.newburgh {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-roots.jpg");
 } 
@@ -586,7 +586,6 @@ div.city-story ul li.recon.newburgh {
 div.city-story ul li.legacy.newburgh {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-legacy.jpg");
 }
-
 
 div.city-story ul li.roots.kingston {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-roots.jpg");
@@ -619,6 +618,39 @@ div.city-story ul li.recon.albany {
 div.city-story ul li.legacy.albany {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-legacy.jpg");
 } 
+
+/*   hover blurbs   */
+div.city-story ul li span.show-blurb {
+  width: 100%;
+  background-color: rgba(256, 256, 256, 0.65);
+  color: #333;
+  display: inline-block;
+  font-size: 0.8em;
+  font-style: normal;
+  height: 100%;
+  left: 0;
+  letter-spacing: .05em;
+  padding: 2.5em 0.25em 0.25em 0.25em;
+  position: absolute;
+  top: 0px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+div.city-story ul li:hover span.show-blurb {
+  visibility: visible;
+}
+
+
+div.city-story ul li span.show-blurb a {
+  color: #B25900;
+}
+
+div.city-story ul li:hover a.story-title {
+  position: absolute;
+  color: #333;
+  z-index: 25;
+}
 /*   ===================   */
 /*      VISUAL RECORD      */
 /*   ===================   */

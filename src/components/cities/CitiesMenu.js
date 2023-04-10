@@ -14,20 +14,20 @@ const CitiesMenu = () => {
     <div className="city-story">
       <header className="basic-page">
         <nav>
-          <p><Link to="/"><img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png"/>Picturing Urban Renewal</Link> &gt; 4 Cities / 4 Stories</p>
+          <p><Link to="/"><img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal</Link> &gt; 4 Cities / 4 Stories</p>
         </nav>
       </header>
 
       <div className="city-story-grid">
         <ul>
           <li className="toprow intro">Intro: <span>What Was Urban Renewal?</span></li>
-          <li className="toprow nyc">New York City <span>A Suburb in the City</span></li>
+          <li className="toprow nyc"><a href="/" className="story-title">New York City <span>A Suburb in the City</span></a><span className="show-blurb">Designed for WWII veterans, Stuyvesant Town was a massive apartment complex in lower Manhattan. Controversial from the start, it nevertheless became a model for the federal urban renewal programs that followed.  <a href="/">View Visual Intro</a></span></li>
           <li className="toprow newburgh">Newburgh <span>Demolition Without Redevelopment</span></li>
           <li className="toprow kingston">Kingston <span>A Tale of Two Neighborhoods</span></li>
           <li className="toprow albany">Albany <span>Brasilia on the Hudson</span></li>
           
           <li className="roots intro">The Roots of Renewal</li>
-          <li className="roots nyc">Percursor to Urban Renewal</li>
+          <li className="roots nyc"><a href="/" className="story-title">Precursor to Urban Renewal</a><span className="show-blurb">City government empowered Metropolitan Life Insurance Co. to seize land for construction of Stuyvesant Town. Lawsuits followed. <a href="/">Preview this story</a></span></li>
           <li className="roots newburgh">"Negro Removal"</li>
           <li className="roots kingston">Demolition vs Rehabilitation</li>
           <li className="roots albany">The Temporary Commission</li>
