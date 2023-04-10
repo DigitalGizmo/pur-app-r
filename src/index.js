@@ -7,6 +7,7 @@ import './index.css';
 import App from './components/App';
 import Home from './components/Home';
 import CitiesMenu from './components/cities/CitiesMenu';
+import CitiesFramer from './components/cities/CitiesFramer';
 import PeopleMenu from './components/people/PeopleMenu';
 import PeopleMenuCities from './components/people/PeopleMenuCities';
 import PersonalStory from './components/people/PersonalStory';
@@ -54,6 +55,7 @@ render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/cities" element={<CitiesMenu />} />
+          <Route path="/cities-framer" element={<CitiesFramer />} />
           <Route path="/people" element={<PeopleMenu />} />
           <Route path="/people/people-menu-cities" element={<PeopleMenuCities />} />
             <Route path="/people/haines-dauner" element={<PersonalStory />} />
