@@ -136,7 +136,7 @@ ul.list-menu .dim-some {
   background-image: url(http://dev.picturingurbanrenewal.org/prod-assets/home/home-bkgnd.jpg);
   background-size: cover;
   color: #dedfcf;
-  padding: 2em 0;
+  height: 100vh;
   text-align: center;
  }
 
@@ -157,52 +157,59 @@ ul.list-menu .dim-some {
   font-size: .75em;
 }
 
-ul.home-primary-menu, ul.home-secondary-menu {
-  list-style-type: none;
-  padding: 0;
+.home header a {
+  color: orange;
+  text-decoration: underline;
 }
 
-ul.home-primary-menu {
-  width: 500px;
-  margin: auto;
-  text-align: center;
-}
-
-ul.home-primary-menu li {
-  display: inline-block;
-  width: 300px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-ul.home-primary-menu li.city-stories {
+h2.city-stories {
   font-size: 1.5em;
-  width: 450px;
   height: 100px;
+  letter-spacing: 0.05em;
+  margin: 0 auto 2em auto;
+  text-transform: uppercase;
+  width: 400px;
 }
 
-ul.home-primary-menu li a {
+h2.city-stories a {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #686959;
+  color: #D17316;
   display: block;
-  margin:  .5em 0;
   padding: 0.5em;
+  text-decoration: underline;
 }
 
-ul.home-primary-menu li a:hover {
+h2.city-stories  a:hover {
   background-color: rgba(178, 89, 0, 0.5);
 }
 
-ul.home-secondary-menu {
-  margin: 3em 0;
+.home footer {
+  background-color: #68695A;
+  margin: 1em 0 0 0;
+  padding: .5em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-ul.home-secondary-menu li {
+ul.home-primary-menu, ul.home-secondary-menu {
+  letter-spacing: 0.025em;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+ul.home-primary-menu li, ul.home-secondary-menu li {
   display: inline-block;
 }
 
-ul.home-secondary-menu li a {
+ul.home-secondary-menu li {
+  font-size: .75em;
+}
+ul.home-primary-menu li a, ul.home-secondary-menu li a {
   padding: .5em;
+  text-decoration: underline;
 }
 
 .tips {
@@ -225,19 +232,20 @@ header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
   width: 100%;
   /* margin-top: 24px;  excized by Don 2023-04-07 */
-  padding: .75em 3%;
+  padding: .5em 3%;
   position: relative;
 }
 
-header.basic-page h1 {
-  font-size: 1.5em;
+header.basic-page nav p {
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .05em;
-  font-weight: 500;
+  margin: 0;
 }
 
-header.basic-page h4, header.basic-page h1 {
-  margin: 0;
+header.basic-page nav p img {
+  margin-right: .5em;
+  width: 8%;
 }
 
 .basic-page h4 span.selected { /* used on Personal Stories Menu pages */
@@ -496,7 +504,121 @@ img.fullpic {
   font-size: .75em;
   line-height: 1.2em;
 }
+/*   ===================   */
+/*     CITY STORY GRID     */
+/*   ===================   */
+div.city-story ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 17vh);
+  grid-gap: 4px;
+  list-style-type: none;
+  font-size: .8em;
+  padding: 2px 0;
+}
 
+div.city-story ul li {
+  background-size: 20vw;
+  outline: 1px solid #68695A;
+  padding: .25em;
+  line-height: 1em;
+}
+
+div.city-story ul li.toprow {
+  grid-row: 1;
+}
+
+div.city-story ul li.roots {
+  grid-row: 2;
+}
+
+div.city-story ul li.lost {
+  grid-row: 3;
+}
+
+
+div.city-story ul li.recon {
+  grid-row: 4;
+}
+
+div.city-story ul li.legacy {
+  grid-row: 5;
+}
+
+div.city-story ul li.intro, div.city-story ul li.toprow {
+  text-transform: uppercase;
+}
+
+div.city-story ul li.toprow span {
+  display: block;
+  text-transform: none;
+}
+
+div.city-story ul li.roots.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-roots.jpg");
+} 
+
+div.city-story ul li.lost.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-lost.jpg");
+} 
+
+div.city-story ul li.recon.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-recon.jpg");
+} 
+
+div.city-story ul li.legacy.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-legacy.jpg");
+} 
+
+
+div.city-story ul li.roots.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-roots.jpg");
+} 
+
+div.city-story ul li.lost.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-lost.jpg");
+} 
+
+div.city-story ul li.recon.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-recon.jpg");
+} 
+
+div.city-story ul li.legacy.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-legacy.jpg");
+}
+
+
+div.city-story ul li.roots.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-roots.jpg");
+} 
+
+div.city-story ul li.lost.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-lost.jpg");
+} 
+
+div.city-story ul li.recon.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-recon.jpg");
+} 
+
+div.city-story ul li.legacy.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-legacy.jpg");
+}
+
+div.city-story ul li.roots.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-roots.jpg");
+} 
+
+div.city-story ul li.lost.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-lost.jpg");
+} 
+
+div.city-story ul li.recon.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-recon.jpg");
+} 
+
+div.city-story ul li.legacy.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-legacy.jpg");
+} 
 /*   ===================   */
 /*      VISUAL RECORD      */
 /*   ===================   */
@@ -1205,7 +1327,7 @@ td span {
 }
 
 /* ======================= */
-/*     GASHOUSE STROLL     */
+/*     STY TOWN STROLL     */
 /* ======================= */
 .stroll-page {/* to get bottom nav to the bottom of the page */
   height: calc(100vh - 50px);

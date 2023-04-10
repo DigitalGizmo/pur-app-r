@@ -36,27 +36,21 @@ const Home = () => {
       <section className="home-wrapper">
         <header>
           <h1>Picturing Urban Renewal</h1>
-          <p>Picturing Urban Renewal invites visitors to explore the visual history of urban renewal in four U.S. cities. Each city’s story is different. Combined, these stories shed light on an era of  optimism, tragedy, and transformation.</p>
-            <a 
-              href='/' 
+          <p>Walking through almost any American downtown, you might come across acres of empty space, blocks of parking lots, or places where the architecture shifts dramatically. These are the products of urban renewal. Missing are the people displaced, their homes, 
+and the businesses they once patronized.</p>
+
+          <p>This website aims to put these people and places back in the picture and to explore the short- and longer-term effects of this controversial policy.&nbsp;
+          <a href='/' 
               onClick={e => { e.preventDefault(); setShowingHomePop(true);}}
-            >Introduction: What Was Urban Renewal?</a>
+            >Read more&hellip;</a></p>
+        <p>Begin your visit</p>
         </header>
+        <h2 className="city-stories">
+          <Link to="/cities">4 Cities / 4 Stories</Link>
+        </h2>
 
-        <ul className="home-primary-menu">
-          <li className="city-stories"><Link to="/cities">4 Cities / 4 Stories</Link></li>
-        </ul>
-
-        <ul className="home-secondary-menu">
-          <li><Link to="/people">People</Link> | </li>
-          <li><Link to="/places">Places</Link> | </li>
-          <li><Link to="/archive/visuals">Visuals</Link> | </li>
-          <li><Link to="/timeline">Timeline</Link> | </li>
-          <li><Link to="/themes">Essays</Link> | </li>
-          <li><Link to="">Educational Resources</Link> | </li>
-          <li><Link to="">About</Link> | </li>
-          <li><Link to="">Contact Us</Link></li>
-        </ul>
+        <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
+              alt='NEH logo' className="neh-logo"/>
 
         <p className="tips">    
           <a 
@@ -64,8 +58,25 @@ const Home = () => {
               onClick={e => { e.preventDefault(); setShowingViewTips(true);}}
             >[Prototype Viewing Tips]</a>
         </p>
-
       </section>
+
+        <footer>
+          <ul className="home-primary-menu">
+            <li><Link to="/people">People</Link> | </li>
+            <li><Link to="/places">Places</Link> | </li>
+            <li><Link to="/archive/visuals">Visuals</Link> | </li>
+            <li><Link to="/timeline">Timeline</Link> | </li>
+            <li><Link to="">Galleries</Link> | </li>
+            <li><Link to="/themes">Essays</Link> | </li>
+          </ul>
+          <ul className="home-secondary-menu">
+            <li><Link to="">About</Link> | </li>
+            <li><Link to="">Resources for Educators</Link> | </li>
+            <li><Link to="">Urban Renewal in Your Community</Link> | </li>
+            <li><Link to="">Contact</Link></li>
+          </ul>
+        </footer>
+
 
       { showingHomePop && 
         <HomePop
@@ -77,9 +88,8 @@ const Home = () => {
         closePop = {closePop}
         />
       }
-        <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
-              alt='NEH logo' className="neh-logo"/>
-    </div>
+
+    </div>/* /div.home */
   )
 } // end Home
 
