@@ -520,7 +520,7 @@ div.city-story ul {
 div.city-story ul li {
   background-size: 20vw;
   outline: 1px solid #68695A;
-  padding: .25em;
+  padding: .3em;
   position: relative;
   line-height: 1em;
 }
@@ -528,129 +528,108 @@ div.city-story ul li {
 div.city-story ul li.toprow {
   grid-row: 1;
 }
-
 div.city-story ul li.roots {
   grid-row: 2;
 }
-
 div.city-story ul li.lost {
   grid-row: 3;
 }
-
-
 div.city-story ul li.recon {
   grid-row: 4;
 }
-
 div.city-story ul li.legacy {
   grid-row: 5;
 }
 
-div.city-story ul li.intro, div.city-story ul li.toprow {
-  text-transform: uppercase;
-}
-
-div.city-story ul li.toprow span {
-  display: block;
-  text-transform: none;
-}
-
-div.city-story ul li.roots.nyc {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-roots.jpg");
-} 
-
-div.city-story ul li.lost.nyc {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-lost.jpg");
-} 
-
-div.city-story ul li.recon.nyc {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-recon.jpg");
-} 
-
-div.city-story ul li.legacy.nyc {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-legacy.jpg");
-} 
-
-div.city-story ul li.roots.newburgh {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-roots.jpg");
-} 
-
-div.city-story ul li.lost.newburgh {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-lost.jpg");
-} 
-
-div.city-story ul li.recon.newburgh {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-recon.jpg");
-} 
-
-div.city-story ul li.legacy.newburgh {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-legacy.jpg");
-}
-
-div.city-story ul li.roots.kingston {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-roots.jpg");
-} 
-
-div.city-story ul li.lost.kingston {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-lost.jpg");
-} 
-
-div.city-story ul li.recon.kingston {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-recon.jpg");
-} 
-
-div.city-story ul li.legacy.kingston {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-legacy.jpg");
-}
-
-div.city-story ul li.roots.albany {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-roots.jpg");
-} 
-
-div.city-story ul li.lost.albany {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-lost.jpg");
-} 
-
-div.city-story ul li.recon.albany {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-recon.jpg");
-} 
-
-div.city-story ul li.legacy.albany {
-  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-legacy.jpg");
-} 
 
 /*   hover blurbs   */
 div.city-story ul li span.show-blurb {
   width: 100%;
   background-color: rgba(256, 256, 256, 0.65);
-  color: #333;
+  color: #353526;
   display: inline-block;
   font-size: 0.8em;
   font-style: normal;
   height: 100%;
   left: 0;
   letter-spacing: .05em;
-  padding: 2.5em 0.25em 0.25em 0.25em;
+  padding: 2.75em 0.3em 0.3em 0.3em;
   position: absolute;
   top: 0px;
   visibility: hidden;
   z-index: 1;
 }
 
-div.city-story ul li:hover span.show-blurb {
-  visibility: visible;
+div.city-story ul li.intro span.story-title, div.city-story ul li.toprow span.story-title {
+  text-transform: uppercase;
+  display: block;
 }
 
+div.city-story ul li:hover span.show-blurb, div.city-story ul li:hover span.story-title {
+  visibility: visible;
+}
 
 div.city-story ul li span.show-blurb a {
   color: #B25900;
 }
 
-div.city-story ul li:hover a.story-title {
-  position: absolute;
-  color: #333;
-  z-index: 25;
+div.city-story ul li:hover {
+  color: #353526;
+  position: relative;
+  z-index: 10;
 }
+
+
+/* background images */
+div.city-story ul li.roots.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-roots.jpg");
+} 
+div.city-story ul li.lost.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-lost.jpg");
+} 
+div.city-story ul li.recon.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-recon.jpg");
+} 
+div.city-story ul li.legacy.nyc {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-legacy.jpg");
+} 
+div.city-story ul li.roots.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-roots.jpg");
+} 
+div.city-story ul li.lost.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-lost.jpg");
+} 
+div.city-story ul li.recon.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-recon.jpg");
+} 
+div.city-story ul li.legacy.newburgh {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/newburgh-legacy.jpg");
+}
+div.city-story ul li.roots.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-roots.jpg");
+} 
+div.city-story ul li.lost.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-lost.jpg");
+} 
+div.city-story ul li.recon.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-recon.jpg");
+} 
+div.city-story ul li.legacy.kingston {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/kingston-legacy.jpg");
+}
+div.city-story ul li.roots.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-roots.jpg");
+} 
+div.city-story ul li.lost.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-lost.jpg");
+} 
+div.city-story ul li.recon.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-recon.jpg");
+} 
+div.city-story ul li.legacy.albany {
+  background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/albany-legacy.jpg");
+} 
+
 /*   ===================   */
 /*      VISUAL RECORD      */
 /*   ===================   */
