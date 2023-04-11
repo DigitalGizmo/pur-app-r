@@ -1,14 +1,26 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useEffect, useContext, useState} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 import { Link } from 'react-router-dom';
+import PopShell from './PopShell';
 
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
+  const [isShowing, setIsShowing] = useState(false);
 
   useEffect(() => {
     changePageName('cities');
     document.title = '4 Cities / 4 Stories';
   }, [changePageName])
+
+  const onPopLinkClick = (event) => {
+    event.preventDefault();
+    setIsShowing(true);
+  }
+  
+  const onPopClose = (event) => {
+    event.preventDefault();
+    setIsShowing(false);
+  }
 
   return (
     <div className="city-story">
@@ -19,6 +31,7 @@ const CitiesMenu = () => {
       </header>
 
       <div className="city-story-grid">
+      {/* <div className={`city-story-grid ${isShowing ? "city-lightbox" : ""}`}> */}
         <ul>
           {/*top row*/}
           <li className="toprow intro"><span className="story-title">Intro:</span> What Was Urban Renewal?
@@ -82,8 +95,10 @@ const CitiesMenu = () => {
             <span className="show-blurb">Protests against demolition temporarily brought urban renewal to a halt. <a href="/">Preview this story</a></span>
           </li>
 
+
           <li className="lost albany"><span className="story-title">Reaction to Redevelopment</span>
-            <span className="show-blurb">The mayor sued to prevent the seizure of land. But most area residents responded with resignation. <a href="/">Preview this story</a></span>
+            <span className="show-blurb">The mayor sued to prevent the seizure of land. But most area residents responded with resignation. 
+            <a href="/" onClick={onPopLinkClick}>Preview this story</a></span>
           </li>
 
 
@@ -130,8 +145,14 @@ const CitiesMenu = () => {
             <span className="show-blurb">In response to the Empire State Plaza, activists organized to oppose highway construction and to promote historic preservation. <a href="/">Preview this story</a></span>
           </li>
         </ul>
-      </div>
 
+        {isShowing && 
+          <PopShell
+          title="Albany: Reaction to Redevelopment"
+          onPopClose = {onPopClose}
+        />};
+
+      </div> {/* End city-story-grid */}
     </div>
   )
 }
