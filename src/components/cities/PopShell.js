@@ -1,8 +1,21 @@
-import React from 'react'; // , { useState, useEffect }
+import React, { useState } from 'react'; // , { useState, useEffect }
 import { Link } from 'react-router-dom';
+import SubPopShell from './SubPopShell';
 
 const PopShell = ({title, onPopClose}) => {
-  return (
+    const [subPopIsShowing, setSubPopIsShowing] = useState(false);
+
+    const onSubPopLinkClick = (event) => {
+      event.preventDefault();
+      setSubPopIsShowing(true);
+    }
+    
+    const onSubPopClose = (event) => {
+      event.preventDefault();
+      setSubPopIsShowing(false);
+    }
+  
+    return (
     <div className="city-lightbox"> 
       {/* <div className="city-pop-wrapper entry-pop"> */}
       <div className="city-pop">
@@ -26,13 +39,18 @@ const PopShell = ({title, onPopClose}) => {
           </dl>
 
           <dl className="bubble2 essay">
-            <Link to="/themes/theme-campbell">
+          <a href="/" onClick={onSubPopLinkClick}>
               <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble 2"/></dt>
               <dd className="feature-title">Essays</dd>
               <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
-            </Link>
+            </a>
           </dl>
         </section>
+
+        {subPopIsShowing && 
+          <SubPopShell
+          onSubPopClose = {onSubPopClose}
+        />}
 
       </div>
     </div>

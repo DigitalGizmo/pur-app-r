@@ -5,7 +5,7 @@ import PopShell from './PopShell';
 
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
-  const [isShowing, setIsShowing] = useState(false);
+  const [popIsShowing, setPopIsShowing] = useState(false);
 
   useEffect(() => {
     changePageName('cities');
@@ -14,12 +14,12 @@ const CitiesMenu = () => {
 
   const onPopLinkClick = (event) => {
     event.preventDefault();
-    setIsShowing(true);
+    setPopIsShowing(true);
   }
   
   const onPopClose = (event) => {
     event.preventDefault();
-    setIsShowing(false);
+    setPopIsShowing(false);
   }
 
   return (
@@ -145,7 +145,7 @@ const CitiesMenu = () => {
           </li>
         </ul>
 
-        {isShowing && 
+        {popIsShowing && 
           <PopShell
           title="Albany: Reaction to Redevelopment"
           onPopClose = {onPopClose}

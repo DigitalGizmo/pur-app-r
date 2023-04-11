@@ -482,6 +482,22 @@ img.fullpic {
   width: 60%;
 }
 
+/* Like slimpop-wrapper for sub pop - Don */
+.sub-pop-wrapper {
+  /* background-color: #686959; */
+  overflow:  auto;
+  padding: 2em;
+  position: relative;
+}
+
+/* Like entnry-pop for sub pop - Don */
+.sub-pop {
+  height: 95%;
+  margin: 5% auto;
+  text-align: left;
+  width: 95%;
+}
+
 .tips-pop {
   height: fit-content;
   margin: 15% auto;
