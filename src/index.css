@@ -230,10 +230,11 @@ ul.home-primary-menu li a, ul.home-secondary-menu li a {
 
 header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
-  width: 100%;
-  /* margin-top: 24px;  excized by Don 2023-04-07 */
+  font-size: 0.9em;
+  height: 70px;
   padding: .5em 3%;
   position: relative;
+  width: 100%;
 }
 
 header.basic-page nav p {
@@ -392,15 +393,74 @@ img.fullpic {
   z-index: 99;
 }
 
-/* Darkens basic-page body for city pops - Don */
+/* for City Story Grid */
 .city-lightbox {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: url(./assets/overlay.png) repeat;
+  bottom: 36px;
+  left: 0;
+  position: absolute;
+  top: 70px;
+  width: 100%;
   z-index: 99;
+}
+
+.city-pop {
+  padding: 2% 3%;
+  text-align: left;
+}
+
+.bubble-zone {
+  position: relative;
+}
+
+.bubble-zone dl {
+  clear: both;
+  font-size: .75em;
+  width: 30%;
+}
+
+.bubble-zone dl.bubble1 {
+  position: absolute;
+  top: 15vh;
+  left: 25%;
+}
+
+.bubble-zone dl.bubble2 {
+  position: absolute;
+  top: 30vh;
+  left: 65%;
+}
+
+.bubble-zone dl dt {
+  float: left;
+  margin-right: 5%;
+}
+
+.bubble-zone dl dt img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.bubble-zone dl.place dt img {
+  border: 2px solid limegreen;
+}
+
+.bubble-zone dl.essay dt img {
+  border: 2px solid orange;
+}
+
+.bubble-zone dl dd {
+  line-height: 1.2em;
+}
+
+.bubble-zone dd.feature-title {
+  padding-top: 2%;
+  text-transform: uppercase;
+}
+
+.bubble-zone dl a:hover dt img {
+  border: 2px dashed;
 }
 
 /* shared styles for all pop ups  */
@@ -414,23 +474,6 @@ img.fullpic {
   position: relative;
 }
 
-/* Not necessary ?  */
-.city-pop-wrapper {
-  /* position: fixed; */
-  background-color: #E6E7D8;  
-  border: 1px solid #BDBEA7;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
-  color: #353626;
-  overflow:  auto;
-  padding: 2em;
-}
-
-.city-pop {/* Large Pop Ups for Visual Record and Slide Shows */
-  height: 90%;
-  margin: 5% auto;
-  text-align: left;
-  width: 90%;
-}
 
 .entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
   height: 80%;

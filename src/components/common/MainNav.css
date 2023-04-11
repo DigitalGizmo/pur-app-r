@@ -40,21 +40,29 @@ nav.main-menu li.selected a {
 /*  Bottom Menu  */
 nav.bottom-menu {
   background-color: #68695A;
-  height: 40px;
+  height: 70px;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   width: 100%;
   text-align: center;
 }
 
+nav.bottom-menu ul{
+  margin: 0;
+  padding: 0;
+}
 nav.bottom-menu li {
   border-right: thin solid #e4e0c7;
   display: inline;
   font-size: 0.75em;
-  font-weight: 400;
   padding: 0 2em;
+  text-transform: uppercase;
 }
 
 nav.bottom-menu li.selected a {
   color: #D17316;
+}
+nav.bottom-menu ul.bottom-secondary li {
+  font-size: .65em;
+  text-transform: capitalize;
 }

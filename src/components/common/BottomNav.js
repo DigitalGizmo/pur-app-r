@@ -19,23 +19,23 @@ const BottomNav = (props) => {
           <Link to="/archive/visuals">Visuals</Link>
         </li>
         <li className={ currPage === 'timeline' ? 'selected' : ''}>
-          <Link to="/timeline">Timeline</Link></li>
+          <Link to="/timeline">Timeline</Link>
+        </li>
         <li className={ currPage === 'galleries' ? 'selected' : ''}>
-          <Link to="/galleries">Galleries</Link></li>
+          <Link to="/galleries">Galleries</Link>
+        </li>
         <li className={ currPage === 'themes' ? 'selected' : ''}>
           <Link to="/themes"
           dangerouslySetInnerHTML={{ __html: 'Essays' }}></Link>
-        </li>  
-        <li>
-          Educational Resources
         </li>
-        <li>
-          About
-        </li>        
-        <li>
-          Contact Us
-        </li>        
       </ul>
+
+      <ul className="bottom-secondary">
+        <li><Link to="">About</Link></li>
+        <li><Link to="">Resources for Educators</Link></li>
+        <li><Link to="">Urban Renewal in Your Community</Link></li>
+        <li><Link to="">Contact</Link></li>
+      </ul>      
     </nav>
   );
 }

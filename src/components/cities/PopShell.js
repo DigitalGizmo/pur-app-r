@@ -13,16 +13,27 @@ const PopShell = ({title, onPopClose}) => {
         </div>
 
         <header>
-          <h1>City: {title}</h1>
-          <p>Specific pop here</p>
-          <p><a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">
-          View City Story</a>
-          </p>
+          <h1>Albany: Reaction to Redevelopment</h1>
+          <p>Explore the features related to this story, or link to the narrative <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">city story</a>.</p>
         </header>
-{/*         
-        <img 
-          src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[currSlide].imgName}.jpg`}
-          alt='meaningful alt text'/> */}
+        <section className="bubble-zone">
+          <dl className="bubble1 place">
+            <a href="/">
+              <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/times-union-front-page.jpg" alt="bubble 1"/></dt>
+              <dd className="feature-title">Places</dd>
+              <dd>Stroll along the sidewalks of pre-demolition Albany.</dd>
+            </a>
+          </dl>
+
+          <dl className="bubble2 essay">
+            <a href="/">
+              <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble 2"/></dt>
+              <dd className="feature-title">Essays</dd>
+              <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
+            </a>
+          </dl>
+        </section>
+
       </div>
     </div>
   );

@@ -72,7 +72,6 @@ const CitiesMenu = () => {
             <span className="show-blurb">Planners recommended demolition of a downtown residential area. For an uptown shopping district, they proposed a pedestrian mall. <a href="/">Preview this story</a></span>
           </li>
 
-
           <li className="roots albany"><span className="story-title">The Temporary Commission</span>
             <span className="show-blurb">State officials proposed building a new capitol complex in downtown Albany. <a href="/">Preview this story</a></span>
           </li>
@@ -150,7 +149,7 @@ const CitiesMenu = () => {
           <PopShell
           title="Albany: Reaction to Redevelopment"
           onPopClose = {onPopClose}
-        />};
+        />}
 
       </div> {/* End city-story-grid */}
     </div>
