@@ -129,6 +129,13 @@ ul.list-menu li span {
 ul.list-menu .dim-some {
   color: #A3A390;
 }
+
+.asterisk {
+  color: #D17316;
+  font-size: 1.5em;
+  font-weight: bold;
+  vertical-align: middle;
+}
 /*   ===================   */
 /*        HOME PAGE        */
 /*   ===================   */
@@ -233,11 +240,12 @@ header.basic-page {/* for menu pages, personal stories, essays, etc */
   font-size: 0.9em;
   height: 70px;
   padding: .5em 3%;
-  position: relative;
+/*  position: relative;*/
   width: 100%;
 }
 
 header.basic-page nav p {
+  color: #D17316;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -395,8 +403,9 @@ img.fullpic {
 
 /* for City Story Grid */
 .city-lightbox {
-  background: url(./assets/overlay.png) repeat;
-  bottom: 36px;
+  background: url(./assets/overlay-dark.png);
+  background-repeat: repeat;
+  bottom: 38px;
   left: 0;
   position: absolute;
   top: 70px;
@@ -544,6 +553,7 @@ img.fullpic {
   font-size: .7em;
   letter-spacing: .05em;
   max-width: 25%;
+  margin: .8em;
 }
 
 .entry-pop a, .more-pop a {
@@ -661,12 +671,11 @@ div.city-story ul li span.show-blurb a {
   color: #B25900;
 }
 
-div.city-story ul li:hover {
-  color: #353526;
+div.city-story ul li:hover span.story-title, div.city-story ul li:hover span.story-subtitle {
   position: relative;
   z-index: 10;
+  color: #353526;
 }
-
 
 /* background images */
 div.city-story ul li.roots.nyc {

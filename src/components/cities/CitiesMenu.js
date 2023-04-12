@@ -34,23 +34,23 @@ const CitiesMenu = () => {
       {/* <div className={`city-story-grid ${isShowing ? "city-lightbox" : ""}`}> */}
         <ul>
           {/*top row*/}
-          <li className="toprow intro"><span className="story-title">Intro:</span> What Was Urban Renewal?
+          <li className="toprow intro"><span className="story-title">Intro:</span> <span className="story-subtitle">What Was Urban Renewal?</span>
             <span className="show-blurb">Do we want or need a rollover blurb here? <a href="/">Link to popup intro?</a></span>
           </li>
 
-          <li className="toprow nyc"><span className="story-title">New York City</span> A Suburb in the City
+          <li className="toprow nyc"><span className="story-title">New York City</span> <span className="story-subtitle">A Suburb in the City</span>
             <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.  <a href="/">View Visual Intro</a></span>
           </li>
 
-          <li className="toprow newburgh"><span className="story-title">Newburgh</span> Demolition Without Redevelopment
+          <li className="toprow newburgh"><span className="story-title">Newburgh</span> <span className="story-subtitle">Demolition Without Redevelopment</span>
             <span className="show-blurb">City leaders targeted Black neighborhoods for demolition. In so doing, they exacerbated a racial rift that continues to haunt Newburgh’s efforts to rebuild. <a href="/">View Visual Intro</a></span>
           </li>
 
-          <li className="toprow kingston"><span className="story-title">Kingston</span> A Tale of Two Neighborhoods
+          <li className="toprow kingston"><span className="story-title">Kingston</span> <span className="story-subtitle">A Tale of Two Neighborhoods</span>
             <span className="show-blurb">The renewal of uptown and downtown Kingston proceeded along different tracks. Much of downtown was demolished, while the uptown shopping district was rehabilitated. Disparities of wealth and power help explain this difference. <a href="/">View Visual Intro</a></span>
           </li>
 
-          <li className="toprow albany"><span className="story-title">Albany</span> Brasilia on the Hudson
+          <li className="toprow albany"><span className="story-title">Albany</span> <span className="story-subtitle">Brasilia on the Hudson</span>
             <span className="show-blurb">Construction of the Empire State Plaza was unusual for being State planned and funded. It was the brainchild of Gov. Nelson Rockefeller, who sought to beautify and reinvigorate New York’s shabby state capital. <a href="/">View Visual Intro</a></span>
           </li>
 
@@ -97,7 +97,7 @@ const CitiesMenu = () => {
 
           <li className="lost albany"><span className="story-title">Reaction to Redevelopment</span>
             <span className="show-blurb">The mayor sued to prevent the seizure of land. But most area residents responded with resignation. 
-            <a href="/" onClick={onPopLinkClick}>Preview this story</a></span>
+            <a href="/" onClick={onPopLinkClick}><span className="asterisk">*</span> Preview this story</a></span>
           </li>
 
 
