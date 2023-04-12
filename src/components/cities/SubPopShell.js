@@ -16,6 +16,7 @@ const SubPopShell = ({title, onSubPopClose}) => {
         </div>
 
         <ThemeCampbell        
+          isSubPop = {true}
         />
 
       </div>

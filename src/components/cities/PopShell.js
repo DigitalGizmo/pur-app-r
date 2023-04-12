@@ -49,7 +49,7 @@ const PopShell = ({title, onPopClose}) => {
 
         {subPopIsShowing && 
           <SubPopShell
-          onSubPopClose = {onSubPopClose}
+            onSubPopClose = {onSubPopClose}
         />}
 
       </div>

@@ -84,8 +84,14 @@ const Visuals= () => {
   return (
     <div> 
       <header className="basic-page">
-        <h1><Link to="/">Picturing Urban Renewal</Link> &gt;
-          The Visual Record</h1>
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; The Visual Record
+          </p>
+        </nav>
         <h4>{numImages} Images | Filter Images</h4>
       </header>
 

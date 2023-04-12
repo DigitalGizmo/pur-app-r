@@ -1,7 +1,8 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
-const ThemeCampbell = () => {
+const ThemeCampbell = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -11,10 +12,29 @@ const ThemeCampbell = () => {
 
   return (
     <div>
-      <header className="basic-page">
-        <h1>Who Lived Here? The Lives of Albany Residents Revealed in Photographs</h1>
-        <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
-      </header>
+
+      {isSubPop ?
+        <header className="basic-page">
+          <h2>Who Lived Here? The Lives of Albany Residents Revealed in Photographs 
+          -- <Link to="/themes"> Jump to Essays</Link>  
+          </h2>
+          <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
+        </header>
+      :
+        <header className="basic-page">
+          <nav>
+            <p>
+              <Link to="/">
+                <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+                alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+              </Link> &gt; &nbsp;
+              <Link to="/themes">Essays</Link> &gt;
+              Who Lived Here? The Lives of Albany Residents Revealed in Photographs
+            </p>
+            <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
+          </nav>
+        </header>
+      }
 
       <section>
         <div className="image-full">

@@ -26,7 +26,12 @@ const CitiesMenu = () => {
     <div className="city-story">
       <header className="basic-page">
         <nav>
-          <p><Link to="/"><img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal</Link> &gt; 4 Cities / 4 Stories</p>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; 4 Cities / 4 Stories
+          </p>
         </nav>
       </header>
 

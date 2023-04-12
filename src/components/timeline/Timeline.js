@@ -100,8 +100,14 @@ const Timeline = () => {
     <div>
       <div className="timeline-top">
         <header className="basic-page">
-          <h1><Link to="/">Picturing Urban Renewal</Link> &gt; 
-            Timeline</h1>
+          <nav>
+            <p>
+              <Link to="/">
+                <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+                alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+              </Link> &gt; Timeline
+            </p>
+          </nav>
         </header>
 
         <section className="thru-lines">
