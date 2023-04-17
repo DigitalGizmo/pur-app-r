@@ -15,9 +15,8 @@ const ThemeCampbell = ({isSubPop}) => {
 
       {isSubPop ?
         <header className="basic-page">
-          <h2>Who Lived Here? The Lives of Albany Residents Revealed in Photographs 
-          -- <Link to="/themes"> Jump to Essays</Link>  
-          </h2>
+          <h4><Link to="/themes">Essays -></Link></h4>
+          <h2>Who Lived Here? The Lives of Albany Residents Revealed in Photographs</h2>
           <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
         </header>
       :
@@ -29,10 +28,13 @@ const ThemeCampbell = ({isSubPop}) => {
                 alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
               </Link> &gt; &nbsp;
               <Link to="/themes">Essays</Link> &gt;
-              Who Lived Here? The Lives of Albany Residents Revealed in Photographs
+              Who Lived Here?
             </p>
-            <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
           </nav>
+          <div className="page-title">
+            <h1>Who Lived Here? The Lives of Albany Residents Revealed in Photographs</h1>
+            <h4>Robin Campbell, University of Albany, SUNY</h4>
+          </div>
         </header>
       }
 

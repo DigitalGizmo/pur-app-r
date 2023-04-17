@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const Theme = () => {
   const { changePageName } = useContext(GlobalContext);
@@ -12,10 +13,22 @@ const Theme = () => {
   return (
     <div>
       <header className="basic-page">
-        <h1>Buyer Beware: Contract Sales</h1>
-        <h4>David Hochfelder, Professor of History, University of Albany, SUNY</h4>
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; &nbsp;
+            <Link to="/themes">Essays</Link> &gt;
+            Buyer Beware
+          </p>
+        </nav>
+        <div className="page-title">
+          <h1>Buyer Beware: Contract Sales</h1>
+          <h4>David Hochfelder, Professor of History, University of Albany, SUNY</h4>
+        </div>
       </header>
-
+      
       <section>
         <div className="image-full">
           <img 

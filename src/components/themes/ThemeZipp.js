@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const ThemeZipp = () => {
   const { changePageName } = useContext(GlobalContext);
@@ -12,8 +13,20 @@ const ThemeZipp = () => {
   return (
     <div>
       <header className="basic-page">
-        <h1>Ghost City: MetLife&rsquo;s Gas House District Photos</h1>
-        <h4>Samuel Zipp, Director of the Urban Studies Program, Professor of American Studies and Urban Studies, Brown University</h4>
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; &nbsp;
+            <Link to="/themes">Essays</Link> &gt;
+            Who Lived Here?
+          </p>
+        </nav>
+        <div className="page-title">
+          <h1>Ghost City: MetLife&rsquo;s Gas House District Photos</h1>
+          <h4>Samuel Zipp, Director of the Urban Studies Program, Professor of American Studies and Urban Studies, Brown University</h4>
+        </div>
       </header>
 
       <section>

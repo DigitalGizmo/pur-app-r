@@ -9,6 +9,9 @@ const BottomNav = (props) => {
   return (
     <nav className="bottom-menu">
       <ul>
+        <li className={ currPage === 'cities' ? 'selected' : ''}>
+          <Link to="/cities">4 Cities/4 Stories</Link>
+        </li>   
         <li className={ currPage === 'people' ? 'selected' : ''}>
           <Link to="/people">People</Link>
         </li>        

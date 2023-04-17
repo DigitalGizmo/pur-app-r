@@ -240,7 +240,7 @@ header.basic-page {/* for menu pages, personal stories, essays, etc */
   font-size: 0.9em;
   height: 70px;
   padding: .5em 3%;
-/*  position: relative;*/
+  position: relative;
   width: 100%;
 }
 
@@ -270,6 +270,19 @@ header.basic-page p.blurb {
   position: absolute;
   top:  5%;
   width: 45%;
+}
+
+header.basic-page div.page-title {
+    background-color: rgba(53, 53, 38, 0.75);
+    padding: 0.75em 3%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+}
+
+header.basic-page h1, header.basic-page h2, header.basic-page h3, header.basic-page h4 {
+  margin: 0;
 }
 
 .basic-grid {/* used in Personal Story pages, Theme pages */
@@ -403,14 +416,17 @@ img.fullpic {
 
 /* for City Story Grid */
 .city-lightbox {
-  background: url(./assets/overlay-dark.png);
-  background-repeat: repeat;
   bottom: 38px;
+  background-color: rgba(0, 0, 0, 0.75);
   left: 0;
   position: absolute;
   top: 70px;
   width: 100%;
   z-index: 99;
+}
+
+.city-pop header.bubbles {
+  width: 40%;
 }
 
 .city-pop {
@@ -425,19 +441,25 @@ img.fullpic {
 .bubble-zone dl {
   clear: both;
   font-size: .75em;
-  width: 30%;
+  width: 25%;
 }
 
 .bubble-zone dl.bubble1 {
   position: absolute;
-  top: 15vh;
-  left: 25%;
+  top: 10px;
+  left: 15%;
 }
 
 .bubble-zone dl.bubble2 {
   position: absolute;
-  top: 30vh;
-  left: 65%;
+  top: 100px;
+  left: 35%;
+}
+
+.bubble-zone dl.bubble3 {
+  position: absolute;
+  top: 250px;
+  left: 25%;
 }
 
 .bubble-zone dl dt {
@@ -447,8 +469,8 @@ img.fullpic {
 
 .bubble-zone dl dt img {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
 }
 
 .bubble-zone dl.place dt img {
@@ -459,12 +481,16 @@ img.fullpic {
   border: 2px solid orange;
 }
 
+.bubble-zone dl.people dt img {
+  border: 2px solid #00BCD4;
+}
+
 .bubble-zone dl dd {
   line-height: 1.2em;
 }
 
 .bubble-zone dd.feature-title {
-  padding-top: 2%;
+  padding-top: 5%;
   text-transform: uppercase;
 }
 
@@ -502,11 +528,19 @@ img.fullpic {
 /* Like entnry-pop for sub pop - Don */
 .sub-pop {
   height: 95%;
-  margin: 5% auto;
+  margin: 3% auto;
   text-align: left;
   width: 95%;
 }
 
+.sub-pop header {
+  height: auto;
+}
+
+.sub-pop .pop-nav {
+  position: relative;
+  z-index: 30;
+}
 .tips-pop {
   height: fit-content;
   margin: 15% auto;
@@ -612,7 +646,7 @@ div.city-story ul {
   grid-gap: 4px;
   list-style-type: none;
   font-size: .8em;
-  padding: 2px 0;
+  padding: 3px;
 }
 
 div.city-story ul li {
