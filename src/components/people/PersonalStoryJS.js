@@ -1,5 +1,6 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const storyBody = "<p>We know little about John or George. But James (better known as &ldquo;Jimmy&rdquo;) appears again in two appraisal photographs by State employees. The first is a portrait of the 68-year-old standing in the middle of his apartment. The second shows him outside on his front steps.</p>" +
 "<p>Jimmy was born in Columbus, OH. He moved to Albany with his wife Eleanor from Newark, N.J. sometime during or just before World War II. He found a job at the Army Depot in nearby Voorheesville. He also played a regular gig at the Red and Blue Club on South Pearl Street. Throughout the 1940s, Jimmy Strawn&rsquo;s orchestra—variously named the Barons of Swing, Men of Music, Sultans of Swing, Music Makers—were in high demand.</p>" +
@@ -7,7 +8,7 @@ const storyBody = "<p>We know little about John or George. But James (better kno
 "<p>By 1964, Jimmy&rsquo;s luck appears to have improved. He and his son moved into a new apartment on Lark Street. And Jimmy found a regular gig up north at a Niagara Falls night club. Club Ragtime promoted Jimmy as the &ldquo;Pearly King of the Honky Tonk Piano.&rdquo; Ads promised a &ldquo;wacky, way-out evening&rdquo; with the flamboyant performer. &ldquo;Hear him do all the old songs—and your not-so-old favorites.&rdquo;</p>" +
 "<p>Return to Albany City Story: <a href='http://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html#chapter1'>Reaction to Redevelopment</a></p>";
 
-const PersonalStory = () => {
+const PersonalStory = ({isSubPop}) => {
   const imgName = 'strawn-living-room';
   const { changePageName } = useContext(GlobalContext);
 
@@ -18,10 +19,32 @@ const PersonalStory = () => {
 
   return (
     <div>
-      <header className="basic-page">
-        <h1>Jimmy Strawn, The Sultan of Swing</h1>
-        <h4>Albany, NY</h4>
-      </header>
+
+      {isSubPop ?
+        <header className="basic-page">
+          <h4><Link to="/people">People -></Link></h4>
+          <h2>Jimmy Strawn, The Sultan of Swing</h2>
+          <h4>Albany, NY</h4>
+        </header>
+      :
+        <header className="basic-page">
+          <nav>
+            <p>
+              <Link to="/">
+                <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+                alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+              </Link> &gt; &nbsp;
+              <Link to="/people">People</Link> &gt;
+              Jimmy Strawn
+            </p>
+          </nav>
+          <div className="page-title">
+            <h1>Jimmy Strawn, The Sultan of Swing</h1>
+            <h4>Albany, NY</h4>
+          </div>
+        </header>
+      }
+
 
       <section className="basic-grid">
         <div className="image-full">
@@ -58,10 +81,10 @@ const PersonalStory = () => {
         <div className="second-col second-row">
           <img src="http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/strawn-bedroom.jpg" 
           alt="Portrait of griffin bennet"/>
-          <p class="caption">Jimmy Strawn's bedroom.</p>
+          <p className="caption">Jimmy Strawn's bedroom.</p>
           <img src="http://dev.picturingurbanrenewal.org/prod-assets/people/storypics/strawn-kitchen.jpg" 
           alt="Portrait of griffin bennet"/>
-          <p class="caption">Jimmy Strawn's kitchen.</p>
+          <p className="caption">Jimmy Strawn's kitchen.</p>
 
         </div>
 

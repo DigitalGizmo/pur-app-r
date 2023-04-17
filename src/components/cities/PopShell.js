@@ -1,12 +1,14 @@
 import React, { useState } from 'react'; // , { useState, useEffect }
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import SubPopShell from './SubPopShell';
 
 const PopShell = ({title, onPopClose}) => {
     const [subPopIsShowing, setSubPopIsShowing] = useState(false);
+    const [popToShow, setPopToShow] = useState("whammy")
 
-    const onSubPopLinkClick = (event) => {
-      event.preventDefault();
+    const onSubPopLinkClick = (popName) => {
+      // event.preventDefault();
+      setPopToShow(popName)
       setSubPopIsShowing(true);
     }
     
@@ -32,15 +34,16 @@ const PopShell = ({title, onPopClose}) => {
         </header>
         <section className="bubble-zone">
           <dl className="bubble1 place">
-            <Link to="/places/stuy-stroll">
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("stroll");}}>
               <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/times-union-front-page.jpg" alt="bubble 1"/></dt>
               <dd className="feature-title">Places</dd>
               <dd>Stroll along the sidewalks of pre-demolition Albany.</dd>
-            </Link>
+            </a>
           </dl>
 
           <dl className="bubble2 essay">
-          <a href="/" onClick={onSubPopLinkClick}>
+          {/* <a href="/" onClick={onSubPopLinkClick(e, "campbell")}> */}
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("campbell");}}>
               <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble 2"/></dt>
               <dd className="feature-title">Essays</dd>
               <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
@@ -48,7 +51,7 @@ const PopShell = ({title, onPopClose}) => {
           </dl>
 
           <dl className="bubble3 people">
-          <a href="/" onClick={onSubPopLinkClick}>
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("strawn");}}>
               <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble 2"/></dt>
               <dd className="feature-title">People</dd>
               <dd>Jimmy Strawn: The Sultan of Swing</dd>
@@ -58,6 +61,7 @@ const PopShell = ({title, onPopClose}) => {
 
         {subPopIsShowing && 
           <SubPopShell
+            popName={popToShow}
             onSubPopClose = {onSubPopClose}
         />}
 
