@@ -6,14 +6,17 @@ import PopShell from './PopShell';
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
   const [popIsShowing, setPopIsShowing] = useState(false);
+  const [bubblesToShow, setBubblesToShow] = useState("whammy")
 
   useEffect(() => {
     changePageName('cities');
     document.title = '4 Cities / 4 Stories';
   }, [changePageName])
 
-  const onPopLinkClick = (event) => {
-    event.preventDefault();
+  
+  const onPopLinkClick = (bubbleName) => {
+    // event.preventDefault();
+    setBubblesToShow(bubbleName)
     setPopIsShowing(true);
   }
   
@@ -88,7 +91,10 @@ const CitiesMenu = () => {
           </li>
 
           <li className="lost nyc"><span className="story-title">Tenant Relocation Bureau, Inc.</span>
-            <span className="show-blurb">Real estate developer James Felt pioneered the tenant relocation process. He would later head the City’s Planning Commission. <a href="/">Preview this story</a></span>
+            <span className="show-blurb">Real estate developer James Felt pioneered the tenant relocation process. He would later head the City’s Planning Commission. 
+            <a href="/" 
+              onClick={e => { e.preventDefault(); onPopLinkClick("nyc-lost");}}
+            ><span className="asterisk">*</span> Preview this story</a></span>
           </li>
 
           <li className="lost newburgh"><span className="story-title">The Fight Over Public Housing</span>
@@ -102,7 +108,9 @@ const CitiesMenu = () => {
 
           <li className="lost albany"><span className="story-title">Reaction to Redevelopment</span>
             <span className="show-blurb">The mayor sued to prevent the seizure of land. But most area residents responded with resignation. 
-            <a href="/" onClick={onPopLinkClick}><span className="asterisk">*</span> Preview this story</a></span>
+            <a href="/"
+             onClick={e => { e.preventDefault(); onPopLinkClick("albany-lost");}}
+            ><span className="asterisk">*</span> Preview this story</a></span>
           </li>
 
 
@@ -152,8 +160,8 @@ const CitiesMenu = () => {
 
         {popIsShowing && 
           <PopShell
-          title="Albany: Reaction to Redevelopment"
-          onPopClose = {onPopClose}
+            bubblesToShow = {bubblesToShow}
+            onPopClose = {onPopClose}
         />}
 
       </div> {/* End city-story-grid */}
