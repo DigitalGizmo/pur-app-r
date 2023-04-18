@@ -2,7 +2,7 @@ import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 import { Link } from 'react-router-dom';
 
-const ThemeZipp = () => {
+const ThemeZipp = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
@@ -12,6 +12,14 @@ const ThemeZipp = () => {
 
   return (
     <div>
+
+      {isSubPop ?
+      <header className="basic-page">
+        <h4><Link to="/themes">Essays -></Link></h4>
+        <h2>Ghost City: MetLife&rsquo;s Gas House District Photos</h2>
+        <h4>Samuel Zipp, Director of the Urban Studies Program, Professor of American Studies and Urban Studies, Brown University</h4>
+      </header>
+      :
       <header className="basic-page">
         <nav>
           <p>
@@ -19,8 +27,7 @@ const ThemeZipp = () => {
               <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
               alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
             </Link> &gt; &nbsp;
-            <Link to="/themes">Essays</Link> &gt;
-            Who Lived Here?
+            <Link to="/themes">Essays</Link> &gt; Ghost City
           </p>
         </nav>
         <div className="page-title">
@@ -28,6 +35,7 @@ const ThemeZipp = () => {
           <h4>Samuel Zipp, Director of the Urban Studies Program, Professor of American Studies and Urban Studies, Brown University</h4>
         </div>
       </header>
+      }
 
       <section>
         <div className="image-full">

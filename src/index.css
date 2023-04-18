@@ -459,7 +459,37 @@ img.fullpic {
 .bubble-zone dl.bubble3 {
   position: absolute;
   top: 250px;
-  left: 25%;
+  left: 30%;
+}
+
+.bubble-zone dl.bubble4 {
+  position: absolute;
+  top: 200px;
+  left: 5%;
+}
+
+.bubble-zone dl.bubble5 {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+}
+
+.bubble-zone dl.bubble6 {
+  position: absolute;
+  top: 350px;
+  left: 65%;
+}
+
+.bubble-zone dl.bubble7 {
+  position: absolute;
+  top: 100px;
+  left: 75%;
+}
+
+.bubble-zone dl.bubble8 {
+  position: absolute;
+  top: 180px;
+  left: 55%;
 }
 
 .bubble-zone dl dt {
@@ -469,8 +499,8 @@ img.fullpic {
 
 .bubble-zone dl dt img {
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
 }
 
 .bubble-zone dl.place dt img {
@@ -483,6 +513,18 @@ img.fullpic {
 
 .bubble-zone dl.people dt img {
   border: 2px solid #00BCD4;
+}
+
+.bubble-zone dl.visual dt img {
+  border: 2px solid deeppink;
+}
+
+.bubble-zone dl.gallery dt img {
+  border: 2px solid greenyellow;
+}
+
+.bubble-zone dl.timeline dt img {
+  border: 2px solid firebrick;
 }
 
 .bubble-zone dl dd {
@@ -508,7 +550,6 @@ img.fullpic {
   padding: 2em;
   position: relative;
 }
-
 
 .entry-pop {/* Large Pop Ups for Visual Record and Slide Shows */
   height: 80%;
@@ -651,10 +692,11 @@ div.city-story ul {
 
 div.city-story ul li {
   background-size: 20vw;
+/*  font-size: 1.15em;*/
+  line-height: 1em;
   outline: 1px solid #68695A;
   padding: .3em;
   position: relative;
-  line-height: 1em;
 }
 
 div.city-story ul li.toprow {
@@ -680,12 +722,13 @@ div.city-story ul li span.show-blurb {
   background-color: rgba(256, 256, 256, 0.65);
   color: #353526;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-style: normal;
   height: 100%;
   left: 0;
-  letter-spacing: .05em;
-  padding: 2.75em 0.3em 0.3em 0.3em;
+  line-height: 1.2em;
+/*  letter-spacing: .05em;*/
+  padding: 3em 0.3em 0.3em 0.3em;
   position: absolute;
   top: 0px;
   visibility: hidden;

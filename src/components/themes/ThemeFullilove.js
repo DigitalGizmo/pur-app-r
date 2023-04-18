@@ -1,21 +1,42 @@
 import React, {useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const ThemeFullilove = () => {
+const ThemeFullilove = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
     changePageName('themes');
-    document.title = 'Theme: Root Shock';
+    document.title = 'Essay: Root Shock';
   }, [changePageName])
 
   return (
     <div>
-      <header className="basic-page">
-        <h1>Root Shock</h1>
-        <h4>Mindy Thompson Fullilove, MD, Professor of Urban Policy and Health, The New School</h4>
-      </header>
+
+      {isSubPop ?
+        <header className="basic-page">
+          <h4><Link to="/themes">Essays -></Link></h4>
+          <h2>Root Shock</h2>
+          <h4>Mindy Thompson Fullilove, MD, Professor of Urban Policy and Health, The New School</h4>
+        </header>
+      :
+        <header className="basic-page">
+          <nav>
+            <p>
+              <Link to="/">
+                <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+                alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+              </Link> &gt; &nbsp;
+              <Link to="/themes">Essays</Link> &gt;
+              Root Shock
+            </p>
+          </nav>
+          <div className="page-title">
+            <h1>Root Shock</h1>
+            <h4>Mindy Thompson Fullilove, MD, Professor of Urban Policy and Health, The New School</h4>
+          </div>
+        </header>
+      }
 
       <section>
         <div className="image-full">

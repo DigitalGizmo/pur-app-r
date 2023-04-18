@@ -2,6 +2,7 @@ import React from 'react'; // , { useState, useEffect }
 import ThemeCampbell from '../themes/ThemeCampbell';
 import PersonalStoryJS from '../people/PersonalStoryJS'
 import StuyStroll from '../places/stuy-stroll/StuyStroll'
+import ThemeFullilove from '../themes/ThemeFullilove';
 
 
 const SubPopShell = ({popName, onSubPopClose}) => {
@@ -14,6 +15,8 @@ const SubPopShell = ({popName, onSubPopClose}) => {
         return  <PersonalStoryJS isSubPop = {true}/>
       case "stroll":
         return  <StuyStroll isSubPop = {true}/>
+      case "rootshock":
+        return  <ThemeFullilove isSubPop = {true}/>
       default:
         return <div>pop name not found</div>
     }

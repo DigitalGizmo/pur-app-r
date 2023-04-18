@@ -16,7 +16,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
       <section className="bubble-zone">
         <dl className="bubble1 place">
         <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("stroll");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/times-union-front-page.jpg" alt="bubble 1"/></dt>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/times-union-front-page.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Places</dd>
             <dd>Stroll along the sidewalks of pre-demolition Albany.</dd>
           </a>
@@ -25,7 +25,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         <dl className="bubble2 essay">
         {/* <a href="/" onClick={onSubPopLinkClick(e, "campbell")}> */}
         <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("campbell");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble 2"/></dt>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Essays</dd>
             <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
           </a>
@@ -33,11 +33,52 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
 
         <dl className="bubble3 people">
         <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("strawn");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble 2"/></dt>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
             <dd className="feature-title">People</dd>
             <dd>Jimmy Strawn: The Sultan of Swing</dd>
           </a>
         </dl>
+
+        <dl className="bubble4 essay">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("rootshock");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">Essays</dd>
+            <dd>Root Shock: Dis-PLACE-ment is a rupture of the geographic and the social</dd>
+          </a>
+        </dl>
+
+        <dl className="bubble5 visual">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">Visuals</dd>
+            <dd>Watch a time-lapse video of the demolition</dd>
+          </a>
+        </dl>
+
+        <dl className="bubble6 people">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">People</dd>
+            <dd>Mae Carlson: Albany's Rooming House Queen</dd>
+          </a>
+        </dl>
+
+        <dl className="bubble7 gallery">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">Galleries</dd>
+            <dd>See the old neighborhoods lost to make way for the Empire State Plaza.</dd>
+          </a>
+        </dl>
+
+        <dl className="bubble8 timeline">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">Timeline</dd>
+            <dd>Explore the protest events that took place in response to the proposed demolition.</dd>
+          </a>
+        </dl>
+
       </section>
     </div>
   );
