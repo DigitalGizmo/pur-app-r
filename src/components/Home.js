@@ -43,8 +43,9 @@ and the businesses they once patronized.</p>
           <a href='/' 
               onClick={e => { e.preventDefault(); setShowingHomePop(true);}}
             >Read more&hellip;</a></p>
-        <p>Begin your visit</p>
         </header>
+        <p>Begin your visit</p>
+
         <h2 className="city-stories">
           <Link to="/cities">4 Cities / 4 Stories</Link>
         </h2>
@@ -61,20 +62,22 @@ and the businesses they once patronized.</p>
       </section>
 
         <footer>
-          <ul className="home-primary-menu">
-            <li><Link to="/people">People</Link> | </li>
-            <li><Link to="/places">Places</Link> | </li>
-            <li><Link to="/archive/visuals">Visuals</Link> | </li>
-            <li><Link to="/timeline">Timeline</Link> | </li>
-            <li><Link to="">Galleries</Link> | </li>
-            <li><Link to="/themes">Essays</Link> | </li>
-          </ul>
-          <ul className="home-secondary-menu">
-            <li><Link to="">About</Link> | </li>
-            <li><Link to="">Resources for Educators</Link> | </li>
-            <li><Link to="">Urban Renewal in Your Community</Link> | </li>
-            <li><Link to="">Contact</Link></li>
-          </ul>
+          <nav className="bottom-menu">
+            <ul>
+              <li><Link to="">People<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Places<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="/archive/visuals">Visuals</Link></li>
+              <li><Link to="/timeline">Timeline</Link></li>
+              <li><Link to="">Galleries<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="/themes">Essays</Link></li>
+            </ul>
+            <ul className="bottom-secondary">
+              <li><Link to="">About<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Resources for Educators<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Urban Renewal in Your Community<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Contact<span className="not-done">Not yet implemented</span></Link></li>
+            </ul>
+          </nav>
         </footer>
 
 

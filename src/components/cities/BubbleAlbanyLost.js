@@ -9,7 +9,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
   return (
     <div>
       <header className="bubbles">
-        <h1>Albany: Reaction to Redevelopment</h1>
+        <h1>Albany:<br/>Reaction to Redevelopment</h1>
         <p>The mayor sued to prevent the seizure of land. But most area residents responded with resignation.</p>
         <p>Explore the features related to this story, or link to the narrative <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html"><span class="asterisk">*</span> city story</a>.</p>
       </header>

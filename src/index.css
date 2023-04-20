@@ -201,25 +201,7 @@ h2.city-stories  a:hover {
   width: 100%;
 }
 
-ul.home-primary-menu, ul.home-secondary-menu {
-  letter-spacing: 0.025em;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-ul.home-primary-menu li, ul.home-secondary-menu li {
-  display: inline-block;
-}
-
-ul.home-secondary-menu li {
-  font-size: .75em;
-}
-ul.home-primary-menu li a, ul.home-secondary-menu li a {
-  padding: .5em;
-  text-decoration: underline;
-}
-
-.tips {
+.tips {/* prototype viewing tips */
   font-size: .75em;
 }
 
@@ -1720,6 +1702,37 @@ div.kingston-scroll iframe {
   margin-top: -22px;
   width: 1100px;
 }
+
+.not-done:hover {
+
+}
+
+/* for tool tips -- */
+span.not-done {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #D9D9D9;
+  color: #333;
+  display: inline-block;
+  font-size: 0.75em;
+  line-height: 1.2em;
+  font-style: normal;
+  box-shadow: 4px 4px 6px 4px #333333a8;
+  padding: 0.25em;
+  position: absolute;
+  text-transform: lowercase;
+  top: 0;
+  visibility: hidden;
+  width: 100px;
+  z-index: 1; 
+}
+
+a:hover span.not-done {
+  visibility: visible;
+  position: relative;
+}
+
+
 
 /*   ===================   */
 /*         COLORS          */

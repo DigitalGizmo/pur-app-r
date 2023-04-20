@@ -50,6 +50,7 @@ nav.bottom-menu {
 nav.bottom-menu ul{
   margin: 0;
   padding: 0;
+  position: relative;
 }
 nav.bottom-menu li {
   border-right: thin solid #e4e0c7;
@@ -62,6 +63,7 @@ nav.bottom-menu li {
 nav.bottom-menu li.selected a {
   color: #D17316;
 }
+
 nav.bottom-menu ul.bottom-secondary li {
   font-size: .65em;
   text-transform: capitalize;

@@ -13,10 +13,10 @@ const BottomNav = (props) => {
           <Link to="/cities">4 Cities/4 Stories</Link>
         </li>   
         <li className={ currPage === 'people' ? 'selected' : ''}>
-          <Link to="/people">People</Link>
+          <Link to="">People<span className="not-done">Not yet implemented</span></Link>
         </li>        
         <li className={ currPage === 'places' ? 'selected' : ''}>
-          <Link to="/places">Places</Link>
+          <Link to="">Places<span className="not-done">Not yet implemented</span></Link>
         </li>  
         <li className={ currPage === 'visuals' ? 'selected' : ''}>
           <Link to="/archive/visuals">Visuals</Link>
@@ -25,7 +25,7 @@ const BottomNav = (props) => {
           <Link to="/timeline">Timeline</Link>
         </li>
         <li className={ currPage === 'galleries' ? 'selected' : ''}>
-          <Link to="/galleries">Galleries</Link>
+          <Link to="">Galleries<span className="not-done">Not yet implemented</span></Link>
         </li>
         <li className={ currPage === 'themes' ? 'selected' : ''}>
           <Link to="/themes"
@@ -34,10 +34,10 @@ const BottomNav = (props) => {
       </ul>
 
       <ul className="bottom-secondary">
-        <li><Link to="">About</Link></li>
-        <li><Link to="">Resources for Educators</Link></li>
-        <li><Link to="">Urban Renewal in Your Community</Link></li>
-        <li><Link to="">Contact</Link></li>
+        <li><Link to="">About<span className="not-done">Not yet implemented</span></Link></li>
+        <li><Link to="">Resources for Educators<span className="not-done">Not yet implemented</span></Link></li>
+        <li><Link to="">Urban Renewal in Your Community<span className="not-done">Not yet implemented</span></Link></li>
+        <li><Link to="">Contact<span className="not-done">Not yet implemented</span></Link></li>
       </ul>      
     </nav>
   );

@@ -23,7 +23,7 @@ const Visuals= () => {
 
   useEffect(() => {
     changePageName('visuals');
-    document.title = 'Visual Record';
+    document.title = 'Visuals';
   }, [changePageName])
 
   // useEffect(() => {
@@ -89,7 +89,7 @@ const Visuals= () => {
             <Link to="/">
               <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
               alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
-            </Link> &gt; The Visual Record
+            </Link> &gt; Visuals
           </p>
         </nav>
         <h4>{numImages} Images | Filter Images</h4>
