@@ -452,8 +452,8 @@ img.fullpic {
 
 .bubble-zone dl.bubble2 {
   position: absolute;
-  top: 100px;
-  left: 35%;
+  top: 50px;
+  left: 40%;
 }
 
 .bubble-zone dl.bubble3 {
@@ -470,13 +470,13 @@ img.fullpic {
 
 .bubble-zone dl.bubble5 {
   position: absolute;
-  top: 0px;
+  top: -180px;
   left: 50%;
 }
 
 .bubble-zone dl.bubble6 {
   position: absolute;
-  top: 350px;
+  top: -50px;
   left: 65%;
 }
 
