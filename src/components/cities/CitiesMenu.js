@@ -2,11 +2,15 @@ import React, {useEffect, useContext, useState} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
 import { Link } from 'react-router-dom';
 import PopShell from './PopShell';
+import SubPopShell from './SubPopShell';
 
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
   const [popIsShowing, setPopIsShowing] = useState(false);
   const [bubblesToShow, setBubblesToShow] = useState("whammy")
+  // City intros lead directlky to subPops
+  const [subPopIsShowing, setSubPopIsShowing] = useState(false);
+  const [popToShow, setPopToShow] = useState("whammy")
 
   useEffect(() => {
     changePageName('cities');
@@ -23,6 +27,16 @@ const CitiesMenu = () => {
   const onPopClose = (event) => {
     event.preventDefault();
     setPopIsShowing(false);
+  }
+
+  const onSubPopLinkClick = (popName) => {
+    setPopToShow(popName)
+    setSubPopIsShowing(true);
+  }
+  
+  const onSubPopClose = (event) => {
+    event.preventDefault();
+    setSubPopIsShowing(false);
   }
 
   return (
@@ -47,7 +61,10 @@ const CitiesMenu = () => {
           </li>
 
           <li className="toprow nyc"><span className="story-title">New York City</span> <span className="story-subtitle">A Suburb in the City</span>
-            <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.<br/><a href="/"><span className="asterisk">*</span>View Visual Intro</a></span>
+            <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.<br/>
+            <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("intro-nyc");}}>
+              <span className="asterisk">*</span>View Visual Intro
+            </a></span>
           </li>
 
           <li className="toprow newburgh"><span className="story-title">Newburgh</span> <span className="story-subtitle">Demolition Without Redevelopment</span>
@@ -163,6 +180,12 @@ const CitiesMenu = () => {
             bubblesToShow = {bubblesToShow}
             onPopClose = {onPopClose}
         />}
+
+        {subPopIsShowing && 
+          <SubPopShell
+            popName={popToShow}
+            onSubPopClose = {onSubPopClose}
+        />}        
 
       </div> {/* End city-story-grid */}
     </div>

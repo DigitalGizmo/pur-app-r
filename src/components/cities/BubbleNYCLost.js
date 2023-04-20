@@ -11,7 +11,9 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
       <header className="bubbles">
         <h1>New York City:<br/>Tenant Relocation Bureau, Inc.</h1>
         <p>Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.</p>
-        <p>Explore the features related to this story, or link to the narrative <a href=""><span class="asterisk">*</span> city story</a>.</p>
+        <p>Explore the features related to this story, or link to the narrative 
+          <a href="/"><span class="asterisk">*</span> city story</a>
+        </p>
       </header>
       <section className="bubble-zone">
         <dl className="bubble1 place">
