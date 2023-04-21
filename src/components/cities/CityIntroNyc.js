@@ -12,7 +12,7 @@ const CityIntroNyc = ({isSubPop}) => {
 
   return (
     <div>
-
+{/*
       {isSubPop ?
         <header className="basic-page">
           <h4><Link to="/themes">Essays -></Link></h4>
@@ -27,32 +27,24 @@ const CityIntroNyc = ({isSubPop}) => {
                 <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
                 alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
               </Link> &gt; &nbsp;
-              <Link to="/themes">Gallery</Link> &gt;
-              City Intro NYC
+              <Link to="">Galleries</Link> &gt;
+              New York City: Visual Intro
             </p>
           </nav>
           <div className="page-title">
-            <h1>City Intro NYC</h1>
-            <h4>suburb</h4>
+            <h1>New York City: Visual Intro</h1>
+            <h4>do we have/want a subhead?</h4>
           </div>
         </header>
-      }
+      }*/}
 
       <section>
         <div className="image-full">
           <img 
-            src="http://dev.picturingurbanrenewal.org/prod-assets/themes/images/slip-cover-top.jpg"
-              alt='meaningful alt text'/>
+            src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/nyc-visual-intro.jpg"
+              alt='static mockup of visual intro'/>
         </div>
 
-        <div className="theme">
-          <p className="caption first">From looking at this photo, what can you tell about the people who once lived here? Source: New York State Archives.</p>
-
-          <article className="narrative">
-            <p className="intro">This essay is based on a series of appraisal photographs taken by the State of New York, 1962-1964. Material culture depicted in these photographs, whether richly appointed domestic interiors or sparsely furnished rooming houses, reveal much about the people who inhabited those spaces.</p>
-
-           </article>
-        </div>
       </section>
     </div>
   );
