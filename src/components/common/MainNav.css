@@ -50,7 +50,6 @@ nav.bottom-menu {
 nav.bottom-menu ul{
   margin: 0;
   padding: 0;
-  position: relative;
 }
 nav.bottom-menu li {
   border-right: thin solid #e4e0c7;

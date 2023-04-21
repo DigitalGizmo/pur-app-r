@@ -155,9 +155,10 @@ ul.list-menu .dim-some {
   margin-bottom: 2em;
 }
 
-.home header h1 {
+.home header h1.home-title {
   font-size: 3em;
-  margin-bottom: 0.25em;
+  margin: 0;
+  padding-top: 1.5em;
 }
 
 .home header p {

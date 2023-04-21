@@ -35,7 +35,7 @@ const Home = () => {
     <div className="home">
       <section className="home-wrapper">
         <header>
-          <h1>Picturing Urban Renewal</h1>
+          <h1 className="home-title">Picturing Urban Renewal</h1>
           <p>Walking through almost any American downtown, you might come across acres of empty space, blocks of parking lots, or places where the architecture shifts dramatically. These are the products of urban renewal. Missing are the people displaced, their homes, 
 and the businesses they once patronized.</p>
 
