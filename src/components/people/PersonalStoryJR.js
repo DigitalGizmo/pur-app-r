@@ -1,5 +1,6 @@
 import React, { useEffect, useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const storyBody = "<p>He faced an uphill fight to win. This Congressional district had twice as many registered Republicans as Democrats. His opponent was a conservative incumbent running for his eighth term. Resnick drove 35,000 miles within the district to meet the voters. He leveraged his wealth as well. He gave away countless pens, buttons, and Chinatown fortune cookies. His most expensive giveaway was a lavishly illustrated booklet that portrayed him as a local boy who made good.</p>" +
 "<p>Immediately after he took office in January 1965, he challenged the seating of Mississippi&rsquo;s entire House delegation because African Americans were unable to vote in that state. A month later, he joined a Congressional delegation on a fact-finding mission to Selma, Alabama, where African American leaders fought to register voters.</p>" +
@@ -21,8 +22,20 @@ const PersonalStory = () => {
   return (
     <div>
       <header className="basic-page">
-        <h1>Joseph Y. Resnick, I&rsquo;m for Joe</h1>
-        <h4>Kingston, NY</h4>
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; &nbsp;
+            <a href="#">People</a> &gt;
+            Joseph Y. Resnick
+          </p>
+        </nav>
+        <div className="page-title">
+          <h1>Joseph Y. Resnick, I&rsquo;m for Joe</h1>
+          <h4>Kingston, NY</h4>
+        </div>
       </header>
 
       <section className="basic-grid">

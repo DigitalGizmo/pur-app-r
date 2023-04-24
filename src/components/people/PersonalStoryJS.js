@@ -34,7 +34,7 @@ const PersonalStory = ({isSubPop}) => {
                 <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
                 alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
               </Link> &gt; &nbsp;
-              <Link to="/people">People</Link> &gt;
+              <a href="#">People</a> &gt;
               Jimmy Strawn
             </p>
           </nav>

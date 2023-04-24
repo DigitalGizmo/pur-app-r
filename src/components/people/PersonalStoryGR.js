@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalState';
+import { Link } from 'react-router-dom';
 
 const storyBody = "<p>Throughout his long career, George deeply believed that cities were essential to human progress, culture, and social improvement. And that they needed to be made better for their residents. Programs like urban renewal were necessary to halt the downward spiral of central cities and to ensure that Americans of all classes and races would be able to live in them. Otherwise, he warned in 1965, the city of the 21st century would be &ldquo;a chaos of low-density, characterless suburbs, spattered with neon signs and hamburger stands&rdquo; surrounded by &ldquo;rapidly proliferating slums in the central core.&rdquo; To avoid this fate, a full national commitment&mdash;with adequate resources&mdash;was essential.</p>" ;
 
@@ -30,9 +31,21 @@ const PersonalStory = () => {
     return (
       <div>
         <header className="basic-page">
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; &nbsp;
+            <a href="#">People</a> &gt;
+            George M. Raymond
+          </p>
+        </nav>
+        <div className="page-title">
           <h1>George M. Raymond, A Passionate Believer in Cities</h1>
           <h4>Kingston, Newburgh, NY</h4>
-        </header>
+        </div>
+      </header>
 
         <section className="basic-grid">
           <div className="image-full">

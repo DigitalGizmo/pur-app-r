@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ViewTips = ({closePop}) => {
 
@@ -20,15 +21,14 @@ const ViewTips = ({closePop}) => {
         <p>Working links are indicated with an orange asterisk<span class="asterisk">*</span>; inks that are not yet implemented will display a tooltip to that effect.</p>
         <p>The features below can be viewed outside the context of the prototype:
           <ul>
-          <li>Places: Kingston: Best Laid Plans</li>
-          <li>Places: Newburgh From The Planner's Perspective</li>
-          <li>People: Bob Haines & Gene Dauner: One Step Ahead Of The Wrecking Ball</li>
-          <li>People: Joseph Y. Resnick, I’m For Joe</li>
-          <li>People: George M. Raymond, A Passionate Believer In Cities</li>
-          <li>People: Carrie Wilson, Contract Buyer</li>
-          <li>People: George M. Raymond, A Passionate Believer In Cities</li>
-          <li>Essay: Buyer Beware: Contract Sales</li>
-          <li>Essay: Root Shock</li>
+          <li>Places: <Link to="/places/kingston"> Kingston: Best Laid Plans</Link></li>
+          <li>Places: <Link to="/places/newburgh"> Newburgh From The Planner's Perspective</Link></li>
+          <li>People: <Link to="/people/haines-dauner"> Bob Haines & Gene Dauner: One Step Ahead Of The Wrecking Ball</Link></li>
+          <li>People: <Link to="/people/joseph-resnick"> Joseph Y. Resnick, I’m For Joe</Link></li>
+          <li>People: <Link to="/people/george-raymond"> George M. Raymond, A Passionate Believer In Cities</Link></li>
+          <li>People: <Link to="/people/carrie-wilson"> Carrie Wilson, Contract Buyer</Link></li>
+          <li>Essay: <Link to="/themes/theme"> Buyer Beware: Contract Sales</Link></li>
+          <li>Essay: <Link to="/themes/theme-fullilove"> Root Shock</Link></li>
         </ul>
       </p>
 

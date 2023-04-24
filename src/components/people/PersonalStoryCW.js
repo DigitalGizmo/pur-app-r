@@ -19,10 +19,23 @@ const PersonalStory = () => {
 
   return (
     <div>
-      <header className="basic-page">
-        <h1>Carrie Wilson, Contract Buyer</h1>
-        <h4>Newburgh, NY</h4>
+    <header className="basic-page">
+        <nav>
+          <p>
+            <Link to="/">
+              <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+              alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+            </Link> &gt; &nbsp;
+            <a href="#">People</a> &gt;
+            Carrie Wilson
+          </p>
+        </nav>
+        <div className="page-title">
+          <h1>Carrie Wilson, Contract Buyer</h1>
+          <h4>Newburgh, NY</h4>
+        </div>
       </header>
+
 
       <section className="basic-grid">
         <div className="image-full">
