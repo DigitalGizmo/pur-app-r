@@ -166,7 +166,7 @@ ul.list-menu .dim-some {
 }
 
 .home header a {
-  color: orange;
+  color: #D17316;
   text-decoration: underline;
 }
 
@@ -555,6 +555,10 @@ img.fullpic {
   margin: 3% auto;
   text-align: left;
   width: 95%;
+}
+
+.sub-pop .theme, .sub-pop .basic-grid {
+  background-color: rgba(53, 53, 38, 1);
 }
 
 .sub-pop header {

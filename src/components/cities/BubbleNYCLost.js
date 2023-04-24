@@ -12,7 +12,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         <h1>New York City:<br/>Tenant Relocation Bureau, Inc.</h1>
         <p>Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.</p>
         <p>Explore the features related to this story, or link to the narrative 
-          <a href="/"><span class="asterisk">*</span> city story</a>
+          <a href="/"> <span class="asterisk">*</span>city story</a>
         </p>
       </header>
       <section className="bubble-zone">
@@ -33,7 +33,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
           </a>
         </dl>
 
-        <dl className="bubble3 people">
+        <dl className="bubble6 people">
         <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("strawn");}}>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">People</dd>
