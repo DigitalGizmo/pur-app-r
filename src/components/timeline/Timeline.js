@@ -146,16 +146,7 @@ const Timeline = () => {
                 thrulines={thrulines}
                 thruIndex={3}
                 lineName="recon"
-                label = "Reconstruction" 
-              />
-            </li>
-            <li>
-              <ThrulineButton
-                setThruline={setThruline}
-                thrulines={thrulines}
-                thruIndex={4}
-                lineName="preserv"
-                label = "Preservation" 
+                label = "Rebuilding" 
               />
             </li>
             <li>
@@ -182,7 +173,7 @@ const Timeline = () => {
                 thrulines={thrulines}
                 thruIndex={7}
                 lineName="public"
-                label = "Urban Renewal P.R." 
+                label = "Gentrification" 
               />
             </li>
 
