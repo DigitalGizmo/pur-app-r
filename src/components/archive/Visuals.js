@@ -92,8 +92,8 @@ const Visuals= () => {
             </Link> &gt; Visuals
           </p>
         </nav>
-        <h4>{numImages} Images | Filter Images</h4>
       </header>
+      <h4 className="visuals-count">{numImages} Images | Filter Images</h4>
 
       <div className="filters">
 

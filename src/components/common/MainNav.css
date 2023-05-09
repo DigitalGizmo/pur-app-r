@@ -14,7 +14,7 @@ nav.main-menu ul {
 }
 
 nav.main-menu li {
-  border-right: thin solid #e4e0c7;
+  border-right: thin solid #898a77;
   display: inline;
   font-size: 0.75em;
   font-weight: 400;
@@ -29,7 +29,7 @@ nav.main-menu li {
   }
 }
 
-nav.main-menu li.last-menu-item, nav.bottom-menu li.last-menu-item {
+nav.main-menu li:last-child, nav.bottom-menu li:last-child {
   border-right: none;
 }
 
@@ -52,7 +52,7 @@ nav.bottom-menu ul{
   padding: 0;
 }
 nav.bottom-menu li {
-  border-right: thin solid #e4e0c7;
+  border-right: thin solid #898a77;
   display: inline;
   font-size: 0.75em;
   padding: 0 2em;
