@@ -64,11 +64,11 @@ and the businesses they once patronized.</p>
         <footer>
           <nav className="bottom-menu">
             <ul>
+              <li><Link to="">Sidewalk Strolls<span className="not-done">Not yet implemented</span></Link></li>
               <li><Link to="">People<span className="not-done">Not yet implemented</span></Link></li>
-              <li><Link to="">Places<span className="not-done">Not yet implemented</span></Link></li>
-              <li><Link to="/archive/visuals">Visuals</Link></li>
               <li><Link to="/timeline">Timeline</Link></li>
-              <li><Link to="">Galleries<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Exhibits<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="/archive/visuals">Visuals</Link></li>
               <li><Link to="/themes">Essays</Link></li>
             </ul>
             <ul className="bottom-secondary">
@@ -76,6 +76,7 @@ and the businesses they once patronized.</p>
               <li><Link to="">Resources for Educators<span className="not-done">Not yet implemented</span></Link></li>
               <li><Link to="">Urban Renewal in Your Community<span className="not-done">Not yet implemented</span></Link></li>
               <li><Link to="">Contact<span className="not-done">Not yet implemented</span></Link></li>
+              <li><Link to="">Site Search<span className="not-done">Not yet implemented</span></Link></li>
             </ul>
           </nav>
         </footer>

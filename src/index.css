@@ -570,10 +570,12 @@ img.fullpic {
   z-index: 30;
 }
 .tips-pop {
-  height: fit-content;
-  margin: 15% auto;
+  height: 75vh;
+  margin: 5% auto;
   padding: 1.25em;
-  width: 60%;
+  width: 75%;
+  overflow-y: scroll;
+  font-size: .9em;
 }
 
 .tips-pop h3 {
@@ -824,6 +826,14 @@ div.city-story ul li.legacy.albany {
 .menu-title:hover {
     color: #D17316;
 }
+
+h4.visuals-count {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 2% 0 0 3%;
+  text-transform: uppercase;
+}
+
 .filters, .images-menu {
   padding: 0.5em 3%;
   font-size: .75em;
@@ -1105,6 +1115,12 @@ audio.personal-story-quote {
 .thru-lines {
   font-size: .85em;
   padding: 1em 0;
+}
+
+@media screen and (max-width: 1070px) {  /*for medium displays, less than or equal to 1070px */
+  .thru-lines {
+    font-size: 0.65em;
+  }
 }
 
 .thru-lines ul li {

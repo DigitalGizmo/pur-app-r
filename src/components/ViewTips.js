@@ -17,18 +17,18 @@ const ViewTips = ({closePop}) => {
         </div>
 
         <h3>Prototype Viewing Tips</h3>
+        <p>Working links are indicated with an orange asterisk<span class="asterisk">*</span>;</p>
+        <p>Links that are not yet implemented will display a tooltip to that effect.</p>
         <p>This prototype is best viewed on a tablet, laptop or desktop computer as it has not yet been optimized for use on a smartphone. Some features may display better by resizing or adjusting the proportions of your browser window &mdash; notably the Albany City Story and the Stroll By: Gas House District.</p>
-        <p>Working links are indicated with an orange asterisk<span class="asterisk">*</span>; inks that are not yet implemented will display a tooltip to that effect.</p>
         <p>The features below can be viewed outside the context of the prototype:
           <ul>
-          <li>Places: <Link to="/places/kingston"> Kingston: Best Laid Plans</Link></li>
-          <li>Places: <Link to="/places/newburgh"> Newburgh From The Planner's Perspective</Link></li>
-          <li>People: <Link to="/people/haines-dauner"> Bob Haines & Gene Dauner: One Step Ahead Of The Wrecking Ball</Link></li>
-          <li>People: <Link to="/people/joseph-resnick"> Joseph Y. Resnick, I’m For Joe</Link></li>
-          <li>People: <Link to="/people/george-raymond"> George M. Raymond, A Passionate Believer In Cities</Link></li>
-          <li>People: <Link to="/people/carrie-wilson"> Carrie Wilson, Contract Buyer</Link></li>
-          <li>Essay: <Link to="/themes/theme"> Buyer Beware: Contract Sales</Link></li>
-          <li>Essay: <Link to="/themes/theme-fullilove"> Root Shock</Link></li>
+          <li>City Story: <Link to="/places/newburgh">Newburgh From The Planner's Perspective</Link>; (NB: this is a partial City Story)</li>
+          <li>People: <Link to="/people/haines-dauner">Bob Haines & Gene Dauner: One Step Ahead Of The Wrecking Ball</Link></li>
+          <li>People: <Link to="/people/joseph-resnick">Joseph Y. Resnick, I’m For Joe</Link></li>
+          <li>People: <Link to="/people/george-raymond">George M. Raymond, A Passionate Believer In Cities</Link></li>
+          <li>People: <Link to="/people/carrie-wilson">Carrie Wilson, Contract Buyer</Link></li>
+          <li>Essay: <Link to="/themes/theme">Buyer Beware: Contract Sales</Link></li>
+          <li>Essay: <Link to="/themes/theme-fullilove">Root Shock</Link></li>
         </ul>
       </p>
 
