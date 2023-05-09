@@ -29,7 +29,7 @@ const HomePop = ({closePop}) => {
           <p>Local governments used federal dollars to seize private property, remove residents, and demolish buildings. The goal was to sell renewal parcels to private redevelopers at a discount. City leaders hoped that new construction would reverse the downward trend in urban population and wealth. But many cities struggled to attract redevelopers.</p>
           <p>Over time, urban renewal became a source of conflict. Owners challenged the seizure of their property. Residents worried about finding new homes. Civil rights advocates opposed the destruction of Black communities. Preservationists acted to protect historic structures. Taxpayers protested rate hikes.</p>
           <p>The federal urban renewal program ended in 1974. But its legacy is still apparent if you know where to look.</p>
-          <p><a href="/">Learn how to research urban renewal in your community.</a></p>
+          <p className="not-done-wrapper"><a href="#"><span className="not-done">Not yet implemented</span>Learn how to research urban renewal in your community</a>.</p>
 
         </article>
       </div> {/* /#slimpop-wrapper */}

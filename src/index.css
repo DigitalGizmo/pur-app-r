@@ -716,10 +716,9 @@ div.city-story ul li span.show-blurb {
   height: 100%;
   left: 0;
   line-height: 1.2em;
-/*  letter-spacing: .05em;*/
-  padding: 3em 0.3em 0.3em 0.3em;
+  padding: 3.25em 0.3em 0.3em 0.3em;
   position: absolute;
-  top: 0px;
+  top: 0;
   visibility: hidden;
   z-index: 1;
 }
@@ -1732,6 +1731,10 @@ div.kingston-scroll iframe {
 }*/
 
 nav.bottom-menu ul li a, ul.bottom-secondary li a, div.city-story-grid ul li a {
+  position: relative;
+}
+
+.not-done-wrapper {
   position: relative;
 }
 
