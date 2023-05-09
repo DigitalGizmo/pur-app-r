@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import PopShell from './PopShell';
 import SubPopShell from './SubPopShell';
 
+import IntroSlides from './IntroSlides';
+
 const CitiesMenu = () => {
   const { changePageName } = useContext(GlobalContext);
   const [popIsShowing, setPopIsShowing] = useState(false);
@@ -39,6 +41,19 @@ const CitiesMenu = () => {
     setSubPopIsShowing(false);
   }
 
+
+  const [isShowing, setIsShowing] = useState(false);
+  const onSlideLinkClick = (event) => {
+    event.preventDefault();
+    setIsShowing(true);
+  }
+  const onSlideClose = () => {
+    setIsShowing(false);
+  }
+
+
+
+
   return (
     <div className="city-story">
       <header className="basic-page">
@@ -61,7 +76,8 @@ const CitiesMenu = () => {
 
           <li className="toprow nyc"><span className="story-title">New York City</span> <span className="story-subtitle">A Suburb in the City</span>
             <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.<br/>
-            <a href="#" onClick={e => { e.preventDefault(); onSubPopLinkClick("intro-nyc");}}>
+            
+            <a href="/" onClick={onSlideLinkClick}>
               <span className="asterisk">*</span>View Visual Intro
             </a></span>
           </li>
@@ -184,7 +200,15 @@ const CitiesMenu = () => {
           <SubPopShell
             popName={popToShow}
             onSubPopClose = {onSubPopClose}
-        />}        
+        />}       
+
+        {isShowing && 
+          <IntroSlides 
+          title="Haines-Dauner"
+          closeSlim = {onSlideClose}
+        />};
+
+
 
       </div> {/* End city-story-grid */}
     </div>
