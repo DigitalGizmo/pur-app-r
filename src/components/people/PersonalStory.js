@@ -30,11 +30,6 @@ const PersonalStory = () => {
   return (
     <div>
       <header className="basic-page">
-        <h1>Bob Haines &amp; Gene Dauner: One Step Ahead of the Wrecking Ball</h1>
-        <h4>Kingston, NY</h4>
-      </header>
-
-      <header className="basic-page">
         <nav>
           <p>
             <Link to="/">
