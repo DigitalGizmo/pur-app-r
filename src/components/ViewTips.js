@@ -22,6 +22,7 @@ const ViewTips = ({closePop}) => {
         <p>This prototype is best viewed on a tablet, laptop or desktop computer as it has not yet been optimized for use on a smartphone. Some features may display better by resizing or adjusting the proportions of your browser window &mdash; notably the Albany City Story and the Stroll By: Gas House District.</p>
         <p>The features below can be viewed outside the context of the prototype:
           <ul>
+          <li>Sidewalk Stroll: <Link to="/places/stuy-stroll">The Gas House District (full screen version)</Link></li>
           <li>City Story: <Link to="/places/newburgh">Newburgh From The Planner's Perspective</Link>; (NB: this is a partial City Story)</li>
           <li>People: <Link to="/people/haines-dauner">Bob Haines & Gene Dauner: One Step Ahead Of The Wrecking Ball</Link></li>
           <li>People: <Link to="/people/joseph-resnick">Joseph Y. Resnick, I’m For Joe</Link></li>

@@ -1546,6 +1546,7 @@ td span {
   margin-top: -10px;
   padding: .1em;
   position: relative;
+  background-color: rgba(53, 53, 38, 0.8);
 }
 
 @media only screen and (max-width: 1000px) {
