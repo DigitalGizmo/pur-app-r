@@ -5,11 +5,12 @@ import {
     gql,
 } from "@apollo/client"; 
 import {motion, AnimatePresence } from 'framer-motion/dist/framer-motion'; // , useAnimation
+import { Link } from 'react-router-dom';
 import StuyFirst from './StuyFirst';
 import StuyFourteenth from './StuyFourteenth';
 import StuyFifteenth from './StuyFifteenth';
 
-const StuyStroll = () => {
+const StuyStroll = ({isSubPop}) => {
   // For street component transitions
   const [pageNum, setPageNum] = useState(1);
   // Direction 0 means 'forward', slide new in from right
@@ -156,9 +157,35 @@ const StuyStroll = () => {
       perspective: 1000,
     }}       
     >
-      <header className="basic-page">
-        <h1>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h1>
-      </header>
+
+      {isSubPop ?
+        <header className="basic-page">
+          <h2>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h2>
+        </header>
+      :
+        <header className="basic-page">
+          <nav>
+            <p>
+              <Link to="/">
+                <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
+                alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
+              </Link> &gt; &nbsp;
+              <h1>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h1>
+            </p>
+          </nav>
+          {/* <div className="page-title">
+            <h1>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h1>
+            <h4>New York, NY</h4>
+          </div> */}
+        </header>
+      }
+
+
+
+
+
+
+
 
       <AnimatePresence initial={false}>
       <motion.div

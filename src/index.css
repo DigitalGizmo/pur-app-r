@@ -1523,6 +1523,7 @@ td span {
 .stroll-page {/* to get bottom nav to the bottom of the page */
   height: calc(100vh - 50px);
   perspective: 100;
+  background-color: #000;
 }
 
 #stroll-wrapper {/*  gashouse main layout elements  */
