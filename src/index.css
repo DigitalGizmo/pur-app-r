@@ -1520,13 +1520,13 @@ td span {
 /* ======================= */
 /*     STY TOWN STROLL     */
 /* ======================= */
-.stroll-page {/* to get bottom nav to the bottom of the page */
-  height: calc(100vh - 50px);
+.stroll-page {/*  to get bottom nav to the bottom of the page  */
+  height: 100vh;
   perspective: 100;
   background-color: #000;
 }
 
-#stroll-wrapper {/*  gashouse main layout elements  */
+#stroll-wrapper {/* gashouse main layout elements  */
   height: calc(100vh - 100px);
   overflow-x: scroll;
   position: absolute;

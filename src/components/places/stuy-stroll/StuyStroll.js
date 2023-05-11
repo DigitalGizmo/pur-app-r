@@ -169,8 +169,8 @@ const StuyStroll = ({isSubPop}) => {
               <Link to="/">
                 <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
                 alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
-              </Link> &gt; &nbsp;
-              <h1>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h1>
+              </Link> &gt; 
+              Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street
             </p>
           </nav>
           {/* <div className="page-title">
