@@ -221,7 +221,7 @@ h2.city-stories  a:hover {
 header.basic-page {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
   font-size: 0.9em;
-  height: 70px;
+/*  height: 70px;*/
   padding: .5em 3%;
   position: relative;
   width: 100%;
@@ -921,9 +921,13 @@ nav.horiz-menu {/* menu page  */
   background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/ghost-city.jpg);
 }
 
-.contract-sales, .who-lived-here, .anti-urban, .root-shock, .ghost-city {
+.blight {
+  background: url(http://dev.picturingurbanrenewal.org/prod-assets/themes/menupics/what-is-blight.jpg);
+}
+
+.contract-sales, .who-lived-here, .anti-urban, .root-shock, .ghost-city, .blight {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .theme { /* themes pages  */
@@ -1726,10 +1730,6 @@ div.kingston-scroll iframe {
 
 /* for "not yet implemented" tool tips -- */
 
-/*li a span.not-done {
-  position: relative;
-}*/
-
 nav.bottom-menu ul li a, ul.bottom-secondary li a, div.city-story-grid ul li a {
   position: relative;
 }
@@ -1749,7 +1749,7 @@ span.not-done {
   box-shadow: 4px 4px 6px 4px #333333a8;
   padding: 0.25em;
   text-transform: lowercase;
-  width: 100px;
+  width: 130px;
 
   z-index: 1; 
   visibility: hidden;
