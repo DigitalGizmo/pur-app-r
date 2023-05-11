@@ -30,7 +30,7 @@ const StuyStroll = () => {
 
   useEffect(() => {
     changePageName('places');
-    document.title = 'Stroll By: Gass House District';
+    document.title = 'Sidewalk Stroll: Gas House District';
   }, [changePageName])
 
   const hoverSpot = (index) => {
@@ -157,7 +157,7 @@ const StuyStroll = () => {
     }}       
     >
       <header className="basic-page">
-        <h1>Stroll By: The Gas House District - 1st Avenue &amp; 14th Street</h1>
+        <h1>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h1>
       </header>
 
       <AnimatePresence initial={false}>
