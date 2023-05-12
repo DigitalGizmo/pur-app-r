@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 const slides = [
-  { imgName: 'dauner-arch-details', 
-    title: 'Thing number 1',
-    caption: 'Architectural details of a building soon to be demolished for Kingston\'s Broadway East Urban Renewal Project, 1967.'
+  { imgName: '01-gasworks', 
+    title: 'The Gas House District',
+    caption: '\“The old Gas House District of the lower East Side, famed in song and story and known two generations ago as one of the toughest neighborhoods in New York, soon will be little more than a memory. The heart of the old waterfront community has been acquired by the Metropolitan Life Insurance Company to provide a site for a modern housing center.\” (New York Times, 1944)'
   },
-  { imgName: 'dauner-1865-bldg', 
-    title: 'Thing number 2',
-    caption: 'The 1865 Building, 74 Broadway, before demolition.'
+  { imgName: '02-peddler', 
+    title: 'Home to European Immigrants',
+    caption: 'By 1940, the Gas House District was less tough and more respectable. It was a place where European immigrants settled before moving on to more prosperous neighborhoods. Italians, Poles, Russians, Austrians, Germans, and Hungarians all made their homes there.'
   },
-  { imgName: 'dauner-1865-bldg-demo', 
-    title: 'Thing number 3',
-    caption: 'The 1865 Building being demolished.'
+  { imgName: '03-moses', 
+    title: 'Slum Clearance',
+    caption: 'The plan to raze the Gas House District originated with Robert Moses. New York City\’s powerful Planning Commissioner described the area as a \“slum.\” In its place, he proposed to build middle-class housing. '
   },
-  { imgName: 'haines-mcmillan-bldg', 
-    title: 'Thing number 4',
-    caption: 'Demolition of McMillan Building, Downtown Kingston, 1967.'
-  },
-  { imgName: 'haines-old-city-hall-pigeons', 
-    title: 'Thing number 5',
-    caption: 'This Bob Haines photograph accompanied an article by Kingston Daily Freeman Reporter Hugh Reynolds, March 18, 1975.'
-  },
-  { imgName: 'dauner-demo-scene', 
-    title: 'Thing number 6',
-    caption: 'Aftermath of demolition.'
+  { imgName: '04-model', 
+    title: 'Private-Public Partnership',
+    caption: 'In 1943, MetLife agreed to build Stuyvesant Town. In return, city officials promised the insurance giant a 25-year tax reduction. This deal ensured a long-term and steady return on investment.'
   },
 ]
 
@@ -76,7 +68,7 @@ const IntroSlides = (props) => {
       </header>
         
         <img 
-          src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[currSlide].imgName}.jpg`}
+          src= {`http://dev.picturingurbanrenewal.org/prod-assets/exhibits/visual-intro-nyc/${slides[currSlide].imgName}.jpg`}
           className="exhibit-img"
           alt='meaningful alt text'/>
       </div>
