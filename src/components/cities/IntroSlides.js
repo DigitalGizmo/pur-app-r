@@ -49,23 +49,40 @@ const IntroSlides = (props) => {
     }
   }
 
+
   return (
     <div className="lightbox"> 
-      <div className="exhibit-pop-wrapper sub-pop ">
+      <div className="exhibit-pop-wrapper sub-pop">
         <header>
-        <div className="pop-nav">
-          <p>
-            {currSlide + 1} of {numSlides} |
-            <a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | 
-            <a href="/" onClick={ (event) => onSlideNext(event) }>Next</a> | 
-            <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
-          </p>
-        </div>
+          
+          <span>{currSlide + 1} of {numSlides} slides</span>
+          {/*<a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | */}
 
-        <h3>Visual Intro: NYC A Suburb in the City</h3> {/*props.title*/}
-        <h1>{slides[currSlide].title}</h1>
-        <p>{slides[currSlide].caption}</p>
-      </header>
+
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="svg-content prev-arrow">
+            <g id="turn-buttons">
+              <a href="/" onClick={ event => onSlidePrev(event) }>
+                <polyline class="arrows" points="60 20 20 50 60 80"></polyline>
+              </a>
+            </g>
+          </svg>
+
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="svg-content next-arrow">
+            <g id="turn-buttons">
+              <a href="/" onClick={ (event) => onSlideNext(event) }>
+                <polyline class="arrows" points="100 20 140 50 100 80"></polyline>
+              </a>
+            </g>
+          </svg>
+
+          <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
+
+          <div className="slide-titles">
+            <h3>Visual Intro: NYC A Suburb in the City</h3> {/*props.title*/}
+            <h1>{slides[currSlide].title}</h1>
+            <p>{slides[currSlide].caption}</p>
+          </div>
+        </header>
         
         <img 
           src= {`http://dev.picturingurbanrenewal.org/prod-assets/exhibits/visual-intro-nyc/${slides[currSlide].imgName}.jpg`}

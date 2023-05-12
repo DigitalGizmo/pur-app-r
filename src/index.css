@@ -672,10 +672,10 @@ img.fullpic {
 }
 
 .exhibit-pop-wrapper {
-/*  background-color: #E6E7D8;  */
   border: 1px solid #686959;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
   color: #E6E7D8;
+  font-size: .9em;
   overflow: auto;
   position: relative;
 }
@@ -683,11 +683,7 @@ img.fullpic {
 .exhibit-pop-wrapper header {
   background-color: rgba(53, 53, 38, 0.8) !important;
   z-index: 12;
-}
-
-
-.exhibit-pop-wrapper h1, .exhibit-pop-wrapper h3, .exhibit-pop-wrapper .pop-nav {
-  margin: 0;
+  position: relative;
 }
 
 .exhibit-pop-wrapper h3 {
@@ -706,6 +702,40 @@ img.fullpic {
   z-index: 1;
 }
 
+.exhibit-pop-wrapper header div.slide-titles {
+  margin-left: 3em;
+  width: 80%;
+  height: 80%;
+}
+
+.slide-titles h1, .slide-titles h3, .slide-titles p {
+  margin: 0;
+}
+.exhibit-pop-wrapper header span {
+  font-size: .8em;
+  position: absolute;
+  top: 2em;
+  left: 10px;
+}
+
+.exhibit-pop-wrapper header svg.prev-arrow {
+  position: absolute;
+  top: 3em;
+  left: 10px;
+}
+
+.exhibit-pop-wrapper header svg.next-arrow {
+  position: absolute;
+  top: 3em;
+  right: 0;
+}
+
+.exhibit-pop-wrapper header a {
+  font-size: .8em;
+  position: absolute;
+  top: 2em;
+  right: 10px;
+}
 /*   ===================   */
 /*     CITY STORY GRID     */
 /*   ===================   */
