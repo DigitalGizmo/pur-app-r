@@ -58,27 +58,24 @@ const IntroSlides = (props) => {
           <span>{currSlide + 1} of {numSlides} slides</span>
           {/*<a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | */}
 
+          <a href="/" onClick={ event => onSlidePrev(event) } className="prev-arrow">
+            <img 
+              src= {`http://dev.picturingurbanrenewal.org/prod-assets/common/arrow-prev.png`}
+              className=""
+              alt='previous slide'/>
+          </a>
 
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="svg-content prev-arrow">
-            <g id="turn-buttons">
-              <a href="/" onClick={ event => onSlidePrev(event) }>
-                <polyline class="arrows" points="60 20 20 50 60 80"></polyline>
-              </a>
-            </g>
-          </svg>
+          <a href="/" onClick={ (event) => onSlideNext(event) } className="next-arrow">
+            <img 
+              src= {`http://dev.picturingurbanrenewal.org/prod-assets/common/arrow-next.png`}
+              className=""
+              alt='next slides'/>
+          </a>
 
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" class="svg-content next-arrow">
-            <g id="turn-buttons">
-              <a href="/" onClick={ (event) => onSlideNext(event) }>
-                <polyline class="arrows" points="100 20 140 50 100 80"></polyline>
-              </a>
-            </g>
-          </svg>
-
-          <a href="/" onClick={ event => onSlimClose(event) }>Close</a>
+          <a href="/" onClick={ event => onSlimClose(event) } className="close">Close</a>
 
           <div className="slide-titles">
-            <h3>Visual Intro: NYC A Suburb in the City</h3> {/*props.title*/}
+            <h3>Visual Intro: NYC - A Suburb in the City</h3> {/*props.title*/}
             <h1>{slides[currSlide].title}</h1>
             <p>{slides[currSlide].caption}</p>
           </div>

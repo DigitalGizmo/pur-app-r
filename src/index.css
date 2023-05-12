@@ -718,19 +718,23 @@ img.fullpic {
   left: 10px;
 }
 
-.exhibit-pop-wrapper header svg.prev-arrow {
+.exhibit-pop-wrapper header a img {
+  width: 2em;
+  height: auto;
+}
+.exhibit-pop-wrapper header a.prev-arrow {
   position: absolute;
   top: 3em;
   left: 10px;
 }
 
-.exhibit-pop-wrapper header svg.next-arrow {
+.exhibit-pop-wrapper header a.next-arrow {
   position: absolute;
   top: 3em;
-  right: 0;
+  right: 10px;
 }
 
-.exhibit-pop-wrapper header a {
+.exhibit-pop-wrapper header a.close {
   font-size: .8em;
   position: absolute;
   top: 2em;
