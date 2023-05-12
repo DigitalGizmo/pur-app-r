@@ -32,7 +32,6 @@ const PopShell = ({bubblesToShow, onPopClose}) => {
     }
   
     return (
-    <div className="city-lightbox-wrapper">
       <div className="city-lightbox"> 
         {/* <div className="city-pop-wrapper entry-pop"> */}
         <div className="city-pop">
@@ -55,7 +54,6 @@ const PopShell = ({bubblesToShow, onPopClose}) => {
 
         </div>
       </div>
-    </div>
   );
 } // end class
 

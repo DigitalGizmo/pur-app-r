@@ -398,17 +398,17 @@ img.fullpic {
 }
 
 /* for City Story Grid */
-.city-lightbox-wrapper {
+/*.city-lightbox-wrapper {
   position: relative;
 }
-
+*/
 .city-lightbox {
-  bottom: 38px;
   background-color: rgba(53, 53, 38, 0.9);
   left: 0;
   position: absolute;
-  top: 70px;
+  top: 0;
   width: 100%;
+  height: 100%;
   z-index: 99;
 }
 
@@ -433,38 +433,38 @@ img.fullpic {
 
 .bubble-zone dl.bubble1 {
   position: absolute;
-  top: -40vh;
-  left: 15vw;
+  top: -30vh;
+  left: 70vw;
 }
 
 .bubble-zone dl.bubble2 {
   position: absolute;
-  top: -50vh;
+  top: -35vh;
   left: 40vw;
 }
 
 .bubble-zone dl.bubble3 {
   position: absolute;
-  top: 10vh;
-  left: 30vw;
+  top: -3vh;
+  left: 35vw;
 }
 
 .bubble-zone dl.bubble4 {
   position: absolute;
-  top: 20vh;
-  left: 5vw;
+  top: 15vh;
+  left: 25vw;
 }
 
 .bubble-zone dl.bubble5 {
   position: absolute;
-  top: -60vh;
+  top: -15vh;
   left: 50vw;
 }
 
 .bubble-zone dl.bubble6 {
   position: absolute;
   top: 0vh;
-  left: 65vw;
+  left: 60vw;
 }
 
 .bubble-zone dl.bubble7 {
@@ -1773,6 +1773,10 @@ div.kingston-scroll iframe {
 /* for "not yet implemented" tool tips -- */
 
 nav.bottom-menu ul li a, ul.bottom-secondary li a, div.city-story-grid ul li a {
+  position: relative;
+}
+
+.city-story-grid {
   position: relative;
 }
 
