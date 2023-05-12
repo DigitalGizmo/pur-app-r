@@ -74,7 +74,7 @@ const CitiesMenu = () => {
             <span className="show-blurb">In the mid-20th century, thousands of neighborhoods in cities across the nation were demolished and rebuilt. Over a million people were displaced. Most of these redevelopment projects were federally funded and locally planned.</span>
           </li>
 
-          <li className="toprow nyc"><span className="story-title">New York City</span> <span className="story-subtitle">A Suburb in the City</span>
+          <li className="toprow nyc"><span className="story-title"><span className="asterisk">*</span>New York City</span> <span className="story-subtitle">A Suburb in the City</span>
             <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. From the beginning, this massive apartment complex was controversial. But it served as a model for the federal urban renewal program.<br/>
             
             <a href="/" onClick={onSlideLinkClick}>
@@ -103,11 +103,11 @@ const CitiesMenu = () => {
             <a href="#">View Visual Intro<span className="not-done">Not yet implemented</span></a></span>
           </li>
 
-          <li className="roots nyc"><span className="story-title">Precursor to Urban Renewal</span>
+          <li className="roots nyc"><span className="story-title"><span className="asterisk">*</span>Precursor to Urban Renewal</span>
             <span className="show-blurb">City government empowered Metropolitan Life Insurance Co. to seize land for construction of Stuyvesant Town. Lawsuits followed.<br/>
             <a href="#">Read story<span className="not-done">Not yet implemented</span></a> | <a href="#" 
               onClick={e => { e.preventDefault(); onPopLinkClick("nyc-lost");}}
-            ><span className="asterisk">*</span> Preview story</a></span>
+            ><span className="asterisk">*</span>Preview story</a></span>
           </li>
 
           <li className="roots newburgh"><span className="story-title">"Negro Removal"</span>
@@ -147,12 +147,12 @@ const CitiesMenu = () => {
             <a href="#">Read story<span className="not-done">Not yet implemented</span></a> | <a href="#">Preview story<span className="not-done">Not yet implemented</span></a></span>
           </li>
 
-          <li className="lost albany"><span className="story-title">Reaction to Redevelopment</span>
+          <li className="lost albany"><span className="story-title"><span className="asterisk">*</span>Reaction to Redevelopment</span>
             <span className="show-blurb">City leaders sued to prevent seizure of 98.5 acres in downtown Albany, but acquiescence best describes the response of soon-to-be-displaced residents and business owners.<br/> 
-            <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html"><span class="asterisk">*</span> Read story</a> | 
+            <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html"><span class="asterisk">*</span>Read story</a> | 
             <a href="#" 
               onClick={e => { e.preventDefault(); onPopLinkClick("albany-lost");}}
-            ><span className="asterisk">*</span> Preview story</a></span>
+            ><span className="asterisk">*</span>Preview story</a></span>
           </li>
 
 

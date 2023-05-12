@@ -398,9 +398,13 @@ img.fullpic {
 }
 
 /* for City Story Grid */
+.city-lightbox-wrapper {
+  position: relative;
+}
+
 .city-lightbox {
   bottom: 38px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(53, 53, 38, 0.9);
   left: 0;
   position: absolute;
   top: 70px;
@@ -429,50 +433,50 @@ img.fullpic {
 
 .bubble-zone dl.bubble1 {
   position: absolute;
-  top: 10px;
-  left: 15%;
+  top: -40vh;
+  left: 15vw;
 }
 
 .bubble-zone dl.bubble2 {
   position: absolute;
-  top: 50px;
-  left: 40%;
+  top: -50vh;
+  left: 40vw;
 }
 
 .bubble-zone dl.bubble3 {
   position: absolute;
-  top: 250px;
-  left: 30%;
+  top: 10vh;
+  left: 30vw;
 }
 
 .bubble-zone dl.bubble4 {
   position: absolute;
-  top: 200px;
-  left: 5%;
+  top: 20vh;
+  left: 5vw;
 }
 
 .bubble-zone dl.bubble5 {
   position: absolute;
-  top: -180px;
-  left: 50%;
+  top: -60vh;
+  left: 50vw;
 }
 
 .bubble-zone dl.bubble6 {
   position: absolute;
-  top: -50px;
-  left: 65%;
+  top: 0vh;
+  left: 65vw;
 }
 
 .bubble-zone dl.bubble7 {
   position: absolute;
-  top: 100px;
-  left: 75%;
+  top: 10vh;
+  left: 75vw;
 }
 
 .bubble-zone dl.bubble8 {
   position: absolute;
-  top: 180px;
-  left: 55%;
+  top: 80vh;
+  left: 55vw;
 }
 
 .bubble-zone dl dt {

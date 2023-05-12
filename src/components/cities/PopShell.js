@@ -32,26 +32,28 @@ const PopShell = ({bubblesToShow, onPopClose}) => {
     }
   
     return (
-    <div className="city-lightbox"> 
-      {/* <div className="city-pop-wrapper entry-pop"> */}
-      <div className="city-pop">
-        <div className="pop-nav">
-          <p>
-            <a href="/" onClick={ event => onPopClose(event) }>Close</a>
-          </p>
+    <div className="city-lightbox-wrapper">
+      <div className="city-lightbox"> 
+        {/* <div className="city-pop-wrapper entry-pop"> */}
+        <div className="city-pop">
+          <div className="pop-nav">
+            <p>
+              <a href="/" onClick={ event => onPopClose(event) }>Close</a>
+            </p>
+          </div>
+
+          {whichBubbles(bubblesToShow)}
+          {/* <BubbleAlbanyLost
+            onSubPopLinkClick={onSubPopLinkClick}
+          /> */}
+
+          {subPopIsShowing && 
+            <SubPopShell
+              popName={popToShow}
+              onSubPopClose = {onSubPopClose}
+          />}
+
         </div>
-
-        {whichBubbles(bubblesToShow)}
-        {/* <BubbleAlbanyLost
-          onSubPopLinkClick={onSubPopLinkClick}
-        /> */}
-
-        {subPopIsShowing && 
-          <SubPopShell
-            popName={popToShow}
-            onSubPopClose = {onSubPopClose}
-        />}
-
       </div>
     </div>
   );
