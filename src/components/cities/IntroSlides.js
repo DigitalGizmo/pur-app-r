@@ -49,7 +49,8 @@ const IntroSlides = (props) => {
 
   return (
     <div className="lightbox"> 
-      <div className="slimpop-wrapper entry-pop">
+      <div className="exhibit-pop-wrapper sub-pop ">
+        <header>
         <div className="pop-nav">
           <p>
             {currSlide + 1} of {numSlides} |
@@ -59,13 +60,14 @@ const IntroSlides = (props) => {
           </p>
         </div>
 
-        <header>
-          <h1>Slide Show: {props.title}</h1> {/*props.title*/}
-          <p>{slides[currSlide].caption}</p>
-        </header>
+        <h3>Visual Intro: NYC A Suburb in the City</h3> {/*props.title*/}
+        <h1>Slide Title Goes Here</h1>
+        <p>{slides[currSlide].caption}</p>
+      </header>
         
         <img 
           src= {`http://dev.picturingurbanrenewal.org/prod-assets/archive/fullpics/${slides[currSlide].imgName}.jpg`}
+          className="exhibit-img"
           alt='meaningful alt text'/>
       </div>
     </div>

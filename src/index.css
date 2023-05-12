@@ -218,7 +218,7 @@ h2.city-stories  a:hover {
 /*      SHARED LAYOUT     */
 /* ====================== */
 
-header.basic-page {/* for menu pages, personal stories, essays, etc */
+header.basic-page, div.exhibit-pop-wrapper header {/* for menu pages, personal stories, essays, etc */
   background-color: #686959;
   font-size: 0.9em;
 /*  height: 70px;*/
@@ -666,6 +666,42 @@ img.fullpic {
   font-size: .75em;
   line-height: 1.2em;
 }
+
+.exhibit-pop-wrapper {
+/*  background-color: #E6E7D8;  */
+  border: 1px solid #686959;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+  color: #E6E7D8;
+  overflow: auto;
+  position: relative;
+}
+
+.exhibit-pop-wrapper header {
+  background-color: rgba(53, 53, 38, 0.8) !important;
+  z-index: 12;
+}
+
+
+.exhibit-pop-wrapper h1, .exhibit-pop-wrapper h3, .exhibit-pop-wrapper .pop-nav {
+  margin: 0;
+}
+
+.exhibit-pop-wrapper h3 {
+  font-size: .9em;
+  color: #B25900;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+.exhibit-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 /*   ===================   */
 /*     CITY STORY GRID     */
 /*   ===================   */
