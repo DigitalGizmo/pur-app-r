@@ -404,25 +404,42 @@ img.fullpic {
 */
 .city-lightbox {
   background-color: rgba(53, 53, 38, 0.9);
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
   z-index: 99;
-}
-
-.city-pop header.bubbles {
-  width: 40%;
 }
 
 .city-pop {
   padding: 2% 3%;
-  text-align: left;
 }
 
 .bubble-zone {
   position: relative;
+}
+
+
+.city-pop header.bubbles {
+  font-size: .9em;
+  position: absolute;
+  color: #E4E0C7;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  width: 40%;
+  padding: 1em;
+  background-color: #686959;
+  margin: auto
+}
+
+.city-pop header.bubbles h1 {
+  margin: .5em 0;
+}
+
+.city-pop header.bubbles p a {
+  color: #D17316;
 }
 
 .bubble-zone dl {
@@ -433,50 +450,50 @@ img.fullpic {
 
 .bubble-zone dl.bubble1 {
   position: absolute;
-  top: -30vh;
-  left: 70vw;
+  top: 4vh;
+  left: 0vw;
 }
 
 .bubble-zone dl.bubble2 {
   position: absolute;
-  top: -35vh;
-  left: 40vw;
+  top: 22vh;
+  left: 5vw;
 }
 
 .bubble-zone dl.bubble3 {
   position: absolute;
-  top: -3vh;
-  left: 35vw;
+  top: 45vh;
+  left: 3vw;
 }
 
 .bubble-zone dl.bubble4 {
   position: absolute;
-  top: 15vh;
-  left: 25vw;
+  top: 62vh;
+  left: 20vw;
 }
 
 .bubble-zone dl.bubble5 {
   position: absolute;
-  top: -15vh;
-  left: 50vw;
+  top: 45vh;
+  left: 40vw;
 }
 
 .bubble-zone dl.bubble6 {
   position: absolute;
-  top: 0vh;
-  left: 60vw;
+  top: 60vh;
+  left: 58vw;
 }
 
 .bubble-zone dl.bubble7 {
   position: absolute;
-  top: 10vh;
-  left: 75vw;
+  top: 35vh;
+  left: 70vw;
 }
 
 .bubble-zone dl.bubble8 {
   position: absolute;
-  top: 20vh;
-  left: 55vw;
+  top: 15vh;
+  left: 72vw;
 }
 
 .bubble-zone dl dt {
@@ -503,7 +520,7 @@ img.fullpic {
 }
 
 .bubble-zone dl.visual dt img {
-  border: 2px solid deeppink;
+  border: 2px solid #9c27b0;
 }
 
 .bubble-zone dl.gallery dt img {
@@ -555,7 +572,7 @@ img.fullpic {
 
 /* Like entnry-pop for sub pop - Don */
 .sub-pop {
-  height: 95%;
+  height: 85%;
   margin: 3% auto;
   text-align: left;
   width: 95%;

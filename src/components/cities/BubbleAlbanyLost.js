@@ -8,38 +8,31 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
 
   return (
     <div>
-      <header className="bubbles">
-        <h1>Albany:<br/>Reaction to Redevelopment</h1>
-        <p>The mayor sued to prevent the seizure of land. But most area residents responded with resignation.</p>
-        <p>Explore the features related to this story, or link to the narrative <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html"><span class="asterisk">*</span> city story</a>.</p>
-      </header>
       <section className="bubble-zone">
+
+        <header className="bubbles">
+          <h1>Albany: Reaction to Redevelopment</h1>
+          <p>The City sued to prevent demolition of a downtown neighborhood. But Albany residents were divided over the plan to build the Empire State Plaza.</p>
+          <p>Explore the features related to this story, or link to the city story: <a href="https://dev.picturingurbanrenewal.org/wireframe/city-stories/albany-displaced.html">* Reaction to Redevelopment</a></p>
+        </header>
+
         <dl className="bubble1 place">
-        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("stroll");}}>
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jay-street.jpg" alt="bubble"/></dt>
-            <dd className="feature-title">Places</dd>
-            <dd>Stroll along the sidewalks of pre-demolition Albany.</dd>
+            <dd className="feature-title">Sidewalk Strolls</dd>
+            <dd>Stroll Albany&apos;s sidewalks, peek inside homes and businesses that would soon be demolished</dd>
           </a>
         </dl>
 
-        <dl className="bubble2 essay">
-        {/* <a href="/" onClick={onSubPopLinkClick(e, "campbell")}> */}
-        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("campbell");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble"/></dt>
-            <dd className="feature-title"><span class="asterisk">*</span>Essays</dd>
-            <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
-          </a>
-        </dl>
-
-        <dl className="bubble3 people">
+        <dl className="bubble2 people">
           <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("strawn");}}>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jimmy-strawn.jpg" alt="bubble"/></dt>
             <dd className="feature-title"><span class="asterisk">*</span>People</dd>
-            <dd>Jimmy Strawn: The Sultan of Swing</dd>
+            <dd>Jimmy Strawn:<br/>The Sultan of Swing</dd>
           </a>
         </dl>
 
-        <dl className="bubble4 essay">
+        <dl className="bubble3 essay">
           <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("rootshock");}}>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/root-shock.jpg" alt="bubble"/></dt>
             <dd className="feature-title"><span class="asterisk">*</span>Essays</dd>
@@ -47,34 +40,42 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
           </a>
         </dl>
 
+        <dl className="bubble7 essay">
+        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("campbell");}}>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/NYSA_interior.jpg" alt="bubble"/></dt>
+            <dd className="feature-title"><span class="asterisk">*</span>Essays</dd>
+            <dd>Who Lived Here? The lives of Albany residents are revealed in photos.</dd>
+          </a>
+        </dl>
+
         <dl className="bubble5 visual">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/demolition.jpg" alt="bubble"/></dt>
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/mutin-rendering66.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Visuals</dd>
-            <dd>Watch a time-lapse video of the demolition</dd>
+            <dd>Designing the South Mall&mdash;See the architects&apos; vision for the South Mall</dd>
           </a>
         </dl>
 
         <dl className="bubble6 people">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/Mae-Carlson.jpg" alt="bubble"/></dt>
             <dd className="feature-title">People</dd>
-            <dd>Mae Carlson: Albany's Rooming House Queen</dd>
+            <dd>Mae Carlson: Albany&apos;s Rooming House Queen</dd>
           </a>
         </dl>
 
-        <dl className="bubble7 gallery">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
-            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/neighborhood-map.jpg" alt="bubble"/></dt>
-            <dd className="feature-title">Galleries</dd>
-            <dd>See the old neighborhoods lost to make way for the Empire State Plaza.</dd>
+        <dl className="bubble4 gallery">
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+            <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/demo.jpg" alt="bubble"/></dt>
+            <dd className="feature-title">Exhibits</dd>
+            <dd>The Demolition and Reconstruction of Albany&apos;s South Mall area</dd>
           </a>
         </dl>
 
         <dl className="bubble8 timeline">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}>
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("Timeline");}}>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/timeline.jpg" alt="bubble"/></dt>
-            <dd className="feature-title">Timeline</dd>
+            <dd className="feature-title"><span class="asterisk">*</span>Timeline</dd>
             <dd>Explore the protest events that took place in response to the proposed demolition.</dd>
           </a>
         </dl>
