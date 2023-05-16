@@ -30,9 +30,9 @@ const StuyStroll = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('places');
+    if (!isSubPop) { changePageName('places');}
     document.title = 'Sidewalk Stroll: Gas House District';
-  }, [changePageName])
+  }, [changePageName, isSubPop])
 
   const hoverSpot = (index) => {
     let newHighlights = [...BASE_HIGHLIGHTS];
