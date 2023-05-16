@@ -33,7 +33,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble6 people">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/robt-moses.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">People</dd>
             <dd>Robert Moses: The Mastermind of Stuyvesant Town</dd>
@@ -41,7 +41,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble3 people">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/ecker.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">People</dd>
             <dd>Frederick Ecker: A Prudent Investment</dd>
@@ -49,7 +49,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble4 essay">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/blight.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">Essay</dd>
             <dd>What is Blight?</dd>
@@ -57,7 +57,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble7 people">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/charles-abrams.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">People</dd>
             <dd>Charles Abrams and the &ldquo;Walled City&rdquo;</dd>
@@ -65,7 +65,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble8 gallery">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/mapping-blight.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title">Exhibits</dd>
             <dd>Mapping Blight</dd>

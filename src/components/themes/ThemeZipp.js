@@ -6,16 +6,16 @@ const ThemeZipp = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('themes');
+    if (!isSubPop) { changePageName('themes');}
     document.title = 'Essay: Ghost City';
-  }, [changePageName])
+  }, [changePageName, isSubPop])
 
   return (
     <div>
 
       {isSubPop ?
       <header className="basic-page">
-        <h4><Link to="/themes">Essays -></Link></h4>
+        <h4><Link to="/themes">Essays</Link></h4>
         <h2>Ghost City: MetLife&rsquo;s Gas House District Photos</h2>
         <h4>Samuel Zipp, Director of the Urban Studies Program, Professor of American Studies and Urban Studies, Brown University</h4>
       </header>

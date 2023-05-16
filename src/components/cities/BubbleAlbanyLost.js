@@ -17,7 +17,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </header>
 
         <dl className="bubble1 place">
-        <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+        <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/jay-street.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Sidewalk Strolls</dd>
             <dd>Stroll Albany&apos;s sidewalks, peek inside homes and businesses that would soon be demolished</dd>
@@ -49,7 +49,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble5 visual">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/mutin-rendering66.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Visuals</dd>
             <dd>Designing the South Mall&mdash;See the architects&apos; vision for the South Mall</dd>
@@ -57,7 +57,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble6 people">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/Mae-Carlson.jpg" alt="bubble"/></dt>
             <dd className="feature-title">People</dd>
             <dd>Mae Carlson: Albany&apos;s Rooming House Queen</dd>
@@ -65,7 +65,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble4 gallery">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("");}}><span className="not-done">Not yet implemented</span>
+          <a href="#"><span className="not-done">Not yet implemented</span>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/demo.jpg" alt="bubble"/></dt>
             <dd className="feature-title">Exhibits</dd>
             <dd>The Demolition and Reconstruction of Albany&apos;s South Mall area</dd>
@@ -73,9 +73,9 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
         </dl>
 
         <dl className="bubble8 timeline">
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("Timeline");}}>
+          <a href="#">
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/timeline.jpg" alt="bubble"/></dt>
-            <dd className="feature-title"><span class="asterisk">*</span>Timeline</dd>
+            <dd className="feature-title">Timeline</dd>
             <dd>Explore the protest events that took place in response to the proposed demolition.</dd>
           </a>
         </dl>

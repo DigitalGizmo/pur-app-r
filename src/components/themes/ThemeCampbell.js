@@ -6,16 +6,16 @@ const ThemeCampbell = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('themes');
+    if (!isSubPop) { changePageName('themes');}
     document.title = 'Essay: Who Lived Here?';
-  }, [changePageName])
+  }, [changePageName, isSubPop])
 
   return (
     <div>
 
       {isSubPop ?
         <header className="basic-page">
-          <h4><Link to="/themes">Essays -></Link></h4>
+          <h4><Link to="/themes">Essays</Link></h4>
           <h2>Who Lived Here? The Lives of Albany Residents Revealed in Photographs</h2>
           <h4>Robin Campbell, Chief Curator, New York State Bureau of Historic Sites, retired. Adjunct Professor of History, University of Albany, SUNY</h4>
         </header>

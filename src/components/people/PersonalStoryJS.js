@@ -13,16 +13,16 @@ const PersonalStory = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('people');
+    if (!isSubPop) { changePageName('people');}
     document.title = 'Personal Story - Jimmy Strawn';
-  }, [changePageName])
+  }, [changePageName, isSubPop])
 
   return (
     <div>
 
       {isSubPop ?
         <header className="basic-page">
-          <h4><Link to="/people">People -></Link></h4>
+          <h4><Link to="/people">People</Link></h4>
           <h2>Jimmy Strawn, The Sultan of Swing</h2>
           <h4>Albany, NY</h4>
         </header>

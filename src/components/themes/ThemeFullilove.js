@@ -6,16 +6,16 @@ const ThemeFullilove = ({isSubPop}) => {
   const { changePageName } = useContext(GlobalContext);
 
   useEffect(() => {
-    changePageName('themes');
+    if (!isSubPop) { changePageName('themes');}
     document.title = 'Essay: Root Shock';
-  }, [changePageName])
+  }, [changePageName, isSubPop])
 
   return (
     <div>
 
       {isSubPop ?
         <header className="basic-page">
-          <h4><Link to="/themes">Essays -></Link></h4>
+          <h4><Link to="/themes">Essays</Link></h4>
           <h2>Root Shock</h2>
           <h4>Mindy Thompson Fullilove, MD, Professor of Urban Policy and Health, The New School</h4>
         </header>
