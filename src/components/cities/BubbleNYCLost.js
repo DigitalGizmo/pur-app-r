@@ -25,7 +25,7 @@ const BubbleAlbanyLost = ({onSubPopLinkClick}) => {
 
         <dl className="bubble2 essay">
         {/* <a href="/" onClick={onSubPopLinkClick(e, "campbell")}> */}
-          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("ThemeZipp");}}>
+          <a href="/" onClick={e => { e.preventDefault(); onSubPopLinkClick("theme-zipp");}}>
             <dt><img src="http://dev.picturingurbanrenewal.org/prod-assets/city-stories/gasworks.jpg" alt="bubble 2"/></dt>
             <dd className="feature-title"><span className="asterisk">*</span>Essays</dd>
             <dd>Ghost City: MetLife&apos;s Gas House District Photos</dd>

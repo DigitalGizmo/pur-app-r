@@ -3,6 +3,7 @@ import ThemeCampbell from '../themes/ThemeCampbell';
 import PersonalStoryJS from '../people/PersonalStoryJS'
 import StuyStroll from '../places/stuy-stroll/StuyStroll'
 import ThemeFullilove from '../themes/ThemeFullilove';
+import ThemeZipp from '../themes/ThemeZipp';
 import CityIntroNyc from './CityIntroNyc';
 
 
@@ -16,6 +17,8 @@ const SubPopShell = ({popName, onSubPopClose}) => {
         return  <PersonalStoryJS isSubPop = {true}/>
       case "stroll":
         return  <StuyStroll isSubPop = {true}/>
+      case "theme-zipp":
+        return  <ThemeZipp isSubPop = {true}/>
       case "rootshock":
         return  <ThemeFullilove isSubPop = {true}/>
       case "intro-nyc":
