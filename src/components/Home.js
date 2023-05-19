@@ -42,7 +42,7 @@ and the businesses they once patronized.</p>
           <p>This website aims to put these people and places back in the picture and to explore the short- and longer-term effects of this controversial policy.&nbsp;
           <a href='/' 
               onClick={e => { e.preventDefault(); setShowingHomePop(true);}}
-            >Read more&hellip;</a></p>
+            ><span className="asterisk">*</span>Read more&hellip;</a></p>
         </header>
         <p>Begin your visit</p>
 
@@ -50,15 +50,16 @@ and the businesses they once patronized.</p>
           <Link to="/cities">4 Cities / 4 Stories</Link>
         </h2>
 
-        <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
-              alt='NEH logo' className="neh-logo"/>
-
         <p className="tips">    
           <a 
               href='/' 
               onClick={e => { e.preventDefault(); setShowingViewTips(true);}}
-            >[Prototype Viewing Tips]</a>
+            >[Viewing This Prototype]</a>
         </p>
+        
+        <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/NEH-Preferred-Seal-Transparent820.png"
+              alt='NEH logo' className="neh-logo"/>
+
       </section>
 
         <footer>
@@ -66,10 +67,10 @@ and the businesses they once patronized.</p>
             <ul>
               <li><Link to="">Sidewalk Strolls<span className="not-done">Not yet implemented</span></Link></li>
               <li><Link to="">People<span className="not-done">Not yet implemented</span></Link></li>
-              <li><Link to="/timeline">Timeline</Link></li>
+              <li><Link to="/timeline"><span className="asterisk">*</span>Timeline</Link></li>
               <li><Link to="">Exhibits<span className="not-done">Not yet implemented</span></Link></li>
-              <li><Link to="/archive/visuals">Visuals</Link></li>
-              <li><Link to="/themes">Essays</Link></li>
+              <li><Link to="/archive/visuals"><span className="asterisk">*</span>Visuals</Link></li>
+              <li><Link to="/themes"><span className="asterisk">*</span>Essays</Link></li>
             </ul>
             <ul className="bottom-secondary">
               <li><Link to="">About<span className="not-done">Not yet implemented</span></Link></li>
