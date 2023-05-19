@@ -160,6 +160,7 @@ const StuyStroll = ({isSubPop}) => {
 
       {isSubPop ?
         <header className="basic-page">
+          <h5>1943</h5>
           <h2>Sidewalk Stroll: The Gas House District</h2>
         </header>
       :

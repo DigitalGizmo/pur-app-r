@@ -10,7 +10,7 @@ const BottomNav = (props) => {
     <nav className="bottom-menu">
       <ul>
         <li className={ currPage === 'cities' ? 'selected' : ''}>
-          <Link to="/cities">4 Cities/4 Stories</Link>
+          <Link to="/cities"><span className="asterisk">*</span>4 Cities/4 Stories</Link>
         </li>
         <li className={ currPage === 'places' ? 'selected' : ''}>
           <a href="#">Sidewalk Strolls<span className="not-done">Not yet implemented</span></a>
@@ -19,13 +19,13 @@ const BottomNav = (props) => {
           <a href="#">People<span className="not-done">Not yet implemented</span></a>
         </li>        
         <li className={ currPage === 'timeline' ? 'selected' : ''}>
-          <Link to="/timeline">Timeline</Link>
+          <Link to="/timeline"><span className="asterisk">*</span>Timeline</Link>
         </li>
         <li className={ currPage === 'galleries' ? 'selected' : ''}>
           <a href="#">Exhibits<span className="not-done">Not yet implemented</span></a>
         </li>
         <li className={ currPage === 'visuals' ? 'selected' : ''}>
-          <Link to="/archive/visuals">Visuals</Link>
+          <Link to="/archive/visuals"><span className="asterisk">*</span>Visuals</Link>
         </li>
         <li className={ currPage === 'themes' ? 'selected' : ''}>
           <Link to="/themes"

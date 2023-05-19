@@ -262,10 +262,15 @@ header.basic-page div.page-title {
     top: 70px;
     left: 0;
     width: 100%;
+    z-index: 105;
 }
 
-header.basic-page h1, header.basic-page h2, header.basic-page h3, header.basic-page h4 {
+header.basic-page h1, header.basic-page h2, header.basic-page h3, header.basic-page h4, header.basic-page h5 {
   margin: 0;
+}
+
+header.basic-page h5 {
+  color: #D17316;
 }
 
 .basic-grid {/* used in Personal Story pages, Theme pages */
@@ -307,7 +312,8 @@ article.text-side {
 
 p.intro {
  font-size: 1.25em;
- line-height: 1.25em; 
+ line-height: 1.25em;
+ margin-top: 3.5em;
 }
 
 .image-full {
@@ -763,7 +769,7 @@ img.fullpic {
 div.city-story ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 17vh);
+  grid-template-rows: repeat(5, 16vh);
   grid-gap: 4px;
   list-style-type: none;
   font-size: .8em;
@@ -772,7 +778,6 @@ div.city-story ul {
 
 div.city-story ul li {
   background-size: 20vw;
-/*  font-size: 1.15em;*/
   line-height: 1em;
   outline: 1px solid #68695A;
   padding: .3em;
@@ -833,6 +838,9 @@ div.city-story ul li:hover span.story-title, div.city-story ul li:hover span.sto
   color: #353526;
 }
 
+div.city-story ul li:hover span.story-title a {
+  color: #B25900;
+}
 /* background images */
 div.city-story ul li.roots.nyc {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-roots.jpg");
