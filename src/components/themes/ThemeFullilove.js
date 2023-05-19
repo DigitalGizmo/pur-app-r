@@ -7,7 +7,7 @@ const ThemeFullilove = ({isSubPop}) => {
 
   useEffect(() => {
     if (!isSubPop) { changePageName('themes');}
-    document.title = 'Essay: Root Shock';
+    document.title = 'Essay - Root Shock';
   }, [changePageName, isSubPop])
 
   return (

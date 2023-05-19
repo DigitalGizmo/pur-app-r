@@ -160,7 +160,7 @@ const StuyStroll = ({isSubPop}) => {
 
       {isSubPop ?
         <header className="basic-page">
-          <h2>Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street</h2>
+          <h2>Sidewalk Stroll: The Gas House District</h2>
         </header>
       :
         <header className="basic-page">
@@ -170,7 +170,7 @@ const StuyStroll = ({isSubPop}) => {
                 <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/pur-logo.png" 
                 alt="Picturing Urban Renewal logo"/>Picturing Urban Renewal
               </Link> &gt; 
-              Sidewalk Stroll: The Gas House District - 1st Avenue &amp; 14th Street
+              Sidewalk Stroll: The Gas House District
             </p>
           </nav>
           {/* <div className="page-title">

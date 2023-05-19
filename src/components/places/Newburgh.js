@@ -14,7 +14,7 @@ const Newburgh = () => {
 
   useEffect(() => {
     changePageName('places');
-    document.title = 'Places - Newburgh';
+    document.title = 'Newburgh from the Planners Perspective';
   }, [changePageName])
 
   const onCaptionChange = (isInView, imgIndex, titleIndex) => {

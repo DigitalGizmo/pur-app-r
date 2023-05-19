@@ -7,7 +7,7 @@ const ThemeCampbell = ({isSubPop}) => {
 
   useEffect(() => {
     if (!isSubPop) { changePageName('themes');}
-    document.title = 'Essay: Who Lived Here?';
+    document.title = 'Essay - Who Lived Here?';
   }, [changePageName, isSubPop])
 
   return (

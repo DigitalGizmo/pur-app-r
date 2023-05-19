@@ -7,7 +7,7 @@ const ThemeZipp = ({isSubPop}) => {
 
   useEffect(() => {
     if (!isSubPop) { changePageName('themes');}
-    document.title = 'Essay: Ghost City';
+    document.title = 'Essay - Ghost City';
   }, [changePageName, isSubPop])
 
   return (

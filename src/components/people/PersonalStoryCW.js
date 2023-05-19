@@ -14,7 +14,7 @@ const PersonalStory = () => {
 
   useEffect(() => {
     changePageName('people');
-    document.title = 'Personal Story - Carrie Wilson';
+    document.title = 'People - Carrie Wilson';
   }, [changePageName])
 
   return (

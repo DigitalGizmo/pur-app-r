@@ -7,7 +7,7 @@ const Theme = () => {
 
   useEffect(() => {
     changePageName('themes');
-    document.title = 'Essay: Contract Sales';
+    document.title = 'Essay - Contract Sales';
   }, [changePageName])
 
   return (

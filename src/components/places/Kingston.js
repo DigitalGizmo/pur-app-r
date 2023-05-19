@@ -9,7 +9,7 @@ const Kingston = () => {
 
   useEffect(() => {
     changePageName('places');
-    document.title = 'Places - Kingston';
+    document.title = 'Kingston - Best Laid Plans';
   }, [changePageName])
 
   return (

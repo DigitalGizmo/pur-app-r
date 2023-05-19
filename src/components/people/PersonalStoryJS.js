@@ -14,7 +14,7 @@ const PersonalStory = ({isSubPop}) => {
 
   useEffect(() => {
     if (!isSubPop) { changePageName('people');}
-    document.title = 'Personal Story - Jimmy Strawn';
+    document.title = 'People - Jimmy Strawn';
   }, [changePageName, isSubPop])
 
   return (
