@@ -28,8 +28,7 @@ const BottomNav = (props) => {
           <Link to="/archive/visuals"><span className="asterisk">*</span>Visuals</Link>
         </li>
         <li className={ currPage === 'themes' ? 'selected' : ''}>
-          <Link to="/themes"
-          dangerouslySetInnerHTML={{ __html: 'Essays' }}></Link>
+          <Link to="/themes"><span className="asterisk">*</span>Essays</Link>
         </li>
       </ul>
 
