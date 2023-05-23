@@ -842,6 +842,11 @@ div.city-story ul li:hover span.story-title a {
   color: #B25900;
 }
 /* background images */
+
+div.city-story ul li {
+  background-position-y: center;
+}
+
 div.city-story ul li.roots.nyc {
   background-image: url("http://dev.picturingurbanrenewal.org/prod-assets/city-stories/stuytown-roots.jpg");
 } 
