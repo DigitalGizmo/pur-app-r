@@ -7,7 +7,7 @@ const slides = [
   },
   { imgName: '02-peddler', 
     title: 'Home to European Immigrants',
-    caption: 'By 1940, the Gas House District was less tough and more respectable. It was a place where European immigrants settled before moving on to more prosperous neighborhoods. Italians, Poles, Russians, Austrians, Germans, and Hungarians all made their homes there.'
+    caption: 'By 1940, the Gas House District was less tough and more respectable. It was a place where European immigrants settled before moving on to more prosperous neighborhoods. Italians, Poles, Russians, Austrians, Germans, and Hungarians all made their homes there. But as a result of immigration restrictions, that population was on the decline.'
   },
   { imgName: '03-moses', 
     title: 'Slum Clearance',
@@ -16,6 +16,38 @@ const slides = [
   { imgName: '04-model', 
     title: 'Private-Public Partnership',
     caption: 'In 1943, MetLife agreed to build Stuyvesant Town. In return, city officials promised the insurance giant a 25-year tax reduction. This deal ensured a long-term and steady return on investment.'
+  },
+  { imgName: '05-public-mtg', 
+    title: '\"Do You Want to Stay in our Neighborhood?\"',
+    caption: 'Gas House District property owners were the first to organize and protest plans for Stuyvesant Town. In 1943, they took the City to court.'
+  },
+  { imgName: '06-homeless', 
+    title: 'Photographic Evidence',
+    caption: 'That same summer, a MetLife photographer captured scenes from the Gas House District. Some helped make the case for redevelopment.'
+  },
+  { imgName: '07-grocery', 
+    title: 'Photographic Evidence',
+    caption: 'Other photographs undercut the assertion that the Gas House District was a slum.'
+  },
+  { imgName: '08-demolition', 
+    title: 'End of the Gas House District',
+    caption: 'In 1945, MetLife began evicting tenants and demolishing the Gas House District.'
+  },
+  { imgName: '09-banners', 
+    title: 'An Appeal to Mayor La Guardia',
+    caption: '\"The citizens of the future Stuyvesant Town project have received notice to vacate.... WE are appealing to you for help, we know that it\'s not fair to be put out at a time when our soldiers are fighting to keep our homes together. The majority of us have been born, raised, and brought up our own families in this community.\" (Connie Zimmardo to Mayor La Guardia, 1945)'
+  },
+  { imgName: '10-reconstruction', 
+    title: 'Beginnings of Stuyvesant Town',
+    caption: 'Connie Zimmardo\'s appeal proved futile. In May 1946, Harry Delman, his wife, and son Gerald became the last of 3,600 families to move out of the Gas House District. That same month, construction of Stuyvesant Town began.'
+  },
+  { imgName: '11-family', 
+    title: 'World War II Veterans',
+    caption: 'In 1947, new tenants began moving in. They were World War II veterans and their families. Many more applied than could be housed.'
+  },
+  { imgName: '12-ecker', 
+    title: '\“Negroes and Whites Don\'t Mix\”',
+    caption: 'Some veterans weren\'t welcome. MetLife chairman Frederick Ecker declared, \"Negroes and whites don\'t mix...\"'
   },
 ]
 
@@ -55,7 +87,7 @@ const IntroSlides = (props) => {
       <div className="exhibit-pop-wrapper sub-pop">
         <header>
           
-          <span>{currSlide + 1} of {numSlides} slides</span>
+          <span>{currSlide + 1} / {numSlides}</span>
           {/*<a href="/" onClick={ event => onSlidePrev(event) }>Prev</a> | */}
 
           <a href="/" onClick={ event => onSlidePrev(event) } className="prev-arrow">
