@@ -26,7 +26,7 @@ const slides = [
     caption: 'That same summer, a MetLife photographer captured scenes from the Gas House District. Some helped make the case for redevelopment.'
   },
   { imgName: '07-grocery', 
-    title: 'Photographic Evidence',
+    title: 'Alternative Views',
     caption: 'Other photographs undercut the assertion that the Gas House District was a slum.'
   },
   { imgName: '08-demolition', 
@@ -47,7 +47,7 @@ const slides = [
   },
   { imgName: '12-ecker', 
     title: '\“Negroes and Whites Don\'t Mix\”',
-    caption: 'Some veterans weren\'t welcome. MetLife chairman Frederick Ecker declared, \"Negroes and whites don\'t mix...\"'
+    caption: 'Some veterans weren\'t welcome. MetLife chairman Frederick Ecker declared, \"Negroes and whites don\'t mix. Perhaps they will in a hundred years, but they don\'t now.\"'
   },
 ]
 
