@@ -780,7 +780,7 @@ div.city-story ul li {
   background-size: 20vw;
   line-height: 1em;
   outline: 1px solid #68695A;
-  padding: .3em;
+  padding: 4px;
   position: relative;
 }
 
@@ -799,7 +799,15 @@ div.city-story ul li.recon {
 div.city-story ul li.legacy {
   grid-row: 5;
 }
-
+/*   city icons     */
+.toprow img.city-icon {
+  position: absolute;
+  background-color: white;
+  top: 4px;
+  right: 4px;
+  width: 30px;
+  height: 30px;
+}
 
 /*   hover blurbs   */
 div.city-story ul li span.show-blurb {
@@ -812,7 +820,7 @@ div.city-story ul li span.show-blurb {
   height: 100%;
   left: 0;
   line-height: 1.2em;
-  padding: 3.25em 0.3em 0.3em 0.3em;
+  padding: 4.25em 0.3em 4px 0.3em;
   position: absolute;
   top: 0;
   visibility: hidden;

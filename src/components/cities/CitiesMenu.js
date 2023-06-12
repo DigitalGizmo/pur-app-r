@@ -75,23 +75,33 @@ const CitiesMenu = () => {
           </li>
 
           <li className="toprow nyc"><span className="story-title"><span className="asterisk">*</span>New York City</span> <span className="story-subtitle">A Suburb in the City</span>
+            
+            <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/icon-stuytown.svg" class="city-icon" alt="icon for New York City"/>
+
             <span className="show-blurb">Designed for World War II veterans, Stuyvesant Town remade lower Manhattan. This massive apartment complex was controversial, but it served as a model for the federal urban renewal program.<br/>
             
             <a href="/" onClick={onSlideLinkClick}>
               <span className="asterisk">*</span>View Visual Intro</a></span>
           </li>
 
-          <li className="toprow newburgh"><span className="story-title">Newburgh</span> <span className="story-subtitle">Demolition Without Redevelopment</span>
+          <li className="toprow newburgh"><span className="story-title">Newburgh</span> <span className="story-subtitle">Demolition Without<br/>Redevelopment</span>
+            
+            <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/icon-newburgh.svg" class="city-icon" alt="icon for Newburgh"/>
+
             <span className="show-blurb">City leaders targeted Black neighborhoods for demolition. In so doing, they exacerbated a racial rift that continues to haunt Newburgh’s efforts to rebuild.<br/>
             <a href="#">View Visual Intro<span className="not-done">Not yet implemented</span></a></span>
           </li>
 
           <li className="toprow kingston"><span className="story-title">Kingston</span> <span className="story-subtitle">A Tale of Two Neighborhoods</span>
+            <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/icon-kingston.svg" class="city-icon" alt="icon for Kingston"/>
+
             <span className="show-blurb"> The renewal of uptown and downtown Kingston proceeded along different tracks. Much of downtown was demolished. The uptown shopping district was rehabilitated.<br/>
             <a href="#">View Visual Intro<span className="not-done">Not yet implemented</span></a></span>
           </li>
 
           <li className="toprow albany"><span className="story-title">Albany</span> <span className="story-subtitle">Brasilia on the Hudson</span>
+            <img src="http://dev.picturingurbanrenewal.org/prod-assets/common/icon-albany.svg" class="city-icon" alt="icon for Albany"/>
+
             <span className="show-blurb">The Empire State Plaza was unusual for being State planned and funded. The brainchild of Gov. Nelson Rockefeller, it was intended to beautify New York’s state capital.<br/>
             <a href="#">View Visual Intro<span className="not-done">Not yet implemented</span></a></span>
           </li>
